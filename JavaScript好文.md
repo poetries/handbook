@@ -1,1 +1,0 @@
-- [JavaScript奇技淫巧44招](http://forums.fami2u.com/t/javascript-44/77)
