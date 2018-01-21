@@ -1,1 +1,0 @@
-# [所有MySQL相关的文章都搬家到这里了，可在这里找到它们](https://github.com/jaywcjlove/mysql-tutorial)
