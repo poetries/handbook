@@ -1,0 +1,121 @@
+{
+    "name": "handbook",
+    "version": "1.0.0",
+    "description": "handbook",
+    "keywords": [
+        "handbook"
+    ],
+    "homepage": "http://JSLite.io",
+    "author": "poetries <jingguanliuye@gmail.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/poetries/handbook.git"
+    },
+    "licenses": "MIT",
+    "idoc": {
+        "theme": "handbook",
+        "logo": "idoc-logo.svg",
+        "md": [
+            "Git常用命令.md",
+            {
+                "前端": [
+                    {
+                        "Javascript": [
+                            {
+                                "RN": [
+                                    "React-native Android环境搭建.md"
+                                ]
+                            },
+                            "思维导图.md",
+                            "正则表达式.md",
+                            "轻量高效的开源JavaScript插件和库.md"
+                        ]
+                    }
+                ]
+            },
+            {
+                "服务端编程": [
+                    {
+                        "数据库": [
+                            "Redis.md"
+                        ]
+                    },
+                    {
+                        "系统服务": [
+                            "docker.md",
+                            {
+                                "shell": [
+                                    "shell-regex.md",
+                                    "Shell.md"
+                                ]
+                            },
+                            "Nginx.md"
+                        ]
+                    },
+                    {
+                        "Linux": []
+                    },
+                    {
+                        "数据库": [
+                            {
+                                "mysql": [
+                                    "21-minutes-MySQL-basic-entry.md",
+                                    "awesome-mysql.md",
+                                    {
+                                        "chapter1": [
+                                            "1.1.md",
+                                            "1.2.md",
+                                            "1.3.md",
+                                            "1.4.md",
+                                            "1.md"
+                                        ]
+                                    },
+                                    {
+                                        "chapter17": [
+                                            "17.1.md",
+                                            "17.2.md",
+                                            "17.3.md"
+                                        ]
+                                    },
+                                    {
+                                        "chapter2": [
+                                            "2.1.md",
+                                            "2.2.md",
+                                            "2.3.md",
+                                            "2.4.md",
+                                            "2.5.md"
+                                        ]
+                                    },
+                                    {
+                                        "chapter3": [
+                                            "3.1.md",
+                                            "3.2.md",
+                                            "3.3.md",
+                                            "3.4.md",
+                                            "3.5.md",
+                                            "3.md"
+                                        ]
+                                    },
+                                    "README.md"
+                                ]
+                            },
+                            "Redis.md"
+                        ]
+                    }
+                ]
+            },
+            {
+                "工具快捷键": [
+                    "Git常用命令.md",
+                    "vim.md"
+                ]
+            },
+            {
+                "其他": [
+                    "HTTP状态码.md",
+                    "通过代理工具提高Github Clone速度.md"
+                ]
+            }
+        ]
+    }
+}

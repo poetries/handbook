@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handbook</title>
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            <img src="../../../../idoc-logo.svg">
+        
+    </div>
+<ul><li><a href="../../../../index.html">Git常用命令</a></li><li><a href="#"><span></span>前端</a><ul><li><a href="#"><span></span>Javascript</a><ul><li><a href="#"><span></span>RN</a><ul><li><a href="../../../../html/前端/Javascript/RN/React-native Android环境搭建.html">React-native Android环境搭建</a></li></ul></li><li><a href="../../../../html/前端/Javascript/思维导图.html">思维导图</a></li><li><a href="../../../../html/前端/Javascript/正则表达式.html">正则表达式</a></li><li><a href="../../../../html/前端/Javascript/轻量高效的开源JavaScript插件和库.html">轻量高效的开源JavaScript插件和库</a></li></ul></li></ul></li><li><a href="#"><span></span>服务端编程</a><ul><li><a href="#"><span></span>数据库</a><ul><li><a href="../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li><li><a href="#"><span></span>系统服务</a><ul><li><a href="../../../../html/服务端编程/系统服务/docker.html">docker</a></li><li><a href="#"><span></span>shell</a><ul><li><a href="../../../../html/服务端编程/系统服务/shell/shell-regex.html">shell-regex</a></li><li><a href="../../../../html/服务端编程/系统服务/shell/Shell.html">Shell</a></li></ul></li><li><a href="../../../../html/服务端编程/系统服务/Nginx.html">Nginx</a></li></ul></li><li><a href="#"><span></span>Linux</a><ul></ul></li><li><a href="#"><span></span>数据库</a><ul><li><a href="#"><span></span>mysql</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/21-minutes-MySQL-basic-entry.html">21-minutes-MySQL-basic-entry</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/awesome-mysql.html">awesome-mysql</a></li><li><a href="#"><span></span>chapter1</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.1.html">1.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.2.html">1.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.3.html">1.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.4.html">1.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.html">1</a></li></ul></li><li><a href="#"><span></span>chapter17</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.1.html">17.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.2.html">17.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.3.html">17.3</a></li></ul></li><li><a href="#"><span></span>chapter2</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.1.html">2.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.2.html">2.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.3.html">2.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.4.html">2.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.5.html">2.5</a></li></ul></li><li><a href="#"><span></span>chapter3</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.1.html">3.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.2.html">3.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.3.html">3.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.4.html">3.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.5.html">3.5</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.html">3</a></li></ul></li><li><a href="../../../../html/服务端编程/数据库/mysql/README.html">README</a></li></ul></li><li><a href="../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li></ul></li><li><a href="#"><span></span>工具快捷键</a><ul><li><a href="../../../../html/工具快捷键/Git常用命令.html">Git常用命令</a></li><li><a href="../../../../html/工具快捷键/vim.html">vim</a></li></ul></li><li><a href="#"><span></span>其他</a><ul><li><a href="../../../../html/其他/HTTP状态码.html">HTTP状态码</a></li><li><a href="../../../../html/其他/通过代理工具提高Github Clone速度.html">通过代理工具提高Github Clone速度</a></li></ul></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/poetries/handbook.git"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0网络相关目录说明">网络相关目录说明</a></li><li><a href="#t1ip命令工具">ip命令工具</a></li><li><a href="#t2ip配置">ip配置</a></li><li><a href="#t3启动和关闭网卡命令">启动和关闭网卡命令</a></li><li><a href="#t4网卡开机自动启动">网卡开机自动启动</a></li><li><a href="#t5重启/停止/查看网络">重启/停止/查看网络</a></li><li><a href="#t6其它名词解释">其它名词解释</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t0&#x7F51;&#x7EDC;&#x76F8;&#x5173;&#x76EE;&#x5F55;&#x8BF4;&#x660E;">&#x7F51;&#x7EDC;&#x76F8;&#x5173;&#x76EE;&#x5F55;&#x8BF4;&#x660E; <a href="#t0&#x7F51;&#x7EDC;&#x76F8;&#x5173;&#x76EE;&#x5F55;&#x8BF4;&#x660E;"> # </a></h2>
+<pre><code class="lang-bash">/etc/sysconfig/network <span class="hljs-comment"># &#x5305;&#x62EC;&#x4E3B;&#x673A;&#x57FA;&#x672C;&#x7F51;&#x7EDC;&#x4FE1;&#x606F;&#xFF0C;&#x7528;&#x4E8E;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;</span>
+/etc/sysconfig/network-script/ <span class="hljs-comment"># &#x6B64;&#x76EE;&#x5F55;&#x4E0B;&#x662F;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x6700;&#x521D;&#x59CB;&#x5316;&#x7F51;&#x7EDC;&#x7684;&#x4FE1;&#x606F;</span>
+/etc/sysconfig/network-script/ifcfg-em1 <span class="hljs-comment"># &#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x6BCF;&#x4E2A;&#x4EBA;&#x7684;&#x914D;&#x7F6E;&#x540D;&#x5B57;&#x4E0D;&#x4E00;&#x6837;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x67E5;&#x770B;</span>
+/etc/xinetd.conf &#x5B9A;&#x4E49;&#x4E86;&#x7531;&#x8D85;&#x7EA7;&#x8FDB;&#x7A0B;XINETD&#x542F;&#x52A8;&#x7684;&#x7F51;&#x7EDC;&#x670D;&#x52A1;
+/etc/protocols <span class="hljs-comment"># &#x8BBE;&#x5B9A;&#x4E86;&#x4E3B;&#x673A;&#x4F7F;&#x7528;&#x7684;&#x534F;&#x8BAE;&#x4EE5;&#x53CA;&#x5404;&#x4E2A;&#x534F;&#x8BAE;&#x7684;&#x534F;&#x8BAE;&#x53F7;</span>
+/etc/services  <span class="hljs-comment"># &#x8BBE;&#x5B9A;&#x4E86;&#x4E3B;&#x673A;&#x7684;&#x4E0D;&#x540C;&#x7AEF;&#x53E3;&#x7684;&#x7F51;&#x7EDC;&#x670D;&#x52A1;</span>
+</code></pre>
+<p>&#x5728; CentOS 7 &#x4E2D; ifconfig &#x547D;&#x4EE4;&#x5DF2;&#x7ECF;&#x4E0D;&#x7075;&#x4E86;&#xFF0C;&#x6362;&#x6210;&#x4E86; <code>ip</code> &#x547D;&#x4EE4;&#x5DE5;&#x5177;&#xFF0C;&#x8F93;&#x5165; ifconfig &#x4F1A;&#x62A5;&#x5982;&#x4E0B;&#x9519;&#x8BEF;:</p>
+<pre><code class="lang-bash">ifconfig
+-bash: ifconfig: <span class="hljs-built_in">command</span> not found
+</code></pre>
+<p>&#x4F60;&#x53EF;&#x901A;&#x8FC7;&#x547D;&#x4EE4; <code>ls /usr/sbin/</code> &#x67E5;&#x770B;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B; &#x6709;&#x6CA1;&#x6709; ifconfig &#x5DE5;&#x5177;&#xFF0C;&#x8FD9;&#x4E2A;&#x8DEF;&#x5F84;&#x4E00;&#x822C;&#x662F;&#x914D;&#x7F6E;&#x5728;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E0A;&#x9762;&#xFF0C;&#x4F60;&#x901A;&#x8FC7;&#x67E5;&#x770B;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x770B;&#x4E00;&#x4E0B;&#x653E;&#x7F6E;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x7A0B;&#x5E8F;&#x7684;&#x8DEF;&#x5F84; /usr/sbin &#x3002;</p>
+<pre><code>echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
+</code></pre><p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x5DE5;&#x5177; <strong>yum install net-tools</strong> &#x5C06; <strong>ifconfig</strong> &#x547D;&#x4EE4;&#x627E;&#x56DE;&#x6765;&#x3002;</p>
+<h2 id="t1ip&#x547D;&#x4EE4;&#x5DE5;&#x5177;">ip&#x547D;&#x4EE4;&#x5DE5;&#x5177; <a href="#t1ip&#x547D;&#x4EE4;&#x5DE5;&#x5177;"> # </a></h2>
+<p>ip  [&#x9009;&#x9879;]  &#x64CD;&#x4F5C;&#x5BF9;&#x8C61;{link|addr|route...}</p>
+<pre><code class="lang-bash">
+ip link show                    <span class="hljs-comment"># &#x663E;&#x793A;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x4FE1;&#x606F;</span>
+ip link <span class="hljs-built_in">set</span> eth0 upi            <span class="hljs-comment"># &#x5F00;&#x542F;&#x7F51;&#x5361;</span>
+ip link <span class="hljs-built_in">set</span> eth0 down           <span class="hljs-comment"># &#x5173;&#x95ED;&#x7F51;&#x5361;</span>
+ip link <span class="hljs-built_in">set</span> eth0 promisc on     <span class="hljs-comment"># &#x5F00;&#x542F;&#x7F51;&#x5361;&#x7684;&#x6DF7;&#x5408;&#x6A21;&#x5F0F;</span>
+ip link <span class="hljs-built_in">set</span> eth0 promisc offi   <span class="hljs-comment"># &#x5173;&#x95ED;&#x7F51;&#x5361;&#x7684;&#x6DF7;&#x4E2A;&#x6A21;&#x5F0F;</span>
+ip link <span class="hljs-built_in">set</span> eth0 txqueuelen 1200 <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x7F51;&#x5361;&#x961F;&#x5217;&#x957F;&#x5EA6;</span>
+ip link <span class="hljs-built_in">set</span> eth0 mtu 1400        <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x7F51;&#x5361;&#x6700;&#x5927;&#x4F20;&#x8F93;&#x5355;&#x5143;</span>
+ip addr show     <span class="hljs-comment"># &#x663E;&#x793A;&#x7F51;&#x5361;IP&#x4FE1;&#x606F;</span>
+ip addr add 192.168.0.1/24 dev eth0 <span class="hljs-comment"># &#x8BBE;&#x7F6E;eth0&#x7F51;&#x5361;IP&#x5730;&#x5740;192.168.0.1</span>
+ip addr del 192.168.0.1/24 dev eth0 <span class="hljs-comment"># &#x5220;&#x9664;eth0&#x7F51;&#x5361;IP&#x5730;&#x5740;</span>
+
+ip route list                 <span class="hljs-comment"># &#x67E5;&#x770B;&#x8DEF;&#x7531;&#x4FE1;&#x606F;</span>
+ip route add 192.168.4.0/24  via  192.168.0.254 dev eth0 <span class="hljs-comment"># &#x8BBE;&#x7F6E;192.168.4.0&#x7F51;&#x6BB5;&#x7684;&#x7F51;&#x5173;&#x4E3A;192.168.0.254,&#x6570;&#x636E;&#x8D70;eth0&#x63A5;&#x53E3;</span>
+ip route add default via  192.168.0.254  dev eth0        <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x7F51;&#x5173;&#x4E3A;192.168.0.254</span>
+ip route del 192.168.4.0/24   <span class="hljs-comment"># &#x5220;&#x9664;192.168.4.0&#x7F51;&#x6BB5;&#x7684;&#x7F51;&#x5173;</span>
+ip route del default          <span class="hljs-comment"># &#x5220;&#x9664;&#x9ED8;&#x8BA4;&#x8DEF;&#x7531;</span>
+</code></pre>
+<h2 id="t2ip&#x914D;&#x7F6E;">ip&#x914D;&#x7F6E; <a href="#t2ip&#x914D;&#x7F6E;"> # </a></h2>
+<p>&#x901A;&#x8FC7; ip addr &#x547D;&#x4EE4; &#x67E5;&#x770B;ip&#x3002;&#x770B;&#x5230;&#x4E24;&#x4E2A;&#x914D;&#x7F6E;&#xFF0C;<strong>lo</strong> &#x548C; <strong>em1</strong> &#xFF0C;lo&#x4EE3;&#x8868;127.0.0.1&#xFF0C;&#x5373;localhost&#x3002;em1&#x8FD9;&#x4E2A;&#x662F;&#x4F60;&#x7684;&#x7F51;&#x5361;&#xFF0C;&#x5982;&#x679C;&#x4E0A;&#x9762;&#x6CA1;&#x6709; inet &#x5B57;&#x6BB5;&#x540E;&#x9762;&#x8DDF;&#x7740; IP &#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x53BB;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;&#x8FD9;&#x91CC; /etc/sysconfig/network-scripts/ifcfg-em1 &#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x662F; ifcfg-&lt;&#x7F51;&#x5361;&#x540D;&#x5B57;&gt; &#x52A0;&#x4E0A;&#x4F60;&#x7F51;&#x5361;&#x540D;&#x5B57;&#xFF0C;&#x65B0;&#x7684;Centos&#x3002;&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-bash">vi /etc/sysconfig/network-scripts/ifcfg-em1
+</code></pre>
+<p>&#x4E3B;&#x8981;&#x66F4;&#x6539;&#x8FD9;&#x4E09;&#x9879;&#xFF1A;<strong>BOOTPROTO=dhcp</strong>&#x3001;<strong>ONBOOT=yes</strong>&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x6211;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># TYPE&#xFF1A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x3002;&#x5728;/etc/sysconfig/network-scripts/&#x76EE;&#x5F55;&#x6709;&#x591A;&#x79CD;&#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x6709;Ethernet &#x3001;IPsec&#x7B49;&#x7C7B;&#x578B;&#xFF0C;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x4E3A;Ethernet&#x3002;</span>
+TYPE=Ethernet    
+
+BOOTPROTO=dhcp     <span class="hljs-comment"># &#x81EA;&#x52A8;&#x83B7;&#x53D6;IP</span>
+<span class="hljs-comment"># BOOTPROTO=none   # &#x9759;&#x6001;&#x914D;&#x7F6E;&#xFF0C;&#x82E5;&#x8BE5;&#x503C;&#x4E3A;&#x201C;dhcp&#x201D;&#x5219;&#x4E3A;&#x52A8;&#x6001;&#x83B7;&#x5F97;&#xFF0C;&#x53E6;&#x5916; static&#x4E5F;&#x662F;&#x8868;&#x793A;&#x9759;&#x6001;ip&#x5730;&#x5740;</span>
+DEFROUTE=yes
+PEERDNS=yes
+PEERROUTES=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes        <span class="hljs-comment"># &#x662F;&#x5426;&#x6267;&#x884C;IPv6&#x3002;yes&#xFF1A;&#x652F;&#x6301;IPv6&#x3002;no&#xFF1A;&#x4E0D;&#x652F;&#x6301;IPv6&#x3002;</span>
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_PEERDNS=yes
+IPV6_PEERROUTES=yes
+IPV6_FAILURE_FATAL=no
+NAME=em1                <span class="hljs-comment"># &#x7F51;&#x5361;&#x540D;&#x79F0;</span>
+UUID=99-6217--a******   <span class="hljs-comment"># UUID&#x53F7;&#xFF0C;&#x6CA1;&#x4E8B;&#x4E0D;&#x8981;&#x52A8;&#x5B83;&#xFF0C;&#x5426;&#x5219;&#x4F60;&#x4F1A;&#x540E;&#x6094;&#x7684;</span>
+DEVICE=em1              <span class="hljs-comment"># &#x63A5;&#x53E3;&#x540D;&#x79F0;</span>
+ONBOOT=yes              <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x7F51;&#x7EDC;&#x5F00;&#x673A;&#x81EA;&#x52A8;&#x542F;&#x52A8;</span>
+
+IPADDR=&lt;&#x8FD9;&#x91CC;&#x56FA;&#x5B9A;IP&#x914D;&#x7F6E;&#x7684;&#x5730;&#x65B9;&gt;  <span class="hljs-comment"># &#x8BBE;&#x7F6E;IP&#x5730;&#x5740;</span>
+PREFIX=24                   <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x5B50;&#x7F51;&#x63A9;&#x7801;</span>
+GATEWAY=&lt;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x7F51;&#x5173;&gt;        <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x7F51;&#x5173;</span>
+DNS1=&lt;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;DNS&gt;           <span class="hljs-comment"># DNS</span>
+
+DNS1=8.8.8.8            <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x4E3B;DNS</span>
+DNS2=8.8.4.4            <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x5907;DNS</span>
+</code></pre>
+<h2 id="t3&#x542F;&#x52A8;&#x548C;&#x5173;&#x95ED;&#x7F51;&#x5361;&#x547D;&#x4EE4;">&#x542F;&#x52A8;&#x548C;&#x5173;&#x95ED;&#x7F51;&#x5361;&#x547D;&#x4EE4; <a href="#t3&#x542F;&#x52A8;&#x548C;&#x5173;&#x95ED;&#x7F51;&#x5361;&#x547D;&#x4EE4;"> # </a></h2>
+<pre><code class="lang-bash">ifup &lt;&#x8BBE;&#x5907;&#x540D;&gt;    <span class="hljs-comment"># &#x6FC0;&#x6D3B;&#x7F51;&#x5361; {&#x7F51;&#x5361;&#x540D;&#x5B57;}</span>
+ifdown &lt;&#x8BBE;&#x5907;&#x540D;&gt;  <span class="hljs-comment"># &#x5173;&#x95ED;&#x7F51;&#x5361;</span>
+ifup em1  <span class="hljs-comment"># &#x6FC0;&#x6D3B;&#x7F51;&#x5361; em1</span>
+</code></pre>
+<h2 id="t4&#x7F51;&#x5361;&#x5F00;&#x673A;&#x81EA;&#x52A8;&#x542F;&#x52A8;">&#x7F51;&#x5361;&#x5F00;&#x673A;&#x81EA;&#x52A8;&#x542F;&#x52A8; <a href="#t4&#x7F51;&#x5361;&#x5F00;&#x673A;&#x81EA;&#x52A8;&#x542F;&#x52A8;"> # </a></h2>
+<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x9762; vi /etc/sysconfig/network-scripts/ifcfg-em1 &#x7684;&#x53C2;&#x6570; <strong>ONBOOT=yes</strong></p>
+<h2 id="t5&#x91CD;&#x542F;/&#x505C;&#x6B62;/&#x67E5;&#x770B;&#x7F51;&#x7EDC;">&#x91CD;&#x542F;/&#x505C;&#x6B62;/&#x67E5;&#x770B;&#x7F51;&#x7EDC; <a href="#t5&#x91CD;&#x542F;/&#x505C;&#x6B62;/&#x67E5;&#x770B;&#x7F51;&#x7EDC;"> # </a></h2>
+<pre><code class="lang-bash">service network start    <span class="hljs-comment"># &#x542F;&#x52A8;&#x7F51;&#x7EDC;&#x670D;&#x52A1;</span>
+service network stop     <span class="hljs-comment"># &#x505C;&#x6B62;&#x7F51;&#x7EDC;&#x670D;&#x52A1;</span>
+service network restart  <span class="hljs-comment"># &#x91CD;&#x542F;&#x7F51;&#x7EDC;&#x670D;&#x52A1;</span>
+service network status   <span class="hljs-comment"># &#x67E5;&#x770B;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x72B6;&#x6001;</span>
+nmcli dev status         <span class="hljs-comment"># &#x68C0;&#x67E5;&#x53D7;&#x7F51;&#x7EDC;&#x7BA1;&#x7406;&#x5668;&#x7BA1;&#x7406;&#x7684;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;</span>
+systemctl status NetworkManager.service <span class="hljs-comment"># &#x9A8C;&#x8BC1;&#x7F51;&#x7EDC;&#x7BA1;&#x7406;&#x5668;&#x670D;&#x52A1;&#x7684;&#x72B6;&#x6001;</span>
+</code></pre>
+<h2 id="t6&#x5176;&#x5B83;&#x540D;&#x8BCD;&#x89E3;&#x91CA;">&#x5176;&#x5B83;&#x540D;&#x8BCD;&#x89E3;&#x91CA; <a href="#t6&#x5176;&#x5B83;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"> # </a></h2>
+<ul>
+<li>wlan0 &#x8868;&#x793A;&#x7B2C;&#x4E00;&#x5757;&#x65E0;&#x7EBF;&#x4EE5;&#x592A;&#x7F51;&#x5361;</li>
+<li>Link encap &#x8868;&#x793A;&#x8BE5;&#x7F51;&#x5361;&#x4F4D;&#x4E8E;OSI&#x7269;&#x7406;&#x5C42;(Physical Layer&#xFF09;&#x7684;&#x540D;&#x79F0;</li>
+<li>HWaddr &#x8868;&#x793A;&#x7F51;&#x5361;&#x7684;MAC&#x5730;&#x5740;&#xFF08;Hardware Address&#xFF09;</li>
+<li>inet addr &#x8868;&#x793A;&#x8BE5;&#x7F51;&#x5361;&#x5728;TCP/IP&#x7F51;&#x7EDC;&#x4E2D;&#x7684;IP&#x5730;&#x5740;</li>
+<li>Bcast &#x8868;&#x793A;&#x5E7F;&#x64AD;&#x5730;&#x5740;&#xFF08;Broad Address&#xFF09;</li>
+<li>Mask &#x8868;&#x793A;&#x5B50;&#x7F51;&#x63A9;&#x7801;&#xFF08;Subnet Mask&#xFF09;</li>
+<li>MTU &#x8868;&#x793A;&#x6700;&#x5927;&#x4F20;&#x9001;&#x5355;&#x5143;&#xFF0C;&#x4E0D;&#x540C;&#x5C40;&#x57DF;&#x7F51; MTU&#x503C;&#x4E0D;&#x4E00;&#x5B9A;&#x76F8;&#x540C;&#xFF0C;&#x5BF9;&#x4EE5;&#x592A;&#x7F51;&#x6765;&#x8BF4;&#xFF0C;MTU&#x7684;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x662F;1500&#x4E2A;&#x5B57;&#x8282;</li>
+<li>Metric &#x8868;&#x793A;&#x5EA6;&#x91CF;&#x503C;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x8DEF;&#x7531;&#x6210;&#x672C;</li>
+<li>RX &#x8868;&#x793A;&#x63A5;&#x6536;&#x7684;&#x6570;&#x636E;&#x5305;</li>
+<li>TX &#x8868;&#x793A;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#x5305;</li>
+<li>collisions &#x8868;&#x793A;&#x6570;&#x636E;&#x5305;&#x51B2;&#x7A81;&#x7684;&#x6B21;&#x6570;</li>
+<li>txqueuelen &#x8868;&#x793A;&#x4F20;&#x9001;&#x5217;&#x961F;&#xFF08;Transfer Queue&#xFF09;&#x957F;&#x5EA6;</li>
+<li>interrupt &#x8868;&#x793A;&#x8BE5;&#x7F51;&#x5361;&#x7684;IRQ&#x4E2D;&#x65AD;&#x53F7;</li>
+<li>Base address &#x8868;&#x793A;I/O&#x5730;&#x5740;</li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

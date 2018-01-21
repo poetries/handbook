@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handbook</title>
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            <img src="../../../../idoc-logo.svg">
+        
+    </div>
+<ul><li><a href="../../../../index.html">Git常用命令</a></li><li><a href="#"><span></span>前端</a><ul><li><a href="#"><span></span>Javascript</a><ul><li><a href="#"><span></span>RN</a><ul><li><a href="../../../../html/前端/Javascript/RN/React-native Android环境搭建.html">React-native Android环境搭建</a></li></ul></li><li><a href="../../../../html/前端/Javascript/思维导图.html">思维导图</a></li><li><a href="../../../../html/前端/Javascript/正则表达式.html">正则表达式</a></li><li><a href="../../../../html/前端/Javascript/轻量高效的开源JavaScript插件和库.html">轻量高效的开源JavaScript插件和库</a></li></ul></li></ul></li><li><a href="#"><span></span>服务端编程</a><ul><li><a href="#"><span></span>数据库</a><ul><li><a href="../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li><li><a href="#"><span></span>系统服务</a><ul><li><a href="../../../../html/服务端编程/系统服务/docker.html">docker</a></li><li><a href="#"><span></span>shell</a><ul><li><a href="../../../../html/服务端编程/系统服务/shell/shell-regex.html">shell-regex</a></li><li><a href="../../../../html/服务端编程/系统服务/shell/Shell.html">Shell</a></li></ul></li><li><a href="../../../../html/服务端编程/系统服务/Nginx.html">Nginx</a></li></ul></li><li><a href="#"><span></span>Linux</a><ul></ul></li><li><a href="#"><span></span>数据库</a><ul><li><a href="#"><span></span>mysql</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/21-minutes-MySQL-basic-entry.html">21-minutes-MySQL-basic-entry</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/awesome-mysql.html">awesome-mysql</a></li><li><a href="#"><span></span>chapter1</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.1.html">1.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.2.html">1.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.3.html">1.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.4.html">1.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.html">1</a></li></ul></li><li><a href="#"><span></span>chapter17</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.1.html">17.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.2.html">17.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.3.html">17.3</a></li></ul></li><li><a href="#"><span></span>chapter2</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.1.html">2.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.2.html">2.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.3.html">2.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.4.html">2.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.5.html">2.5</a></li></ul></li><li><a href="#"><span></span>chapter3</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.1.html">3.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.2.html">3.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.3.html">3.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.4.html">3.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.5.html">3.5</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.html">3</a></li></ul></li><li><a href="../../../../html/服务端编程/数据库/mysql/README.html">README</a></li></ul></li><li><a href="../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li></ul></li><li><a href="#"><span></span>工具快捷键</a><ul><li><a href="../../../../html/工具快捷键/Git常用命令.html">Git常用命令</a></li><li><a href="../../../../html/工具快捷键/vim.html">vim</a></li></ul></li><li><a href="#"><span></span>其他</a><ul><li><a href="../../../../html/其他/HTTP状态码.html">HTTP状态码</a></li><li><a href="../../../../html/其他/通过代理工具提高Github Clone速度.html">通过代理工具提高Github Clone速度</a></li></ul></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/poetries/handbook.git"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0概念简介">概念简介</a></li><li><a href="#t1安装">安装</a></li><li><a href="#t2安装Mitaka">安装Mitaka</a></li><li><a href="#t3卸载">卸载</a></li><li><a href="#t4登陆Dashboard">登陆Dashboard</a></li><li><a href="#t5错误处理">错误处理</a><ul><li><a href="#t6devstack部署openstack遇到rdo源配置问题及解决办法">devstack部署openstack遇到rdo源配置问题及解决办法</a></li><li><a href="#t7端口被占用">端口被占用</a></li></ul></li><li><a href="#t8日志">日志</a><ul><li><a href="#t9Nova日志">Nova日志</a></li><li><a href="#t10Dashboard日志">Dashboard日志</a></li><li><a href="#t11存储日志">存储日志</a></li><li><a href="#t12Glance日志">Glance日志</a></li><li><a href="#t13Neutron日志">Neutron日志</a></li><li><a href="#t14改变日志级别">改变日志级别</a><ul><li><a href="#t15设置Nova服务的日志级别">设置Nova服务的日志级别</a></li><li><a href="#t16设置其他OpenStack服务中的日志级别">设置其他OpenStack服务中的日志级别</a></li></ul></li></ul></li><li><a href="#t17服务管理">服务管理</a><ul><li><a href="#t18重启 Neutron 服务">重启 Neutron 服务</a><ul><li><a href="#t19控制节点">控制节点</a></li><li><a href="#t20网络节点">网络节点</a></li><li><a href="#t21计算节点">计算节点</a></li></ul></li><li><a href="#t22重启cinder服务">重启cinder服务</a><ul><li><a href="#t23存储节点">存储节点</a></li><li><a href="#t24存储节点">存储节点</a></li></ul></li><li><a href="#t25重启glance服务">重启glance服务</a></li><li><a href="#t26重启Swift服务">重启Swift服务</a><ul><li><a href="#t27控制节点">控制节点</a></li><li><a href="#t28存储节点">存储节点</a></li></ul></li><li><a href="#t29重启Nova服务">重启Nova服务</a><ul><li><a href="#t30控制节点">控制节点</a></li><li><a href="#t31计算节点">计算节点</a></li></ul></li></ul></li><li><a href="#t32参考知识">参考知识</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t0&#x6982;&#x5FF5;&#x7B80;&#x4ECB;">&#x6982;&#x5FF5;&#x7B80;&#x4ECB; <a href="#t0&#x6982;&#x5FF5;&#x7B80;&#x4ECB;"> # </a></h2>
+<p><strong>OpenStack</strong>&#xFF1A;OpenStack&#x662F;&#x4E00;&#x4E2A;&#x7531;NASA&#x548C;Rackspace&#x5408;&#x4F5C;&#x7814;&#x53D1;&#x5E76;&#x53D1;&#x8D77;&#x7684;&#xFF0C;&#x4EE5;Apache&#x8BB8;&#x53EF;&#x8BC1;&#x6388;&#x6743;&#x7684;&#x81EA;&#x7531;&#x8F6F;&#x4EF6;&#x548C;&#x5F00;&#x653E;&#x6E90;&#x4EE3;&#x7801;&#x9879;&#x76EE;&#x3002;&#x9879;&#x76EE;&#x76EE;&#x6807;&#x662F;&#x63D0;&#x4F9B;&#x5B9E;&#x65BD;&#x7B80;&#x5355;&#x3001;&#x53EF;&#x5927;&#x89C4;&#x6A21;&#x6269;&#x5C55;&#x3001;&#x4E30;&#x5BCC;&#x3001;&#x6807;&#x51C6;&#x7EDF;&#x4E00;&#x7684;&#x4E91;&#x8BA1;&#x7B97;&#x7BA1;&#x7406;&#x5E73;&#x53F0;&#x3002;OpenStack&#x901A;&#x8FC7;&#x5404;&#x79CD;&#x4E92;&#x8865;&#x7684;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x4E86;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x5373;&#x670D;&#x52A1;&#xFF08;IaaS&#xFF09;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x6BCF;&#x4E2A;&#x670D;&#x52A1;&#x63D0;&#x4F9B;API&#x4EE5;&#x8FDB;&#x884C;&#x96C6;&#x6210;&#x3002;OpenStack&#x662F;&#x7528;Python&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x3002;</p>
+<p><strong>DevStack</strong>&#xFF1A;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x5B89;&#x88C5;OpenStack&#x7684;&#x5DE5;&#x5177;&#x3002;</p>
+<p><strong>OpenStack&#x6838;&#x5FC3;&#x9879;&#x76EE;</strong>&#xFF1A;OpenStack&#x662F;&#x7531;&#x5F88;&#x591A;&#x6838;&#x5FC3;&#x9879;&#x76EE;&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x3002;</p>
+<p><strong>&#x8BA1;&#x7B97;(Compute)</strong>&#xFF1A;Nova&#x3002;&#x4E00;&#x5957;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x7528;&#x4E8E;&#x4E3A;&#x5355;&#x4E2A;&#x7528;&#x6237;&#x6216;&#x4F7F;&#x7528;&#x7FA4;&#x7EC4;&#x7BA1;&#x7406;&#x865A;&#x62DF;&#x673A;&#x5B9E;&#x4F8B;&#x7684;&#x6574;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x6839;&#x636E;&#x7528;&#x6237;&#x9700;&#x6C42;&#x6765;&#x63D0;&#x4F9B;&#x865A;&#x62DF;&#x670D;&#x52A1;&#x3002;&#x8D1F;&#x8D23;&#x865A;&#x62DF;&#x673A;&#x521B;&#x5EFA;&#x3001;&#x5F00;&#x673A;&#x3001;&#x5173;&#x673A;&#x3001;&#x6302;&#x8D77;&#x3001;&#x6682;&#x505C;&#x3001;&#x8C03;&#x6574;&#x3001;&#x8FC1;&#x79FB;&#x3001;&#x91CD;&#x542F;&#x3001;&#x9500;&#x6BC1;&#x7B49;&#x64CD;&#x4F5C;&#xFF0C;&#x914D;&#x7F6E;CPU&#x3001;&#x5185;&#x5B58;&#x7B49;&#x4FE1;&#x606F;&#x89C4;&#x683C;&#x3002;&#x81EA;Austin&#x7248;&#x672C;&#x96C6;&#x6210;&#x5230;&#x9879;&#x76EE;&#x4E2D;&#x3002;</p>
+<p><strong>&#x5BF9;&#x8C61;&#x5B58;&#x50A8;(Object Storage)</strong>&#xFF1A;Swift&#x3002;&#x4E00;&#x5957;&#x7528;&#x4E8E;&#x5728;&#x5927;&#x89C4;&#x6A21;&#x53EF;&#x6269;&#x5C55;&#x7CFB;&#x7EDF;&#x4E2D;&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x5197;&#x4F59;&#x53CA;&#x9AD8;&#x5BB9;&#x9519;&#x673A;&#x5236;&#x5B9E;&#x73B0;&#x5BF9;&#x8C61;&#x5B58;&#x50A8;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x5141;&#x8BB8;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#x6216;&#x8005;&#x68C0;&#x7D22;&#x6587;&#x4EF6;&#x3002;&#x53EF;&#x4E3A;Glance&#x63D0;&#x4F9B;&#x955C;&#x50CF;&#x5B58;&#x50A8;&#xFF0C;&#x4E3A;Cinder&#x63D0;&#x4F9B;&#x5377;&#x5907;&#x4EFD;&#x670D;&#x52A1;&#x3002;&#x81EA;Austin&#x7248;&#x672C;&#x96C6;&#x6210;&#x5230;&#x9879;&#x76EE;&#x4E2D;&#x3002;</p>
+<p><strong>&#x955C;&#x50CF;&#x670D;&#x52A1;(Image Service)</strong>&#xFF1A;Glance&#x3002;&#x4E00;&#x5957;&#x865A;&#x62DF;&#x673A;&#x955C;&#x50CF;&#x67E5;&#x627E;&#x53CA;&#x68C0;&#x7D22;&#x7CFB;&#x7EDF;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x865A;&#x62DF;&#x673A;&#x955C;&#x50CF;&#x683C;&#x5F0F;(AKI&#x3001;AMI&#x3001;ARI&#x3001;ISO&#x3001;QCOW2&#x3001;Raw&#x3001;VDI&#x3001;VHD&#x3001;VMDK)&#xFF0C;&#x6709;&#x521B;&#x5EFA;&#x4E0A;&#x4F20;&#x955C;&#x50CF;&#x3001;&#x5220;&#x9664;&#x955C;&#x50CF;&#x3001;&#x7F16;&#x8F91;&#x955C;&#x50CF;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x7684;&#x529F;&#x80FD;&#x3002;&#x81EA;Bexar&#x7248;&#x672C;&#x96C6;&#x6210;&#x5230;&#x9879;&#x76EE;&#x4E2D;&#x3002;</p>
+<p><strong>&#x8EAB;&#x4EFD;&#x670D;&#x52A1;(Identity Service)</strong>&#xFF1A;Keystone&#x3002;&#x4E3A;OpenStack&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x3001;&#x670D;&#x52A1;&#x89C4;&#x5219;&#x548C;&#x670D;&#x52A1;&#x4EE4;&#x724C;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x7BA1;&#x7406;Domains&#x3001;Projects&#x3001;Users&#x3001;Groups&#x3001;Roles&#x3002;&#x81EA;Essex&#x7248;&#x672C;&#x96C6;&#x6210;&#x5230;&#x9879;&#x76EE;&#x4E2D;&#x3002;</p>
+<p><strong>&#x7F51;&#x7EDC;&amp;&#x5730;&#x5740;&#x7BA1;&#x7406;(Network&#xFF09;</strong>&#xFF1A;Neutron&#x3002;&#x63D0;&#x4F9B;&#x4E91;&#x8BA1;&#x7B97;&#x7684;&#x7F51;&#x7EDC;&#x865A;&#x62DF;&#x5316;&#x6280;&#x672F;&#xFF0C;&#x4E3A;OpenStack&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x3002;&#x4E3A;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;Network&#x3001;Subnet&#x3001;Router&#xFF0C;&#x914D;&#x7F6E;DHCP&#x3001;DNS&#x3001;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x3001;L3&#x670D;&#x52A1;&#xFF0C;&#x7F51;&#x7EDC;&#x652F;&#x6301;GRE&#x3001;VLAN&#x3002;&#x63D2;&#x4EF6;&#x67B6;&#x6784;&#x652F;&#x6301;&#x8BB8;&#x591A;&#x4E3B;&#x6D41;&#x7684;&#x7F51;&#x7EDC;&#x5382;&#x5BB6;&#x548C;&#x6280;&#x672F;&#xFF0C;&#x5982;OpenvSwitch&#x3002;&#x81EA;Folsom&#x7248;&#x672C;&#x96C6;&#x6210;&#x5230;&#x9879;&#x76EE;&#x4E2D;&#x3002;</p>
+<p><strong>&#x5757;&#x5B58;&#x50A8;(Block Storage)</strong>&#xFF1A;Cinder&#x3002;&#x4E3A;&#x8FD0;&#x884C;&#x5B9E;&#x4F8B;&#x63D0;&#x4F9B;&#x7A33;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x5757;&#x5B58;&#x50A8;&#x670D;&#x52A1;&#xFF0C;&#x5B83;&#x7684;&#x63D2;&#x4EF6;&#x9A71;&#x52A8;&#x67B6;&#x6784;&#x6709;&#x5229;&#x4E8E;&#x5757;&#x8BBE;&#x5907;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#xFF0C;&#x5982;&#x521B;&#x5EFA;&#x5377;&#x3001;&#x5220;&#x9664;&#x5377;&#xFF0C;&#x5728;&#x5B9E;&#x4F8B;&#x4E0A;&#x6302;&#x8F7D;&#x548C;&#x5378;&#x8F7D;&#x5377;&#x3002;&#x81EA;Folsom&#x7248;&#x672C;&#x96C6;&#x6210;&#x5230;&#x9879;&#x76EE;&#x4E2D;&#x3002;</p>
+<p><strong>UI &#x754C;&#x9762;(Dashboard)</strong>&#xFF1A;Horizon&#x3002;OpenStack&#x4E2D;&#x5404;&#x79CD;&#x670D;&#x52A1;&#x7684;Web&#x7BA1;&#x7406;&#x95E8;&#x6237;&#xFF0C;&#x7528;&#x4E8E;&#x7B80;&#x5316;&#x7528;&#x6237;&#x5BF9;&#x670D;&#x52A1;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&#x542F;&#x52A8;&#x5B9E;&#x4F8B;&#x3001;&#x5206;&#x914D;IP&#x5730;&#x5740;&#x3001;&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x7B49;&#x3002;&#x81EA;Essex&#x7248;&#x672C;&#x96C6;&#x6210;&#x5230;&#x9879;&#x76EE;&#x4E2D;&#x3002;</p>
+<p><strong>pip</strong>&#xFF1A;&#x662F;&#x4E00;&#x4E2A;Python&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x4E8E;&#x5B89;&#x88C5; PyPI &#x4E0A;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF0C;DevStack&#x5B89;&#x88C5;OpenStack&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x4F7F;&#x7528;&#x5230;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x3002;</p>
+<h2 id="t1&#x5B89;&#x88C5;">&#x5B89;&#x88C5; <a href="#t1&#x5B89;&#x88C5;"> # </a></h2>
+<pre><code>wget --no-check-certificate http://rdo.fedorapeople.org/rdo-release.rpm
+rpm -ivh rdo-release.rpm
+
+yum install -y openstack-packstack
+yum -y update
+
+# &#x63A5;&#x4E0B;&#x6765;&#x4E00;&#x952E;&#x5B89;&#x88C5;OpenStack&#xFF0C;--install-hosts&#x53C2;&#x6570;&#x9700;&#x8981;&#x8F93;&#x5165;&#x4F60;&#x7684;IP&#x5730;&#x5740;
+packstack --install-hosts=your_ip; # &#x63D0;&#x793A;&#x8F93;&#x5165;&#x7684;&#x65F6;&#x5019;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x7B49;&#x5F85;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x5373;&#x53EF;&#x3002;
+packstack --allinone
+
+# &#x8F93;&#x51FA;&#x7ED3;&#x679C;
+You will find full trace in log /var/tmp/packstack/20170113-125411-kkk_H3/manifests/192.168.188.127_controller.pp.log
+Please check log file /var/tmp/packstack/20170113-125411-kkk_H3/openstack-setup.log for more information
+Additional information:
+ * A new answerfile was created in: /root/packstack-answers-20170113-125412.txt
+ * Time synchronization installation was skipped. Please note that unsynchronized time on server instances might be problem for some OpenStack components.
+ * File /root/keystonerc_admin has been created on OpenStack client host 192.168.188.127. To use the command line tools you need to source the file.
+ * To access the OpenStack Dashboard browse to http://192.168.188.127/dashboard .
+Please, find your login credentials stored in the keystonerc_admin in your home directory.
+ * To use Nagios, browse to http://192.168.188.127/nagios username: nagiosadmin, password: de7af5954a834f89
+# reboot &#x91CD;&#x542F;&#x673A;&#x5668;
+</code></pre><h2 id="t2&#x5B89;&#x88C5;Mitaka">&#x5B89;&#x88C5;Mitaka <a href="#t2&#x5B89;&#x88C5;Mitaka"> # </a></h2>
+<p>&#x6267;&#x884C;&#x4E0B;&#x5217;&#x547D;&#x4EE4;&#x5B89;&#x88C5;RDO&#x5E93;<a href="https://www.rdoproject.org/install/quickstart/">RDO&#x5B98;&#x7F51;</a></p>
+<pre><code>yum install https://rdoproject.org/repos/rdo-release.rpm
+yum reinstall -y http://rdo.fedorapeople.org/rdo-release.rpm
+</code></pre><p>&#x5B89;&#x88C5;CentOS openstack RPM repository</p>
+<pre><code>yum install centos-release-openstack-mitaka
+
+# &#x6700;&#x65B0;&#x7684;&#x7248;&#x672C;
+yum install -y centos-release-openstack-newton
+</code></pre><p>&#x66F4;&#x65B0;&#x7CFB;&#x7EDF;&#x5305;</p>
+<pre><code>yum update -y
+</code></pre><p>&#x5B89;&#x88C5;packstack&#x5DE5;&#x5177;</p>
+<pre><code>yum install -y openstack-packstack
+</code></pre><p>&#x5B89;&#x88C5;openstack newton&#x7248;&#x672C;</p>
+<pre><code>packstack --allinone
+</code></pre><p>&#x6267;&#x884C;&#x8FD9;&#x4E00;&#x6B65;&#x4E4B;&#x540E;&#x4F1A;&#x82B1;&#x8D39;&#x4E00;&#x4E9B;&#x65F6;&#x95F4;</p>
+<h2 id="t3&#x5378;&#x8F7D;">&#x5378;&#x8F7D; <a href="#t3&#x5378;&#x8F7D;"> # </a></h2>
+<pre><code class="lang-bash">yum list installed | grep @openstack- | awk <span class="hljs-string">&apos;{ print $1 }&apos;</span> | xargs yum -y remove
+</code></pre>
+<h2 id="t4&#x767B;&#x9646;Dashboard">&#x767B;&#x9646;Dashboard <a href="#t4&#x767B;&#x9646;Dashboard"> # </a></h2>
+<pre><code class="lang-bash">cat /root/keystonerc_admin 
+
+<span class="hljs-built_in">export</span> OS_USERNAME=admin
+<span class="hljs-built_in">export</span> OS_TENANT_NAME=admin
+<span class="hljs-built_in">export</span> OS_PASSWORD=d6433394e15f4175
+<span class="hljs-built_in">export</span> OS_AUTH_URL=http://10.1.199.8:35357/v2.0/
+<span class="hljs-built_in">export</span> PS1=<span class="hljs-string">&apos;[\u@\h \W(keystone_admin)]\$ &apos;</span>
+</code></pre>
+<h2 id="t5&#x9519;&#x8BEF;&#x5904;&#x7406;">&#x9519;&#x8BEF;&#x5904;&#x7406; <a href="#t5&#x9519;&#x8BEF;&#x5904;&#x7406;"> # </a></h2>
+<h3 id="t6devstack&#x90E8;&#x7F72;openstack&#x9047;&#x5230;rdo&#x6E90;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#x53CA;&#x89E3;&#x51B3;&#x529E;&#x6CD5;">devstack&#x90E8;&#x7F72;openstack&#x9047;&#x5230;rdo&#x6E90;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#x53CA;&#x89E3;&#x51B3;&#x529E;&#x6CD5; <a href="#t6devstack&#x90E8;&#x7F72;openstack&#x9047;&#x5230;rdo&#x6E90;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#x53CA;&#x89E3;&#x51B3;&#x529E;&#x6CD5;"> # </a></h3>
+<pre><code class="lang-bash">yum install http://rdo.fedorapeople.org/rdo-release.rpm
+&#x65E0;&#x6CD5;&#x6253;&#x5F00; http://rdo.fedorapeople.org/rdo-release.rpm &#xFF0C;&#x8DF3;&#x8FC7;&#x3002;
+&#x9519;&#x8BEF;&#xFF1A;&#x65E0;&#x987B;&#x4EFB;&#x4F55;&#x5904;&#x7406;
+</code></pre>
+<p>&#x89E3;&#x51B3;&#x529E;&#x6CD5;</p>
+<pre><code class="lang-bash">wget --no-check-certificate http://rdo.fedorapeople.org/rdo-release.rpm
+rpm -ivh rdo-release.rpm
+</code></pre>
+<h3 id="t7&#x7AEF;&#x53E3;&#x88AB;&#x5360;&#x7528;">&#x7AEF;&#x53E3;&#x88AB;&#x5360;&#x7528; <a href="#t7&#x7AEF;&#x53E3;&#x88AB;&#x5360;&#x7528;"> # </a></h3>
+<pre><code class="lang-shell"><span class="hljs-meta">#</span><span class="bash"> &#x67E5;&#x770B;&#x5230;80&#x7AEF;&#x53E3;</span>
+netstat -lnp|grep 80
+
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      27906/nginx: master
+tcp        0      0 0.0.0.0:6080            0.0.0.0:*               LISTEN      32437/python2
+unix  2      [ ACC ]     STREAM     LISTENING     21680    2003/master          public/flush
+unix  2      [ ACC ]     STREAM     LISTENING     13380    1/systemd            /run/lvm/lvmetad.sock
+</code></pre>
+<p>&#x6740;&#x6389;&#x6216;&#x8005;&#x505C;&#x7528;&#x670D;&#x52A1;</p>
+<pre><code class="lang-shell">kill -9 27906
+</code></pre>
+<pre><code>warning: /var/cache/yum/x86_64/7/openstack-newton/packages/hiera-1.3.4-5.el7.noarch.rpm: Header V4 RSA/SHA1 Signature, key ID 764429e6: NOKEY2.4 MB  00:00:53 ETA
+hiera-1.3.4-5.el7.noarch.rpm &#x7684;&#x516C;&#x94A5;&#x5C1A;&#x672A;&#x5B89;&#x88C5;
+</code></pre><pre><code>ERROR : Error appeared during Puppet run: 192.168.188.127_controller.pp
+Error: Could not prefetch nova_flavor provider &apos;openstack&apos;: Command: &apos;openstack [&quot;flavor&quot;, &quot;list&quot;, &quot;--quiet&quot;, &quot;--format&quot;, &quot;csv&quot;, [&quot;--long&quot;, &quot;--all&quot;]]&apos; has been running for more than 40 seconds (tried 4, for a total of 170 seconds)
+</code></pre><h2 id="t8&#x65E5;&#x5FD7;">&#x65E5;&#x5FD7; <a href="#t8&#x65E5;&#x5FD7;"> # </a></h2>
+<p>OpenStack&#x901A;&#x8FC7;&#x751F;&#x6210;&#x5927;&#x91CF;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x6765;&#x5E2E;&#x52A9;&#x6392;&#x67E5;&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x8FD0;&#x884C;&#x671F;&#x95F4;&#x51FA;&#x73B0;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x4ECB;&#x7ECD;&#x51E0;&#x4E2A;&#x5E38;&#x89C1;&#x670D;&#x52A1;&#x7684;&#x76F8;&#x5173;&#x65E5;&#x5FD7;&#x4F4D;&#x7F6E;&#x3002;</p>
+<h3 id="t9Nova&#x65E5;&#x5FD7;">Nova&#x65E5;&#x5FD7; <a href="#t9Nova&#x65E5;&#x5FD7;"> # </a></h3>
+<p>OpenStack&#x8BA1;&#x7B97;&#x670D;&#x52A1;&#x65E5;&#x5FD7;&#x4F4D;&#x4E8E;/var/log/nova&#xFF0C;&#x9ED8;&#x8BA4;&#x6743;&#x9650;&#x62E5;&#x6709;&#x8005;&#x662F;nova&#x7528;&#x6237;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x6BCF;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x90FD;&#x5305;&#x542B;&#x6240;&#x6709;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;,&#x4F8B;&#x5982;nova-compute.log&#x4EC5;&#x5728;&#x8BA1;&#x7B97;&#x8282;&#x70B9;&#x751F;&#x6210;&#x3002;</p>
+<ul>
+<li>nova-compute.log&#xFF1A;&#x865A;&#x62DF;&#x673A;&#x5B9E;&#x4F8B;&#x5728;&#x542F;&#x52A8;&#x548C;&#x8FD0;&#x884C;&#x4E2D;&#x4EA7;&#x751F;&#x7684;&#x65E5;&#x5FD7;</li>
+<li>nova-network.log&#xFF1A;&#x5173;&#x4E8E;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x3001;&#x5206;&#x914D;&#x3001;&#x8DEF;&#x7531;&#x548C;&#x5B89;&#x5168;&#x7EC4;&#x7684;&#x65E5;&#x5FD7;</li>
+<li>nova-manage.log&#xFF1A;&#x8FD0;&#x884C;nova-manage&#x547D;&#x4EE4;&#x65F6;&#x4EA7;&#x751F;&#x7684;&#x65E5;&#x5FD7;</li>
+<li>nova-scheduler.log&#xFF1A;&#x6709;&#x5173;&#x8C03;&#x5EA6;&#x7684;&#xFF0C;&#x5206;&#x914D;&#x4EFB;&#x52A1;&#x7ED9;&#x8282;&#x70B9;&#x4EE5;&#x53CA;&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x76F8;&#x5173;&#x65E5;&#x5FD7;</li>
+<li>nova-objectstore.log&#xFF1A;&#x955C;&#x50CF;&#x76F8;&#x5173;&#x7684;&#x65E5;&#x5FD7;</li>
+<li>nova-api.log&#xFF1A;&#x7528;&#x6237;&#x4E0E;OpenStack&#x4EA4;&#x4E92;&#x4EE5;&#x53CA;OpenStack&#x7EC4;&#x4EF6;&#x95F4;&#x4EA4;&#x4E92;&#x7684;&#x6D88;&#x606F;&#x76F8;&#x5173;&#x65E5;&#x5FD7;</li>
+<li>nova-cert.log&#xFF1A;nova-cert&#x8FC7;&#x7A0B;&#x7684;&#x76F8;&#x5173;&#x65E5;&#x5FD7;</li>
+<li>nova-console.log&#xFF1A;&#x5173;&#x4E8E;nova-console&#x7684;VNC&#x670D;&#x52A1;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</li>
+<li>nova-consoleauth.log&#xFF1A;&#x5173;&#x4E8E;nova-console&#x670D;&#x52A1;&#x7684;&#x9A8C;&#x8BC1;&#x7EC6;&#x8282;</li>
+<li>nova-dhcpbridge.log&#xFF1A;&#x4E0E;dhckbridge&#x670D;&#x52A1;&#x5148;&#x5173;&#x7684;&#x7F51;&#x7EDC;&#x4FE1;&#x606F;</li>
+</ul>
+<h3 id="t10Dashboard&#x65E5;&#x5FD7;">Dashboard&#x65E5;&#x5FD7; <a href="#t10Dashboard&#x65E5;&#x5FD7;"> # </a></h3>
+<p>Dashboard&#x662F;&#x4E00;&#x4E2A;DJango&#x7684;web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x9ED8;&#x8BA4;&#x8FD0;&#x884C;&#x5728;Apache&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x76F8;&#x5E94;&#x7684;&#x8FD0;&#x884C;&#x65E5;&#x5FD7;&#x4E5F;&#x90FD;&#x8BB0;&#x5F55;&#x5728;Apache&#x7684;&#x65E5;&#x5FD7;&#x4E2D;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5728;<code>/var/log/apache2/</code>&#x4E2D;&#x67E5;&#x770B;&#x3002;</p>
+<h3 id="t11&#x5B58;&#x50A8;&#x65E5;&#x5FD7;">&#x5B58;&#x50A8;&#x65E5;&#x5FD7; <a href="#t11&#x5B58;&#x50A8;&#x65E5;&#x5FD7;"> # </a></h3>
+<p>&#x5BF9;&#x8C61;&#x5B58;&#x50A8;Swift&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x5199;&#x5230;syslog&#x4E2D;&#xFF0C;&#x5728;Ubuntu&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;/var/log/syslog&#x67E5;&#x770B;&#xFF0C;&#x5728;&#x5176;&#x4ED6;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x4F4D;&#x4E8E;/var/log/messages&#x4E2D;&#x3002; 
+&#x5757;&#x5B58;&#x50A8;Cinder&#x4EA7;&#x751F;&#x7684;&#x65E5;&#x5FD7;&#x9ED8;&#x8BA4;&#x5B58;&#x653E;&#x5728;/var/log/cinder&#x76EE;&#x5F55;&#x4E2D; </p>
+<ul>
+<li>cinder-api.log&#xFF1A;&#x5173;&#x4E8E;cinder-api&#x670D;&#x52A1;&#x7684;&#x7EC6;&#x8282; </li>
+<li>cinder-scheduler.log&#xFF1A;&#x5173;&#x4E8E;cinder&#x8C03;&#x5EA6;&#x670D;&#x52A1;&#x7684;&#x64CD;&#x4F5C;&#x7684;&#x7EC6;&#x8282; </li>
+<li>cinder-volume.log&#xFF1A;&#x4E0E;cinder&#x5377;&#x670D;&#x52A1;&#x76F8;&#x5173;&#x7684;&#x65E5;&#x5FD7;&#x9879;</li>
+</ul>
+<p>Keystone&#x65E5;&#x5FD7;</p>
+<p>&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;Keystone&#x670D;&#x52A1;&#x7684;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x5728;/var/log/keystone/keystone.log&#x4E2D;&#x3002;</p>
+<h3 id="t12Glance&#x65E5;&#x5FD7;">Glance&#x65E5;&#x5FD7; <a href="#t12Glance&#x65E5;&#x5FD7;"> # </a></h3>
+<p>&#x955C;&#x50CF;&#x670D;&#x52A1;Glance&#x7684;&#x65E5;&#x5FD7;&#x9ED8;&#x8BA4;&#x5B58;&#x653E;&#x5728;/var/log/glance&#x76EE;&#x5F55;&#x4E2D; </p>
+<ul>
+<li>api.log&#xFF1A;Glance API&#x76F8;&#x5173;&#x7684;&#x65E5;&#x5FD7; </li>
+<li>registry.log&#xFF1A;Glance registry&#x670D;&#x52A1;&#x76F8;&#x5173;&#x7684;&#x65E5;&#x5FD7; 
+&#x6839;&#x636E;&#x65E5;&#x5FD7;&#x914D;&#x7F6E;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x4F1A;&#x4FDD;&#x5B58;&#x8BF8;&#x5982;&#x5143;&#x4FE1;&#x606F;&#x66F4;&#x65B0;&#x548C;&#x8BBF;&#x95EE;&#x8BB0;&#x5F55;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x3002;</li>
+</ul>
+<h3 id="t13Neutron&#x65E5;&#x5FD7;">Neutron&#x65E5;&#x5FD7; <a href="#t13Neutron&#x65E5;&#x5FD7;"> # </a></h3>
+<p>&#x7F51;&#x7EDC;&#x670D;&#x52A1;Neutron&#x7684;&#x65E5;&#x5FD7;&#x9ED8;&#x8BA4;&#x5B58;&#x653E;&#x5728;/var/log/neutron&#x76EE;&#x5F55;&#x4E2D; </p>
+<ul>
+<li>dhcp-agent.log&#xFF1A;&#x5173;&#x4E8E;dhcp-agent&#x7684;&#x65E5;&#x5FD7; </li>
+<li>l3-agent.log&#xFF1A;&#x4E0E;l3&#x4EE3;&#x7406;&#x53CA;&#x5176;&#x529F;&#x80FD;&#x76F8;&#x5173;&#x7684;&#x65E5;&#x5FD7; </li>
+<li>metadata-agent.log&#xFF1A;&#x901A;&#x8FC7;neutron&#x4EE3;&#x7406;&#x7ED9;Nova&#x5143;&#x6570;&#x636E;&#x670D;&#x52A1;&#x7684;&#x76F8;&#x5173;&#x65E5;&#x5FD7; </li>
+<li>openvswitch-agent.log&#xFF1A;&#x4E0E;openvswitch&#x76F8;&#x5173;&#x64CD;&#x4F5C;&#x7684;&#x65E5;&#x5FD7;&#x9879;&#xFF0C;&#x5728;&#x5177;&#x4F53;&#x5B9E;&#x73B0;OpenStack&#x7F51;&#x7EDC;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x5C31;&#x4F1A;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x540D; </li>
+<li>server.log&#xFF1A;&#x4E0E;Neutron API&#x670D;&#x52A1;&#x76F8;&#x5173;&#x7684;&#x65E5;&#x5FD7;</li>
+</ul>
+<h3 id="t14&#x6539;&#x53D8;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;">&#x6539;&#x53D8;&#x65E5;&#x5FD7;&#x7EA7;&#x522B; <a href="#t14&#x6539;&#x53D8;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;"> # </a></h3>
+<p>&#x6BCF;&#x4E2A;OpenStack&#x670D;&#x52A1;&#x7684;&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;&#x5747;&#x4E3A;&#x8B66;&#x544A;&#x7EA7;&#xFF08;Warning&#xFF09;&#xFF0C;&#x8BE5;&#x7EA7;&#x522B;&#x7684;&#x65E5;&#x5FD7;&#x5BF9;&#x4E8E;&#x4E86;&#x89E3;&#x8FD0;&#x884C;&#x4E2D;&#x7CFB;&#x7EDF;&#x7684;&#x72B6;&#x6001;&#x6216;&#x8005;&#x57FA;&#x672C;&#x7684;&#x9519;&#x8BEF;&#x5B9A;&#x4F4D;&#x5DF2;&#x7ECF;&#x591F;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x65F6;&#x5019;&#x9700;&#x8981;&#x4E0A;&#x8C03;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;&#x6765;&#x5E2E;&#x52A9;&#x8BCA;&#x65AD;&#x95EE;&#x9898;&#xFF0C;&#x6216;&#x8005;&#x4E0B;&#x8C03;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;&#x4EE5;&#x51CF;&#x5C11;&#x65E5;&#x5FD7;&#x566A;&#x58F0;&#x3002;&#x7531;&#x4E8E;&#x5404;&#x4E2A;&#x670D;&#x52A1;&#x7684;&#x65E5;&#x5FD7;&#x8BBE;&#x7F6E;&#x65B9;&#x5F0F;&#x7C7B;&#x4F3C;&#xFF0C;&#x56E0;&#x6B64;&#x8FD9;&#x91CC;&#x5C31;&#x4EE5;Nova&#x670D;&#x52A1;&#x4E3A;&#x4F8B;&#x3002;</p>
+<h4 id="t15&#x8BBE;&#x7F6E;Nova&#x670D;&#x52A1;&#x7684;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;">&#x8BBE;&#x7F6E;Nova&#x670D;&#x52A1;&#x7684;&#x65E5;&#x5FD7;&#x7EA7;&#x522B; <a href="#t15&#x8BBE;&#x7F6E;Nova&#x670D;&#x52A1;&#x7684;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;"> # </a></h4>
+<pre><code>vi /etc/nova/logging.conf
+</code></pre><p>&#x5C06;&#x5217;&#x51FA;&#x7684;&#x670D;&#x52A1;&#x7684;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;&#x4FEE;&#x6539;&#x4E3A;DEBUG&#x3001;INFO&#x6216;WARNING</p>
+<pre><code>[logger_root]
+level = WARNING
+handlers = null
+
+[logger_nova]
+level = INFO
+handlers = stderr
+qualname = nova
+......
+</code></pre><h4 id="t16&#x8BBE;&#x7F6E;&#x5176;&#x4ED6;OpenStack&#x670D;&#x52A1;&#x4E2D;&#x7684;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;">&#x8BBE;&#x7F6E;&#x5176;&#x4ED6;OpenStack&#x670D;&#x52A1;&#x4E2D;&#x7684;&#x65E5;&#x5FD7;&#x7EA7;&#x522B; <a href="#t16&#x8BBE;&#x7F6E;&#x5176;&#x4ED6;OpenStack&#x670D;&#x52A1;&#x4E2D;&#x7684;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;"> # </a></h4>
+<p>&#x5176;&#x4ED6;&#x670D;&#x52A1;&#xFF08;&#x5982;Glance&#x548C;Keystone&#xFF09;&#x76EE;&#x524D;&#x90FD;&#x5728;&#x5B83;&#x4EEC;&#x7684;&#x4E3B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E;&#x4E86;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;&#x9897;&#xFF0C;&#x4F8B;&#x5982;/etc/glance/glance-api.conf&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x4E2D;&#x5BF9;&#x5E94;&#x8BBE;&#x7F6E;&#x6765;&#x5C06;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;&#x8C03;&#x6574;&#x5230;INFO&#x548C;DEBUG&#xFF1A;</p>
+<pre><code>[DEFAULT]
+#set INFO log level output
+verbose = False
+
+#set DEBUG log level output
+debug = False
+</code></pre><h2 id="t17&#x670D;&#x52A1;&#x7BA1;&#x7406;">&#x670D;&#x52A1;&#x7BA1;&#x7406; <a href="#t17&#x670D;&#x52A1;&#x7BA1;&#x7406;"> # </a></h2>
+<pre><code class="lang-bash">systemctl stop httpd
+systemctl start httpd
+</code></pre>
+<h3 id="t18&#x91CD;&#x542F; Neutron &#x670D;&#x52A1;">&#x91CD;&#x542F; Neutron &#x670D;&#x52A1; <a href="#t18&#x91CD;&#x542F; Neutron &#x670D;&#x52A1;"> # </a></h3>
+<h4 id="t19&#x63A7;&#x5236;&#x8282;&#x70B9;">&#x63A7;&#x5236;&#x8282;&#x70B9; <a href="#t19&#x63A7;&#x5236;&#x8282;&#x70B9;"> # </a></h4>
+<pre><code>service openstack-nova-api restart
+service openstack-nova-scheduler restart
+service openstack-nova-conductor restart
+service neutron-server restart
+</code></pre><h4 id="t20&#x7F51;&#x7EDC;&#x8282;&#x70B9;">&#x7F51;&#x7EDC;&#x8282;&#x70B9; <a href="#t20&#x7F51;&#x7EDC;&#x8282;&#x70B9;"> # </a></h4>
+<pre><code>service openvswitch restart
+service neutron-openvswitch-agent restart&#xFF08;fuel&#x63A7;&#x5236;&#x8282;&#x70B9;&#x9ED8;&#x8BA4;stop&#xFF09;
+service neutron-l3-agent restart&#xFF08;fuel&#x63A7;&#x5236;&#x8282;&#x70B9;&#x9ED8;&#x8BA4;stop&#xFF09;
+service neutron-dhcp-agent restart&#xFF08;fuel&#x63A7;&#x5236;&#x8282;&#x70B9;&#x9ED8;&#x8BA4;stop&#xFF09;
+service neutron-metadata-agent restart&#xFF08;fuel&#x63A7;&#x5236;&#x8282;&#x70B9;&#x9ED8;&#x8BA4;stop&#xFF09;
+</code></pre><h4 id="t21&#x8BA1;&#x7B97;&#x8282;&#x70B9;">&#x8BA1;&#x7B97;&#x8282;&#x70B9; <a href="#t21&#x8BA1;&#x7B97;&#x8282;&#x70B9;"> # </a></h4>
+<pre><code>service neutron-openvswitch-agent restart
+service openvswitch restart
+</code></pre><h3 id="t22&#x91CD;&#x542F;cinder&#x670D;&#x52A1;">&#x91CD;&#x542F;cinder&#x670D;&#x52A1; <a href="#t22&#x91CD;&#x542F;cinder&#x670D;&#x52A1;"> # </a></h3>
+<h4 id="t23&#x5B58;&#x50A8;&#x8282;&#x70B9;">&#x5B58;&#x50A8;&#x8282;&#x70B9; <a href="#t23&#x5B58;&#x50A8;&#x8282;&#x70B9;"> # </a></h4>
+<pre><code>service openstack-cinder-api restart
+service openstack-cinder-scheduler restart
+</code></pre><h4 id="t24&#x5B58;&#x50A8;&#x8282;&#x70B9;">&#x5B58;&#x50A8;&#x8282;&#x70B9; <a href="#t24&#x5B58;&#x50A8;&#x8282;&#x70B9;"> # </a></h4>
+<pre><code>service openstack-cinder-volume restart
+</code></pre><h3 id="t25&#x91CD;&#x542F;glance&#x670D;&#x52A1;">&#x91CD;&#x542F;glance&#x670D;&#x52A1; <a href="#t25&#x91CD;&#x542F;glance&#x670D;&#x52A1;"> # </a></h3>
+<pre><code>service openstack-glance-api restart
+service openstack-glance-registry restart
+</code></pre><h3 id="t26&#x91CD;&#x542F;Swift&#x670D;&#x52A1;">&#x91CD;&#x542F;Swift&#x670D;&#x52A1; <a href="#t26&#x91CD;&#x542F;Swift&#x670D;&#x52A1;"> # </a></h3>
+<h4 id="t27&#x63A7;&#x5236;&#x8282;&#x70B9;">&#x63A7;&#x5236;&#x8282;&#x70B9; <a href="#t27&#x63A7;&#x5236;&#x8282;&#x70B9;"> # </a></h4>
+<pre><code>service openstack-swift-proxy restart
+service memcached restart
+</code></pre><h4 id="t28&#x5B58;&#x50A8;&#x8282;&#x70B9;">&#x5B58;&#x50A8;&#x8282;&#x70B9; <a href="#t28&#x5B58;&#x50A8;&#x8282;&#x70B9;"> # </a></h4>
+<pre><code>service openstack-swift-account restart
+service openstack-swift-account-auditor restart
+service openstack-swift-account-reaper restart
+service openstack-swift-account-replicator restart
+service openstack-swift-container restart
+service openstack-swift-container-auditor restart
+service openstack-swift-container-replicator restart
+service openstack-swift-container-updater restart
+service openstack-swift-object restart
+service openstack-swift-object-auditor restart
+service openstack-swift-object-replicator restart
+service openstack-swift-object-updater restart
+</code></pre><h3 id="t29&#x91CD;&#x542F;Nova&#x670D;&#x52A1;">&#x91CD;&#x542F;Nova&#x670D;&#x52A1; <a href="#t29&#x91CD;&#x542F;Nova&#x670D;&#x52A1;"> # </a></h3>
+<h4 id="t30&#x63A7;&#x5236;&#x8282;&#x70B9;">&#x63A7;&#x5236;&#x8282;&#x70B9; <a href="#t30&#x63A7;&#x5236;&#x8282;&#x70B9;"> # </a></h4>
+<pre><code>service openstack-nova-api restart
+service openstack-nova-cert restart
+service openstack-nova-consoleauth restart
+service openstack-nova-scheduler restart
+service openstack-nova-conductor restart
+service openstack-nova-novncproxy restart
+</code></pre><h4 id="t31&#x8BA1;&#x7B97;&#x8282;&#x70B9;">&#x8BA1;&#x7B97;&#x8282;&#x70B9; <a href="#t31&#x8BA1;&#x7B97;&#x8282;&#x70B9;"> # </a></h4>
+<pre><code>service libvirtd restart
+service openstack-nova-compute restart
+</code></pre><h2 id="t32&#x53C2;&#x8003;&#x77E5;&#x8BC6;">&#x53C2;&#x8003;&#x77E5;&#x8BC6; <a href="#t32&#x53C2;&#x8003;&#x77E5;&#x8BC6;"> # </a></h2>
+<ul>
+<li><a href="http://www.infocool.net/kb/OpenStack/201609/187078.htmldddAA">&#x5728; CentOS7.2 &#x4E0A;&#x5B89;&#x88C5; OpenStack Liberty &#x7248;</a></li>
+<li><a href="http://www.trystack.cn/Articles/openstack-deployment.html">OpenStack&#x90E8;&#x7F72;&#x90FD;&#x6709;&#x54EA;&#x4E9B;&#x65B9;&#x5F0F;</a></li>
+<li><a href="http://promisejohn.github.io/2015/05/07/HelloOpenstack/">Openstack&#x5B89;&#x88C5;&#x90E8;&#x7F72;</a></li>
+<li><a href="http://www.chenshake.com/centos-6-4-rdo-test/">CentOS 6.4 RDO&#x6D4B;&#x8BD5;</a></li>
+<li><a href="http://linuxpitstop.com/openstack-mitaka-rdo-on-centos-7/">Install And Configure OpenStack Mitaka RDO On CentOS 7</a></li>
+<li><a href="http://www.chenshake.com/openstack-havana-dashboard-to-test-and-use/#i">OpenStack Havana Dashboard&#x6D4B;&#x8BD5;&#x548C;&#x4F7F;&#x7528;</a></li>
+<li><a href="http://cloudman.cc/">OpenStack&#x5B89;&#x88C5;&#x89C6;&#x9891;&#x6559;&#x7A0B;</a></li>
+<li><a href="https://www.ustack.com/blog/install-openstack-in-10mins/#OpenStack-3/">10&#x5206;&#x949F;&#x5B89;&#x88C5;OpenStack</a></li>
+<li><a href="http://download.cirros-cloud.net/0.3.4/">cirros&#x955C;&#x50CF;&#x4E0B;&#x8F7D;</a></li>
+<li><a href="http://blog.csdn.net/qq_20154221/article/details/51586537">&#x5236;&#x4F5C;openstack&#x955C;&#x50CF;win7.qcow2&#xFF08;centos/ubuntu/win&#x955C;&#x50CF;&#x5206;&#x4EAB;&#xFF09;</a> &#x955C;&#x50CF;&#x5BC6;&#x7801;&#x5747;&#x4E3A; intel@123</li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

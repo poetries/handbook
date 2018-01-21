@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handbook</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            <img src="../../../idoc-logo.svg">
+        
+    </div>
+<ul><li><a href="../../../index.html">Git常用命令</a></li><li><a href="#"><span></span>前端</a><ul><li><a href="#"><span></span>Javascript</a><ul><li><a href="#"><span></span>RN</a><ul><li><a href="../../../html/前端/Javascript/RN/React-native Android环境搭建.html">React-native Android环境搭建</a></li></ul></li><li><a href="../../../html/前端/Javascript/思维导图.html">思维导图</a></li><li class="active"><a href="../../../html/前端/Javascript/正则表达式.html">正则表达式</a></li><li><a href="../../../html/前端/Javascript/轻量高效的开源JavaScript插件和库.html">轻量高效的开源JavaScript插件和库</a></li></ul></li></ul></li><li><a href="#"><span></span>服务端编程</a><ul><li><a href="#"><span></span>数据库</a><ul><li><a href="../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li><li><a href="#"><span></span>系统服务</a><ul><li><a href="../../../html/服务端编程/系统服务/docker.html">docker</a></li><li><a href="#"><span></span>shell</a><ul><li><a href="../../../html/服务端编程/系统服务/shell/shell-regex.html">shell-regex</a></li><li><a href="../../../html/服务端编程/系统服务/shell/Shell.html">Shell</a></li></ul></li><li><a href="../../../html/服务端编程/系统服务/Nginx.html">Nginx</a></li></ul></li><li><a href="#"><span></span>Linux</a><ul></ul></li><li><a href="#"><span></span>数据库</a><ul><li><a href="#"><span></span>mysql</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/21-minutes-MySQL-basic-entry.html">21-minutes-MySQL-basic-entry</a></li><li><a href="../../../html/服务端编程/数据库/mysql/awesome-mysql.html">awesome-mysql</a></li><li><a href="#"><span></span>chapter1</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.1.html">1.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.2.html">1.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.3.html">1.3</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.4.html">1.4</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.html">1</a></li></ul></li><li><a href="#"><span></span>chapter17</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter17/17.1.html">17.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter17/17.2.html">17.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter17/17.3.html">17.3</a></li></ul></li><li><a href="#"><span></span>chapter2</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.1.html">2.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.2.html">2.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.3.html">2.3</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.4.html">2.4</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.5.html">2.5</a></li></ul></li><li><a href="#"><span></span>chapter3</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.1.html">3.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.2.html">3.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.3.html">3.3</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.4.html">3.4</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.5.html">3.5</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.html">3</a></li></ul></li><li><a href="../../../html/服务端编程/数据库/mysql/README.html">README</a></li></ul></li><li><a href="../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li></ul></li><li><a href="#"><span></span>工具快捷键</a><ul><li><a href="../../../html/工具快捷键/Git常用命令.html">Git常用命令</a></li><li><a href="../../../html/工具快捷键/vim.html">vim</a></li></ul></li><li><a href="#"><span></span>其他</a><ul><li><a href="../../../html/其他/HTTP状态码.html">HTTP状态码</a></li><li><a href="../../../html/其他/通过代理工具提高Github Clone速度.html">通过代理工具提高Github Clone速度</a></li></ul></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/poetries/handbook.git"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0一些正则表达式">一些正则表达式</a></li><li><a href="#t1一些匹配方法">一些匹配方法</a><ul><li><a href="#t2去除首尾的">去除首尾的</a></li><li><a href="#t3javascript:; 、javascript:void(0)">javascript:; 、javascript:void(0)</a></li><li><a href="#t4匹配">匹配</a></li><li><a href="#t5匹配一些字符">匹配一些字符</a></li><li><a href="#t6关键字符替换">关键字符替换</a></li><li><a href="#t7替换参数中的值">替换参数中的值</a></li><li><a href="#t8匹配括号内容">匹配括号内容</a></li><li><a href="#t9调换">调换</a></li><li><a href="#t10字符串截取">字符串截取</a></li></ul></li><li><a href="#t11验证">验证</a><ul><li><a href="#t12小数点后几位验证">小数点后几位验证</a></li><li><a href="#t13密码强度正则">密码强度正则</a></li><li><a href="#t14校验中文">校验中文</a></li><li><a href="#t15包含中文正则">包含中文正则</a></li><li><a href="#t16由数字、26个英文字母或下划线组成的字符串">由数字、26个英文字母或下划线组成的字符串</a></li><li><a href="#t17身份证号正则">身份证号正则</a></li><li><a href="#t18校验日期">校验日期</a></li><li><a href="#t19校验文件后缀">校验文件后缀</a></li><li><a href="#t20用户名正则">用户名正则</a></li><li><a href="#t21整数正则">整数正则</a></li><li><a href="#t22数字正则">数字正则</a></li><li><a href="#t23Email正则">Email正则</a></li><li><a href="#t24传真号码">传真号码</a></li><li><a href="#t25手机号码正则">手机号码正则</a></li><li><a href="#t26URL正则">URL正则</a></li><li><a href="#t27IPv4地址正则">IPv4地址正则</a></li><li><a href="#t28十六进制颜色正则">十六进制颜色正则</a></li><li><a href="#t29QQ号码正则">QQ号码正则</a></li><li><a href="#t30微信号正则">微信号正则</a></li><li><a href="#t31车牌号正则">车牌号正则</a></li><li><a href="#t32颜色值校验">颜色值校验</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t0&#x4E00;&#x4E9B;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;">&#x4E00;&#x4E9B;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F; <a href="#t0&#x4E00;&#x4E9B;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"> # </a></h2>
+<p>&#x901A;&#x8FC7;&#x4E00;&#x4E9B;&#x4F8B;&#x5B50;&#x6765;&#x5B66;&#x4E60;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6458;&#x5F55;&#xFF0C;js&#x6B63;&#x5219;&#x51FD;&#x6570;match&#x3001;exec&#x3001;test&#x3001;search&#x3001;replace&#x3001;split</p>
+<h2 id="t1&#x4E00;&#x4E9B;&#x5339;&#x914D;&#x65B9;&#x6CD5;">&#x4E00;&#x4E9B;&#x5339;&#x914D;&#x65B9;&#x6CD5; <a href="#t1&#x4E00;&#x4E9B;&#x5339;&#x914D;&#x65B9;&#x6CD5;"> # </a></h2>
+<h3 id="t2&#x53BB;&#x9664;&#x9996;&#x5C3E;&#x7684;">&#x53BB;&#x9664;&#x9996;&#x5C3E;&#x7684; <a href="#t2&#x53BB;&#x9664;&#x9996;&#x5C3E;&#x7684;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x53BB;&#x9664;&#x9996;&#x5C3E;&#x7684;&#x2018;/&#x2019;</span>
+input = input.replace(<span class="hljs-regexp">/^\/*|\/*$/g</span>,<span class="hljs-string">&apos;&apos;</span>);
+</code></pre>
+<h3 id="t3javascript:; &#x3001;javascript:void(0)">javascript:; &#x3001;javascript:void(0) <a href="#t3javascript:; &#x3001;javascript:void(0)"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-string">&apos;javascript:;&apos;</span>.match(<span class="hljs-regexp">/^(javascript\s*\:|#)/</span>);
+<span class="hljs-comment">//[&quot;javascript:&quot;, &quot;javascript:&quot;, index: 0, input: &quot;javascript:;&quot;]</span>
+</code></pre>
+<h3 id="t4&#x5339;&#x914D;">&#x5339;&#x914D; <a href="#t4&#x5339;&#x914D;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;access_token=dcb90862-29fb-4b03-93ff-5f0a8f546250; refresh_token=702f4815-a0ff-456c-82ce-24e4d7d619e6; account_uid=1361177947320160506170322436&quot;</span>;
+str.match(<span class="hljs-regexp">/account_uid=([^\=]+(\;)|(.*))/ig</span>);
+</code></pre>
+<h3 id="t5&#x5339;&#x914D;&#x4E00;&#x4E9B;&#x5B57;&#x7B26;">&#x5339;&#x914D;&#x4E00;&#x4E9B;&#x5B57;&#x7B26; <a href="#t5&#x5339;&#x914D;&#x4E00;&#x4E9B;&#x5B57;&#x7B26;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&apos;asdf html-webpack-plugin for &quot;index/index.html&quot; asdfasdf&apos;</span>;
+str.match(<span class="hljs-regexp">/html-webpack-plugin for \&quot;(.*)\&quot;/ig</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">RegExp</span>.$<span class="hljs-number">1</span>) <span class="hljs-comment">//=&gt;index/index.html</span>
+</code></pre>
+<h3 id="t6&#x5173;&#x952E;&#x5B57;&#x7B26;&#x66FF;&#x6362;">&#x5173;&#x952E;&#x5B57;&#x7B26;&#x66FF;&#x6362; <a href="#t6&#x5173;&#x952E;&#x5B57;&#x7B26;&#x66FF;&#x6362;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-string">&apos;css/[hash:8].index-index.css&apos;</span>.replace(<span class="hljs-regexp">/\[(?:(\w+):)?(contenthash|hash)(?::([a-z]+\d*))?(?::(\d+))?\]/ig</span>,<span class="hljs-string">&apos;(.*)&apos;</span>);
+<span class="hljs-comment">//=&gt; css/(.*).index-index.css</span>
+</code></pre>
+<h3 id="t7&#x66FF;&#x6362;&#x53C2;&#x6570;&#x4E2D;&#x7684;&#x503C;">&#x66FF;&#x6362;&#x53C2;&#x6570;&#x4E2D;&#x7684;&#x503C; <a href="#t7&#x66FF;&#x6362;&#x53C2;&#x6570;&#x4E2D;&#x7684;&#x503C;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str  = <span class="hljs-string">&apos;&lt;!DOCTYPE html&gt;&lt;html manifest=&quot;../../cache.manifest&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&apos;</span>;
+str.replace(<span class="hljs-regexp">/&lt;html[^&gt;]*manifest=&quot;([^&quot;]*)&quot;[^&gt;]*&gt;/</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">word</span>)</span>{
+   <span class="hljs-keyword">return</span> word.replace(<span class="hljs-regexp">/manifest=&quot;([^&quot;]*)&quot;/</span>,<span class="hljs-string">&apos;manifest=&quot;&apos;</span>+url+<span class="hljs-string">&apos;&quot;&apos;</span>);
+}).replace(<span class="hljs-regexp">/&lt;html(\s?[^\&gt;]*\&gt;)/</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">word</span>)</span>{
+    <span class="hljs-keyword">if</span>(word.indexOf(<span class="hljs-string">&apos;manifest&apos;</span>)) <span class="hljs-keyword">return</span> word;
+    <span class="hljs-keyword">return</span> word.replace(<span class="hljs-string">&apos;&lt;html&apos;</span>,<span class="hljs-string">&apos;&lt;html manifest=&quot;&apos;</span>+url+<span class="hljs-string">&apos;&quot;&apos;</span>);
+});
+<span class="hljs-comment">//&#x539F;&#xFF1A;&lt;!DOCTYPE html&gt;&lt;html manifest=&quot;../../cache.manifest&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="hljs-comment">//&#x66FF;&#x6362;&#x6210;=&gt; &lt;!DOCTYPE html&gt;&lt;html manifest=&quot;cache.manifest&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+</code></pre>
+<h3 id="t8&#x5339;&#x914D;&#x62EC;&#x53F7;&#x5185;&#x5BB9;">&#x5339;&#x914D;&#x62EC;&#x53F7;&#x5185;&#x5BB9; <a href="#t8&#x5339;&#x914D;&#x62EC;&#x53F7;&#x5185;&#x5BB9;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-string">&apos;max_length(12)&apos;</span>.match(<span class="hljs-regexp">/^(.+?)\((.+)\)$/</span>)
+<span class="hljs-comment">// [&quot;max_length(12)&quot;, &quot;max_length&quot;, &quot;12&quot;, index: 0, input: &quot;max_length(12)&quot;]</span>
+</code></pre>
+<h3 id="t9&#x8C03;&#x6362;">&#x8C03;&#x6362; <a href="#t9&#x8C03;&#x6362;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> name = <span class="hljs-string">&quot;Doe, John&quot;</span>; 
+name.replace(<span class="hljs-regexp">/(\w+)\s*, \s*(\w+)/</span>, <span class="hljs-string">&quot;$2 $1&quot;</span>); 
+<span class="hljs-comment">//=&gt; &quot;John Doe&quot;</span>
+</code></pre>
+<h3 id="t10&#x5B57;&#x7B26;&#x4E32;&#x622A;&#x53D6;">&#x5B57;&#x7B26;&#x4E32;&#x622A;&#x53D6; <a href="#t10&#x5B57;&#x7B26;&#x4E32;&#x622A;&#x53D6;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&apos;asfdf === sdfaf ##&apos;</span>
+str.match(<span class="hljs-regexp">/[^===]+(?=[===])/g</span>) <span class="hljs-comment">// &#x622A;&#x53D6; ===&#x4E4B;&#x524D;&#x7684;&#x5185;&#x5BB9;</span>
+
+str.replace(<span class="hljs-regexp">/\n/g</span>,<span class="hljs-string">&apos;&apos;</span>)  <span class="hljs-comment">// &#x66FF;&#x6362;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684; \n &#x6362;&#x884C;&#x5B57;&#x7B26;</span>
+</code></pre>
+<h2 id="t11&#x9A8C;&#x8BC1;">&#x9A8C;&#x8BC1; <a href="#t11&#x9A8C;&#x8BC1;"> # </a></h2>
+<h3 id="t12&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x51E0;&#x4F4D;&#x9A8C;&#x8BC1;">&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x51E0;&#x4F4D;&#x9A8C;&#x8BC1; <a href="#t12&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x51E0;&#x4F4D;&#x9A8C;&#x8BC1;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x7CBE;&#x786E;&#x5230;1&#x4F4D;&#x5C0F;&#x6570;</span>
+/^[<span class="hljs-number">1</span><span class="hljs-number">-9</span>][<span class="hljs-number">0</span><span class="hljs-number">-9</span>]*$|^[<span class="hljs-number">1</span><span class="hljs-number">-9</span>][<span class="hljs-number">0</span><span class="hljs-number">-9</span>]*\.[<span class="hljs-number">0</span><span class="hljs-number">-9</span>]$|^<span class="hljs-number">0</span>\.[<span class="hljs-number">0</span><span class="hljs-number">-9</span>]$/.test(<span class="hljs-number">1.2</span>);
+
+<span class="hljs-comment">// &#x7CBE;&#x786E;&#x5230;2&#x4F4D;&#x5C0F;&#x6570;</span>
+/^[<span class="hljs-number">0</span><span class="hljs-number">-9</span>]+(.[<span class="hljs-number">0</span><span class="hljs-number">-9</span>]{<span class="hljs-number">2</span>})?$/.test(<span class="hljs-number">1.221</span>);
+</code></pre>
+<h3 id="t13&#x5BC6;&#x7801;&#x5F3A;&#x5EA6;&#x6B63;&#x5219;">&#x5BC6;&#x7801;&#x5F3A;&#x5EA6;&#x6B63;&#x5219; <a href="#t13&#x5BC6;&#x7801;&#x5F3A;&#x5EA6;&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js">// &#x5FC5;&#x987B;&#x662F;&#x5305;&#x542B;&#x5927;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF0C;&#x957F;&#x5EA6;&#x5728;8-10&#x4E4B;&#x95F4;&#x3002;
+/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$/.test(&quot;weeeeeeeW2&quot;);
+//&#x5BC6;&#x7801;&#x5F3A;&#x5EA6;&#x6B63;&#x5219;&#xFF0C;&#x6700;&#x5C11;6&#x4F4D;&#xFF0C;&#x5305;&#x62EC;&#x81F3;&#x5C11;1&#x4E2A;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#xFF0C;1&#x4E2A;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#xFF0C;1&#x4E2A;&#x6570;&#x5B57;&#xFF0C;1&#x4E2A;&#x7279;&#x6B8A;&#x5B57;&#x7B26;
+/^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&amp;*? ]).*$/.test(&quot;diaoD123#&quot;);
+//&#x8F93;&#x51FA; true
+</code></pre>
+<h3 id="t14&#x6821;&#x9A8C;&#x4E2D;&#x6587;">&#x6821;&#x9A8C;&#x4E2D;&#x6587; <a href="#t14&#x6821;&#x9A8C;&#x4E2D;&#x6587;"> # </a></h3>
+<pre><code class="lang-js">/^[\u4e00-\u9fa5]{<span class="hljs-number">0</span>,}$/.test(<span class="hljs-string">&quot;&#x4F46;&#x662F;d&quot;</span>); <span class="hljs-comment">//false</span>
+/^[\u4e00-\u9fa5]{<span class="hljs-number">0</span>,}$/.test(<span class="hljs-string">&quot;&#x4F46;&#x662F;&quot;</span>); <span class="hljs-comment">//true</span>
+/^[\u4e00-\u9fa5]{<span class="hljs-number">0</span>,}$/.test(<span class="hljs-string">&quot;&#x4F46;&#x662F;&quot;</span>); <span class="hljs-comment">//true</span>
+</code></pre>
+<h3 id="t15&#x5305;&#x542B;&#x4E2D;&#x6587;&#x6B63;&#x5219;">&#x5305;&#x542B;&#x4E2D;&#x6587;&#x6B63;&#x5219; <a href="#t15&#x5305;&#x542B;&#x4E2D;&#x6587;&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js">/[\u4E00-\u9FA5]/.test(<span class="hljs-string">&quot;&#x4F46;&#x662F;d&quot;</span>) <span class="hljs-comment">//true</span>
+</code></pre>
+<h3 id="t16&#x7531;&#x6570;&#x5B57;&#x3001;26&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6216;&#x4E0B;&#x5212;&#x7EBF;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32;">&#x7531;&#x6570;&#x5B57;&#x3001;26&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6216;&#x4E0B;&#x5212;&#x7EBF;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32; <a href="#t16&#x7531;&#x6570;&#x5B57;&#x3001;26&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6216;&#x4E0B;&#x5212;&#x7EBF;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32;"> # </a></h3>
+<pre><code class="lang-js">/^\w+$/.test(<span class="hljs-string">&quot;ds2_@#&quot;</span>); <span class="hljs-comment">// false</span>
+</code></pre>
+<h3 id="t17&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x6B63;&#x5219;">&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x6B63;&#x5219; <a href="#t17&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#xFF08;18&#x4F4D;&#xFF09;&#x6B63;&#x5219;</span>
+/^[<span class="hljs-number">1</span><span class="hljs-number">-9</span>]\d{<span class="hljs-number">5</span>}(<span class="hljs-number">18</span>|<span class="hljs-number">19</span>|([<span class="hljs-number">23</span>]\d))\d{<span class="hljs-number">2</span>}((<span class="hljs-number">0</span>[<span class="hljs-number">1</span><span class="hljs-number">-9</span>])|(<span class="hljs-number">10</span>|<span class="hljs-number">11</span>|<span class="hljs-number">12</span>))(([<span class="hljs-number">0</span><span class="hljs-number">-2</span>][<span class="hljs-number">1</span><span class="hljs-number">-9</span>])|<span class="hljs-number">10</span>|<span class="hljs-number">20</span>|<span class="hljs-number">30</span>|<span class="hljs-number">31</span>)\d{<span class="hljs-number">3</span>}[<span class="hljs-number">0</span><span class="hljs-number">-9</span>Xx]$/.test(<span class="hljs-string">&quot;42112319870115371X&quot;</span>);
+<span class="hljs-comment">//&#x8F93;&#x51FA; false</span>
+</code></pre>
+<h3 id="t18&#x6821;&#x9A8C;&#x65E5;&#x671F;">&#x6821;&#x9A8C;&#x65E5;&#x671F; <a href="#t18&#x6821;&#x9A8C;&#x65E5;&#x671F;"> # </a></h3>
+<p>&#x201C;yyyy-mm-dd&#x201C; &#x683C;&#x5F0F;&#x7684;&#x65E5;&#x671F;&#x6821;&#x9A8C;&#xFF0C;&#x5DF2;&#x8003;&#x8651;&#x5E73;&#x95F0;&#x5E74;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x65E5;&#x671F;&#x6B63;&#x5219;&#xFF0C;&#x7B80;&#x5355;&#x5224;&#x5B9A;,&#x672A;&#x505A;&#x6708;&#x4EFD;&#x53CA;&#x65E5;&#x671F;&#x7684;&#x5224;&#x5B9A;</span>
+<span class="hljs-keyword">var</span> dP1 = <span class="hljs-regexp">/^\d{4}(\-)\d{1,2}\1\d{1,2}$/</span>;
+<span class="hljs-comment">//&#x8F93;&#x51FA; true</span>
+<span class="hljs-built_in">console</span>.log(dP1.test(<span class="hljs-string">&quot;2017-05-11&quot;</span>));
+<span class="hljs-comment">//&#x8F93;&#x51FA; true</span>
+<span class="hljs-built_in">console</span>.log(dP1.test(<span class="hljs-string">&quot;2017-15-11&quot;</span>));
+<span class="hljs-comment">//&#x65E5;&#x671F;&#x6B63;&#x5219;&#xFF0C;&#x590D;&#x6742;&#x5224;&#x5B9A;</span>
+<span class="hljs-keyword">var</span> dP2 = <span class="hljs-regexp">/^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$/</span>;
+<span class="hljs-comment">//&#x8F93;&#x51FA; true</span>
+<span class="hljs-built_in">console</span>.log(dP2.test(<span class="hljs-string">&quot;2017-02-11&quot;</span>));
+<span class="hljs-comment">//&#x8F93;&#x51FA; false</span>
+<span class="hljs-built_in">console</span>.log(dP2.test(<span class="hljs-string">&quot;2017-15-11&quot;</span>));
+<span class="hljs-comment">//&#x8F93;&#x51FA; false</span>
+<span class="hljs-built_in">console</span>.log(dP2.test(<span class="hljs-string">&quot;2017-02-29&quot;</span>));
+<span class="hljs-comment">// true</span>
+</code></pre>
+<h3 id="t19&#x6821;&#x9A8C;&#x6587;&#x4EF6;&#x540E;&#x7F00;">&#x6821;&#x9A8C;&#x6587;&#x4EF6;&#x540E;&#x7F00; <a href="#t19&#x6821;&#x9A8C;&#x6587;&#x4EF6;&#x540E;&#x7F00;"> # </a></h3>
+<pre><code class="lang-js">  var strRegex = &quot;(.jpg|.gif|.txt)&quot;;
+  var re=new RegExp(strRegex);
+  if (re.test(str)){
+
+  }
+/(.jpg|.gif)+(\?|\#|$)/.test(&apos;a/b/c.jpgsss&apos;); //=&gt; false
+/(.jpg|.gif)+(\?|\#|$)/.test(&apos;a/b/c.jpg?&apos;); //=&gt; true
+</code></pre>
+<h3 id="t20&#x7528;&#x6237;&#x540D;&#x6B63;&#x5219;">&#x7528;&#x6237;&#x540D;&#x6B63;&#x5219; <a href="#t20&#x7528;&#x6237;&#x540D;&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x7528;&#x6237;&#x540D;&#x6B63;&#x5219;&#xFF0C;4&#x5230;16&#x4F4D;&#xFF08;&#x5B57;&#x6BCD;&#xFF0C;&#x6570;&#x5B57;&#xFF0C;&#x4E0B;&#x5212;&#x7EBF;&#xFF0C;&#x51CF;&#x53F7;&#xFF09;</span>
+/^[a-zA-Z0<span class="hljs-number">-9</span>_-]{<span class="hljs-number">4</span>,<span class="hljs-number">16</span>}$/.test(<span class="hljs-string">&quot;diaodiao&quot;</span>);
+<span class="hljs-comment">//&#x8F93;&#x51FA; true</span>
+</code></pre>
+<h3 id="t21&#x6574;&#x6570;&#x6B63;&#x5219;">&#x6574;&#x6570;&#x6B63;&#x5219; <a href="#t21&#x6574;&#x6570;&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js">/^\d+$/.test(<span class="hljs-string">&quot;42&quot;</span>);    <span class="hljs-comment">//&#x6B63;&#x6574;&#x6570;&#x6B63;&#x5219;  -&gt; &#x8F93;&#x51FA; true</span>
+/^-\d+$/.test(<span class="hljs-string">&quot;-42&quot;</span>);  <span class="hljs-comment">//&#x8D1F;&#x6574;&#x6570;&#x6B63;&#x5219;  -&gt; &#x8F93;&#x51FA; true</span>
+/^-?\d+$/.test(<span class="hljs-string">&quot;-42&quot;</span>); <span class="hljs-comment">//&#x6574;&#x6570;&#x6B63;&#x5219;  -&gt; &#x8F93;&#x51FA; true</span>
+
+/^[<span class="hljs-number">0</span><span class="hljs-number">-9</span>]+$/.test(<span class="hljs-number">25.5455</span>) <span class="hljs-comment">//&#x6B63;&#x6574;&#x6570;&#x6B63;&#x5219;  -&gt; &#x8F93;&#x51FA; false</span>
+<span class="hljs-comment">// &#x6D6E;&#x70B9;&#x6570;</span>
+/^(?:[-+])?(?:[<span class="hljs-number">0</span><span class="hljs-number">-9</span>]+)?(?:\.[<span class="hljs-number">0</span><span class="hljs-number">-9</span>]*)?(?:[eE][\+\-]?(?:[<span class="hljs-number">0</span><span class="hljs-number">-9</span>]+))?$/.test(<span class="hljs-number">0.2</span>)
+</code></pre>
+<h3 id="t22&#x6570;&#x5B57;&#x6B63;&#x5219;">&#x6570;&#x5B57;&#x6B63;&#x5219; <a href="#t22&#x6570;&#x5B57;&#x6B63;&#x5219;"> # </a></h3>
+<p>&#x53EF;&#x4EE5;&#x662F;&#x6574;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x6D6E;&#x70B9;&#x6570;</p>
+<pre><code class="lang-js">/^\d*\.?\d+$/.test(<span class="hljs-string">&quot;42.2&quot;</span>);     <span class="hljs-comment">//&#x6B63;&#x6570;&#x6B63;&#x5219;  -&gt; &#x8F93;&#x51FA; true</span>
+/^-\d*\.?\d+$/.test(<span class="hljs-string">&quot;-42.2&quot;</span>);   <span class="hljs-comment">//&#x8D1F;&#x6570;&#x6B63;&#x5219; -&gt; &#x8F93;&#x51FA; true</span>
+/^-?\d*\.?\d+$/.test(<span class="hljs-string">&quot;-42.2&quot;</span>);  <span class="hljs-comment">//&#x6570;&#x5B57;&#x6B63;&#x5219; -&gt; &#x8F93;&#x51FA; true</span>
+</code></pre>
+<h3 id="t23Email&#x6B63;&#x5219;">Email&#x6B63;&#x5219; <a href="#t23Email&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">//Email&#x6B63;&#x5219;</span>
+/^([A-Za-z0<span class="hljs-number">-9</span>_\-\.])+\@([A-Za-z0<span class="hljs-number">-9</span>_\-\.])+\.([A-Za-z]{<span class="hljs-number">2</span>,<span class="hljs-number">4</span>})$/.test(<span class="hljs-string">&quot;wowohoo@qq.com&quot;</span>);
+<span class="hljs-comment">//&#x8F93;&#x51FA; true</span>
+
+<span class="hljs-comment">// 1.&#x90AE;&#x7BB1;&#x4EE5;a-z&#x3001;A-Z&#x3001;0-9&#x5F00;&#x5934;&#xFF0C;&#x6700;&#x5C0F;&#x957F;&#x5EA6;&#x4E3A;1.</span>
+<span class="hljs-comment">// 2.&#x5982;&#x679C;&#x5DE6;&#x4FA7;&#x90E8;&#x5206;&#x5305;&#x542B;-&#x3001;_&#x3001;.&#x5219;&#x8FD9;&#x4E9B;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#x7684;&#x524D;&#x9762;&#x5FC5;&#x987B;&#x5305;&#x4E00;&#x4F4D;&#x6570;&#x5B57;&#x6216;&#x5B57;&#x6BCD;&#x3002;</span>
+<span class="hljs-comment">// 3.@&#x7B26;&#x53F7;&#x662F;&#x5FC5;&#x586B;&#x9879;</span>
+<span class="hljs-comment">// 4.&#x53F3;&#x5219;&#x90E8;&#x5206;&#x53EF;&#x5206;&#x4E3A;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x4E3A;&#x90AE;&#x4EF6;&#x63D0;&#x4F9B;&#x5546;&#x57DF;&#x540D;&#x5730;&#x5740;&#xFF0C;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x4E3A;&#x57DF;&#x540D;&#x540E;&#x7F00;&#xFF0C;&#x73B0;&#x5DF2;&#x77E5;&#x7684;&#x6700;&#x77ED;&#x4E3A;2&#x4F4D;&#x3002;</span>
+<span class="hljs-comment">//   &#x6700;&#x957F;&#x7684;&#x4E3A;6&#x4E3A;&#x3002;</span>
+<span class="hljs-comment">// 5.&#x90AE;&#x4EF6;&#x63D0;&#x4F9B;&#x5546;&#x57DF;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x7279;&#x6B8A;&#x5B57;&#x7B26;-&#x3001;_&#x3001;.</span>
+/^[a-z0<span class="hljs-number">-9</span>]+([._\\-]*[a-z0<span class="hljs-number">-9</span>])*@([a-z0<span class="hljs-number">-9</span>]+[-a-z0<span class="hljs-number">-9</span>]*[a-z0<span class="hljs-number">-9</span>]+.){<span class="hljs-number">1</span>,<span class="hljs-number">63</span>}[a-z0<span class="hljs-number">-9</span>]+$/.test(<span class="hljs-string">&quot;wowohoo@qq.com&quot;</span>);
+</code></pre>
+<h3 id="t24&#x4F20;&#x771F;&#x53F7;&#x7801;">&#x4F20;&#x771F;&#x53F7;&#x7801; <a href="#t24&#x4F20;&#x771F;&#x53F7;&#x7801;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x56FD;&#x5BB6;&#x4EE3;&#x7801;(2&#x5230;3&#x4F4D;)-&#x533A;&#x53F7;(2&#x5230;3&#x4F4D;)-&#x7535;&#x8BDD;&#x53F7;&#x7801;(7&#x5230;8&#x4F4D;)-&#x5206;&#x673A;&#x53F7;(3&#x4F4D;)</span>
+/^(([<span class="hljs-number">0</span>\+]\d{<span class="hljs-number">2</span>,<span class="hljs-number">3</span>}-)?(<span class="hljs-number">0</span>\d{<span class="hljs-number">2</span>,<span class="hljs-number">3</span>})-)(\d{<span class="hljs-number">7</span>,<span class="hljs-number">8</span>})(-(\d{<span class="hljs-number">3</span>,}))?$/.test(<span class="hljs-string">&apos;021-5055455&apos;</span>)
+</code></pre>
+<h3 id="t25&#x624B;&#x673A;&#x53F7;&#x7801;&#x6B63;&#x5219;">&#x624B;&#x673A;&#x53F7;&#x7801;&#x6B63;&#x5219; <a href="#t25&#x624B;&#x673A;&#x53F7;&#x7801;&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x624B;&#x673A;&#x53F7;&#x6B63;&#x5219;</span>
+/^<span class="hljs-number">1</span>[<span class="hljs-number">34578</span>]\d{<span class="hljs-number">9</span>}$/.test(<span class="hljs-string">&quot;13611778887&quot;</span>);
+<span class="hljs-comment">//&#x8F93;&#x51FA; true</span>
+
+<span class="hljs-comment">//* 13&#x6BB5;&#xFF1A;130&#x3001;131&#x3001;132&#x3001;133&#x3001;134&#x3001;135&#x3001;136&#x3001;137&#x3001;138&#x3001;139</span>
+<span class="hljs-comment">//* 14&#x6BB5;&#xFF1A;145&#x3001;147</span>
+<span class="hljs-comment">//* 15&#x6BB5;&#xFF1A;150&#x3001;151&#x3001;152&#x3001;153&#x3001;155&#x3001;156&#x3001;157&#x3001;158&#x3001;159</span>
+<span class="hljs-comment">//* 17&#x6BB5;&#xFF1A;170&#x3001;176&#x3001;177&#x3001;178</span>
+<span class="hljs-comment">//* 18&#x6BB5;&#xFF1A;180&#x3001;181&#x3001;182&#x3001;183&#x3001;184&#x3001;185&#x3001;186&#x3001;187&#x3001;188&#x3001;189</span>
+<span class="hljs-comment">//* &#x56FD;&#x9645;&#x7801; &#x5982;&#xFF1A;&#x4E2D;&#x56FD;(+86)</span>
+/^((\+?[<span class="hljs-number">0</span><span class="hljs-number">-9</span>]{<span class="hljs-number">1</span>,<span class="hljs-number">4</span>})|(\(\+<span class="hljs-number">86</span>\)))?(<span class="hljs-number">13</span>[<span class="hljs-number">0</span><span class="hljs-number">-9</span>]|<span class="hljs-number">14</span>[<span class="hljs-number">57</span>]|<span class="hljs-number">15</span>[<span class="hljs-number">012356789</span>]|<span class="hljs-number">17</span>[<span class="hljs-number">03678</span>]|<span class="hljs-number">18</span>[<span class="hljs-number">0</span><span class="hljs-number">-9</span>])\d{<span class="hljs-number">8</span>}$/.test(<span class="hljs-string">&quot;13611778887&quot;</span>);
+</code></pre>
+<h3 id="t26URL&#x6B63;&#x5219;">URL&#x6B63;&#x5219; <a href="#t26URL&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">//URL&#x6B63;&#x5219;</span>
+/^((https?|ftp|file):\/\/)?([\da-z\.-]+)\.([a-z\.]{<span class="hljs-number">2</span>,<span class="hljs-number">6</span>})([\/\w \.-]*)*\/?$/.test(<span class="hljs-string">&quot;http://wangchujiang.com&quot;</span>);
+<span class="hljs-comment">//&#x8F93;&#x51FA; true</span>
+
+<span class="hljs-comment">//&#x83B7;&#x53D6;url&#x4E2D;&#x57DF;&#x540D;&#x3001;&#x534F;&#x8BAE;&#x6B63;&#x5219; &apos;http://xxx.xx/xxx&apos;,&apos;https://xxx.xx/xxx&apos;,&apos;//xxx.xx/xxx&apos;</span>
+/^(http(?:|s)\:)*\/\/([^\/]+)/.test(<span class="hljs-string">&quot;http://www.baidu.com&quot;</span>);
+
+<span class="hljs-regexp">/^((http|https):\/\/(\w+:{0,1}\w*@)?(\S+)|)(:[0-9]+)?(\/|\/([\w#!:.?+=&amp;%@!\-\/]))?$/</span>.test(<span class="hljs-string">&apos;https://www.baidu.com/s?wd=@#%$^&amp;%$#&apos;</span>)
+
+<span class="hljs-comment">// &#x5FC5;&#x987B;&#x6709;&#x534F;&#x8BAE; </span>
+/^[a-zA-Z]+:\/\<span class="hljs-comment">//.test(&quot;http://www.baidu.com&quot;);</span>
+</code></pre>
+<h3 id="t27IPv4&#x5730;&#x5740;&#x6B63;&#x5219;">IPv4&#x5730;&#x5740;&#x6B63;&#x5219; <a href="#t27IPv4&#x5730;&#x5740;&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">//ipv4&#x5730;&#x5740;&#x6B63;&#x5219;</span>
+/^(?:(?:<span class="hljs-number">25</span>[<span class="hljs-number">0</span><span class="hljs-number">-5</span>]|<span class="hljs-number">2</span>[<span class="hljs-number">0</span><span class="hljs-number">-4</span>][<span class="hljs-number">0</span><span class="hljs-number">-9</span>]|[<span class="hljs-number">01</span>]?[<span class="hljs-number">0</span><span class="hljs-number">-9</span>][<span class="hljs-number">0</span><span class="hljs-number">-9</span>]?)\.){<span class="hljs-number">3</span>}(?:<span class="hljs-number">25</span>[<span class="hljs-number">0</span><span class="hljs-number">-5</span>]|<span class="hljs-number">2</span>[<span class="hljs-number">0</span><span class="hljs-number">-4</span>][<span class="hljs-number">0</span><span class="hljs-number">-9</span>]|[<span class="hljs-number">01</span>]?[<span class="hljs-number">0</span><span class="hljs-number">-9</span>][<span class="hljs-number">0</span><span class="hljs-number">-9</span>]?)$/.test(<span class="hljs-string">&quot;192.168.130.199&quot;</span>);
+<span class="hljs-comment">//&#x8F93;&#x51FA; true</span>
+</code></pre>
+<h3 id="t28&#x5341;&#x516D;&#x8FDB;&#x5236;&#x989C;&#x8272;&#x6B63;&#x5219;">&#x5341;&#x516D;&#x8FDB;&#x5236;&#x989C;&#x8272;&#x6B63;&#x5219; <a href="#t28&#x5341;&#x516D;&#x8FDB;&#x5236;&#x989C;&#x8272;&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js">//RGB Hex&#x989C;&#x8272;&#x6B63;&#x5219;
+/^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/.test(&quot;#b8b8b8&quot;);
+//&#x8F93;&#x51FA; true
+</code></pre>
+<h3 id="t29QQ&#x53F7;&#x7801;&#x6B63;&#x5219;">QQ&#x53F7;&#x7801;&#x6B63;&#x5219; <a href="#t29QQ&#x53F7;&#x7801;&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">//QQ&#x53F7;&#x6B63;&#x5219;&#xFF0C;5&#x81F3;11&#x4F4D;</span>
+/^[<span class="hljs-number">1</span><span class="hljs-number">-9</span>][<span class="hljs-number">0</span><span class="hljs-number">-9</span>]{<span class="hljs-number">4</span>,<span class="hljs-number">10</span>}$/.test(<span class="hljs-string">&quot;398188661&quot;</span>);<span class="hljs-comment">//&#x8F93;&#x51FA; true</span>
+</code></pre>
+<h3 id="t30&#x5FAE;&#x4FE1;&#x53F7;&#x6B63;&#x5219;">&#x5FAE;&#x4FE1;&#x53F7;&#x6B63;&#x5219; <a href="#t30&#x5FAE;&#x4FE1;&#x53F7;&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x5FAE;&#x4FE1;&#x53F7;&#x6B63;&#x5219;&#xFF0C;6&#x81F3;20&#x4F4D;&#xFF0C;&#x4EE5;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#xFF0C;&#x5B57;&#x6BCD;&#xFF0C;&#x6570;&#x5B57;&#xFF0C;&#x51CF;&#x53F7;&#xFF0C;&#x4E0B;&#x5212;&#x7EBF;</span>
+/^[a-zA-Z]([-_a-zA-Z0<span class="hljs-number">-9</span>]{<span class="hljs-number">5</span>,<span class="hljs-number">19</span>})+$/.test(<span class="hljs-string">&quot;jslite&quot;</span>); <span class="hljs-comment">//&#x8F93;&#x51FA; true</span>
+</code></pre>
+<h3 id="t31&#x8F66;&#x724C;&#x53F7;&#x6B63;&#x5219;">&#x8F66;&#x724C;&#x53F7;&#x6B63;&#x5219; <a href="#t31&#x8F66;&#x724C;&#x53F7;&#x6B63;&#x5219;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x8F66;&#x724C;&#x53F7;&#x6B63;&#x5219;</span>
+/^[&#x4EAC;&#x6D25;&#x6CAA;&#x6E1D;&#x5180;&#x8C6B;&#x4E91;&#x8FBD;&#x9ED1;&#x6E58;&#x7696;&#x9C81;&#x65B0;&#x82CF;&#x6D59;&#x8D63;&#x9102;&#x6842;&#x7518;&#x664B;&#x8499;&#x9655;&#x5409;&#x95FD;&#x8D35;&#x7CA4;&#x9752;&#x85CF;&#x5DDD;&#x5B81;&#x743C;&#x4F7F;&#x9886;A-Z]{<span class="hljs-number">1</span>}[A-Z]{<span class="hljs-number">1</span>}[A-Z0<span class="hljs-number">-9</span>]{<span class="hljs-number">4</span>}[A-Z0<span class="hljs-number">-9</span>&#x6302;&#x5B66;&#x8B66;&#x6E2F;&#x6FB3;]{<span class="hljs-number">1</span>}$/.test(<span class="hljs-string">&quot;&#x6CAA;B99116&quot;</span>) <span class="hljs-comment">//&#x8F93;&#x51FA; true</span>
+</code></pre>
+<h3 id="t32&#x989C;&#x8272;&#x503C;&#x6821;&#x9A8C;">&#x989C;&#x8272;&#x503C;&#x6821;&#x9A8C; <a href="#t32&#x989C;&#x8272;&#x503C;&#x6821;&#x9A8C;"> # </a></h3>
+<pre><code class="lang-js">// HEX &#x989C;&#x8272;&#x6B63;&#x5219;
+/^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.test(&quot;#ccb2b2&quot;)
+</code></pre>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

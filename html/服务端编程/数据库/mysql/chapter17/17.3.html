@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handbook</title>
+    <link rel="stylesheet" type="text/css" href="../../../../../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            <img src="../../../../../idoc-logo.svg">
+        
+    </div>
+<ul><li><a href="../../../../../index.html">Git常用命令</a></li><li><a href="#"><span></span>前端</a><ul><li><a href="#"><span></span>Javascript</a><ul><li><a href="#"><span></span>RN</a><ul><li><a href="../../../../../html/前端/Javascript/RN/React-native Android环境搭建.html">React-native Android环境搭建</a></li></ul></li><li><a href="../../../../../html/前端/Javascript/思维导图.html">思维导图</a></li><li><a href="../../../../../html/前端/Javascript/正则表达式.html">正则表达式</a></li><li><a href="../../../../../html/前端/Javascript/轻量高效的开源JavaScript插件和库.html">轻量高效的开源JavaScript插件和库</a></li></ul></li></ul></li><li><a href="#"><span></span>服务端编程</a><ul><li><a href="#"><span></span>数据库</a><ul><li><a href="../../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li><li><a href="#"><span></span>系统服务</a><ul><li><a href="../../../../../html/服务端编程/系统服务/docker.html">docker</a></li><li><a href="#"><span></span>shell</a><ul><li><a href="../../../../../html/服务端编程/系统服务/shell/shell-regex.html">shell-regex</a></li><li><a href="../../../../../html/服务端编程/系统服务/shell/Shell.html">Shell</a></li></ul></li><li><a href="../../../../../html/服务端编程/系统服务/Nginx.html">Nginx</a></li></ul></li><li><a href="#"><span></span>Linux</a><ul></ul></li><li><a href="#"><span></span>数据库</a><ul><li><a href="#"><span></span>mysql</a><ul><li><a href="../../../../../html/服务端编程/数据库/mysql/21-minutes-MySQL-basic-entry.html">21-minutes-MySQL-basic-entry</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/awesome-mysql.html">awesome-mysql</a></li><li><a href="#"><span></span>chapter1</a><ul><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter1/1.1.html">1.1</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter1/1.2.html">1.2</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter1/1.3.html">1.3</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter1/1.4.html">1.4</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter1/1.html">1</a></li></ul></li><li><a href="#"><span></span>chapter17</a><ul><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter17/17.1.html">17.1</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter17/17.2.html">17.2</a></li><li class="active"><a href="../../../../../html/服务端编程/数据库/mysql/chapter17/17.3.html">17.3</a></li></ul></li><li><a href="#"><span></span>chapter2</a><ul><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter2/2.1.html">2.1</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter2/2.2.html">2.2</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter2/2.3.html">2.3</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter2/2.4.html">2.4</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter2/2.5.html">2.5</a></li></ul></li><li><a href="#"><span></span>chapter3</a><ul><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter3/3.1.html">3.1</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter3/3.2.html">3.2</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter3/3.3.html">3.3</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter3/3.4.html">3.4</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter3/3.5.html">3.5</a></li><li><a href="../../../../../html/服务端编程/数据库/mysql/chapter3/3.html">3</a></li></ul></li><li><a href="../../../../../html/服务端编程/数据库/mysql/README.html">README</a></li></ul></li><li><a href="../../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li></ul></li><li><a href="#"><span></span>工具快捷键</a><ul><li><a href="../../../../../html/工具快捷键/Git常用命令.html">Git常用命令</a></li><li><a href="../../../../../html/工具快捷键/vim.html">vim</a></li></ul></li><li><a href="#"><span></span>其他</a><ul><li><a href="../../../../../html/其他/HTTP状态码.html">HTTP状态码</a></li><li><a href="../../../../../html/其他/通过代理工具提高Github Clone速度.html">通过代理工具提高Github Clone速度</a></li></ul></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/poetries/handbook.git"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0MySQL修改密码">MySQL修改密码</a><ul><li><a href="#t1mysqld_safe不存在修改密码">mysqld_safe不存在修改密码</a></li><li><a href="#t2启动修改丢失的mysql单实例root密码方法">启动修改丢失的mysql单实例root密码方法</a></li><li><a href="#t3Mac下重置MySQL的root密码">Mac下重置MySQL的root密码</a></li><li><a href="#t4不重启mysqld修改密码的方法">不重启mysqld修改密码的方法</a></li><li><a href="#t5官网参考">官网参考</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0MySQL&#x4FEE;&#x6539;&#x5BC6;&#x7801;">MySQL&#x4FEE;&#x6539;&#x5BC6;&#x7801; <a href="#t0MySQL&#x4FEE;&#x6539;&#x5BC6;&#x7801;"> # </a></h1>
+<h2 id="t1mysqld_safe&#x4E0D;&#x5B58;&#x5728;&#x4FEE;&#x6539;&#x5BC6;&#x7801;">mysqld_safe&#x4E0D;&#x5B58;&#x5728;&#x4FEE;&#x6539;&#x5BC6;&#x7801; <a href="#t1mysqld_safe&#x4E0D;&#x5B58;&#x5728;&#x4FEE;&#x6539;&#x5BC6;&#x7801;"> # </a></h2>
+<ol>
+<li>&#x505C;&#x6B62; MySQL:</li>
+</ol>
+<pre><code class="lang-bash">systemctl stop mysqld
+</code></pre>
+<ol>
+<li>&#x8BBE;&#x7F6E;MySQL&#x73AF;&#x5883;&#x9009;&#x9879;</li>
+</ol>
+<pre><code class="lang-bash">systemctl <span class="hljs-built_in">set</span>-environment MYSQLD_OPTS=<span class="hljs-string">&quot;--skip-grant-tables&quot;</span>
+</code></pre>
+<ol>
+<li>&#x4F7F;&#x7528;&#x60A8;&#x521A;&#x624D;&#x8BBE;&#x7F6E;&#x7684;&#x9009;&#x9879;&#x542F;&#x52A8;MySQL</li>
+</ol>
+<pre><code class="lang-bash">systemctl start mysqld
+</code></pre>
+<ol>
+<li>&#x4EE5;root&#x8EAB;&#x4EFD;&#x767B;&#x5F55;</li>
+</ol>
+<pre><code class="lang-bash">mysql -u root
+</code></pre>
+<ol>
+<li>&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;MySQL&#x547D;&#x4EE4;&#x66F4;&#x65B0;root&#x7528;&#x6237;&#x5BC6;&#x7801;</li>
+</ol>
+<pre><code class="lang-bash">mysql&gt; UPDATE mysql.user SET authentication_string = PASSWORD(<span class="hljs-string">&apos;MyNewPassword&apos;</span>)
+    -&gt; WHERE User = <span class="hljs-string">&apos;root&apos;</span> AND Host = <span class="hljs-string">&apos;localhost&apos;</span>;
+mysql&gt; FLUSH PRIVILEGES;
+mysql&gt; quit
+</code></pre>
+<ol>
+<li>&#x505C;&#x6B62;mysql</li>
+</ol>
+<pre><code class="lang-bash">systemctl stop mysqld
+</code></pre>
+<ol>
+<li>&#x53D6;&#x6D88;&#x8BBE;&#x7F6E;MySQL&#x73AF;&#x5883;&#x9009;&#x9879;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E0B;&#x6B21;&#x542F;&#x52A8;</li>
+</ol>
+<pre><code class="lang-bash">systemctl <span class="hljs-built_in">unset</span>-environment MYSQLD_OPTS
+</code></pre>
+<ol>
+<li>&#x6B63;&#x5E38;&#x542F;&#x52A8;MySQL&#xFF1A;</li>
+</ol>
+<pre><code class="lang-bash">systemctl start mysqld
+</code></pre>
+<ol>
+<li>&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x60A8;&#x7684;&#x65B0;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#xFF1A;</li>
+</ol>
+<pre><code class="lang-bash">mysql -u root -p
+</code></pre>
+<h2 id="t2&#x542F;&#x52A8;&#x4FEE;&#x6539;&#x4E22;&#x5931;&#x7684;mysql&#x5355;&#x5B9E;&#x4F8B;root&#x5BC6;&#x7801;&#x65B9;&#x6CD5;">&#x542F;&#x52A8;&#x4FEE;&#x6539;&#x4E22;&#x5931;&#x7684;mysql&#x5355;&#x5B9E;&#x4F8B;root&#x5BC6;&#x7801;&#x65B9;&#x6CD5; <a href="#t2&#x542F;&#x52A8;&#x4FEE;&#x6539;&#x4E22;&#x5931;&#x7684;mysql&#x5355;&#x5B9E;&#x4F8B;root&#x5BC6;&#x7801;&#x65B9;&#x6CD5;"> # </a></h2>
+<ol>
+<li>&#x9996;&#x5148;&#x505C;&#x6B62;mysql</li>
+</ol>
+<pre><code class="lang-bash">sudo /etc/init.d/mysql stop
+
+<span class="hljs-comment"># &#x6216;&#x8005;&#x4E0B;&#x9762;</span>
+sudo /usr/<span class="hljs-built_in">local</span>/mysql/bin/mysql stop
+
+<span class="hljs-comment"># &#x6216;&#x8005; </span>
+service mysqld stop
+</code></pre>
+<ol>
+<li>&#x4F7F;&#x7528;--skip-grant-tables&#x542F;&#x52A8;mysql&#xFF0C;&#x5FFD;&#x7565;&#x6388;&#x6743;&#x767B;&#x5F55;&#x9A8C;&#x8BC1;&#xFF0C;&#x670D;&#x52A1;&#x4E0D;&#x8981;&#x505C;&#x6B62;&#xFF0C;&#x65B0;&#x5F00;&#x7A97;&#x53E3;&#x505A;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x64CD;&#x4F5C;&#x3002;</li>
+</ol>
+<pre><code class="lang-bash">sudo mysqld_safe --skip-grant-tables --user=mysql <span class="hljs-comment"># &#x63D0;&#x793A;&#xFF1A;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x52A0;--skip-grant-tables &#x53C2;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x5FFD;&#x7565;&#x6388;&#x6743;&#x9A8C;&#x8BC1;</span>
+<span class="hljs-comment"># &#x6216;&#x8005;&#x4E0B;&#x9762;</span>
+sudo /usr/<span class="hljs-built_in">local</span>/mysql/bin/mysqld_safe  --skip-grant-tables --user=mysql
+</code></pre>
+<ol>
+<li>&#x8FDB;&#x5165;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;</li>
+</ol>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x8FD0;&#x884C;</span>
+mysql
+</code></pre>
+<ol>
+<li>&#x4FEE;&#x6539;mysqlroot&#x5BC6;&#x7801;&#xFF1A;update</li>
+</ol>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x7EC8;&#x7AEF;&#x8FDB;&#x5165;MySQL&#x6570;&#x636E;&#x4E2D;&#x8FD0;&#x884C;</span>
+mysql&gt; update mysql.user <span class="hljs-built_in">set</span> password=password(<span class="hljs-string">&quot;123456&quot;</span>) <span class="hljs-built_in">where</span> user=<span class="hljs-string">&apos;root&apos;</span> and host=<span class="hljs-string">&apos;localhost&apos;</span>;
+mysql&gt; flush privileges;
+
+<span class="hljs-comment"># &#x7EC8;&#x7AEF;&#x4E2D;&#x8FD0;&#x884C;</span>
+mysqladmin -uroot -p123456 shutdown
+</code></pre>
+<ol>
+<li>&#x91CD;&#x65B0;&#x542F;&#x52A8;mysql</li>
+</ol>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x7EC8;&#x7AEF;&#x4E2D;&#x8FD0;&#x884C;</span>
+/etc/init.d/mysql start
+mysql -uroot -p123456
+</code></pre>
+<h2 id="t3Mac&#x4E0B;&#x91CD;&#x7F6E;MySQL&#x7684;root&#x5BC6;&#x7801;">Mac&#x4E0B;&#x91CD;&#x7F6E;MySQL&#x7684;root&#x5BC6;&#x7801; <a href="#t3Mac&#x4E0B;&#x91CD;&#x7F6E;MySQL&#x7684;root&#x5BC6;&#x7801;"> # </a></h2>
+<p>&#x4EE5;&#x524D;&#x7684;&#x8001;&#x7248;&#x672C;root&#x7684;&#x9ED8;&#x8BA4;&#x5BC6;&#x7801;&#x4E3A;&#x7A7A;&#xFF0C;Mysql 5.6&#x53CA;&#x4EE5;&#x540E;&#x7248;&#x672C;&#x51FA;&#x5904;&#x4E8E;&#x5B89;&#x5168;&#x8003;&#x8651;&#xFF0C;root&#x5BC6;&#x7801;&#x5DF2;&#x7ECF;&#x4E0D;&#x4E3A;&#x7A7A;&#x4E86;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x8868;&#x793A;&#x6CA1;&#x6709;&#x751F;&#x6210;root&#x7684;&#x4E34;&#x65F6;&#x5BC6;&#x7801;</span>
+ERROR 1045 (28000): Access denied <span class="hljs-keyword">for</span> user <span class="hljs-string">&apos;root&apos;</span>@<span class="hljs-string">&apos;localhost&apos;</span> (using password: NO)
+
+<span class="hljs-comment"># &#x8868;&#x793A;&#x751F;&#x6210;&#x4E86;root&#x7684;&#x4E34;&#x65F6;&#x5BC6;&#x7801;</span>
+ERROR 1045 (28000): Access denied <span class="hljs-keyword">for</span> user <span class="hljs-string">&apos;root&apos;</span>@<span class="hljs-string">&apos;localhost&apos;</span> (using password: YES)
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>mysql -uroot -p</code> &#x767B;&#x5F55;&#x8FDB;&#x53BB;&#x3002;</p>
+<p>1&#x3001;&#x505C;&#x6B62; mysql server</p>
+<p>&#x5728; Mac &#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;GUI&#x505C;&#x6B62; MySQL &#x670D;&#x52A1;&#xFF0C;&#x6B65;&#x9AA4;&#xFF1A;<code>&#x7CFB;&#x7EDF;&#x504F;&#x597D;&#x8BBE;&#x7F6E;</code> &gt; <code>MySQL</code> &gt; <code>Stop MySQL Server</code>&#x3002;&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x6765;&#x505C;&#x6B62;&#x670D;&#x52A1;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Mac OS &#x91CC;&#x9762;&#x53EF;&#x4EE5;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;</span>
+sudo /usr/<span class="hljs-built_in">local</span>/mysql/support-files/mysql.server stop
+
+<span class="hljs-comment"># centos &#x505C;&#x6B62;mysql&#x6570;&#x636E;&#x5E93;</span>
+sudo /etc/init.d/mysqld stop
+</code></pre>
+<p>2&#x3001;&#x7EC8;&#x7AEF;&#xFF0C;&#x8F93;&#x5165;&#x8FDB;&#x5165;&#x5B89;&#x5168;&#x6A21;&#x5F0F;&#xFF0C;&#x8FD0;&#x884C;&#x4E4B;&#x540E;&#x8FDB;&#x7A0B;&#x4FDD;&#x6301;&#x6302;&#x8F7D;&#x3002;</p>
+<pre><code class="lang-bash">sudo /usr/<span class="hljs-built_in">local</span>/mysql/bin/mysqld_safe --skip-grant-tables
+</code></pre>
+<p>3&#x3001;&#x65B0;&#x5F00;&#x7EC8;&#x7AEF;&#xFF0C;&#x8F93;&#x5165;</p>
+<pre><code class="lang-bash">sudo /usr/<span class="hljs-built_in">local</span>/mysql/bin/mysql -u root
+<span class="hljs-comment"># &#x8F93;&#x5165; Mac &#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x5BC6;&#x7801;&#x540E;&#xFF0C;</span>
+<span class="hljs-comment"># &#x76F4;&#x63A5;&#x6572;&#x56DE;&#x8F66;&#x8FDB;&#x5165; mysql &#x7EC8;&#x7AEF;&#xFF0C;&#x8F93;&#x5165;&#xFF1A;</span>
+mysql&gt; FLUSH PRIVILEGES;
+mysql&gt; ALTER USER <span class="hljs-string">&apos;root&apos;</span>@<span class="hljs-string">&apos;localhost&apos;</span> IDENTIFIED BY <span class="hljs-string">&apos;MyNewPass&apos;</span>;
+<span class="hljs-comment"># &#x8F93;&#x5165; \q &#x9000;&#x51FA; mysql &#x7EC8;&#x7AEF;</span>
+\q
+</code></pre>
+<p>4&#x3001;&#x91CD;&#x542F;MySQL.</p>
+<pre><code class="lang-bash">ps -ef | grep mysql
+</code></pre>
+<ul>
+<li>&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x8FDB;&#x7A0B;&#x7F16;&#x53F7;&#x3002;  </li>
+<li>&#x901A;&#x8FC7;<code>sudo kill 93</code>&#x6740;&#x6389;<code>mysql</code>&#x8FDB;&#x7A0B;  </li>
+<li>&#x542F;&#x52A8;&#x670D;&#x52A1;<code>&#x7CFB;&#x7EDF;&#x504F;&#x597D;&#x8BBE;&#x7F6E;</code> &gt; <code>MySQL</code> &gt; <code>Start MySQL Server</code></li>
+</ul>
+<p>&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x66F4;&#x5FEB;&#x6377;&#x7684;&#x91CD;&#x542F;  </p>
+<pre><code class="lang-bash">sudo /usr/<span class="hljs-built_in">local</span>/mysql/support-files/mysql.server start
+</code></pre>
+<h2 id="t4&#x4E0D;&#x91CD;&#x542F;mysqld&#x4FEE;&#x6539;&#x5BC6;&#x7801;&#x7684;&#x65B9;&#x6CD5;">&#x4E0D;&#x91CD;&#x542F;mysqld&#x4FEE;&#x6539;&#x5BC6;&#x7801;&#x7684;&#x65B9;&#x6CD5; <a href="#t4&#x4E0D;&#x91CD;&#x542F;mysqld&#x4FEE;&#x6539;&#x5BC6;&#x7801;&#x7684;&#x65B9;&#x6CD5;"> # </a></h2>
+<p>1&#x3001;&#x9996;&#x5148;&#x5F97;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x62E5;&#x6709;&#x4FEE;&#x6539;&#x6743;&#x9650;&#x7684;mysql&#x6570;&#x636E;&#x5E93;&#x8D26;&#x53F7;&#xFF0C;&#x5F53;&#x524D;&#x7684;mysql&#x5B9E;&#x4F8B;&#x8D26;&#x53F7;&#xFF08;&#x8F83;&#x4F4E;&#x6743;&#x9650;&#x7684;&#x8D26;&#x53F7;&#xFF0C;&#x6BD4;&#x5982;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;test&#x6570;&#x636E;&#x5E93;&#xFF09;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x76F8;&#x540C;&#x7248;&#x672C;&#x5B9E;&#x4F8B;&#x7684;&#x8D26;&#x53F7;&#x3002;&#x628A;data/mysql&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x7684;user&#x8868;&#x76F8;&#x5173;&#x7684;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x5230;data/test&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x3002;</p>
+<pre><code>[root@localhost mysql]# cp mysql/user.* test/
+[root@localhost mysql]# chown mysql.mysql test/user.*
+</code></pre><p>2&#x3001;&#x4F7F;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x8F83;&#x4F4E;&#x6743;&#x9650;&#x7684;&#x8D26;&#x53F7;&#x94FE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x8BBE;&#x7F6E;test&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;user&#x5B58;&#x50A8;&#x7684;&#x5BC6;&#x7801;&#x6570;&#x636E;&#x3002;</p>
+<pre><code>[root@localhost mysql]# mysql -utest -p12345
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 17
+Server version: 5.5.25a-log Source distribution
+
+Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.
+
+mysql&gt; use test
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql&gt; update user set password=password(&apos;yayun&apos;) where user=&apos;root&apos;;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 5  Changed: 0  Warnings: 0
+
+mysql&gt;
+</code></pre><p>3&#x3001;&#x628A;&#x4FEE;&#x6539;&#x540E;&#x7684;user.MYD&#x548C;user.MYI&#x590D;&#x5236;&#x5230;mysql&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x8BB0;&#x5F97;&#x5907;&#x4EFD;&#x4E4B;&#x524D;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-bash">mv mysql/user.MYD mysql/user.MYD.bak
+mv mysql/user.MYI mysql/user.MYI.bak
+cp <span class="hljs-built_in">test</span>/user.MY* mysql/
+chown mysql.mysql mysql/user.*
+</code></pre>
+<p>4&#x3001;&#x67E5;&#x627E;mysql&#x8FDB;&#x7A0B;&#x53F7;&#xFF0C;&#x5E76;&#x4E14;&#x53D1;&#x9001;SIGHUP&#x4FE1;&#x53F7;&#xFF0C;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6743;&#x9650;&#x8868;&#x3002;</p>
+<pre><code>[root@localhost mysql]# pgrep -n mysql
+2184
+[root@localhost mysql]#
+[root@localhost mysql]# kill -SIGHUP 2184
+</code></pre><p>5&#x3001;&#x767B;&#x9646;&#x6D4B;&#x8BD5;</p>
+<pre><code class="lang-bash">[root@localhost mysql]<span class="hljs-comment"># mysql -uroot -pyayun</span>
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 20
+Server version: 5.5.25a-log Source distribution
+
+Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type <span class="hljs-string">&apos;help;&apos;</span> or <span class="hljs-string">&apos;\h&apos;</span> <span class="hljs-keyword">for</span> <span class="hljs-built_in">help</span>. Type <span class="hljs-string">&apos;\c&apos;</span> to clear the current input statement.
+
+mysql&gt;
+</code></pre>
+<h2 id="t5&#x5B98;&#x7F51;&#x53C2;&#x8003;">&#x5B98;&#x7F51;&#x53C2;&#x8003; <a href="#t5&#x5B98;&#x7F51;&#x53C2;&#x8003;"> # </a></h2>
+<ul>
+<li><a href="http://dev.mysql.com/doc/refman/5.7/en/resetting-permissions.html">How to Reset the Root Password</a></li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

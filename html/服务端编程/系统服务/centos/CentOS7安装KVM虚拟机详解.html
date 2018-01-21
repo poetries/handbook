@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handbook</title>
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            <img src="../../../../idoc-logo.svg">
+        
+    </div>
+<ul><li><a href="../../../../index.html">Git常用命令</a></li><li><a href="#"><span></span>前端</a><ul><li><a href="#"><span></span>Javascript</a><ul><li><a href="#"><span></span>RN</a><ul><li><a href="../../../../html/前端/Javascript/RN/React-native Android环境搭建.html">React-native Android环境搭建</a></li></ul></li><li><a href="../../../../html/前端/Javascript/思维导图.html">思维导图</a></li><li><a href="../../../../html/前端/Javascript/正则表达式.html">正则表达式</a></li><li><a href="../../../../html/前端/Javascript/轻量高效的开源JavaScript插件和库.html">轻量高效的开源JavaScript插件和库</a></li></ul></li></ul></li><li><a href="#"><span></span>服务端编程</a><ul><li><a href="#"><span></span>数据库</a><ul><li><a href="../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li><li><a href="#"><span></span>系统服务</a><ul><li><a href="../../../../html/服务端编程/系统服务/docker.html">docker</a></li><li><a href="#"><span></span>shell</a><ul><li><a href="../../../../html/服务端编程/系统服务/shell/shell-regex.html">shell-regex</a></li><li><a href="../../../../html/服务端编程/系统服务/shell/Shell.html">Shell</a></li></ul></li><li><a href="../../../../html/服务端编程/系统服务/Nginx.html">Nginx</a></li></ul></li><li><a href="#"><span></span>Linux</a><ul></ul></li><li><a href="#"><span></span>数据库</a><ul><li><a href="#"><span></span>mysql</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/21-minutes-MySQL-basic-entry.html">21-minutes-MySQL-basic-entry</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/awesome-mysql.html">awesome-mysql</a></li><li><a href="#"><span></span>chapter1</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.1.html">1.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.2.html">1.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.3.html">1.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.4.html">1.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.html">1</a></li></ul></li><li><a href="#"><span></span>chapter17</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.1.html">17.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.2.html">17.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.3.html">17.3</a></li></ul></li><li><a href="#"><span></span>chapter2</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.1.html">2.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.2.html">2.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.3.html">2.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.4.html">2.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.5.html">2.5</a></li></ul></li><li><a href="#"><span></span>chapter3</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.1.html">3.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.2.html">3.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.3.html">3.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.4.html">3.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.5.html">3.5</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.html">3</a></li></ul></li><li><a href="../../../../html/服务端编程/数据库/mysql/README.html">README</a></li></ul></li><li><a href="../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li></ul></li><li><a href="#"><span></span>工具快捷键</a><ul><li><a href="../../../../html/工具快捷键/Git常用命令.html">Git常用命令</a></li><li><a href="../../../../html/工具快捷键/vim.html">vim</a></li></ul></li><li><a href="#"><span></span>其他</a><ul><li><a href="../../../../html/其他/HTTP状态码.html">HTTP状态码</a></li><li><a href="../../../../html/其他/通过代理工具提高Github Clone速度.html">通过代理工具提高Github Clone速度</a></li></ul></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/poetries/handbook.git"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0检测是否支持KVM">检测是否支持KVM</a></li><li><a href="#t1安装 KVM 环境">安装 KVM 环境</a></li><li><a href="#t2安装虚拟机">安装虚拟机</a><ul><li><a href="#t3命令行配置系统">命令行配置系统</a></li><li><a href="#t4连接虚拟机">连接虚拟机</a></li><li><a href="#t5虚拟机其它管理">虚拟机其它管理</a></li></ul></li><li><a href="#t6配置物理机网络">配置物理机网络</a></li><li><a href="#t7端口转发">端口转发</a></li><li><a href="#t8公网访问虚拟机">公网访问虚拟机</a></li><li><a href="#t9配置宿主机网络">配置宿主机网络</a><ul><li><a href="#t10Bridge模式配置">Bridge模式配置</a></li><li><a href="#t11NAT模式">NAT模式</a></li><li><a href="#t12自定义NAT网络">自定义NAT网络</a></li><li><a href="#t13退出虚拟机">退出虚拟机</a></li></ul></li><li><a href="#t14修改虚拟机配置信息">修改虚拟机配置信息</a></li><li><a href="#t15克隆虚拟机">克隆虚拟机</a></li><li><a href="#t16通过镜像创建虚拟机">通过镜像创建虚拟机</a></li><li><a href="#t17动态更改cpu数量和内存大小">动态更改cpu数量和内存大小</a></li><li><a href="#t18挂载磁盘">挂载磁盘</a><ul><li><a href="#t19创建磁盘">创建磁盘</a></li></ul></li><li><a href="#t20常用命令说明">常用命令说明</a><ul><li><a href="#t21virt-install">virt-install</a></li><li><a href="#t22virsh">virsh</a></li></ul></li><li><a href="#t23错误解决">错误解决</a></li><li><a href="#t24参考文章">参考文章</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t0&#x68C0;&#x6D4B;&#x662F;&#x5426;&#x652F;&#x6301;KVM">&#x68C0;&#x6D4B;&#x662F;&#x5426;&#x652F;&#x6301;KVM <a href="#t0&#x68C0;&#x6D4B;&#x662F;&#x5426;&#x652F;&#x6301;KVM"> # </a></h2>
+<p>KVM &#x662F;&#x57FA;&#x4E8E; x86 &#x865A;&#x62DF;&#x5316;&#x6269;&#x5C55;(Intel VT &#x6216;&#x8005; AMD-V) &#x6280;&#x672F;&#x7684;&#x865A;&#x62DF;&#x673A;&#x8F6F;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x67E5;&#x770B; CPU &#x662F;&#x5426;&#x652F;&#x6301; VT &#x6280;&#x672F;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x652F;&#x6301;KVM&#x3002;&#x6709;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x5982;&#x679C;&#x7ED3;&#x679C;&#x4E2D;&#x6709;vmx&#xFF08;Intel&#xFF09;&#x6216;svm(AMD)&#x5B57;&#x6837;&#xFF0C;&#x5C31;&#x8BF4;&#x660E;CPU&#x7684;&#x652F;&#x6301;&#x7684;&#x3002;</p>
+<pre><code class="lang-bash">cat /proc/cpuinfo | egrep <span class="hljs-string">&apos;vmx|svm&apos;</span>
+
+flags   : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc
+</code></pre>
+<p>&#x5173;&#x95ED;SELinux&#xFF0C;&#x5C06; /etc/sysconfig/selinux &#x4E2D;&#x7684; <code>SELinux=enforcing</code> &#x4FEE;&#x6539;&#x4E3A; <code>SELinux=disabled</code></p>
+<pre><code class="lang-bash">vi /etc/sysconfig/selinux
+</code></pre>
+<h2 id="t1&#x5B89;&#x88C5; KVM &#x73AF;&#x5883;">&#x5B89;&#x88C5; KVM &#x73AF;&#x5883; <a href="#t1&#x5B89;&#x88C5; KVM &#x73AF;&#x5883;"> # </a></h2>
+<p>&#x901A;&#x8FC7; <a href="https://jaywcjlove.github.io/linux-command/c/yum.html">yum</a> &#x5B89;&#x88C5; kvm &#x57FA;&#x7840;&#x5305;&#x548C;&#x7BA1;&#x7406;&#x5DE5;&#x5177;</p>
+<p>kvm&#x76F8;&#x5173;&#x5B89;&#x88C5;&#x5305;&#x53CA;&#x5176;&#x4F5C;&#x7528;: </p>
+<ul>
+<li><code>qemu-kvm</code> &#x4E3B;&#x8981;&#x7684;KVM&#x7A0B;&#x5E8F;&#x5305;  </li>
+<li><code>python-virtinst</code> &#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;&#x6240;&#x9700;&#x8981;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x548C;&#x7A0B;&#x5E8F;&#x5E93;  </li>
+<li><code>virt-manager</code> GUI&#x865A;&#x62DF;&#x673A;&#x7BA1;&#x7406;&#x5DE5;&#x5177;  </li>
+<li><code>virt-top</code> &#x865A;&#x62DF;&#x673A;&#x7EDF;&#x8BA1;&#x547D;&#x4EE4;  </li>
+<li><code>virt-viewer</code> GUI&#x8FDE;&#x63A5;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FDE;&#x63A5;&#x5230;&#x5DF2;&#x914D;&#x7F6E;&#x597D;&#x7684;&#x865A;&#x62DF;&#x673A;  </li>
+<li><code>libvirt</code> C&#x8BED;&#x8A00;&#x5DE5;&#x5177;&#x5305;&#xFF0C;&#x63D0;&#x4F9B;libvirt&#x670D;&#x52A1;  </li>
+<li><code>libvirt-client</code> &#x4E3A;&#x865A;&#x62DF;&#x5BA2;&#x6237;&#x673A;&#x63D0;&#x4F9B;&#x7684;C&#x8BED;&#x8A00;&#x5DE5;&#x5177;&#x5305;  </li>
+<li><code>virt-install</code> &#x57FA;&#x4E8E;libvirt&#x670D;&#x52A1;&#x7684;&#x865A;&#x62DF;&#x673A;&#x521B;&#x5EFA;&#x547D;&#x4EE4;  </li>
+<li><code>bridge-utils</code> &#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#x6865;&#x63A5;&#x8BBE;&#x5907;&#x7684;&#x5DE5;&#x5177;  </li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5; kvm </span>
+<span class="hljs-comment"># ------------------------</span>
+<span class="hljs-comment"># yum -y install qemu-kvm python-virtinst libvirt libvirt-python virt-manager libguestfs-tools bridge-utils virt-install</span>
+
+yum -y install qemu-kvm libvirt virt-install bridge-utils 
+
+<span class="hljs-comment"># &#x91CD;&#x542F;&#x5BBF;&#x4E3B;&#x673A;&#xFF0C;&#x4EE5;&#x4FBF;&#x52A0;&#x8F7D; kvm &#x6A21;&#x5757;</span>
+<span class="hljs-comment"># ------------------------</span>
+reboot
+
+<span class="hljs-comment"># &#x67E5;&#x770B;KVM&#x6A21;&#x5757;&#x662F;&#x5426;&#x88AB;&#x6B63;&#x786E;&#x52A0;&#x8F7D;</span>
+<span class="hljs-comment"># ------------------------</span>
+lsmod | grep kvm
+
+kvm_intel             162153  0
+kvm                   525259  1 kvm_intel
+</code></pre>
+<p>&#x5F00;&#x542F;kvm&#x670D;&#x52A1;&#xFF0C;&#x5E76;&#x4E14;&#x8BBE;&#x7F6E;&#x5176;&#x5F00;&#x673A;&#x81EA;&#x52A8;&#x542F;&#x52A8;</p>
+<pre><code class="lang-bash">systemctl start libvirtd
+systemctl <span class="hljs-built_in">enable</span> libvirtd
+</code></pre>
+<p>&#x67E5;&#x770B;&#x72B6;&#x6001;&#x64CD;&#x4F5C;&#x7ED3;&#x679C;&#xFF0C;&#x5982;<code>Active: active (running)</code>&#xFF0C;&#x8BF4;&#x660E;&#x8FD0;&#x884C;&#x60C5;&#x51B5;&#x826F;&#x597D;</p>
+<pre><code class="lang-bash">systemctl status libvirtd
+systemctl is-enabled libvirtd
+
+&#x25CF; libvirtd.service - Virtualization daemon
+   Loaded: loaded (/usr/lib/systemd/system/libvirtd.service; enabled; vendor preset: enabled)
+   Active: active (running) since &#x4E8C; 2001-01-02 11:29:53 CST; 1h 41min ago
+     Docs: man:libvirtd(8)
+           http://libvirt.org
+</code></pre>
+<h2 id="t2&#x5B89;&#x88C5;&#x865A;&#x62DF;&#x673A;">&#x5B89;&#x88C5;&#x865A;&#x62DF;&#x673A; <a href="#t2&#x5B89;&#x88C5;&#x865A;&#x62DF;&#x673A;"> # </a></h2>
+<p>&#x5B89;&#x88C5;&#x524D;&#x8981;&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x8BED;&#x8A00;&#x4E3A;&#x82F1;&#x6587;<code>LANG=&quot;en_US.UTF-8&quot;</code>&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4E2D;&#x6587;&#x7684;&#x8BDD;&#x67D0;&#x4E9B;&#x7248;&#x672C;&#x53EF;&#x80FD;&#x4F1A;&#x62A5;&#x9519;&#x3002;<code>CentOS 7</code> &#x5728;&#x8FD9;&#x91CC;&#x4FEE;&#x6539; <code>/etc/locale.conf</code>&#x3002;</p>
+<p>kvm&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x7279;&#x522B;&#x6CE8;&#x610F;<code>.iso</code>&#x955C;&#x50CF;&#x6587;&#x4EF6;&#x4E00;&#x5B9A;&#x653E;&#x5230;<code>/home</code> &#x6216;&#x8005;&#x6839;&#x76EE;&#x5F55;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x56E0;&#x4E3A;&#x6743;&#x9650;&#x62A5;&#x9519;&#xFF0C;&#x65E0;&#x6CD5;&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;&#x3002;</p>
+<pre><code class="lang-bash">virt-install \
+--virt-type=kvm \
+--name=centos78 \
+--vcpus=2 \
+--memory=4096 \
+--location=/tmp/CentOS-7-x86_64-Minimal-1511.iso \
+--disk path=/home/vms/centos78.qcow2,size=40,format=qcow2 \
+--network bridge=br0 \
+--graphics none \
+--extra-args=<span class="hljs-string">&apos;console=ttyS0&apos;</span> \
+--force
+<span class="hljs-comment"># ------------------------</span>
+virt-install --virt-type=kvm --name=centos88 --vcpus=2 --memory=4096 --location=/tmp/CentOS-7-x86_64-Minimal-1511.iso --disk path=/home/vms/centos88.qcow2,size=40,format=qcow2 --network bridge=br0 --graphics none --extra-args=<span class="hljs-string">&apos;console=ttyS0&apos;</span> --force
+</code></pre>
+<h3 id="t3&#x547D;&#x4EE4;&#x884C;&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;">&#x547D;&#x4EE4;&#x884C;&#x914D;&#x7F6E;&#x7CFB;&#x7EDF; <a href="#t3&#x547D;&#x4EE4;&#x884C;&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;"> # </a></h3>
+<p>&#x4E0A;&#x9762;&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;&#x547D;&#x4EE4;&#x6700;&#x7EC8;&#x9700;&#x8981;&#x4F60;&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;&#x8BBE;&#x7F6E;&#xFF0C;&#x5E26; <code>[!]</code> &#x57FA;&#x672C;&#x90FD;&#x662F;&#x8981;&#x914D;&#x7F6E;&#x7684;&#xFF0C;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x5F80;&#x4E0B;&#x914D;&#x7F6E;&#xFF0C;&#x6309;&#x5BF9;&#x7528;&#x7684;&#x6570;&#x5B57;&#x4EE5;&#x6B64;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x3002;</p>
+<pre><code class="lang-bash">
+Installation
+
+ 1) [x] Language settings                 2) [!] Timezone settings
+        (English (United States))                (Timezone is not <span class="hljs-built_in">set</span>.)
+ 3) [!] Installation <span class="hljs-built_in">source</span>               4) [!] Software selection
+        (Processing...)                          (Processing...)
+ 5) [!] Installation Destination          6) [x] Kdump
+        (No disks selected)                      (Kdump is enabled)
+ 7) [ ] Network configuration             8) [!] Root password
+        (Not connected)                          (Password is not <span class="hljs-built_in">set</span>.)
+ 9) [!] User creation
+        (No user will be created)
+  Please make your choice from above [<span class="hljs-string">&apos;q&apos;</span> to quit | <span class="hljs-string">&apos;b&apos;</span> to begin installation |
+  <span class="hljs-string">&apos;r&apos;</span> to refresh]:
+</code></pre>
+<p>2) Timezone settings &#x65F6;&#x533A;&#x8BBE;&#x7F6E;&#x9009;&#x62E9;  <code>5) Asia&#x4E9A;&#x6D32;</code>&#xFF0C;&#x518D;&#x9009;&#x62E9;&#x57CE;&#x5E02; <code>62) Shanghai&#x4E0A;&#x6D77;</code></p>
+<pre><code class="lang-bash">Available regions
+ 1)  Africa                 6)  Atlantic              10)  Pacific
+ 2)  America                7)  Australia             11)  US
+ 3)  Antarctica             8)  Europe                12)  Etc
+ 4)  Arctic                 9)  Indian
+ 5)  Asia
+Please select the timezone.
+Use numbers or <span class="hljs-built_in">type</span> names directly [b to region list, q to quit]: 5
+--------------------
+
+ 8)  Baghdad               35)  Kathmandu             61)  Seoul
+ 9)  Bahrain               36)  Khandyga              62)  Shanghai
+10)  Baku                  37)  Kolkata               63)  Singapore
+26)  Hong_Kong             53)  Pontianak
+27)  Hovd
+Please select the timezone.
+Use numbers or <span class="hljs-built_in">type</span> names directly [b to region list, q to quit]: 62
+</code></pre>
+<p>3) Installation source &#x5B89;&#x88C5;&#x6E90;&#x8F93;&#x5165;&#x6570;&#x5B57;<code>2</code></p>
+<pre><code class="lang-bash">Choose an installation <span class="hljs-built_in">source</span> <span class="hljs-built_in">type</span>.
+ 1)  CD/DVD
+ 2)  <span class="hljs-built_in">local</span> ISO file
+ 3)  Network
+  Please make your choice from above [<span class="hljs-string">&apos;q&apos;</span> to quit | <span class="hljs-string">&apos;c&apos;</span> to <span class="hljs-built_in">continue</span> |
+  <span class="hljs-string">&apos;r&apos;</span> to refresh]: 2
+</code></pre>
+<p>4) Software selection &#x8F6F;&#x4EF6;&#x9009;&#x62E9;</p>
+<pre><code class="lang-bash">Base environment
+Software selection
+
+Base environment
+
+ 1)  [x] Minimal Install
+  Please make your choice from above [<span class="hljs-string">&apos;q&apos;</span> to quit | <span class="hljs-string">&apos;c&apos;</span> to <span class="hljs-built_in">continue</span> |
+  <span class="hljs-string">&apos;r&apos;</span> to refresh]:
+</code></pre>
+<p>5) Installation Destination &#x5B89;&#x88C5;&#x76EE;&#x7684;&#x5730;</p>
+<pre><code class="lang-bash">Installation Destination
+
+[x] 1) : 40 GiB (vda)
+
+1 disk selected; 40 GiB capacity; 40 GiB free ...
+
+  Please make your choice from above [<span class="hljs-string">&apos;q&apos;</span> to quit | <span class="hljs-string">&apos;c&apos;</span> to <span class="hljs-built_in">continue</span> |
+  <span class="hljs-string">&apos;r&apos;</span> to refresh]: c
+
+
+Autopartitioning Options &#x81EA;&#x52A8;&#x5206;&#x533A;&#x9009;&#x9879;
+
+[ ] 1) Replace Existing Linux system(s) &#x66FF;&#x6362;&#x73B0;&#x6709;&#x7684;Linux&#x7CFB;&#x7EDF;
+
+[x] 2) Use All Space &#x4F7F;&#x7528;&#x6240;&#x6709;&#x7A7A;&#x95F4;
+
+[ ] 3) Use Free Space &#x4F7F;&#x7528;&#x53EF;&#x7528;&#x7A7A;&#x95F4;
+
+================================================================================
+Partition Scheme Options &#x5206;&#x533A;&#x65B9;&#x6848;&#x9009;&#x9879;
+
+[ ] 1) Standard Partition &#x6807;&#x51C6;&#x5206;&#x533A;
+
+[ ] 2) Btrfs Btrfs
+
+[x] 3) LVM LVM(&#x903B;&#x8F91;&#x5377;&#x7BA1;&#x7406;)
+
+[ ] 4) LVM Thin Provisioning &#x7CBE;&#x7B80;&#x914D;&#x7F6E;
+
+Select a partition scheme configuration.
+
+  Please make your choice from above [<span class="hljs-string">&apos;q&apos;</span> to quit | <span class="hljs-string">&apos;c&apos;</span> to <span class="hljs-built_in">continue</span> |
+  <span class="hljs-string">&apos;r&apos;</span> to refresh]: c
+</code></pre>
+<p>&#x6B64;&#x5904;&#x4E5F;&#x53EF;&#x4EE5;&#x53EA;&#x8BBE;&#x7F6E; <code>Root &#x5BC6;&#x7801;</code>&#x548C;<code>Installation Destination &#x5B89;&#x88C5;&#x76EE;&#x7684;&#x5730;</code>&#x5176;&#x5B83;&#x8FDB;&#x5165;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;&#x6BD4;&#x5982;&#x65F6;&#x533A;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;TZ=&apos;Asia/Shanghai&apos;; export TZ&quot;</span> &gt;&gt; /etc/profile
+</code></pre>
+<h3 id="t4&#x8FDE;&#x63A5;&#x865A;&#x62DF;&#x673A;">&#x8FDE;&#x63A5;&#x865A;&#x62DF;&#x673A; <a href="#t4&#x8FDE;&#x63A5;&#x865A;&#x62DF;&#x673A;"> # </a></h3>
+<p>&#x901A;&#x8FC7; <code>virsh console &lt;&#x865A;&#x62DF;&#x673A;&#x540D;&#x79F0;&gt;</code> &#x547D;&#x4EE4;&#x6765;&#x8FDE;&#x63A5;&#x865A;&#x62DF;&#x673A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x67E5;&#x770B;&#x865A;&#x62DF;&#x673A;</span>
+virsh list              <span class="hljs-comment"># &#x67E5;&#x770B;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x865A;&#x62DF;&#x673A;</span>
+virsh list &#x2013;all         <span class="hljs-comment"># &#x67E5;&#x770B;&#x6240;&#x6709;&#x865A;&#x62DF;&#x673A;</span>
+
+ Id    Name                           State
+----------------------------------------------------
+ 7     centos72                       running
+</code></pre>
+<p>&#x8FDE;&#x63A5;&#x865A;&#x62DF;&#x673A;</p>
+<pre><code class="lang-bash">virsh console centos72
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x865A;&#x62DF;&#x673A;&#x7F51;&#x7EDC;&#xFF0C;&#x7F16;&#x8F91;<code>vi /etc/sysconfig/network-scripts/ifcfg-eth0</code></p>
+<pre><code class="lang-bash">TYPE=Ethernet
+BOOTPROTO=static
+IPADDR=192.168.120.200
+PREFIX=24
+GATEWAY=192.168.120.1
+DEFROUTE=yes
+PEERDNS=yes
+PEERROUTES=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_PEERDNS=yes
+IPV6_PEERROUTES=yes
+IPV6_FAILURE_FATAL=no
+NAME=eth0
+UUID=adfa3b7d-bf60-47e6-8482-871dee686fb5
+DEVICE=eth0
+ONBOOT=yes
+</code></pre>
+<p>&#x6DFB;&#x52A0;DNS&#x914D;&#x7F6E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x653E;&#x5230;<code>ifcfg-eth0</code>&#x4E2D;&#xFF0C;DNS&#x4E0D;&#x662F;&#x968F;&#x4FBF;&#x8BBE;&#x7F6E;&#x7684;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<a href="https://jaywcjlove.github.io/linux-command/c/host.html">host</a>&#x3001;<a href="https://jaywcjlove.github.io/linux-command/c/dig.html">dig</a>&#x3001;<a href="https://jaywcjlove.github.io/linux-command/c/nslookup.html">nslookup</a>&#x547D;&#x4EE4;&#x67E5;&#x8BE2;DNS&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E9B;&#x5DE5;&#x5177;&#x4E0D;&#x5B58;&#x5728;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>yum install bind-utils -y</code>&#x6765;&#x5B89;&#x88C5;&#x4E00;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5982;&#x679C;&#x6CA1;&#x6709;&#x5728;&#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#x6DFB;&#x52A0;DNS&#x53EF;&#x4EE5;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x6DFB;&#x52A0;DNS</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;nameserver 192.168.188.1&quot;</span> &gt; /etc/resolv.conf
+</code></pre>
+<p>&#x6FC0;&#x6D3B;&#x7F51;&#x5361;</p>
+<pre><code class="lang-bash">ifup eth0 <span class="hljs-comment"># &#x6FC0;&#x6D3B;&#x7F51;&#x5361;</span>
+</code></pre>
+<h3 id="t5&#x865A;&#x62DF;&#x673A;&#x5176;&#x5B83;&#x7BA1;&#x7406;">&#x865A;&#x62DF;&#x673A;&#x5176;&#x5B83;&#x7BA1;&#x7406; <a href="#t5&#x865A;&#x62DF;&#x673A;&#x5176;&#x5B83;&#x7BA1;&#x7406;"> # </a></h3>
+<pre><code class="lang-bash">virsh start centos72     <span class="hljs-comment"># &#x865A;&#x62DF;&#x673A;&#x5F00;&#x542F;&#xFF08;&#x542F;&#x52A8;&#xFF09;&#xFF1A;</span>
+virsh reboot centos72    <span class="hljs-comment"># &#x865A;&#x62DF;&#x673A;&#x91CD;&#x65B0;&#x542F;&#x52A8;</span>
+virsh shutdown centos72  <span class="hljs-comment"># &#x865A;&#x62DF;&#x673A;&#x5173;&#x673A;</span>
+virsh destroy centos72   <span class="hljs-comment"># &#x5F3A;&#x5236;&#x5173;&#x673A;&#xFF08;&#x5F3A;&#x5236;&#x65AD;&#x7535;&#xFF09;</span>
+virsh <span class="hljs-built_in">suspend</span> centos72   <span class="hljs-comment"># &#x6682;&#x505C;&#xFF08;&#x6302;&#x8D77;&#xFF09;KVM &#x865A;&#x62DF;&#x673A;</span>
+virsh resume centos72    <span class="hljs-comment"># &#x6062;&#x590D;&#x88AB;&#x6302;&#x8D77;&#x7684; KVM &#x865A;&#x62DF;&#x673A;</span>
+virsh undefine centos72  <span class="hljs-comment"># &#x8BE5;&#x65B9;&#x6CD5;&#x53EA;&#x5220;&#x9664;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x78C1;&#x76D8;&#x6587;&#x4EF6;&#x672A;&#x5220;&#x9664;</span>
+virsh autostart centos72 <span class="hljs-comment"># &#x968F;&#x7269;&#x7406;&#x673A;&#x542F;&#x52A8;&#x800C;&#x542F;&#x52A8;&#xFF08;&#x5F00;&#x673A;&#x542F;&#x52A8;&#xFF09;</span>
+virsh autostart --<span class="hljs-built_in">disable</span> centos72 <span class="hljs-comment"># &#x53D6;&#x6D88;&#x6807;&#x8BB0;&#x4E3A;&#x81EA;&#x52A8;&#x5F00;&#x59CB;&#xFF08;&#x53D6;&#x6D88;&#x5F00;&#x673A;&#x542F;&#x52A8;&#xFF09;</span>
+</code></pre>
+<h2 id="t6&#x914D;&#x7F6E;&#x7269;&#x7406;&#x673A;&#x7F51;&#x7EDC;">&#x914D;&#x7F6E;&#x7269;&#x7406;&#x673A;&#x7F51;&#x7EDC; <a href="#t6&#x914D;&#x7F6E;&#x7269;&#x7406;&#x673A;&#x7F51;&#x7EDC;"> # </a></h2>
+<p>&#x76EE;&#x524D;&#x6211;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;IP&#xFF0C;&#x901A;&#x8FC7;&#x914D;&#x7F6E;<code>eno2</code>&#xFF0C;&#x7F51;&#x6865;&#x5F53;&#x505A;&#x8DEF;&#x7531;&#x5668;&#xFF0C;&#x865A;&#x62DF;&#x673A;&#x5171;&#x4EAB;&#x7269;&#x7406;&#x673A;&#x8FDB;&#x51FA;&#x7F51;&#x7EDC;&#x3002;&#x7269;&#x7406;&#x673A;&#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#xFF0C;&#x7F51;&#x7EDC;&#x8FDB;&#x51FA;&#x8D70;<code>eno2</code> &#x7F16;&#x8F91;<code>vi /etc/sysconfig/network-scripts/ifcfg-eno2</code></p>
+<pre><code class="lang-bash">TYPE=Ethernet
+BOOTPROTO=static
+DEFROUTE=yes
+PEERDNS=yes
+PEERROUTES=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_PEERDNS=yes
+IPV6_PEERROUTES=yes
+IPV6_FAILURE_FATAL=no
+NAME=eno2
+UUID=f66c303e-994a-43cf-bd91-bb897dc2088d
+DEVICE=eno2
+ONBOOT=yes
+
+IPADDR=&lt;&#x8FD9;&#x91CC;&#x56FA;&#x5B9A;IP&#x914D;&#x7F6E;&#x7684;&#x5730;&#x65B9;&gt;  <span class="hljs-comment"># &#x8BBE;&#x7F6E;IP&#x5730;&#x5740;</span>
+PREFIX=24                   <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x5B50;&#x7F51;&#x63A9;&#x7801;</span>
+GATEWAY=&lt;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x7F51;&#x5173;&gt;        <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x7F51;&#x5173;</span>
+DNS1=&lt;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;DNS&gt;           <span class="hljs-comment"># DNS</span>
+</code></pre>
+<p><code>ifcfg-br0</code> &#x6865;&#x63A5;&#x7F51;&#x5361;&#x914D;&#x7F6E;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-bash">TYPE=Bridge
+BOOTPROTO=static
+NAME=br0
+DEVICE=br0
+ONBOOT=yes
+IPADDR=192.168.120.1
+PREFIX=24
+</code></pre>
+<p><code>ifcfg-eno1</code> &#x7269;&#x7406;&#x7F51;&#x5361;&#x6307;&#x5B9A;&#x6865;&#x63A5;&#x7F51;&#x5361;<code>BRIDGE=&quot;br0&quot;</code></p>
+<pre><code class="lang-bash">TYPE=Ethernet
+BOOTPROTO=none
+NAME=eno1
+DEVICE=eno1
+ONBOOT=yes
+BRIDGE=<span class="hljs-string">&quot;br0&quot;</span>
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x8DEF;&#x7531;&#x8F6C;&#x53D1;<code>vi /etc/sysctl.conf</code></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Controls IP packet forwarding</span>
+net.ipv4.ip_forward = 0
+&#x4FEE;&#x6539;&#x4E3A;
+<span class="hljs-comment"># Controls IP packet forwarding</span>
+net.ipv4.ip_forward = 1    &#x5141;&#x8BB8;&#x5185;&#x7F6E;&#x8DEF;&#x7531;
+</code></pre>
+<p>&#x518D;&#x6267;&#x884C; <code>sysctl -p</code> &#x4F7F;&#x5176;&#x751F;&#x6548;</p>
+<h2 id="t7&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;">&#x7AEF;&#x53E3;&#x8F6C;&#x53D1; <a href="#t7&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;"> # </a></h2>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x8FD8;&#x4EE5;&#x4E0A;&#x8FF0;VM&#x4E3A;&#x4F8B;&#xFF0C;&#x76EE;&#x524D;&#x8BE5;KVM&#x7684;&#x516C;&#x7F51;IP&#x4E3A;<code>211.11.61.7</code>&#xFF0C;VM&#x7684;IP&#x4E3A;<code>192.168.188.115</code>&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x8981;&#x6C42;&#x901A;&#x8FC7;&#x8BBF;&#x95EE;KVM&#x7684;2222&#x7AEF;&#x53E3;&#x8BBF;&#x95EE;VM&#x7684;22&#x7AEF;&#x53E3;&#x3002;</p>
+<p>&#x7F16;&#x8F91;<code>vi /etc/rc.d/rc.local</code> &#x6DFB;&#x52A0;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#xFF0C;&#x8FBE;&#x5230;&#x5F00;&#x673A;&#x91CD;&#x542F;&#x914D;&#x7F6E;&#x7F51;&#x7EDC;&#x8F6C;&#x53D1;&#x89C4;&#x5219;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x542F;&#x52A8;&#x7F51;&#x7EDC;&#x8F6C;&#x53D1;&#x89C4;&#x5219;</span>
+iptables -t nat -A : -s 192.168.188.0/24 -j SNAT --to-source 211.11.61.7
+
+iptables -t nat -A POSTROUTING -s 192.168.188.0/24 -j SNAT --to-source 211.11.61.7
+iptables -t nat -A PREROUTING -d  211.11.61.7 -p tcp --dport 2222  -j DNAT --to-dest 192.168.188.115:22
+iptables -t nat -A PREROUTING -d  211.11.61.7 -p tcp --dport 2221  -j DNAT --to-dest 192.168.188.115:21
+
+<span class="hljs-comment"># &#x5B9E;&#x9645;&#x6548;&#x679C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5916;&#x7F51;&#x8FDE;&#x63A5;&#x865A;&#x62DF;&#x673A;</span>
+ssh -p 2222 root@211.11.61.7
+</code></pre>
+<p>&#x901A;&#x8FC7;<a href="https://jaywcjlove.github.io/linux-command/c/iptables.html">iptables</a>&#x547D;&#x4EE4;&#x6765;&#x8BBE;&#x7F6E;&#x8F6C;&#x53D1;&#x89C4;&#x5219;&#xFF0C;&#x6E90;SNAT&#x89C4;&#x5219;&#xFF0C;&#x6E90;&#x7F51;&#x7EDC;&#x5730;&#x5740;&#x8F6C;&#x6362;&#xFF0C;SNAT&#x5C31;&#x662F;&#x91CD;&#x5199;&#x5305;&#x7684;&#x6E90;IP&#x5730;&#x5740;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x6570;&#x636E;&#x5305;&#x8FDB;&#x884C; &#x6E90;NAT(SNAT)&#xFF0C;&#x7CFB;&#x7EDF;&#x5148;&#x8DEF;&#x7531;&#x2014;&#x2014;&gt;&#x518D;&#x8FC7;&#x6EE4;&#xFF08;FORWARD)&#x2014;&#x2014;&gt;&#x6700;&#x540E;&#x624D;&#x8FDB;&#x884C;POSTROUTING SNAT&#x5730;&#x5740;&#x7FFB;&#x8BD1;</span>
+<span class="hljs-comment"># -t&lt;&#x8868;&gt;&#xFF1A;&#x6307;&#x5B9A;&#x8981;&#x64CD;&#x7EB5;&#x7684;&#x8868;&#xFF1B;</span>
+<span class="hljs-comment"># -A&#xFF1A;&#x5411;&#x89C4;&#x5219;&#x94FE;&#x4E2D;&#x6DFB;&#x52A0;&#x6761;&#x76EE;&#xFF1B;</span>
+<span class="hljs-comment"># -s&#xFF1A;&#x6307;&#x5B9A;&#x8981;&#x5339;&#x914D;&#x7684;&#x6570;&#x636E;&#x5305;&#x6E90;ip&#x5730;&#x5740;&#xFF1B;</span>
+<span class="hljs-comment"># -j&lt;&#x76EE;&#x6807;&gt;&#xFF1A;&#x6307;&#x5B9A;&#x8981;&#x8DF3;&#x8F6C;&#x7684;&#x76EE;&#x6807;&#xFF1B;</span>
+<span class="hljs-comment"># -j SNAT&#xFF1A;&#x6E90;&#x7F51;&#x7EDC;&#x5730;&#x5740;&#x8F6C;&#x6362;&#xFF0C;SNAT&#x5C31;&#x662F;&#x91CD;&#x5199;&#x5305;&#x7684;&#x6E90;IP&#x5730;&#x5740;</span>
+<span class="hljs-comment"># --to-source ipaddr[-ipaddr][:port-port] </span>
+<span class="hljs-comment">#   &#x5B83;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x5355;&#x4E2A;&#x65B0;&#x7684;&#x6E90;IP&#x5730;&#x5740;&#xFF0C;IP&#x5730;&#x5740;&#x7684;&#x5305;&#x542B;&#x8303;&#x56F4;&#xFF0C;&#x4EE5;&#x53CA;&#x53EF;&#x9009;&#x7684;&#x7AEF;&#x53E3;&#x8303;&#x56F4;&#xFF08;&#x4EC5;&#x5F53;&#x89C4;&#x5219;&#x8FD8;&#x6307;&#x5B9A;-p tcp&#x6216;-p udp&#x65F6;&#x624D;&#x6709;&#x6548;&#xFF09;&#x3002; </span>
+<span class="hljs-comment">#   &#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#x8303;&#x56F4;&#xFF0C;&#x5219;&#x4F4E;&#x4E8E;512&#x7684;&#x6E90;&#x7AEF;&#x53E3;&#x5C06;&#x6620;&#x5C04;&#x5230;512&#x4EE5;&#x4E0B;&#x7684;&#x5176;&#x4ED6;&#x7AEF;&#x53E3;&#xFF1A;512&#x548C;1023&#x4E4B;&#x95F4;&#x7684;&#x7AEF;&#x53E3;&#x5C06;&#x6620;&#x5C04;&#x5230;&#x4F4E;&#x4E8E;1024&#x7684;&#x7AEF;&#x53E3;&#xFF0C;</span>
+<span class="hljs-comment">#   &#x5176;&#x4ED6;&#x7AEF;&#x53E3;&#x5C06;&#x88AB;&#x6620;&#x5C04;&#x5230;1024&#x6216;&#x66F4;&#x9AD8;&#x3002; &#x5728;&#x53EF;&#x80FD;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x6E2F;&#x53E3;&#x66F4;&#x6539;&#x3002;</span>
+<span class="hljs-comment">#   &#x5728;&#x5185;&#x6838;&#x9AD8;&#x8FBE;2.6.10&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x51E0;&#x4E2A; - &#x6E90;&#x9009;&#x9879;&#x3002; </span>
+<span class="hljs-comment">#   &#x5BF9;&#x4E8E;&#x8FD9;&#x4E9B;&#x5185;&#x6838;&#xFF0C;&#x5982;&#x679C;&#x901A;&#x8FC7;&#x5730;&#x5740;&#x8303;&#x56F4;&#x6216;&#x591A;&#x4E2A;&#x6E90;&#x9009;&#x9879;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x6E90;&#x5730;&#x5740;&#xFF0C;&#x5219;&#x4F1A;&#x5728;&#x8FD9;&#x4E9B;&#x5730;&#x5740;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x7684;&#x5FAA;&#x73AF;&#xFF08;&#x5FAA;&#x73AF;&#x4E2D;&#x5FAA;&#x73AF;&#xFF09;&#x3002; </span>
+<span class="hljs-comment">#   &#x540E;&#x6765;&#x7684;&#x5185;&#x6838;&#xFF08;&gt; = 2.6.11-rc1&#xFF09;&#x4E0D;&#x518D;&#x5177;&#x6709;NAT&#x5230;&#x591A;&#x4E2A;&#x8303;&#x56F4;&#x7684;&#x80FD;&#x529B;&#x3002;</span>
+iptables -t nat -A POSTROUTING -s 192.168.120.0/24 -j SNAT --to-source &lt;&#x56FA;&#x5B9A;IP&gt;
+<span class="hljs-comment"># cat /etc/sysconfig/iptables</span>
+</code></pre>
+<h2 id="t8&#x516C;&#x7F51;&#x8BBF;&#x95EE;&#x865A;&#x62DF;&#x673A;">&#x516C;&#x7F51;&#x8BBF;&#x95EE;&#x865A;&#x62DF;&#x673A; <a href="#t8&#x516C;&#x7F51;&#x8BBF;&#x95EE;&#x865A;&#x62DF;&#x673A;"> # </a></h2>
+<p>&#x901A;&#x8FC7;&#x516C;&#x7F51;ip <code>192.168.188.222</code>&#x7AEF;&#x53E3;<code>2280</code>&#xFF0C;&#x8F6C;&#x53D1;&#x5230;&#x865A;&#x62DF;&#x673A;<code>192.168.111.133:80</code>&#x4E0A;&#x9762;</p>
+<pre><code class="lang-bash">iptables -t nat -A PREROUTING -d 192.168.188.222 -p tcp --dport 2280 -j DNAT --to-dest 192.168.111.133:80
+</code></pre>
+<p>&#x91CD;&#x542F;&#x5E76;&#x4FDD;&#x5B58; <code>iptables</code> &#x914D;&#x7F6E;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4FDD;&#x5B58; </span>
+service iptables save
+<span class="hljs-comment"># &#x91CD;&#x542F;</span>
+service iptables restart
+</code></pre>
+<h2 id="t9&#x914D;&#x7F6E;&#x5BBF;&#x4E3B;&#x673A;&#x7F51;&#x7EDC;">&#x914D;&#x7F6E;&#x5BBF;&#x4E3B;&#x673A;&#x7F51;&#x7EDC; <a href="#t9&#x914D;&#x7F6E;&#x5BBF;&#x4E3B;&#x673A;&#x7F51;&#x7EDC;"> # </a></h2>
+<ol>
+<li>KVM &#x865A;&#x62DF;&#x673A;&#x662F;&#x57FA;&#x4E8E; NAT &#x7684;&#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#xFF1B;</li>
+<li>&#x53EA;&#x6709;&#x540C;&#x4E00;&#x5BBF;&#x4E3B;&#x673A;&#x7684;&#x865A;&#x62DF;&#x952E;&#x4E4B;&#x95F4;&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x8BBF;&#x95EE;&#xFF0C;&#x8DE8;&#x5BBF;&#x4E3B;&#x673A;&#x662F;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#xFF1B;</li>
+<li>&#x865A;&#x62DF;&#x673A;&#x9700;&#x8981;&#x548C;&#x5BBF;&#x4E3B;&#x673A;&#x914D;&#x7F6E;&#x6210;&#x6865;&#x63A5;&#x6A21;&#x5F0F;&#xFF0C;&#x4EE5;&#x4FBF;&#x865A;&#x62DF;&#x673A;&#x53EF;&#x4EE5;&#x5728;&#x5C40;&#x57DF;&#x7F51;&#x5185;&#x53EF;&#x89C1;&#xFF1B;</li>
+</ol>
+<h3 id="t10Bridge&#x6A21;&#x5F0F;&#x914D;&#x7F6E;">Bridge&#x6A21;&#x5F0F;&#x914D;&#x7F6E; <a href="#t10Bridge&#x6A21;&#x5F0F;&#x914D;&#x7F6E;"> # </a></h3>
+<p>Bridge&#x65B9;&#x5F0F;&#x5373;&#x865A;&#x62DF;&#x7F51;&#x6865;&#x7684;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x65B9;&#x5F0F;&#xFF0C;&#x662F;&#x5BA2;&#x6237;&#x673A;&#x548C;&#x5B50;&#x7F51;&#x91CC;&#x9762;&#x7684;&#x673A;&#x5668;&#x80FD;&#x591F;&#x4E92;&#x76F8;&#x901A;&#x4FE1;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x865A;&#x62DF;&#x673A;&#x6210;&#x4E3A;&#x7F51;&#x7EDC;&#x4E2D;&#x5177;&#x6709;&#x72EC;&#x7ACB;IP&#x7684;&#x4E3B;&#x673A;&#x3002;<strong>&#x6865;&#x63A5;&#x7F51;&#x7EDC;</strong>&#xFF08;&#x4E5F;&#x53EB; <strong>&#x7269;&#x7406;&#x8BBE;&#x5907;&#x5171;&#x4EAB;</strong>&#xFF09;&#x88AB;&#x7528;&#x4F5C;&#x628A;&#x4E00;&#x4E2A;&#x7269;&#x7406;&#x8BBE;&#x5907;&#x590D;&#x5236;&#x5230;&#x4E00;&#x53F0;&#x865A;&#x62DF;&#x673A;&#x3002;&#x7F51;&#x6865;&#x591A;&#x7528;&#x4F5C;&#x9AD8;&#x7EA7;&#x8BBE;&#x7F6E;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x4E3B;&#x673A;&#x591A;&#x4E2A;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<pre><code class="lang-bash">&#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;      &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+&#x2502;          HOST           &#x2502;      &#x2502;Virtual Machine 1&#x2502;
+&#x2502; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;      &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x2502;      &#x2502;    &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;     &#x2502;
+&#x2502; &#x2502; br0  &#x2502;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2502; vnet0 &#x2502;&#x2500;&#x2502;&#x2500; &#x2500; &#x2500; &#x2502;    &#x2502; br0  &#x2502;     &#x2502;
+&#x2502; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;  &#x2502;   &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2502;      &#x2502;    &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;     &#x2502;
+&#x2502;     &#x2502;     &#x2502;             &#x2502;      &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+&#x2502;     &#x2502;     &#x2502;   &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x2502;      &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+&#x2502; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;  &#x2514;&#x2500;&#x2500;&#x2500;&#x2502; vnet1 &#x2502;&#x2500;&#x2502;&#x2500;     &#x2502;Virtual Machine 2&#x2502;
+&#x2502; &#x2502; eno0 &#x2502;      &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2502; &#x2502;    &#x2502;    &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;     &#x2502;
+&#x2502; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;                &#x2502;  &#x2500; &#x2500; &#x2502;    &#x2502; br0  &#x2502;     &#x2502;
+&#x2502; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;                &#x2502;      &#x2502;    &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;     &#x2502;
+&#x2502; &#x2502; eno1 &#x2502;                &#x2502;      &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+&#x2502; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;                &#x2502;
+&#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+</code></pre>
+<p>&#x901A;&#x8FC7;<a href="https://jaywcjlove.github.io/linux-command/c/ip.html">ip</a> &#x547D;&#x4EE4;&#x67E5;&#x770B;&#x5BBF;&#x4E3B;&#x673A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x5B57;</p>
+<pre><code class="lang-bash">ip addr
+
+6: eno1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP qlen 1000
+    link/ether 38:63:bb:44:cf:6c brd ff:ff:ff:ff:ff:ff
+    inet 192.168.188.132/24 brd 192.168.188.255 scope global dynamic eno1
+       valid_lft 2822sec preferred_lft 2822sec
+    inet6 fe80::3a63:bbff:fe44:cf6c/64 scope link
+       valid_lft forever preferred_lft forever
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E0A;&#x9762;<code>eno1</code>&#x662F;&#x6709;&#x83B7;&#x53D6;&#x5230;ip&#x5730;&#x5740;&#x7684;&#xFF0C;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x5728;<code>/etc/sysconfig/network-scripts/</code>&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;<code>ifcfg-eno1</code> &#x5BBF;&#x4E3B;&#x673A;&#x7684;&#x7269;&#x7406;&#x7F51;&#x5361;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># cat ifcfg-eno1</span>
+TYPE=Ethernet
+BOOTPROTO=static
+NAME=eno1
+DEVICE=eno1
+UUID=242b3d4d-37a5-4f46-b072-55554c185ecf
+ONBOOT=yes
+
+BRIDGE=<span class="hljs-string">&quot;br0&quot;</span> <span class="hljs-comment"># &#x6307;&#x5B9A;&#x6865;&#x63A5;&#x7F51;&#x5361;&#x7684;&#x540D;&#x79F0;</span>
+</code></pre>
+<p><code>ifcfg-br0</code> &#x6865;&#x63A5;&#x7F51;&#x5361;&#x914D;&#x7F6E;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># cat ifcfg-br0</span>
+BOOTPROTO=static
+DEFROUTE=yes
+PEERDNS=yes
+PEERROUTES=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_PEERDNS=yes
+IPV6_PEERROUTES=yes
+IPV6_FAILURE_FATAL=no
+NAME=br0
+UUID=242b3d4d-37a5-4f46-b072-55554c185ecf
+DEVICE=br0
+ONBOOT=yes
+TYPE=bridge  <span class="hljs-comment"># &#x5C06;&#x5236;&#x5B9A;&#x4E3A;&#x6865;&#x63A5;&#x7C7B;&#x578B;</span>
+IPADDR=192.168.188.133  <span class="hljs-comment"># &#x8BBE;&#x7F6E;IP&#x5730;&#x5740;</span>
+PREFIX=24               <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x5B50;&#x7F51;&#x63A9;&#x7801;</span>
+GATEWAY=192.168.188.1   <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x7F51;&#x5173;</span>
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x901A;&#x8FC7;<a href="https://jaywcjlove.github.io/linux-command/c/systemctl.html">systemctl</a> &#x547D;&#x4EE4;&#x91CD;&#x542F;&#x7F51;&#x5361;&#x3002;</p>
+<pre><code class="lang-bash">ifup eno1 <span class="hljs-comment"># &#x6FC0;&#x6D3B;&#x7F51;&#x5361;</span>
+ifup br0 <span class="hljs-comment"># &#x6FC0;&#x6D3B;&#x6865;&#x63A5;&#x7F51;&#x5361;</span>
+<span class="hljs-comment"># &#x4E24;&#x79CD;&#x91CD;&#x542F;&#x7F51;&#x7EDC;&#x7684;&#x65B9;&#x6CD5;</span>
+systemctl restart network.service
+service network restart
+
+<span class="hljs-comment"># &#x6821;&#x9A8C;&#x6865;&#x63A5;&#x63A5;&#x53E3;</span>
+brctl show
+
+bridge name bridge id   STP enabled interfaces
+br0   8000.3863bb44cf6c no    eno1
+              vnet0
+virbr0    8000.525400193f0f yes   virbr0-nic
+</code></pre>
+<h3 id="t11NAT&#x6A21;&#x5F0F;">NAT&#x6A21;&#x5F0F; <a href="#t11NAT&#x6A21;&#x5F0F;"> # </a></h3>
+<p>NAT(Network Address Translation&#x7F51;&#x7EDC;&#x5730;&#x5740;&#x7FFB;&#x8BD1;)&#xFF0C;NAT&#x65B9;&#x5F0F;&#x662F;kvm&#x5B89;&#x88C5;&#x540E;&#x7684;&#x9ED8;&#x8BA4;&#x65B9;&#x5F0F;&#x3002;&#x5B83;&#x652F;&#x6301;&#x4E3B;&#x673A;&#x4E0E;&#x865A;&#x62DF;&#x673A;&#x7684;&#x4E92;&#x8BBF;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x652F;&#x6301;&#x865A;&#x62DF;&#x673A;&#x8BBF;&#x95EE;&#x4E92;&#x8054;&#x7F51;&#xFF0C;&#x4F46;&#x4E0D;&#x652F;&#x6301;&#x5916;&#x754C;&#x8BBF;&#x95EE;&#x865A;&#x62DF;&#x673A;&#x3002;</p>
+<pre><code class="lang-bash">virsh net-edit default <span class="hljs-comment"># &#x5982;&#x679C;&#x8981;&#x521B;&#x5EFA;&#x6216;&#x8005;&#x4FEE;&#x6539;NAT&#x7F51;&#x7EDC;&#xFF0C;&#x8981;&#x5148;&#x7F16;&#x8F91;default.xml&#xFF1A;</span>
+virsh net-list --all
+
+ Name                 State      Autostart     Persistent
+----------------------------------------------------------
+ default              active     no            no
+</code></pre>
+<p>default&#x662F;&#x5BBF;&#x4E3B;&#x673A;&#x5B89;&#x88C5;&#x865A;&#x62DF;&#x673A;&#x652F;&#x6301;&#x6A21;&#x5757;&#x7684;&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x7684;&#x3002;</p>
+<pre><code class="lang-bash">ip a l
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: ens1f0: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc mq state DOWN qlen 1000
+    link/ether 2c:44:fd:8c:43:44 brd ff:ff:ff:ff:ff:ff
+3: ens1f1: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc mq state DOWN qlen 1000
+    link/ether 2c:44:fd:8c:43:45 brd ff:ff:ff:ff:ff:ff
+4: ens1f2: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc mq state DOWN qlen 1000
+    link/ether 2c:44:fd:8c:43:46 brd ff:ff:ff:ff:ff:ff
+5: ens1f3: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc mq state DOWN qlen 1000
+    link/ether 2c:44:fd:8c:43:47 brd ff:ff:ff:ff:ff:ff
+6: eno1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq master br0 state UP qlen 1000
+    link/ether 38:63:bb:44:cf:6c brd ff:ff:ff:ff:ff:ff
+7: eno2: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc mq state DOWN qlen 1000
+    link/ether 38:63:bb:44:cf:6d brd ff:ff:ff:ff:ff:ff
+8: eno3: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc mq state DOWN qlen 1000
+    link/ether 38:63:bb:44:cf:6e brd ff:ff:ff:ff:ff:ff
+9: eno4: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc mq state DOWN qlen 1000
+    link/ether 38:63:bb:44:cf:6f brd ff:ff:ff:ff:ff:ff
+10: virbr0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc noqueue state DOWN
+    link/ether 52:54:00:19:3f:0f brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+11: virbr0-nic: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc pfifo_fast master virbr0 state DOWN qlen 500
+    link/ether 52:54:00:19:3f:0f brd ff:ff:ff:ff:ff:ff
+12: br0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP
+    link/ether 38:63:bb:44:cf:6c brd ff:ff:ff:ff:ff:ff
+    inet 192.168.188.132/24 brd 192.168.188.255 scope global dynamic br0
+       valid_lft 3397sec preferred_lft 3397sec
+    inet 192.168.188.133/24 brd 192.168.188.255 scope global secondary br0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::3a63:bbff:fe44:cf6c/64 scope link
+       valid_lft forever preferred_lft forever
+19: vnet0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast master br0 state UNKNOWN qlen 500
+    link/ether fe:54:00:72:12:a8 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::fc54:ff:fe72:12a8/64 scope link
+       valid_lft forever preferred_lft forever
+</code></pre>
+<p>&#x5176;&#x4E2D;virbr0&#x662F;&#x7531;&#x5BBF;&#x4E3B;&#x673A;&#x865A;&#x62DF;&#x673A;&#x652F;&#x6301;&#x6A21;&#x5757;&#x5B89;&#x88C5;&#x65F6;&#x4EA7;&#x751F;&#x7684;&#x865A;&#x62DF;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#xFF0C;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;switch&#x548C;bridge&#xFF0C;&#x8D1F;&#x8D23;&#x628A;&#x5185;&#x5BB9;&#x5206;&#x53D1;&#x5230;&#x5404;&#x865A;&#x62DF;&#x673A;&#x3002;&#x51E0;&#x4E2A;&#x865A;&#x62DF;&#x673A;&#x7BA1;&#x7406;&#x6A21;&#x5757;&#x4EA7;&#x751F;&#x7684;&#x63A5;&#x53E3;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#x56FE;:</p>
+<pre><code class="lang-bash">&#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;                      
+&#x2502;         HOST          &#x2502;                      
+&#x2502; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;              &#x2502;   &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+&#x2502; &#x2502; br0  &#x2502;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;     &#x2502;   &#x2502;Virtual Machine 1&#x2502;
+&#x2502; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2502;      &#x2502;     &#x2502;   &#x2502;   &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;      &#x2502;
+&#x2502;     &#x2502;    &#x2502;  &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x2502; &#x2500; &#x2502;   &#x2502; br0  &#x2502;      &#x2502;
+&#x2502;     &#x2502;    &#x2502;  &#x2502; vnet0 &#x2502;&#x2500;&#x2502;&#x2518;  &#x2502;   &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;      &#x2502;
+&#x2502; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x2502;  &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2502;   &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+&#x2502; &#x2502;virbr0&#x2502; &#x2502;  &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x2502;   &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+&#x2502; &#x2502; -nic &#x2502; &#x2514;&#x2500;&#x2500;&#x2502; vnet1 &#x2502;&#x2500;&#x2502;&#x2510;  &#x2502;Virtual Machine 2&#x2502;
+&#x2502; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;    &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2502;   &#x2502;                 &#x2502;
+&#x2502; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;              &#x2502;&#x2514; &#x2500;&#x2502;   &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;      &#x2502;
+&#x2502; &#x2502; eno0 &#x2502;              &#x2502;   &#x2502;   &#x2502; br0  &#x2502;      &#x2502;
+&#x2502; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;              &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;      &#x2502;
+&#x2502; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;              &#x2502;   &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+&#x2502; &#x2502; eno1 &#x2502;              &#x2502;
+&#x2502; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;              &#x2502;
+&#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+</code></pre>
+<p>&#x4ECE;&#x56FE;&#x4E0A;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x865A;&#x62DF;&#x63A5;&#x53E3;&#x548C;&#x7269;&#x7406;&#x63A5;&#x53E3;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x8FDE;&#x63A5;&#x5173;&#x7CFB;&#xFF0C;&#x6240;&#x4EE5;&#x865A;&#x62DF;&#x673A;&#x53EA;&#x80FD;&#x5728;&#x901A;&#x8FC7;&#x865A;&#x62DF;&#x7684;&#x7F51;&#x7EDC;&#x8BBF;&#x95EE;&#x5916;&#x90E8;&#x4E16;&#x754C;&#xFF0C;&#x65E0;&#x6CD5;&#x4ECE;&#x7F51;&#x7EDC;&#x4E0A;&#x5B9A;&#x4F4D;&#x548C;&#x8BBF;&#x95EE;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x3002;</p>
+<p>virbr0&#x662F;&#x4E00;&#x4E2A;&#x6865;&#x63A5;&#x5668;&#xFF0C;&#x63A5;&#x6536;&#x6240;&#x6709;&#x5230;&#x7F51;&#x7EDC;192.168.122.*&#x7684;&#x5185;&#x5BB9;&#x3002;&#x4ECE;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x9A8C;&#x8BC1;&#xFF1A;</p>
+<pre><code class="lang-bash">brctl show
+<span class="hljs-comment"># &#x8F93;&#x51FA;&#x7ED3;&#x679C;</span>
+<span class="hljs-comment"># ---------------------</span>
+<span class="hljs-comment"># bridge name bridge id   STP enabled interfaces</span>
+<span class="hljs-comment"># br0   8000.3863bb44cf6c no    eno1</span>
+<span class="hljs-comment">#               vnet0</span>
+<span class="hljs-comment"># virbr0    8000.525400193f0f yes   virbr0-nic</span>
+
+ip route
+<span class="hljs-comment"># default via 192.168.188.1 dev br0</span>
+<span class="hljs-comment"># 169.254.0.0/16 dev br0  scope link  metric 1012</span>
+<span class="hljs-comment"># 192.168.122.0/24 dev virbr0  proto kernel  scope link  src 192.168.122.1</span>
+<span class="hljs-comment"># 192.168.188.0/24 dev br0  proto kernel  scope link  src 192.168.188.132</span>
+</code></pre>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x865A;&#x62DF;&#x673A;&#x652F;&#x6301;&#x6A21;&#x5757;&#x4F1A;&#x4FEE;&#x6539;iptables&#x89C4;&#x5219;&#xFF0C;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#xFF1A;</p>
+<pre><code class="lang-bash">iptables -t nat -L -nv
+iptables -t filter -L -nv
+</code></pre>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;default&#x7684;&#x8BDD;&#xFF0C;&#x6216;&#x8005;&#x9700;&#x8981;&#x6269;&#x5C55;&#x81EA;&#x5DF1;&#x7684;&#x865A;&#x62DF;&#x7F51;&#x7EDC;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x91CD;&#x65B0;&#x5B89;&#x88C5;NAT&#x3002;</p>
+<pre><code class="lang-bash">virsh net-define /usr/share/libvirt/networks/default.xml
+</code></pre>
+<p>&#x6B64;&#x547D;&#x4EE4;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x7F51;&#x7EDC;&#xFF0C;default.xml&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">network</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>default<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">bridge</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;virbr0&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">forward</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ip</span> <span class="hljs-attr">address</span>=<span class="hljs-string">&quot;192.168.122.1&quot;</span> <span class="hljs-attr">netmask</span>=<span class="hljs-string">&quot;255.255.255.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dhcp</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">range</span> <span class="hljs-attr">start</span>=<span class="hljs-string">&quot;192.168.122.2&quot;</span> <span class="hljs-attr">end</span>=<span class="hljs-string">&quot;192.168.122.254&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dhcp</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ip</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">network</span>&gt;</span>
+</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;xml&#xFF0C;&#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x865A;&#x62DF;&#x7F51;&#x7EDC;&#x3002;</p>
+<p>&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x548C;&#x6FC0;&#x6D3B;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-bash">virsh  net-define /etc/libvirt/qemu/networks/default.xml
+</code></pre>
+<p>&#x6807;&#x8BB0;&#x4E3A;&#x81EA;&#x52A8;&#x542F;&#x52A8;&#xFF1A;</p>
+<pre><code class="lang-bash">virsh net-autostart default
+<span class="hljs-comment"># Network default marked as autostarted</span>
+
+virsh net-start default
+</code></pre>
+<p>&#x542F;&#x52A8;&#x7F51;&#x7EDC;&#xFF1A;</p>
+<pre><code class="lang-bash">virsh net-start default
+<span class="hljs-comment"># Network default started</span>
+</code></pre>
+<p>&#x7F51;&#x7EDC;&#x542F;&#x52A8;&#x540E;&#x53EF;&#x4EE5;&#x7528;&#x547D;&#x4EE4;brctl show &#x67E5;&#x770B;&#x548C;&#x9A8C;&#x8BC1;&#x3002;</p>
+<p>&#x4FEE;&#x6539;<code>vi /etc/sysctl.conf</code>&#x4E2D;&#x53C2;&#x6570;&#xFF0C;&#x5141;&#x8BB8;ip&#x8F6C;&#x53D1;&#xFF0C;CentOS7&#x662F;&#x5728;<code>vi /usr/lib/sysctl.d/00-system.conf</code> &#x8FD9;&#x91CC;&#x9762;&#x4FEE;&#x6539;</p>
+<pre><code class="lang-bash">net.ipv4.ip_forward=1
+</code></pre>
+<p>&#x901A;&#x8FC7; <code>sysctl -p</code> &#x67E5;&#x770B;&#x4FEE;&#x6539;&#x7ED3;&#x679C;</p>
+<h3 id="t12&#x81EA;&#x5B9A;&#x4E49;NAT&#x7F51;&#x7EDC;">&#x81EA;&#x5B9A;&#x4E49;NAT&#x7F51;&#x7EDC; <a href="#t12&#x81EA;&#x5B9A;&#x4E49;NAT&#x7F51;&#x7EDC;"> # </a></h3>
+<p>&#x521B;&#x5EFA;&#x540D;&#x4E3A;<code>management</code>&#x7684;NAT&#x7F51;&#x7EDC;&#xFF0C;<code>vi  /usr/share/libvirt/networks/management.xml</code></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">network</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>management<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">bridge</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;virbr1&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">forward</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ip</span> <span class="hljs-attr">address</span>=<span class="hljs-string">&quot;192.168.123.1&quot;</span> <span class="hljs-attr">netmask</span>=<span class="hljs-string">&quot;255.255.255.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dhcp</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">range</span> <span class="hljs-attr">start</span>=<span class="hljs-string">&quot;192.168.123.2&quot;</span> <span class="hljs-attr">end</span>=<span class="hljs-string">&quot;192.168.123.254&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dhcp</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ip</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">network</span>&gt;</span>
+</code></pre>
+<p>&#x542F;&#x7528;&#x65B0;&#x5EFA;&#x7684;NAT&#x7F51;&#x7EDC;</p>
+<pre><code class="lang-bash">virsh net-define /usr/share/libvirt/networks/management.xml
+virsh net-start management
+virsh net-autostart management
+</code></pre>
+<p>&#x9A8C;&#x8BC1;</p>
+<pre><code class="lang-bash">brctl show
+<span class="hljs-comment"># bridge name bridge id   STP enabled interfaces</span>
+<span class="hljs-comment"># br0   8000.3863bb44cf6c no    eno1</span>
+<span class="hljs-comment">#               vnet0</span>
+<span class="hljs-comment"># virbr0    8000.525400193f0f yes   virbr0-nic</span>
+<span class="hljs-comment"># virbr1    8000.52540027f0ba yes   virbr1-nic</span>
+
+virsh net-list --all
+<span class="hljs-comment">#  Name                 State      Autostart     Persistent</span>
+<span class="hljs-comment"># ----------------------------------------------------------</span>
+<span class="hljs-comment">#  default              active     no            no</span>
+<span class="hljs-comment">#  management           active     yes           yes</span>
+</code></pre>
+<h3 id="t13&#x9000;&#x51FA;&#x865A;&#x62DF;&#x673A;">&#x9000;&#x51FA;&#x865A;&#x62DF;&#x673A; <a href="#t13&#x9000;&#x51FA;&#x865A;&#x62DF;&#x673A;"> # </a></h3>
+<pre><code class="lang-bash"><span class="hljs-built_in">exit</span> <span class="hljs-comment"># &#x9000;&#x51FA;&#x7CFB;&#x7EDF;&#x5230;&#x767B;&#x5F55;&#x754C;&#x9762;</span>
+
+Ctrl+5 <span class="hljs-comment"># &#x4ECE;&#x865A;&#x62DF;&#x673A;&#x767B;&#x5F55;&#x9875;&#x9762;&#xFF0C;&#x9000;&#x51FA;&#x5230;&#x5BBF;&#x4E3B;&#x673A;&#x547D;&#x4EE4;&#x884C;&#x9875;&#x9762;</span>
+Ctrl+] <span class="hljs-comment"># &#x6216;&#x8005;&#x4E0B;&#x9762;</span>
+</code></pre>
+<h2 id="t14&#x4FEE;&#x6539;&#x865A;&#x62DF;&#x673A;&#x914D;&#x7F6E;&#x4FE1;&#x606F;">&#x4FEE;&#x6539;&#x865A;&#x62DF;&#x673A;&#x914D;&#x7F6E;&#x4FE1;&#x606F; <a href="#t14&#x4FEE;&#x6539;&#x865A;&#x62DF;&#x673A;&#x914D;&#x7F6E;&#x4FE1;&#x606F;"> # </a></h2>
+<p>&#x76F4;&#x63A5;&#x901A;&#x8FC7;vim&#x547D;&#x4EE4;&#x4FEE;&#x6539;</p>
+<pre><code class="lang-bash">vim  /etc/libvirt/qemu/centos72.xml
+</code></pre>
+<p>&#x901A;&#x8FC7;virsh&#x547D;&#x4EE4;&#x4FEE;&#x6539;</p>
+<pre><code class="lang-bash">virsh edit centos72
+</code></pre>
+<h2 id="t15&#x514B;&#x9686;&#x865A;&#x62DF;&#x673A;">&#x514B;&#x9686;&#x865A;&#x62DF;&#x673A; <a href="#t15&#x514B;&#x9686;&#x865A;&#x62DF;&#x673A;"> # </a></h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x6682;&#x505C;&#x539F;&#x59CB;&#x865A;&#x62DF;&#x673A;</span>
+virsh shutdown centos72
+virt-clone -o centos72 -n centos.112 -f /home/vms/centos.112.qcow2 -m 00:00:00:00:00:01
+virt-clone -o centos88 -n centos.112 --file /home/vms/centos.112.qcow2 --nonsparse
+</code></pre>
+<p><code>virt-clone</code> &#x53C2;&#x6570;&#x4ECB;&#x7ECD;</p>
+<ul>
+<li><code>--version</code> &#x67E5;&#x770B;&#x7248;&#x672C;&#x3002;</li>
+<li><code>-h&#xFF0C;--help</code> &#x67E5;&#x770B;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;&#x3002;</li>
+<li><code>--connect=URI</code> &#x8FDE;&#x63A5;&#x5230;&#x865A;&#x62DF;&#x673A;&#x7BA1;&#x7406;&#x7A0B;&#x5E8F; libvirt &#x7684;URI&#x3002;</li>
+<li><code>-o &#x539F;&#x59CB;&#x865A;&#x62DF;&#x673A;&#x540D;&#x79F0;</code> &#x539F;&#x59CB;&#x865A;&#x62DF;&#x673A;&#x540D;&#x79F0;&#xFF0C;&#x5FC5;&#x987B;&#x4E3A;&#x5173;&#x95ED;&#x6216;&#x8005;&#x6682;&#x505C;&#x72B6;&#x6001;&#x3002;</li>
+<li><code>-n &#x65B0;&#x865A;&#x62DF;&#x673A;&#x540D;&#x79F0;</code> --name &#x65B0;&#x865A;&#x62DF;&#x673A;&#x540D;&#x79F0;&#x3002;</li>
+<li><code>--auto-clone</code> &#x4ECE;&#x539F;&#x6765;&#x7684;&#x865A;&#x62DF;&#x673A;&#x914D;&#x7F6E;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x514B;&#x9686;&#x540D;&#x79F0;&#x548C;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;&#x3002;</li>
+<li><code>-u NEW_UUID, --uuid=NEW_UUID</code> &#x514B;&#x9686;&#x865A;&#x62DF;&#x673A;&#x7684;&#x65B0;&#x7684;UUID&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x751F;&#x6210;&#x7684;UUID&#x3002;</li>
+<li><code>-m NEW_MAC, --mac=NEW_MAC</code> &#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x65B0;&#x7684;mac&#x5730;&#x5740;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x968F;&#x673A;&#x751F;&#x6210; MAC&#x3002;</li>
+<li><code>-f NEW_DISKFILE, --file=NEW_DISKFILE</code> &#x4E3A;&#x65B0;&#x5BA2;&#x6237;&#x673A;&#x4F7F;&#x7528;&#x65B0;&#x7684;&#x78C1;&#x76D8;&#x955C;&#x50CF;&#x6587;&#x4EF6;&#x5730;&#x5740;&#x3002;</li>
+<li><code>--force-copy=TARGET</code> &#x5F3A;&#x5236;&#x590D;&#x5236;&#x8BBE;&#x5907;&#x3002;</li>
+<li><code>--nonsparse</code> &#x4E0D;&#x4F7F;&#x7528;&#x7A00;&#x758F;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x78C1;&#x76D8;&#x6620;&#x50CF;&#x3002;</li>
+</ul>
+<h2 id="t16&#x901A;&#x8FC7;&#x955C;&#x50CF;&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;">&#x901A;&#x8FC7;&#x955C;&#x50CF;&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A; <a href="#t16&#x901A;&#x8FC7;&#x955C;&#x50CF;&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;"> # </a></h2>
+<p>&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;&#x955C;&#x50CF;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x590D;&#x5236;&#x7B2C;&#x4E00;&#x6B21;&#x5B89;&#x88C5;&#x7684;&#x5E72;&#x51C0;&#x7CFB;&#x7EDF;&#x955C;&#x50CF;&#xFF0C;&#x4F5C;&#x4E3A;&#x57FA;&#x7840;&#x955C;&#x50CF;&#x6587;&#x4EF6;&#xFF0C;</span>
+<span class="hljs-comment"># &#x540E;&#x9762;&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x57FA;&#x7840;&#x955C;&#x50CF;</span>
+cp /home/vms/centos.88.qcow2 /home/vms/centos7.base.qcow2
+
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x57FA;&#x7840;&#x955C;&#x50CF;&#x6587;&#x4EF6;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x865A;&#x62DF;&#x673A;&#x955C;&#x50CF;</span>
+cp /home/vms/centos7.base.qcow2 /home/vms/centos7.113.qcow2
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x590D;&#x5236;&#x7B2C;&#x4E00;&#x6B21;&#x5B89;&#x88C5;&#x7684;&#x5E72;&#x51C0;&#x7CFB;&#x7EDF;&#x955C;&#x50CF;&#xFF0C;&#x4F5C;&#x4E3A;&#x57FA;&#x7840;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;</span>
+virsh dumpxml centos.88 &gt; /home/vms/centos7.base.xml
+
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x57FA;&#x7840;&#x865A;&#x62DF;&#x673A;&#x955C;&#x50CF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x865A;&#x62DF;&#x673A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+cp /home/vms/centos7.base.xml /home/vms/centos7.113.xml
+
+<span class="hljs-comment"># &#x7F16;&#x8F91;&#x65B0;&#x865A;&#x62DF;&#x673A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+vi /home/vms/centos7.113.xml
+</code></pre>
+<p>&#x4E3B;&#x8981;&#x662F;&#x4FEE;&#x6539;&#x865A;&#x62DF;&#x673A;&#x6587;&#x4EF6;&#x540D;&#xFF0C;UUID&#xFF0C;&#x955C;&#x50CF;&#x5730;&#x5740;&#x548C;&#x7F51;&#x5361;&#x5730;&#x5740;&#xFF0C;&#x5176;&#x4E2D; UUID &#x5728; Linux &#x4E0B;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>uuidgen</code> &#x547D;&#x4EE4;&#x751F;&#x6210;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">domain</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&apos;kvm&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>centos7.113<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">uuid</span>&gt;</span>1e86167a-33a9-4ce8-929e-58013fbf9122<span class="hljs-tag">&lt;/<span class="hljs-name">uuid</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">devices</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">disk</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&apos;file&apos;</span> <span class="hljs-attr">device</span>=<span class="hljs-string">&apos;disk&apos;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&apos;/home/vms/centos7.113.img&apos;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">disk</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">interface</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&apos;bridge&apos;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mac</span> <span class="hljs-attr">address</span>=<span class="hljs-string">&apos;00:00:00:00:00:04&apos;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">interface</span>&gt;</span>    
+    <span class="hljs-tag">&lt;/<span class="hljs-name">devices</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">domain</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-bash">virsh define /home/vms/centos7.113.xml
+<span class="hljs-comment"># Domain centos.113 defined from /home/vms/centos7.113.xml</span>
+</code></pre>
+<h2 id="t17&#x52A8;&#x6001;&#x66F4;&#x6539;cpu&#x6570;&#x91CF;&#x548C;&#x5185;&#x5B58;&#x5927;&#x5C0F;">&#x52A8;&#x6001;&#x66F4;&#x6539;cpu&#x6570;&#x91CF;&#x548C;&#x5185;&#x5B58;&#x5927;&#x5C0F; <a href="#t17&#x52A8;&#x6001;&#x66F4;&#x6539;cpu&#x6570;&#x91CF;&#x548C;&#x5185;&#x5B58;&#x5927;&#x5C0F;"> # </a></h2>
+<p>&#x52A8;&#x6001;&#x8C03;&#x6574;&#xFF0C;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x7ED9;&#x865A;&#x62DF;&#x673A;&#x5206;&#x914D;&#x7684;&#x6700;&#x5927;&#x5185;&#x5B58;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x542F;&#x865A;&#x62DF;&#x673A;&#x3002;</p>
+<pre><code class="lang-bash">virsh list --all
+<span class="hljs-comment">#  Id    &#x540D;&#x79F0;                         &#x72B6;&#x6001;</span>
+<span class="hljs-comment"># ----------------------------------------------------</span>
+<span class="hljs-comment">#  2     working112                     running</span>
+
+<span class="hljs-comment"># &#x66F4;&#x6539;CPU</span>
+virsh setvcpus working112 --maximum 4 --config
+<span class="hljs-comment"># &#x66F4;&#x6539;&#x5185;&#x5B58;</span>
+virsh setmaxmem working112 1048576 --config
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x4FE1;&#x606F;</span>
+virsh dominfo working112
+</code></pre>
+<h2 id="t18&#x6302;&#x8F7D;&#x78C1;&#x76D8;">&#x6302;&#x8F7D;&#x78C1;&#x76D8; <a href="#t18&#x6302;&#x8F7D;&#x78C1;&#x76D8;"> # </a></h2>
+<h3 id="t19&#x521B;&#x5EFA;&#x78C1;&#x76D8;">&#x521B;&#x5EFA;&#x78C1;&#x76D8; <a href="#t19&#x521B;&#x5EFA;&#x78C1;&#x76D8;"> # </a></h3>
+<pre><code class="lang-bash">mkdir /home/vms
+</code></pre>
+<p>&#x67E5;&#x770B;&#x955C;&#x50CF;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-bash">virt-filesystems --long --parts --blkdevs -h -a working112.qcow2
+
+<span class="hljs-comment"># Name       Type       Size  Parent</span>
+<span class="hljs-comment"># /dev/sda1  partition  200M  /dev/sda</span>
+<span class="hljs-comment"># /dev/sda2  partition  9.8G  /dev/sda</span>
+<span class="hljs-comment"># /dev/sda   device     10G   -</span>
+
+qemu-img info working112.qcow2
+
+<span class="hljs-comment"># image: working112.qcow2</span>
+<span class="hljs-comment"># file format: qcow2</span>
+<span class="hljs-comment"># virtual size: 140G (150323855360 bytes)</span>
+<span class="hljs-comment"># disk size: 33G</span>
+<span class="hljs-comment"># cluster_size: 65536</span>
+<span class="hljs-comment"># Format specific information:</span>
+<span class="hljs-comment">#     compat: 1.1</span>
+<span class="hljs-comment">#     lazy refcounts: true</span>
+</code></pre>
+<p>&#x7ED9;&#x865A;&#x62DF;&#x673A;&#x955C;&#x50CF;&#x6DFB;&#x52A0;<code>200G</code>&#x5927;&#x5C0F;&#xFF0C;&#x6CE8;&#x610F;&#x9700;&#x8981;&#x505C;&#x6B62;<code>working112</code>&#x865A;&#x62DF;&#x673A;</p>
+<pre><code class="lang-bash">qemu-img resize working112.qcow2 +200G
+<span class="hljs-comment"># Image resized.</span>
+</code></pre>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5236;&#x4F5C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x7684;&#x78C1;&#x76D8;&#x7684;&#x5907;&#x4EFD;&#x526F;&#x672C;&#x3002;</p>
+<pre><code class="lang-bash">cp working112.qcow2 working112-orig.qcow2
+</code></pre>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x6765;&#x589E;&#x52A0; <code>/dev/sda</code></p>
+<pre><code class="lang-bash">virt-resize --expand /dev/sda1 working112-orig.qcow2 working112.qcow2
+</code></pre>
+<p>&#x67E5;&#x770B;&#x955C;&#x50CF;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-bash">qemu-img info working112.qcow2
+<span class="hljs-comment"># image: working112.qcow2</span>
+<span class="hljs-comment"># file format: qcow2</span>
+<span class="hljs-comment"># virtual size: 140G (150323855360 bytes)</span>
+<span class="hljs-comment"># disk size: 33G</span>
+<span class="hljs-comment"># cluster_size: 65536</span>
+<span class="hljs-comment"># Format specific information:</span>
+<span class="hljs-comment">#     compat: 1.1</span>
+<span class="hljs-comment">#     lazy refcounts: true</span>
+</code></pre>
+<p>&#x8FDB;&#x5165;&#x865A;&#x62DF;&#x673A;<code>virsh console working112</code> &#x67E5;&#x770B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code class="lang-bash">vgdisplay <span class="hljs-comment"># &#x663E;&#x793A;&#x5377;&#x7EC4;&#x5927;&#x5C0F;</span>
+lvdisplay <span class="hljs-comment"># &#x663E;&#x793A;&#x903B;&#x8F91;&#x5377;&#x5927;&#x5C0F;</span>
+</code></pre>
+<p>&#x5377;&#x7EC4;&#x5927;&#x5C0F;&#x5DF2;&#x589E;&#x52A0;&#xFF0C;&#x4E0B;&#x9762;&#x9700;&#x8981;&#x5206;&#x914D;&#x5BB9;&#x91CF;&#x7ED9;&#x903B;&#x8F91;&#x5377;</p>
+<pre><code class="lang-bash">lvextend -L +60G /dev/centos/root
+</code></pre>
+<p>&#x8FD8;&#x6709;&#x6700;&#x540E;&#x4E00;&#x6B65;&#xFF0C;&#x5206;&#x914D;&#x597D;&#x4E86;&#x9700;&#x8981;&#x505A;&#x7CFB;&#x7EDF;&#x8C03;&#x6574;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># ext &#x7CFB;&#x7EDF;&#x683C;&#x5F0F;&#x4F7F;&#x7528;&#xFF1A;</span>
+resize2fs /dev/centos/root
+<span class="hljs-comment"># xfs &#x7CFB;&#x7EDF;&#x683C;&#x5F0F;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x547D;&#x4EE4;</span>
+xfs_growfs /dev/centos/root
+</code></pre>
+<h2 id="t20&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x8BF4;&#x660E;">&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x8BF4;&#x660E; <a href="#t20&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x8BF4;&#x660E;"> # </a></h2>
+<h3 id="t21virt-install">virt-install <a href="#t21virt-install"> # </a></h3>
+<p>&#x5E38;&#x7528;&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
+<pre><code class="lang-bash">&#x2013;name&#x6307;&#x5B9A;&#x865A;&#x62DF;&#x673A;&#x540D;&#x79F0;
+&#x2013;memory&#x5206;&#x914D;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#x3002;
+&#x2013;vcpus&#x5206;&#x914D;CPU&#x6838;&#x5FC3;&#x6570;&#xFF0C;&#x6700;&#x5927;&#x4E0E;&#x5B9E;&#x4F53;&#x673A;CPU&#x6838;&#x5FC3;&#x6570;&#x76F8;&#x540C;
+&#x2013;disk&#x6307;&#x5B9A;&#x865A;&#x62DF;&#x673A;&#x955C;&#x50CF;&#xFF0C;size&#x6307;&#x5B9A;&#x5206;&#x914D;&#x5927;&#x5C0F;&#x5355;&#x4F4D;&#x4E3A;G&#x3002;
+&#x2013;network&#x7F51;&#x7EDC;&#x7C7B;&#x578B;&#xFF0C;&#x6B64;&#x5904;&#x7528;&#x7684;&#x662F;&#x9ED8;&#x8BA4;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x7684;&#x5E94;&#x8BE5;&#x662F;bridge&#x6865;&#x63A5;&#x3002;
+&#x2013;accelerate&#x52A0;&#x901F;
+&#x2013;cdrom&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x955C;&#x50CF;iso
+&#x2013;vnc&#x542F;&#x7528;VNC&#x8FDC;&#x7A0B;&#x7BA1;&#x7406;&#xFF0C;&#x4E00;&#x822C;&#x5B89;&#x88C5;&#x7CFB;&#x7EDF;&#x90FD;&#x8981;&#x542F;&#x7528;&#x3002;
+&#x2013;vncport&#x6307;&#x5B9A;VNC&#x76D1;&#x63A7;&#x7AEF;&#x53E3;&#xFF0C;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A;5900&#xFF0C;&#x7AEF;&#x53E3;&#x4E0D;&#x80FD;&#x91CD;&#x590D;&#x3002;
+&#x2013;vnclisten&#x6307;&#x5B9A;VNC&#x7ED1;&#x5B9A;IP&#xFF0C;&#x9ED8;&#x8BA4;&#x7ED1;&#x5B9A;127.0.0.1&#xFF0C;&#x8FD9;&#x91CC;&#x6539;&#x4E3A;0.0.0.0&#x3002;
+&#x2013;os-type=linux,windows
+&#x2013;os-variant=rhel6
+
+--name      &#x6307;&#x5B9A;&#x865A;&#x62DF;&#x673A;&#x540D;&#x79F0;
+--ram       &#x865A;&#x62DF;&#x673A;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x4EE5; MB &#x4E3A;&#x5355;&#x4F4D;
+--vcpus     &#x5206;&#x914D;CPU&#x6838;&#x5FC3;&#x6570;&#xFF0C;&#x6700;&#x5927;&#x4E0E;&#x5B9E;&#x4F53;&#x673A;CPU&#x6838;&#x5FC3;&#x6570;&#x76F8;&#x540C;
+&#x2013;-vnc       &#x542F;&#x7528;VNC&#x8FDC;&#x7A0B;&#x7BA1;&#x7406;&#xFF0C;&#x4E00;&#x822C;&#x5B89;&#x88C5;&#x7CFB;&#x7EDF;&#x90FD;&#x8981;&#x542F;&#x7528;&#x3002;
+&#x2013;-vncport   &#x6307;&#x5B9A;VNC&#x76D1;&#x63A7;&#x7AEF;&#x53E3;&#xFF0C;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A;5900&#xFF0C;&#x7AEF;&#x53E3;&#x4E0D;&#x80FD;&#x91CD;&#x590D;&#x3002;
+&#x2013;-vnclisten  &#x6307;&#x5B9A;VNC&#x7ED1;&#x5B9A;IP&#xFF0C;&#x9ED8;&#x8BA4;&#x7ED1;&#x5B9A;127.0.0.1&#xFF0C;&#x8FD9;&#x91CC;&#x6539;&#x4E3A;0.0.0.0&#x3002;
+--network   &#x865A;&#x62DF;&#x673A;&#x7F51;&#x7EDC;&#x914D;&#x7F6E;
+  <span class="hljs-comment"># &#x5176;&#x4E2D;&#x5B50;&#x9009;&#x9879;&#xFF0C;bridge=br0 &#x6307;&#x5B9A;&#x6865;&#x63A5;&#x7F51;&#x5361;&#x7684;&#x540D;&#x79F0;&#x3002;</span>
+
+&#x2013;os-type=linux,windows
+&#x2013;os-variant=rhel7.2
+
+--disk &#x6307;&#x5B9A;&#x865A;&#x62DF;&#x673A;&#x7684;&#x78C1;&#x76D8;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;
+  <span class="hljs-comment"># size&#xFF0C;&#x521D;&#x59CB;&#x78C1;&#x76D8;&#x5927;&#x5C0F;&#xFF0C;&#x4EE5; GB &#x4E3A;&#x5355;&#x4F4D;&#x3002;</span>
+
+--location &#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x4ECB;&#x8D28;&#x8DEF;&#x5F84;&#xFF0C;&#x5982;&#x5149;&#x76D8;&#x955C;&#x50CF;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;
+--graphics &#x56FE;&#x5F62;&#x5316;&#x663E;&#x793A;&#x914D;&#x7F6E;
+  <span class="hljs-comment"># &#x5168;&#x65B0;&#x5B89;&#x88C5;&#x865A;&#x62DF;&#x673A;&#x8FC7;&#x7A0B;&#x4E2D;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x5F88;&#x591A;&#x4EA4;&#x4E92;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x8BBE;&#x7F6E;&#x8BED;&#x8A00;&#xFF0C;&#x521D;&#x59CB;&#x5316; root &#x5BC6;&#x7801;&#x7B49;&#x7B49;&#x3002;</span>
+  <span class="hljs-comment"># graphics &#x9009;&#x9879;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x914D;&#x7F6E;&#x56FE;&#x5F62;&#x5316;&#x7684;&#x4EA4;&#x4E92;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; vnc&#xFF08;&#x4E00;&#x79CD;&#x8FDC;&#x7A0B;&#x684C;&#x9762;&#x8F6F;&#x4EF6;&#xFF09;&#x8FDB;&#x884C;&#x94FE;&#x63A5;&#x3002;</span>
+  <span class="hljs-comment"># &#x6211;&#x4EEC;&#x8FD9;&#x5217;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x7684;&#x65B9;&#x5F0F;&#x5B89;&#x88C5;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x8981;&#x8BBE;&#x7F6E;&#x4E3A; none&#xFF0C;&#x4F46;&#x8981;&#x901A;&#x8FC7; --extra-args &#x9009;&#x9879;&#x6307;&#x5B9A;&#x7EC8;&#x7AEF;&#x4FE1;&#x606F;&#xFF0C;</span>
+  <span class="hljs-comment"># &#x8FD9;&#x6837;&#x624D;&#x80FD;&#x5C06;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x4EA4;&#x4E92;&#x4FE1;&#x606F;&#x8F93;&#x51FA;&#x5230;&#x5F53;&#x524D;&#x63A7;&#x5236;&#x53F0;&#x3002;</span>
+--extra-args &#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5B89;&#x88C5;&#x65B9;&#x5F0F;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x989D;&#x5916;&#x9009;&#x9879;
+</code></pre>
+<h3 id="t22virsh">virsh <a href="#t22virsh"> # </a></h3>
+<p>&#x57FA;&#x7840;&#x547D;&#x4EE4;</p>
+<pre><code class="lang-bash">virsh list --all           <span class="hljs-comment"># &#x67E5;&#x770B;&#x6240;&#x6709;&#x8FD0;&#x884C;&#x548C;&#x6CA1;&#x6709;&#x8FD0;&#x884C;&#x7684;&#x865A;&#x62DF;&#x673A;</span>
+virsh list                 <span class="hljs-comment"># &#x67E5;&#x770B;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x865A;&#x62DF;&#x673A;</span>
+virsh dumpxml vm-name      <span class="hljs-comment"># &#x67E5;&#x770B;kvm&#x865A;&#x62DF;&#x673A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+virsh start vm-name        <span class="hljs-comment"># &#x542F;&#x52A8;kvm&#x865A;&#x62DF;&#x673A;</span>
+virsh shutdown vm-name     <span class="hljs-comment"># &#x6B63;&#x5E38;&#x5173;&#x673A;</span>
+
+virsh destroy vm-name      <span class="hljs-comment"># &#x975E;&#x6B63;&#x5E38;&#x5173;&#x673A;&#xFF0C;&#x5F3A;&#x5236;&#x5173;&#x95ED;&#x865A;&#x62DF;&#x673A;&#xFF08;&#x76F8;&#x5F53;&#x4E8E;&#x7269;&#x7406;&#x673A;&#x76F4;&#x63A5;&#x62D4;&#x6389;&#x7535;&#x6E90;&#xFF09;</span>
+virsh undefine vm-name     <span class="hljs-comment"># &#x5220;&#x9664;vm&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+
+ls /etc/libvirt/qemu
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x5220;&#x9664;&#x7ED3;&#x679C;&#xFF0C;Centos-6.6&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x4F46;&#x78C1;&#x76D8;&#x6587;&#x4EF6;&#x4E0D;&#x4F1A;&#x88AB;&#x5220;&#x9664;</span>
+
+virsh define file-name.xml <span class="hljs-comment"># &#x6839;&#x636E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x865A;&#x62DF;&#x673A;</span>
+virsh <span class="hljs-built_in">suspend</span> vm-name      <span class="hljs-comment"># &#x6302;&#x8D77;&#xFF0C;&#x7EC8;&#x6B62;</span>
+virsh resumed vm-name      <span class="hljs-comment"># &#x6062;&#x590D;&#x88AB;&#x6302;&#x8D77;&#x7684;&#x865A;&#x62DF;&#x673A;</span>
+virsh autostart vm-name    <span class="hljs-comment"># &#x5F00;&#x673A;&#x81EA;&#x542F;&#x52A8;vm</span>
+virsh console &lt;&#x865A;&#x62DF;&#x673A;&#x540D;&#x79F0;&gt;   <span class="hljs-comment"># &#x8FDE;&#x63A5;&#x865A;&#x62DF;&#x673A;</span>
+</code></pre>
+<h2 id="t23&#x9519;&#x8BEF;&#x89E3;&#x51B3;">&#x9519;&#x8BEF;&#x89E3;&#x51B3; <a href="#t23&#x9519;&#x8BEF;&#x89E3;&#x51B3;"> # </a></h2>
+<pre><code class="lang-bash">console <span class="hljs-built_in">test</span>
+Connected to domain <span class="hljs-built_in">test</span>
+Escape character is ^]
+</code></pre>
+<p>&#x5982;&#x679C;&#x51FA;&#x73B0;&#x4E0A;&#x9762;&#x5B57;&#x7B26;&#x4E32;&#x4F7F;&#x7528; <kbd>CTRL+Shift+5</kbd> <kbd>CTRL+Shift+]</kbd></p>
+<ol>
+<li><p>ERROR Format cannot be specified for unmanaged storage.
+virt-manager &#x6CA1;&#x6709;&#x627E;&#x5230;&#x5B58;&#x50A8;&#x6C60;&#xFF0C;&#x521B;&#x5EFA;&#x50A8;&#x5B58;&#x6C60;&#x5373;&#x53EF;</p>
+</li>
+<li><p>KVM VNC&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x95EA;&#x9000;
+&#x4F7F;&#x7528;real vnc&#x6216;&#x8005;&#x5176;&#x5B83;vnc&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;kvm&#x95EA;&#x9000;&#xFF0C;&#x628A;&#x5BA2;&#x6237;&#x7AEF;&#x8BBE;&#x7F6E;&#x4E2D;&#x7684;ColourLevel&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;rgb222&#x6216;full&#x5373;&#x53EF;</p>
+</li>
+<li><p>virsh shutdown <domain> &#x65E0;&#x6CD5;&#x5173;&#x95ED;&#x865A;&#x62DF;&#x673A;
+&#x4F7F;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x5173;&#x95ED;&#x865A;&#x62DF;&#x673A;&#x65F6;&#xFF0C;KVM&#x662F;&#x5411;&#x865A;&#x62DF;&#x673A;&#x53D1;&#x9001;&#x4E00;&#x4E2A;ACPI&#x7684;&#x6307;&#x4EE4;&#xFF0C;&#x9700;&#x8981;&#x865A;&#x62DF;&#x673A;&#x5B89;&#x88C5;acpid&#x670D;&#x52A1;&#xFF1A;</domain></p>
+</li>
+</ol>
+<h2 id="t24&#x53C2;&#x8003;&#x6587;&#x7AE0;">&#x53C2;&#x8003;&#x6587;&#x7AE0; <a href="#t24&#x53C2;&#x8003;&#x6587;&#x7AE0;"> # </a></h2>
+<ul>
+<li><a href="https://www.linux-kvm.org/page/Main_Page">KVM&#x5B98;&#x65B9;&#x7F51;&#x7AD9;</a></li>
+<li><a href="http://www.cnblogs.com/ilanni/p/3878151.html">KVM&#x865A;&#x62DF;&#x673A;Linux&#x7CFB;&#x7EDF;&#x589E;&#x52A0;&#x786C;&#x76D8;</a></li>
+<li><a href="https://www.ibm.com/support/knowledgecenter/zh/linuxonibm/liaat/liaatvirtinstalloptions.htm">virt-install &#x547D;&#x4EE4;&#x53C2;&#x6570;&#x8BE6;&#x89E3;</a></li>
+<li><a href="https://raymii.org/s/articles/virt-install_introduction_and_copy_paste_distro_install_commands.html">&#x4F7F;&#x7528;virt-install&#x5B89;&#x88C5;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x53D1;&#x884C;&#x7248;&#x5B89;&#x88C5;&#x4EE3;&#x7801;&#x76F4;&#x63A5;&#x590D;&#x5236;&#x8FD0;&#x884C;</a></li>
+<li><a href="http://blog.oneiroi.co.uk/linux/kvm/virt-resize/RHEL/LVM/kvm-linux-expanding-a-lvm-guest-file-system-using-virt-resize/">KVM Linux - Expanding a Guest LVM File System Using Virt-resize</a></li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

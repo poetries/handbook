@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handbook</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            <img src="../../idoc-logo.svg">
+        
+    </div>
+<ul><li><a href="index.html">Git常用命令</a></li><li><a href="#"><span></span>前端</a><ul><li><a href="#"><span></span>Javascript</a><ul><li><a href="#"><span></span>RN</a><ul><li><a href="html/前端/Javascript/RN/React-native Android环境搭建.html">React-native Android环境搭建</a></li></ul></li><li><a href="html/前端/Javascript/思维导图.html">思维导图</a></li><li><a href="html/前端/Javascript/正则表达式.html">正则表达式</a></li><li><a href="html/前端/Javascript/轻量高效的开源JavaScript插件和库.html">轻量高效的开源JavaScript插件和库</a></li></ul></li></ul></li><li><a href="#"><span></span>服务端编程</a><ul><li><a href="#"><span></span>数据库</a><ul><li><a href="html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li><li><a href="#"><span></span>系统服务</a><ul><li><a href="html/服务端编程/系统服务/docker.html">docker</a></li><li><a href="#"><span></span>shell</a><ul><li><a href="html/服务端编程/系统服务/shell/shell-regex.html">shell-regex</a></li><li><a href="html/服务端编程/系统服务/shell/Shell.html">Shell</a></li></ul></li><li><a href="html/服务端编程/系统服务/Nginx.html">Nginx</a></li></ul></li><li><a href="#"><span></span>Linux</a><ul></ul></li><li><a href="#"><span></span>数据库</a><ul><li><a href="#"><span></span>mysql</a><ul><li><a href="html/服务端编程/数据库/mysql/21-minutes-MySQL-basic-entry.html">21-minutes-MySQL-basic-entry</a></li><li><a href="html/服务端编程/数据库/mysql/awesome-mysql.html">awesome-mysql</a></li><li><a href="#"><span></span>chapter1</a><ul><li><a href="html/服务端编程/数据库/mysql/chapter1/1.1.html">1.1</a></li><li><a href="html/服务端编程/数据库/mysql/chapter1/1.2.html">1.2</a></li><li><a href="html/服务端编程/数据库/mysql/chapter1/1.3.html">1.3</a></li><li><a href="html/服务端编程/数据库/mysql/chapter1/1.4.html">1.4</a></li><li><a href="html/服务端编程/数据库/mysql/chapter1/1.html">1</a></li></ul></li><li><a href="#"><span></span>chapter17</a><ul><li><a href="html/服务端编程/数据库/mysql/chapter17/17.1.html">17.1</a></li><li><a href="html/服务端编程/数据库/mysql/chapter17/17.2.html">17.2</a></li><li><a href="html/服务端编程/数据库/mysql/chapter17/17.3.html">17.3</a></li></ul></li><li><a href="#"><span></span>chapter2</a><ul><li><a href="html/服务端编程/数据库/mysql/chapter2/2.1.html">2.1</a></li><li><a href="html/服务端编程/数据库/mysql/chapter2/2.2.html">2.2</a></li><li><a href="html/服务端编程/数据库/mysql/chapter2/2.3.html">2.3</a></li><li><a href="html/服务端编程/数据库/mysql/chapter2/2.4.html">2.4</a></li><li><a href="html/服务端编程/数据库/mysql/chapter2/2.5.html">2.5</a></li></ul></li><li><a href="#"><span></span>chapter3</a><ul><li><a href="html/服务端编程/数据库/mysql/chapter3/3.1.html">3.1</a></li><li><a href="html/服务端编程/数据库/mysql/chapter3/3.2.html">3.2</a></li><li><a href="html/服务端编程/数据库/mysql/chapter3/3.3.html">3.3</a></li><li><a href="html/服务端编程/数据库/mysql/chapter3/3.4.html">3.4</a></li><li><a href="html/服务端编程/数据库/mysql/chapter3/3.5.html">3.5</a></li><li><a href="html/服务端编程/数据库/mysql/chapter3/3.html">3</a></li></ul></li><li><a href="html/服务端编程/数据库/mysql/README.html">README</a></li></ul></li><li><a href="html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li></ul></li><li><a href="#"><span></span>工具快捷键</a><ul><li class="active"><a href="html/工具快捷键/Git常用命令.html">Git常用命令</a></li><li><a href="html/工具快捷键/vim.html">vim</a></li></ul></li><li><a href="#"><span></span>其他</a><ul><li><a href="html/其他/HTTP状态码.html">HTTP状态码</a></li><li><a href="html/其他/通过代理工具提高Github Clone速度.html">通过代理工具提高Github Clone速度</a></li></ul></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/poetries/handbook.git"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0配置">配置</a></li><li><a href="#t1修改项目中的个人信息">修改项目中的个人信息</a><ul><li><a href="#t2配置自动换行">配置自动换行</a></li></ul></li><li><a href="#t3常见使用场景">常见使用场景</a><ul><li><a href="#t4创建SSH密钥">创建SSH密钥</a></li><li><a href="#t5多账号ssh配置">多账号ssh配置</a></li><li><a href="#t6免密码登录远程服务器">免密码登录远程服务器</a></li><li><a href="#t7文件推向3个git库">文件推向3个git库</a></li><li><a href="#t8修改远程仓库地址">修改远程仓库地址</a></li><li><a href="#t9撤销远程记录">撤销远程记录</a></li><li><a href="#t10放弃本地的文件修改">放弃本地的文件修改</a></li><li><a href="#t11最简单放弃本地修改内容">最简单放弃本地修改内容</a></li><li><a href="#t12回滚到某个commit提交">回滚到某个commit提交</a></li><li><a href="#t13回退到某一个版本">回退到某一个版本</a></li><li><a href="#t14去掉某个commit">去掉某个commit</a></li><li><a href="#t15合并多个commit">合并多个commit</a></li><li><a href="#t16修改远程Commit记录">修改远程Commit记录</a></li><li><a href="#t17添加忽略文件">添加忽略文件</a></li><li><a href="#t18利用commit关闭一个issue">利用commit关闭一个issue</a></li><li><a href="#t19同步fork的上游仓库">同步fork的上游仓库</a></li><li><a href="#t20批量修改历史commit中的名字和邮箱">批量修改历史commit中的名字和邮箱</a></li><li><a href="#t21查看某个文件历史">查看某个文件历史</a></li><li><a href="#t22打造自己的git命令">打造自己的git命令</a></li><li><a href="#t23中文乱码的解决方案">中文乱码的解决方案</a></li></ul></li><li><a href="#t24新建仓库">新建仓库</a><ul><li><a href="#t25init">init</a></li><li><a href="#t26status">status</a></li><li><a href="#t27add">add</a></li><li><a href="#t28commit">commit</a></li><li><a href="#t29remote">remote</a></li><li><a href="#t30push">push</a></li></ul></li><li><a href="#t31clone">clone</a></li><li><a href="#t32本地">本地</a><ul><li><a href="#t33help">help</a></li><li><a href="#t34add">add</a></li><li><a href="#t35rm">rm</a></li><li><a href="#t36commit">commit</a></li><li><a href="#t37reset">reset</a></li><li><a href="#t38revert">revert</a></li><li><a href="#t39checkout">checkout</a></li><li><a href="#t40diff">diff</a></li><li><a href="#t41stash">stash</a></li><li><a href="#t42merge">merge</a></li><li><a href="#t43cherry-pick">cherry-pick</a></li><li><a href="#t44rebase">rebase</a></li></ul></li><li><a href="#t45分支branch">分支branch</a><ul><li><a href="#t46删除">删除</a></li><li><a href="#t47提交">提交</a></li><li><a href="#t48拉取">拉取</a></li><li><a href="#t49分支合并">分支合并</a></li><li><a href="#t50重命名">重命名</a></li><li><a href="#t51查看">查看</a></li><li><a href="#t52新建">新建</a></li><li><a href="#t53连接">连接</a></li><li><a href="#t54分支切换">分支切换</a></li></ul></li><li><a href="#t55远端">远端</a></li><li><a href="#t56submodule">submodule</a></li><li><a href="#t57删除文件">删除文件</a></li><li><a href="#t58remote">remote</a></li><li><a href="#t59标签tag">标签tag</a></li><li><a href="#t60日志log">日志log</a></li><li><a href="#t61重写历史">重写历史</a><ul><li><a href="#t62删除仓库">删除仓库</a></li></ul></li><li><a href="#t63其它">其它</a></li><li><a href="#t64报错问题解决">报错问题解决</a></li><li><a href="#t65参考资料">参考资料</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t0&#x914D;&#x7F6E;">&#x914D;&#x7F6E; <a href="#t0&#x914D;&#x7F6E;"> # </a></h2>
+<p>&#x9996;&#x5148;&#x662F;&#x914D;&#x7F6E;&#x5E10;&#x53F7;&#x4FE1;&#x606F; <code>ssh -T git@github.com</code> &#x6D4B;&#x8BD5;&#x3002;</p>
+<h2 id="t1&#x4FEE;&#x6539;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;">&#x4FEE;&#x6539;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F; <a href="#t1&#x4FEE;&#x6539;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;"> # </a></h2>
+<pre><code class="lang-bash">git <span class="hljs-built_in">help</span> config <span class="hljs-comment"># &#x83B7;&#x53D6;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;&#xFF0C;&#x67E5;&#x770B;&#x4FEE;&#x6539;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#x7684;&#x53C2;&#x6570;  </span>
+git config --global user.name <span class="hljs-string">&quot;&#x5C0F;&#x5F1F;&#x8C03;&#x8C03;&quot;</span>           <span class="hljs-comment"># &#x4FEE;&#x6539;&#x5168;&#x5C40;&#x540D;&#x5B57;</span>
+git config --global user.email <span class="hljs-string">&quot;wowohoo@qq.com&quot;</span>  <span class="hljs-comment"># &#x4FEE;&#x6539;&#x5168;&#x5C40;&#x90AE;&#x7BB1;</span>
+git config --list         <span class="hljs-comment"># &#x67E5;&#x770B;&#x914D;&#x7F6E;&#x7684;&#x4FE1;&#x606F;</span>
+</code></pre>
+<h3 id="t2&#x914D;&#x7F6E;&#x81EA;&#x52A8;&#x6362;&#x884C;">&#x914D;&#x7F6E;&#x81EA;&#x52A8;&#x6362;&#x884C; <a href="#t2&#x914D;&#x7F6E;&#x81EA;&#x52A8;&#x6362;&#x884C;"> # </a></h3>
+<p>&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x5751;&#x592A;&#x5927;&#xFF0C;&#x63D0;&#x4EA4;&#x5230;git&#x662F;&#x81EA;&#x52A8;&#x5C06;&#x6362;&#x884C;&#x7B26;&#x8F6C;&#x6362;&#x4E3A;lf </p>
+<pre><code class="lang-bash">git config --global core.autocrlf input
+</code></pre>
+<h2 id="t3&#x5E38;&#x89C1;&#x4F7F;&#x7528;&#x573A;&#x666F;">&#x5E38;&#x89C1;&#x4F7F;&#x7528;&#x573A;&#x666F; <a href="#t3&#x5E38;&#x89C1;&#x4F7F;&#x7528;&#x573A;&#x666F;"> # </a></h2>
+<h3 id="t4&#x521B;&#x5EFA;SSH&#x5BC6;&#x94A5;">&#x521B;&#x5EFA;SSH&#x5BC6;&#x94A5; <a href="#t4&#x521B;&#x5EFA;SSH&#x5BC6;&#x94A5;"> # </a></h3>
+<p>&#x8FD9;&#x4E2A;&#x5BC6;&#x94A5;&#x7528;&#x6765;&#x8DDF; github &#x901A;&#x4FE1;&#xFF0C;&#x5728;&#x672C;&#x5730;&#x7EC8;&#x7AEF;&#x91CC;&#x751F;&#x6210;&#x7136;&#x540E;&#x4E0A;&#x4F20;&#x5230; github</p>
+<pre><code class="lang-bash">ssh-keygen -t rsa -C <span class="hljs-string">&apos;wowohoo@qq.com&apos;</span> <span class="hljs-comment"># &#x751F;&#x6210;&#x5BC6;&#x94A5;  </span>
+ssh-keygen -t rsa -C <span class="hljs-string">&quot;wowohoo@qq.com&quot;</span> -f ~/.ssh/ww_rsa <span class="hljs-comment"># &#x6307;&#x5B9A;&#x751F;&#x6210;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#x540D;&#x5B57;</span>
+ssh -T git@github.com <span class="hljs-comment"># &#x6D4B;&#x8BD5;&#x662F;&#x5426;&#x6210;&#x529F;</span>
+</code></pre>
+<h3 id="t5&#x591A;&#x8D26;&#x53F7;ssh&#x914D;&#x7F6E;">&#x591A;&#x8D26;&#x53F7;ssh&#x914D;&#x7F6E; <a href="#t5&#x591A;&#x8D26;&#x53F7;ssh&#x914D;&#x7F6E;"> # </a></h3>
+<p><strong>1.&#x751F;&#x6210;&#x6307;&#x5B9A;&#x540D;&#x5B57;&#x7684;&#x5BC6;&#x94A5;</strong></p>
+<p><code>ssh-keygen -t rsa -C &quot;&#x90AE;&#x7BB1;&#x5730;&#x5740;&quot; -f ~/.ssh/jslite_rsa</code><br>&#x4F1A;&#x751F;&#x6210; <code>jslite_rsa</code> &#x548C; <code>jslite_rsa.pub</code> &#x8FD9;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;  </p>
+<p><strong>2.&#x5BC6;&#x94A5;&#x590D;&#x5236;&#x5230;&#x6258;&#x7BA1;&#x5E73;&#x53F0;&#x4E0A;</strong></p>
+<p><code>vim ~/.ssh/jslite_rsa.pub</code><br>&#x6253;&#x5F00;&#x516C;&#x94A5;&#x6587;&#x4EF6; <code>jslite_rsa.pub</code> &#xFF0C;&#x5E76;&#x628A;&#x5185;&#x5BB9;&#x590D;&#x5236;&#x81F3;&#x4EE3;&#x7801;&#x6258;&#x7BA1;&#x5E73;&#x53F0;&#x4E0A;   </p>
+<p><strong>3.&#x4FEE;&#x6539;config&#x6587;&#x4EF6;</strong></p>
+<p><code>vim ~/.ssh/config</code> #&#x4FEE;&#x6539;config&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x521B;&#x5EFA; <code>config</code>  </p>
+<pre><code class="lang-shell">Host jslite.github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/jslite_rsa
+
+Host work.github.com
+  HostName github.com
+<span class="hljs-meta">  #</span><span class="bash"> Port &#x670D;&#x52A1;&#x5668;open-ssh&#x7AEF;&#x53E3;&#xFF08;&#x9ED8;&#x8BA4;&#xFF1A;22,&#x9ED8;&#x8BA4;&#x65F6;&#x4E00;&#x822C;&#x4E0D;&#x5199;&#x6B64;&#x884C;&#xFF09;</span>
+<span class="hljs-meta">  #</span><span class="bash"> PreferredAuthentications &#x914D;&#x7F6E;&#x767B;&#x5F55;&#x65F6;&#x7528;&#x4EC0;&#x4E48;&#x6743;&#x9650;&#x8BA4;&#x8BC1; </span>
+<span class="hljs-meta">  #</span><span class="bash">                          publickey|password publickey|keyboard-interactive&#x7B49;</span>
+  User git
+  IdentityFile ~/.ssh/work_rsa
+</code></pre>
+<ul>
+<li><code>Host</code> &#x8FD9;&#x91CC;&#x662F;&#x4E2A;&#x522B;&#x540D;&#x53EF;&#x4EE5;&#x968F;&#x4FBF;&#x547D;&#x540D;</li>
+<li><code>HostName</code> &#x4E00;&#x822C;&#x662F;&#x7F51;&#x7AD9;&#x5982;&#xFF1A;<code>git@ss.github.com:username/repo.git</code> &#x586B;&#x5199; <code>github.com</code></li>
+<li><code>User</code> &#x901A;&#x5E38;&#x586B;&#x5199;<code>git</code></li>
+<li><code>IdentityFile</code> &#x4F7F;&#x7528;&#x7684;&#x516C;&#x94A5;&#x6587;&#x4EF6;&#x5730;&#x5740;</li>
+</ul>
+<p><strong>4.&#x6D4B;&#x8BD5;</strong></p>
+<pre><code class="lang-bash">ssh -T git@jslite.github.com  <span class="hljs-comment"># `@`&#x540E;&#x9762;&#x8DDF;&#x4E0A;&#x5B9A;&#x4E49;&#x7684;Host  </span>
+ssh -T work.github.com        <span class="hljs-comment"># &#x901A;&#x8FC7;&#x522B;&#x540D;&#x6D4B;&#x8BD5;</span>
+ssh -i ~/&#x516C;&#x94A5;&#x6587;&#x4EF6;&#x5730;&#x5740; Host&#x522B;&#x540D;  <span class="hljs-comment"># &#x5982; ssh -i ~/.ssh/work_rsa work.github.com</span>
+</code></pre>
+<p><strong>5.&#x6CE8;&#x610F;</strong></p>
+<p>&#x5982;&#x679C;&#x4F60;&#x4FEE;&#x6539;&#x4E86;id_rsa&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5C06;ssh key&#x6DFB;&#x52A0;&#x5230;SSH agent&#x4E2D;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-bash">ssh-add ~/.ssh/jslite_rsa
+ssh-add -l  <span class="hljs-comment"># &#x67E5;&#x770B;&#x6240;&#x6709;&#x7684;key</span>
+ssh-add -D  <span class="hljs-comment"># &#x5220;&#x9664;&#x6240;&#x6709;&#x7684;key</span>
+ssh-add -d  ~/.ssh/jslite_rsa <span class="hljs-comment"># &#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;key</span>
+</code></pre>
+<h3 id="t6&#x514D;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;">&#x514D;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668; <a href="#t6&#x514D;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;"> # </a></h3>
+<pre><code class="lang-bash">$ ssh-keygen -t rsa -P <span class="hljs-string">&apos;&apos;</span> -f ~/.ssh/aliyunserver.key
+$ ssh-copy-id -i ~/.ssh/aliyunserver.key.pub root@192.168.182.112 <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x9700;&#x8981;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x4E00;&#x6B21;</span>
+</code></pre>
+<p>&#x7F16;&#x8F91; <code>~/.ssh/config</code></p>
+<pre><code class="lang-bash">Host aliyun1
+  HostName 192.168.182.112
+  User root
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/aliyunserver.key
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x914D;&#x7F6E;&#x5B8C;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x767B;&#x5F55;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x8F93;&#x5165;IP&#x5730;&#x5740;&#x548C;&#x5BC6;&#x7801; <code>ssh aliyun1</code></p>
+<h3 id="t7&#x6587;&#x4EF6;&#x63A8;&#x5411;3&#x4E2A;git&#x5E93;">&#x6587;&#x4EF6;&#x63A8;&#x5411;3&#x4E2A;git&#x5E93; <a href="#t7&#x6587;&#x4EF6;&#x63A8;&#x5411;3&#x4E2A;git&#x5E93;"> # </a></h3>
+<p><strong>1. &#x589E;&#x52A0;3&#x4E2A;&#x8FDC;&#x7A0B;&#x5E93;&#x5730;&#x5740;</strong></p>
+<pre><code class="lang-shell">git remote add origin https://github.com/JSLite/JSLite.git  
+git remote set-url --add origin https://gitlab.com/wang/JSLite.js.git  
+git remote set-url --add origin https://oschina.net/wang/JSLite.js.git
+</code></pre>
+<p><strong>2. &#x5220;&#x9664;&#x5176;&#x4E2D;&#x4E00;&#x4E2A; set-url &#x5730;&#x5740;</strong></p>
+<pre><code class="lang-shell">usage: git remote set-url [--push] &lt;name&gt; &lt;newurl&gt; [&lt;oldurl&gt;]
+   or: git remote set-url --add &lt;name&gt; &lt;newurl&gt;
+   or: git remote set-url --delete &lt;name&gt; &lt;url&gt;
+</code></pre>
+<p><code>git remote set-url --delete origin https://oschina.net/wang/JSLite.js.git</code></p>
+<p><strong>3.&#x63A8;&#x9001;&#x4EE3;&#x7801;</strong></p>
+<pre><code class="lang-bash">git push origin master
+git push -f origin master  <span class="hljs-comment"># &#x5F3A;&#x5236;&#x63A8;&#x9001;</span>
+</code></pre>
+<p><strong>4.&#x62C9;&#x4EE3;&#x7801;</strong></p>
+<p>&#x53EA;&#x80FD;&#x62C9;&#x53D6; <code>origin</code> &#x91CC;&#x7684;&#x4E00;&#x4E2A;url&#x5730;&#x5740;&#xFF0C;&#x8FD9;&#x4E2A;fetch-url<br>&#x9ED8;&#x8BA4;&#x4E3A;&#x4F60;&#x6DFB;&#x52A0;&#x7684;&#x5230; <code>origin</code>&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5730;&#x5740;  </p>
+<pre><code class="lang-shell">git pull origin master   
+git pull --all # &#x83B7;&#x53D6;&#x8FDC;&#x7A0B;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x5305;&#x62EC;tag  
+git pull origin next:master # &#x53D6;&#x56DE;origin&#x4E3B;&#x673A;&#x7684;next&#x5206;&#x652F;&#xFF0C;&#x4E0E;&#x672C;&#x5730;&#x7684;master&#x5206;&#x652F;&#x5408;&#x5E76;  
+git pull origin next # &#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x662F;&#x4E0E;&#x5F53;&#x524D;&#x5206;&#x652F;&#x5408;&#x5E76;  
+<span class="hljs-meta">
+#</span><span class="bash"> &#x4E0A;&#x9762;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x7B49;&#x540C;&#x4E8E;&#x4E0B;&#x9762;&#x4E24;&#x6761;&#x547D;&#x4EE4;   </span>
+git fetch origin  
+git merge origin/next
+</code></pre>
+<p>&#x5982;&#x679C;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x5220;&#x9664;&#x4E86;&#x67D0;&#x4E2A;&#x5206;&#x652F;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;git pull &#x4E0D;&#x4F1A;&#x5728;&#x62C9;&#x53D6;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5220;&#x9664;&#x5BF9;&#x5E94;&#x7684;&#x672C;&#x5730;&#x5206;&#x652F;&#x3002;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#xFF0C;&#x7531;&#x4E8E;&#x5176;&#x4ED6;&#x4EBA;&#x64CD;&#x4F5C;&#x4E86;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#xFF0C;&#x5BFC;&#x81F4;git pull&#x4E0D;&#x77E5;&#x4E0D;&#x89C9;&#x5220;&#x9664;&#x4E86;&#x672C;&#x5730;&#x5206;&#x652F;&#x3002;<br>&#x4F46;&#x662F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x8FD9;&#x4E2A;&#x884C;&#x4E3A;&#xFF0C;&#x52A0;&#x4E0A;&#x53C2;&#x6570; -p &#x5C31;&#x4F1A;&#x5728;&#x672C;&#x5730;&#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x5DF2;&#x7ECF;&#x5220;&#x9664;&#x7684;&#x5206;&#x652F;&#x3002;  </p>
+<pre><code class="lang-shell"><span class="hljs-meta">$</span><span class="bash"> git pull -p</span>
+<span class="hljs-meta">#</span><span class="bash"> &#x7B49;&#x540C;&#x4E8E;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;</span>
+<span class="hljs-meta">$</span><span class="bash"> git fetch --prune origin </span>
+<span class="hljs-meta">$</span><span class="bash"> git fetch -p</span>
+</code></pre>
+<p><strong>5.&#x66F4;&#x6539;pull</strong></p>
+<p>&#x53EA;&#x9700;&#x8981;&#x66F4;&#x6539;config&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x90A3;&#x4E09;&#x4E2A;url&#x7684;&#x987A;&#x5E8F;&#x5373;&#x53EF;&#xFF0C;fetch-url&#x4F1A;&#x76F4;&#x63A5;&#x5BF9;&#x5E94;&#x6392;&#x884C;&#x7B2C;&#x4E00;&#x7684;&#x90A3;&#x4E2A;utl&#x8FDE;&#x63A5;&#x3002;    </p>
+<h3 id="t8&#x4FEE;&#x6539;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5730;&#x5740;">&#x4FEE;&#x6539;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5730;&#x5740; <a href="#t8&#x4FEE;&#x6539;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5730;&#x5740;"> # </a></h3>
+<pre><code class="lang-bash">git remote remove origin  <span class="hljs-comment"># &#x5220;&#x9664;&#x8BE5;&#x8FDC;&#x7A0B;&#x8DEF;&#x5F84;  </span>
+git remote add origin git@jslite.github.com:JSLite/JSLite.git  <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x8FDC;&#x7A0B;&#x8DEF;&#x5F84;</span>
+</code></pre>
+<h3 id="t9&#x64A4;&#x9500;&#x8FDC;&#x7A0B;&#x8BB0;&#x5F55;">&#x64A4;&#x9500;&#x8FDC;&#x7A0B;&#x8BB0;&#x5F55; <a href="#t9&#x64A4;&#x9500;&#x8FDC;&#x7A0B;&#x8BB0;&#x5F55;"> # </a></h3>
+<pre><code class="lang-shell">git reset --hard HEAD~1 # &#x64A4;&#x9500;&#x4E00;&#x6761;&#x8BB0;&#x5F55;   
+git push -f origin HEAD:master # &#x540C;&#x6B65;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;
+</code></pre>
+<h3 id="t10&#x653E;&#x5F03;&#x672C;&#x5730;&#x7684;&#x6587;&#x4EF6;&#x4FEE;&#x6539;">&#x653E;&#x5F03;&#x672C;&#x5730;&#x7684;&#x6587;&#x4EF6;&#x4FEE;&#x6539; <a href="#t10&#x653E;&#x5F03;&#x672C;&#x5730;&#x7684;&#x6587;&#x4EF6;&#x4FEE;&#x6539;"> # </a></h3>
+<pre><code class="lang-shell">git reset --hard FETCH_HEAD # FETCH_HEAD&#x8868;&#x793A;&#x4E0A;&#x4E00;&#x6B21;&#x6210;&#x529F;git pull&#x4E4B;&#x540E;&#x5F62;&#x6210;&#x7684;commit&#x70B9;&#x3002;&#x7136;&#x540E;git pull
+</code></pre>
+<p><code>git reset --hard FETCH_HEAD</code> &#x51FA;&#x73B0;&#x9519;&#x8BEF;</p>
+<pre><code class="lang-bash">git pull
+You are not currently on a branch, so I cannot use any
+<span class="hljs-string">&apos;branch.&lt;branchname&gt;.merge&apos;</span> <span class="hljs-keyword">in</span> your configuration file.
+Please specify <span class="hljs-built_in">which</span> remote branch you want to use on the <span class="hljs-built_in">command</span>
+line and try again (e.g. <span class="hljs-string">&apos;git pull &lt;repository&gt; &lt;refspec&gt;&apos;</span>).
+See git-pull(1) FOR details.
+</code></pre>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-bash">git checkout -b temp <span class="hljs-comment"># &#x65B0;&#x5EFA;+&#x5207;&#x6362;&#x5230;temp&#x5206;&#x652F; </span>
+git checkout master
+</code></pre>
+<h3 id="t11&#x6700;&#x7B80;&#x5355;&#x653E;&#x5F03;&#x672C;&#x5730;&#x4FEE;&#x6539;&#x5185;&#x5BB9;">&#x6700;&#x7B80;&#x5355;&#x653E;&#x5F03;&#x672C;&#x5730;&#x4FEE;&#x6539;&#x5185;&#x5BB9; <a href="#t11&#x6700;&#x7B80;&#x5355;&#x653E;&#x5F03;&#x672C;&#x5730;&#x4FEE;&#x6539;&#x5185;&#x5BB9;"> # </a></h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5982;&#x679C;&#x6709;&#x7684;&#x4FEE;&#x6539;&#x4EE5;&#x53CA;&#x52A0;&#x5165;&#x6682;&#x5B58;&#x533A;&#x7684;&#x8BDD;</span>
+git reset --hard 
+<span class="hljs-comment"># &#x8FD8;&#x539F;&#x6240;&#x6709;&#x4FEE;&#x6539;&#xFF0C;&#x4E0D;&#x4F1A;&#x5220;&#x9664;&#x65B0;&#x589E;&#x7684;&#x6587;&#x4EF6;</span>
+git checkout . 
+<span class="hljs-comment"># &#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x4F1A;&#x5220;&#x9664;&#x65B0;&#x589E;&#x7684;&#x6587;&#x4EF6;</span>
+git clean -xdf
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x5B58;&#x50A8;&#x6682;&#x5B58;&#x533A;stash&#xFF0C;&#x5728;&#x5220;&#x9664;&#x6682;&#x5B58;&#x533A;&#x7684;&#x65B9;&#x6CD5;&#x653E;&#x5F03;&#x672C;&#x5730;&#x4FEE;&#x6539;&#x3002;</p>
+<pre><code class="lang-bash">git stash &amp;&amp; git stash drop
+</code></pre>
+<h3 id="t12&#x56DE;&#x6EDA;&#x5230;&#x67D0;&#x4E2A;commit&#x63D0;&#x4EA4;">&#x56DE;&#x6EDA;&#x5230;&#x67D0;&#x4E2A;commit&#x63D0;&#x4EA4; <a href="#t12&#x56DE;&#x6EDA;&#x5230;&#x67D0;&#x4E2A;commit&#x63D0;&#x4EA4;"> # </a></h3>
+<pre><code class="lang-shell">git revert HEAD~1 # &#x64A4;&#x9500;&#x4E00;&#x6761;&#x8BB0;&#x5F55; &#x4F1A;&#x5F39;&#x51FA; commit &#x7F16;&#x8F91;
+git push # &#x63D0;&#x4EA4;&#x56DE;&#x6EDA;
+</code></pre>
+<h3 id="t13&#x56DE;&#x9000;&#x5230;&#x67D0;&#x4E00;&#x4E2A;&#x7248;&#x672C;">&#x56DE;&#x9000;&#x5230;&#x67D0;&#x4E00;&#x4E2A;&#x7248;&#x672C; <a href="#t13&#x56DE;&#x9000;&#x5230;&#x67D0;&#x4E00;&#x4E2A;&#x7248;&#x672C;"> # </a></h3>
+<pre><code class="lang-bash">git reset --hard &lt;<span class="hljs-built_in">hash</span>&gt;
+<span class="hljs-comment"># &#x4F8B;&#x5982; git reset --hard a3hd73r</span>
+<span class="hljs-comment"># --hard&#x4EE3;&#x8868;&#x4E22;&#x5F03;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x8BA9;&#x5DE5;&#x4F5C;&#x533A;&#x4E0E;&#x7248;&#x672C;&#x4EE3;&#x7801;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#xFF0C;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#xFF0C;</span>
+<span class="hljs-comment"># --soft&#x53C2;&#x6570;&#x4EE3;&#x8868;&#x4FDD;&#x7559;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x4FEE;&#x6539;&#x3002;</span>
+</code></pre>
+<h3 id="t14&#x53BB;&#x6389;&#x67D0;&#x4E2A;commit">&#x53BB;&#x6389;&#x67D0;&#x4E2A;commit <a href="#t14&#x53BB;&#x6389;&#x67D0;&#x4E2A;commit"> # </a></h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B9E;&#x8D28;&#x662F;&#x65B0;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x4E0E;&#x539F;&#x6765;&#x5B8C;&#x5168;&#x76F8;&#x53CD;&#x7684;commit&#xFF0C;&#x62B5;&#x6D88;&#x4E86;&#x539F;&#x6765;commit&#x7684;&#x6548;&#x679C;</span>
+git revert &lt;commit-hash&gt;
+</code></pre>
+<h3 id="t15&#x5408;&#x5E76;&#x591A;&#x4E2A;commit">&#x5408;&#x5E76;&#x591A;&#x4E2A;commit <a href="#t15&#x5408;&#x5E76;&#x591A;&#x4E2A;commit"> # </a></h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x5C06;&#x6700;&#x8FD1;4&#x4E2A;commit&#x5408;&#x5E76;&#x4E3A;1&#x4E2A;&#xFF0C;HEAD&#x4EE3;&#x8868;&#x5F53;&#x524D;&#x7248;&#x672C;&#x3002;</span>
+<span class="hljs-comment"># &#x5C06;&#x8FDB;&#x5165;VIM&#x754C;&#x9762;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&#x3002;</span>
+git rebase -i HEAD~4 
+<span class="hljs-comment"># &#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5176;&#x4E2D;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x4E0A;&#x65B9;&#x672A;&#x6CE8;&#x91CA;&#x7684;&#x90E8;&#x5206;&#x662F;&#x586B;&#x5199;&#x8981;&#x6267;&#x884C;&#x7684;&#x6307;&#x4EE4;&#xFF0C;</span>
+<span class="hljs-comment"># &#x800C;&#x4E0B;&#x65B9;&#x6CE8;&#x91CA;&#x7684;&#x90E8;&#x5206;&#x5219;&#x662F;&#x6307;&#x4EE4;&#x7684;&#x63D0;&#x793A;&#x8BF4;&#x660E;&#x3002;&#x6307;&#x4EE4;&#x90E8;&#x5206;&#x4E2D;&#x7531;&#x524D;&#x65B9;&#x7684;&#x547D;&#x4EE4;&#x540D;&#x79F0;&#x3001;commit hash &#x548C; commit message &#x7EC4;&#x6210;</span>
+<span class="hljs-comment"># &#x5F53;&#x524D;&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x77E5;&#x9053; pick &#x548C; squash &#x8FD9;&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x5373;&#x53EF;&#x3002;</span>
+<span class="hljs-comment"># --&gt; pick &#x7684;&#x610F;&#x601D;&#x662F;&#x8981;&#x4F1A;&#x6267;&#x884C;&#x8FD9;&#x4E2A; commit</span>
+<span class="hljs-comment"># --&gt; squash &#x7684;&#x610F;&#x601D;&#x662F;&#x8FD9;&#x4E2A; commit &#x4F1A;&#x88AB;&#x5408;&#x5E76;&#x5230;&#x524D;&#x4E00;&#x4E2A;commit</span>
+
+<span class="hljs-comment"># &#x6211;&#x4EEC;&#x5C06; &#x9700;&#x8981;&#x4FDD;&#x7559;&#x7684; &#x8FD9;&#x4E2A; commit &#x524D;&#x65B9;&#x7684;&#x547D;&#x4EE4;&#x6539;&#x6210; squash &#x6216; s&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x5165;:wq&#x4EE5;&#x4FDD;&#x5B58;&#x5E76;&#x9000;&#x51FA;</span>
+<span class="hljs-comment"># &#x8FD9;&#x662F;&#x6211;&#x4EEC;&#x4F1A;&#x770B;&#x5230; commit message &#x7684;&#x7F16;&#x8F91;&#x754C;&#x9762;</span>
+
+<span class="hljs-comment"># &#x5176;&#x4E2D;, &#x975E;&#x6CE8;&#x91CA;&#x90E8;&#x5206;&#x5C31;&#x662F;&#x4E24;&#x6B21;&#x7684; commit message, &#x4F60;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#x5C06;&#x8FD9;&#x4E24;&#x4E2A;&#x4FEE;&#x6539;&#x6210;&#x65B0;&#x7684; commit message&#x3002;</span>
+<span class="hljs-comment"># </span>
+<span class="hljs-comment"># &#x8F93;&#x5165;wq&#x4FDD;&#x5B58;&#x5E76;&#x63A8;&#x51FA;, &#x518D;&#x6B21;&#x8F93;&#x5165;git log&#x67E5;&#x770B; commit &#x5386;&#x53F2;&#x4FE1;&#x606F;&#xFF0C;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x8FD9;&#x4E24;&#x4E2A; commit &#x5DF2;&#x7ECF;&#x5408;&#x5E76;&#x4E86;&#x3002;</span>
+<span class="hljs-comment"># &#x5C06;&#x4FEE;&#x6539;&#x5F3A;&#x5236;&#x63A8;&#x9001;&#x5230;&#x524D;&#x7AEF;</span>
+git push -f origin master
+</code></pre>
+<h3 id="t16&#x4FEE;&#x6539;&#x8FDC;&#x7A0B;Commit&#x8BB0;&#x5F55;">&#x4FEE;&#x6539;&#x8FDC;&#x7A0B;Commit&#x8BB0;&#x5F55; <a href="#t16&#x4FEE;&#x6539;&#x8FDC;&#x7A0B;Commit&#x8BB0;&#x5F55;"> # </a></h3>
+<pre><code class="lang-bash">git commit --amend
+<span class="hljs-comment"># amend&#x53EA;&#x80FD;&#x4FEE;&#x6539;&#x6CA1;&#x6709;&#x63D0;&#x4EA4;&#x5230;&#x7EBF;&#x4E0A;&#x7684;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x6B21;commit&#x8BB0;&#x5F55;</span>
+git rebase -i HEAD~3
+<span class="hljs-comment"># &#x8868;&#x793A;&#x8981;&#x4FEE;&#x6539;&#x5F53;&#x524D;&#x7248;&#x672C;&#x7684;&#x5012;&#x6570;&#x7B2C;&#x4E09;&#x6B21;&#x72B6;&#x6001;</span>
+<span class="hljs-comment"># &#x5C06;&#x8981;&#x66F4;&#x6539;&#x7684;&#x8BB0;&#x5F55;&#x884C;&#x9996;&#x5355;&#x8BCD; pick &#x6539;&#x4E3A; edit</span>
+pick 96dc3f9 doc: Update quick-start.md
+pick f1cce8a <span class="hljs-built_in">test</span>(Transition):Add transition <span class="hljs-built_in">test</span> (<span class="hljs-comment">#47)</span>
+pick 6293516 feat(Divider): Add Divider component.
+<span class="hljs-comment"># Rebase eeb03a4..6293516 onto eeb03a4 (3 commands)</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Commands:</span>
+<span class="hljs-comment"># p, pick = use commit</span>
+<span class="hljs-comment"># r, reword = use commit, but edit the commit message</span>
+<span class="hljs-comment"># e, edit = use commit, but stop for amending</span>
+<span class="hljs-comment"># s, squash = use commit, but meld into previous commit</span>
+<span class="hljs-comment"># f, fixup = like &quot;squash&quot;, but discard this commit&apos;s log message</span>
+<span class="hljs-comment"># x, exec = run command (the rest of the line) using shell</span>
+<span class="hljs-comment"># d, drop = remove commit</span>
+</code></pre>
+<p>&#x4FDD;&#x5B58;&#x5E76;&#x9000;&#x51FA;&#xFF0C;&#x4F1A;&#x5F39;&#x51FA;&#x4E0B;&#x9762;&#x63D0;&#x793A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># You can amend the commit now, with</span>
+<span class="hljs-comment"># </span>
+<span class="hljs-comment">#   git commit --amend</span>
+<span class="hljs-comment"># </span>
+<span class="hljs-comment"># Once you are satisfied with your changes, run</span>
+<span class="hljs-comment"># </span>
+<span class="hljs-comment">#   git rebase --continue</span>
+
+<span class="hljs-comment"># &#x901A;&#x8FC7;&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x8FDB;&#x5165;&#x7F16;&#x8F91;&#x9875;&#x9762;&#x66F4;&#x6539;commit&#xFF0C;&#x4FDD;&#x5B58;&#x9000;&#x51FA;</span>
+git commit --amend
+<span class="hljs-comment"># &#x4FDD;&#x5B58;&#x9000;&#x51FA;&#x786E;&#x8BA4;&#x4FEE;&#x6539;&#xFF0C;&#x7EE7;&#x7EED;&#x6267;&#x884C; rebase, </span>
+git rebase --<span class="hljs-built_in">continue</span>
+<span class="hljs-comment"># &#x5982;&#x679C;&#x4FEE;&#x6539;&#x591A;&#x6761;&#x8BB0;&#x5F55;&#x53CD;&#x590D;&#x6267;&#x884C;&#x4E0A;&#x9762;&#x4E24;&#x6761;&#x547D;&#x4EE4;&#x76F4;&#x5230;&#x5B8C;&#x6210;&#x6240;&#x6709;&#x4FEE;&#x6539;</span>
+
+<span class="hljs-comment"># &#x6700;&#x540E;&#xFF0C;&#x786E;&#x4FDD;&#x522B;&#x4EBA;&#x6CA1;&#x6709;&#x63D0;&#x4EA4;&#x8FDB;&#x884C;push&#xFF0C;&#x6700;&#x597D;&#x4E0D;&#x8981;&#x52A0; -f &#x5F3A;&#x5236;&#x63A8;&#x9001;</span>
+git push -f origin master
+</code></pre>
+<h3 id="t17&#x6DFB;&#x52A0;&#x5FFD;&#x7565;&#x6587;&#x4EF6;">&#x6DFB;&#x52A0;&#x5FFD;&#x7565;&#x6587;&#x4EF6; <a href="#t17&#x6DFB;&#x52A0;&#x5FFD;&#x7565;&#x6587;&#x4EF6;"> # </a></h3>
+<pre><code>echo node_modules/ &gt;&gt; .gitignore
+</code></pre><h3 id="t18&#x5229;&#x7528;commit&#x5173;&#x95ED;&#x4E00;&#x4E2A;issue">&#x5229;&#x7528;commit&#x5173;&#x95ED;&#x4E00;&#x4E2A;issue <a href="#t18&#x5229;&#x7528;commit&#x5173;&#x95ED;&#x4E00;&#x4E2A;issue"> # </a></h3>
+<p>&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x5728;Github&#x4E0A;&#x53EF;&#x4EE5;&#x73A9;&#x513F;&#xFF0C;Gitlab&#x4E0A;&#x7279;&#x522B;&#x8001;&#x7684;&#x7248;&#x672C;&#x4E0D;&#x80FD;&#x73A9;&#x513F;&#x54E6;&#xFF0C;&#x90A3;&#x4E48;&#x5982;&#x4F55;&#x8DDF;&#x968F;&#x7740;commit&#x5173;&#x95ED;&#x4E00;&#x4E2A;issue&#x5462;? &#x5728;confirm merge&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E0B;&#x547D;&#x4EE4;&#x6765;&#x5173;&#x95ED;&#x76F8;&#x5173;issue:  </p>
+<p><code>fixes #xxx</code>&#x3001; <code>fixed #xxx</code>&#x3001; <code>fix #xxx</code>&#x3001; <code>closes #xxx</code>&#x3001; <code>close #xxx</code>&#x3001; <code>closed #xxx</code>&#x3001;</p>
+<h3 id="t19&#x540C;&#x6B65;fork&#x7684;&#x4E0A;&#x6E38;&#x4ED3;&#x5E93;">&#x540C;&#x6B65;fork&#x7684;&#x4E0A;&#x6E38;&#x4ED3;&#x5E93; <a href="#t19&#x540C;&#x6B65;fork&#x7684;&#x4E0A;&#x6E38;&#x4ED3;&#x5E93;"> # </a></h3>
+<p><a href="https://help.github.com/articles/syncing-a-fork/">Github&#x6559;&#x7A0B;&#x540C;&#x6B65;fork&#x6559;&#x7A0B;</a>&#xFF0C;<a href="http://www.miss77.net/549.html">&#x5728;Github&#x4E0A;&#x540C;&#x6B65;&#x4E00;&#x4E2A;&#x5206;&#x652F;(fork)</a>  </p>
+<p><strong>&#x8BBE;&#x7F6E;&#x6DFB;&#x52A0;&#x591A;&#x4E2A;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5730;&#x5740;&#x3002;</strong></p>
+<p>&#x5728;&#x540C;&#x6B65;&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8FDC;&#x7A0B;&#x70B9;&#x6307;&#x5411;&#x4E0A;&#x6E38;&#x4ED3;&#x5E93;(repo).&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x6D3E;&#x751F;&#x4E86;&#x4E00;&#x4E2A;&#x539F;&#x59CB;&#x4ED3;&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x5982;&#x4E0B;&#x65B9;&#x6CD5;&#x505A;&#x3002;</p>
+<pre><code class="lang-shell"><span class="hljs-meta">$</span><span class="bash"> git remote -v</span>
+<span class="hljs-meta">#</span><span class="bash"> List the current remotes &#xFF08;&#x5217;&#x51FA;&#x5F53;&#x524D;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF09;</span>
+<span class="hljs-meta">#</span><span class="bash"> origin  https://github.com/user/repo.git (fetch)</span>
+<span class="hljs-meta">#</span><span class="bash"> origin  https://github.com/user/repo.git (push)</span>
+<span class="hljs-meta">$</span><span class="bash"> git remote add upstream https://github.com/otheruser/repo.git</span>
+<span class="hljs-meta">#</span><span class="bash"> Set a new remote (&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;)</span>
+<span class="hljs-meta">$</span><span class="bash"> git remote -v</span>
+<span class="hljs-meta">#</span><span class="bash"> Verify new remote (&#x9A8C;&#x8BC1;&#x65B0;&#x7684;&#x539F;&#x5531;&#x4ED3;&#x5E93;)</span>
+<span class="hljs-meta">#</span><span class="bash"> origin    https://github.com/user/repo.git (fetch)</span>
+<span class="hljs-meta">#</span><span class="bash"> origin    https://github.com/user/repo.git (push)</span>
+<span class="hljs-meta">#</span><span class="bash"> upstream  https://github.com/otheruser/repo.git (fetch)</span>
+<span class="hljs-meta">#</span><span class="bash"> upstream  https://github.com/otheruser/repo.git (push)</span>
+</code></pre>
+<p><strong>&#x540C;&#x6B65;&#x66F4;&#x65B0;&#x4ED3;&#x5E93;&#x5185;&#x5BB9;</strong></p>
+<p>&#x540C;&#x6B65;&#x4E0A;&#x6E38;&#x4ED3;&#x5E93;&#x5230;&#x4F60;&#x7684;&#x4ED3;&#x5E93;&#x9700;&#x8981;&#x6267;&#x884C;&#x4E24;&#x6B65;&#xFF1A;&#x9996;&#x5148;&#x4F60;&#x9700;&#x8981;&#x4ECE;&#x8FDC;&#x7A0B;&#x62C9;&#x53BB;&#xFF0C;&#x4E4B;&#x540E;&#x4F60;&#x9700;&#x8981;&#x5408;&#x5E76;&#x4F60;&#x5E0C;&#x671B;&#x7684;&#x5206;&#x652F;&#x5230;&#x4F60;&#x7684;&#x672C;&#x5730;&#x526F;&#x672C;&#x5206;&#x652F;&#x3002;&#x4ECE;&#x4E0A;&#x6E38;&#x7684;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x63D0;&#x53D6;&#x5206;&#x652F;&#x4EE5;&#x53CA;&#x5404;&#x81EA;&#x7684;&#x63D0;&#x4EA4;&#x5185;&#x5BB9;&#x3002; <code>master</code> &#x5C06;&#x88AB;&#x5B58;&#x50A8;&#x5728;&#x672C;&#x5730;&#x5206;&#x652F;&#x673A;&#x6784; <code>upstream/master</code></p>
+<pre><code class="lang-shell">git fetch upstream
+<span class="hljs-meta">#</span><span class="bash"> remote: Counting objects: 75, <span class="hljs-keyword">done</span>.</span>
+<span class="hljs-meta">#</span><span class="bash"> remote: Compressing objects: 100% (53/53), <span class="hljs-keyword">done</span>.</span>
+<span class="hljs-meta">#</span><span class="bash"> remote: Total 62 (delta 27), reused 44 (delta 9)</span>
+<span class="hljs-meta">#</span><span class="bash"> Unpacking objects: 100% (62/62), <span class="hljs-keyword">done</span>.</span>
+<span class="hljs-meta">#</span><span class="bash"> From https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY</span>
+<span class="hljs-meta">#</span><span class="bash">  * [new branch]      master     -&gt; upstream/master</span>
+</code></pre>
+<p>&#x68C0;&#x67E5;&#x4F60;&#x7684; fork&apos;s &#x672C;&#x5730; <code>master</code> &#x5206;&#x652F;</p>
+<pre><code class="lang-shell">git checkout master
+<span class="hljs-meta">#</span><span class="bash"> Switched to branch <span class="hljs-string">&apos;master&apos;</span></span>
+</code></pre>
+<p>&#x5408;&#x5E76;&#x6765;&#x81EA; <code>upstream/master</code> &#x7684;&#x66F4;&#x6539;&#x5230;&#x672C;&#x5730; master  &#x5206;&#x652F;&#x4E0A;&#x3002;  &#x8FD9;&#x4F7F;&#x4F60;&#x7684;&#x524D; fork&apos;s <code>master</code> &#x5206;&#x652F;&#x4E0E;&#x4E0A;&#x6E38;&#x8D44;&#x6E90;&#x5E93;&#x540C;&#x6B65;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x4F60;&#x672C;&#x5730;&#x4FEE;&#x6539;&#x3002;  </p>
+<pre><code class="lang-shell">git merge upstream/master
+<span class="hljs-meta">#</span><span class="bash"> Updating a422352..5fdff0f</span>
+<span class="hljs-meta">#</span><span class="bash"> Fast-forward</span>
+<span class="hljs-meta">#</span><span class="bash">  README                    |    9 -------</span>
+<span class="hljs-meta">#</span><span class="bash">  README.md                 |    7 ++++++</span>
+<span class="hljs-meta">#</span><span class="bash">  2 files changed, 7 insertions(+), 9 deletions(-)</span>
+<span class="hljs-meta">#</span><span class="bash">  delete mode 100644 README</span>
+<span class="hljs-meta">#</span><span class="bash">  create mode 100644 README.md</span>
+</code></pre>
+<h3 id="t20&#x6279;&#x91CF;&#x4FEE;&#x6539;&#x5386;&#x53F2;commit&#x4E2D;&#x7684;&#x540D;&#x5B57;&#x548C;&#x90AE;&#x7BB1;">&#x6279;&#x91CF;&#x4FEE;&#x6539;&#x5386;&#x53F2;commit&#x4E2D;&#x7684;&#x540D;&#x5B57;&#x548C;&#x90AE;&#x7BB1; <a href="#t20&#x6279;&#x91CF;&#x4FEE;&#x6539;&#x5386;&#x53F2;commit&#x4E2D;&#x7684;&#x540D;&#x5B57;&#x548C;&#x90AE;&#x7BB1;"> # </a></h3>
+<p><strong>1.&#x514B;&#x9686;&#x4ED3;&#x5E93;</strong></p>
+<p>&#x6CE8;&#x610F;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E0D;&#x662F;&#x666E;&#x901A;&#x7684;clone&#xFF0C;clone&#x4E0B;&#x6765;&#x7684;&#x4ED3;&#x5E93;&#x5E76;&#x4E0D;&#x80FD;&#x53C2;&#x4E0E;&#x5F00;&#x53D1;</p>
+<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> --bare https://github.com/user/repo.git
+<span class="hljs-built_in">cd</span> repo.git
+</code></pre>
+<p><strong>2.&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x8FD0;&#x884C;&#x4EE3;&#x7801;</strong></p>
+<p>OLD_EMAIL&#x539F;&#x6765;&#x7684;&#x90AE;&#x7BB1;<br>CORRECT_NAME&#x66F4;&#x6B63;&#x7684;&#x540D;&#x5B57;<br>CORRECT_EMAIL&#x66F4;&#x6B63;&#x7684;&#x90AE;&#x7BB1;  </p>
+<p>&#x5C06;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x590D;&#x5236;&#x653E;&#x5230;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x6267;&#x884C;</p>
+<pre><code class="lang-bash">git filter-branch -f --env-filter <span class="hljs-string">&apos;
+OLD_EMAIL=&quot;wowohoo@qq.com&quot;
+CORRECT_NAME=&quot;&#x5C0F;&#x5F1F;&#x8C03;&#x8C03;&quot;
+CORRECT_EMAIL=&quot;&#x66F4;&#x6B63;&#x7684;&#x90AE;&#x7BB1;@qq.com&quot;
+if [ &quot;$GIT_COMMITTER_EMAIL&quot; = &quot;$OLD_EMAIL&quot; ]
+then
+    export GIT_COMMITTER_NAME=&quot;$CORRECT_NAME&quot;
+    export GIT_COMMITTER_EMAIL=&quot;$CORRECT_EMAIL&quot;
+fi
+if [ &quot;$GIT_AUTHOR_EMAIL&quot; = &quot;$OLD_EMAIL&quot; ]
+then
+    export GIT_AUTHOR_NAME=&quot;$CORRECT_NAME&quot;
+    export GIT_AUTHOR_EMAIL=&quot;$CORRECT_EMAIL&quot;
+fi
+&apos;</span> --tag-name-filter cat -- --branches --tags
+</code></pre>
+<p>&#x6267;&#x884C;&#x8FC7;&#x7A0B;</p>
+<pre><code class="lang-bash">Rewrite 160d4df2689ff6df3820563bfd13b5f1fb9ba832 (479/508) (16 seconds passed, remaining 0 predicted)
+Ref <span class="hljs-string">&apos;refs/heads/dev&apos;</span> was rewritten
+Ref <span class="hljs-string">&apos;refs/heads/master&apos;</span> was rewritten
+</code></pre>
+<p><strong>3.&#x540C;&#x6B65;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</strong></p>
+<p>&#x540C;&#x6B65;&#x5230;push&#x8FDC;&#x7A0B;git&#x4ED3;&#x5E93;</p>
+<pre><code class="lang-bash">git push --force --tags origin <span class="hljs-string">&apos;refs/heads/*&apos;</span>
+</code></pre>
+<p>&#x6211;&#x8FD8;&#x9047;&#x5230;&#x4E86;&#x5982;&#x4E0B;&#x9762;&#x9519;&#x8BEF;&#xFF0C;lab&#x9ED8;&#x8BA4;&#x7ED9;master&#x5206;&#x652F;&#x52A0;&#x4E86;&#x4FDD;&#x62A4;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x5F3A;&#x5236;&#x8986;&#x76D6;&#x3002;<code>Project(&#x9879;&#x76EE;)</code>-&gt;<code>Setting</code>-&gt;<code>Repository</code> &#x83DC;&#x5355;&#x4E0B;&#x9762;&#x7684;<code>Protected branches</code>&#x628A;master&#x7684;&#x4FDD;&#x62A4;&#x53BB;&#x6389;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x4FEE;&#x6539;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x5EFA;&#x8BAE;&#x628A;master&#x7684;&#x4FDD;&#x62A4;&#x518D;&#x52A0;&#x56DE;&#x6765;&#xFF0C;&#x6BD5;&#x7ADF;&#x5F3A;&#x63A8;&#x4E0D;&#x662F;&#x4EF6;&#x597D;&#x4E8B;&#x3002;</p>
+<pre><code class="lang-bash">remote: GitLab: You are not allowed to force push code to a protected branch on this project.
+</code></pre>
+<p>&#x5F53;&#x4E0A;&#x9762;&#x7684;push &#x4E0D;&#x4E0A;&#x53BB;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5148; <code>git pull</code> &#x786E;&#x4FDD;&#x6700;&#x65B0;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-bash">git pull  --allow-unrelated-histories
+<span class="hljs-comment"># &#x6216;&#x8005;&#x6307;&#x5B9A;&#x5206;&#x679D;</span>
+git pull origin master --allow-unrelated-histories
+</code></pre>
+<h3 id="t21&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x5386;&#x53F2;">&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x5386;&#x53F2; <a href="#t21&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x5386;&#x53F2;"> # </a></h3>
+<pre><code class="lang-shell">git log --pretty=oneline &#x6587;&#x4EF6;&#x540D;  # &#x5217;&#x51FA;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x6539;&#x52A8;&#x5386;&#x53F2;  
+git show c178bf49   # &#x67D0;&#x6B21;&#x7684;&#x6539;&#x52A8;&#x7684;&#x4FEE;&#x6539;&#x8BB0;&#x5F55;  
+git log -p c178bf49 # &#x67D0;&#x6B21;&#x7684;&#x6539;&#x52A8;&#x7684;&#x4FEE;&#x6539;&#x8BB0;&#x5F55;  
+git blame &#x6587;&#x4EF6;&#x540D;     # &#x663E;&#x793A;&#x6587;&#x4EF6;&#x7684;&#x6BCF;&#x4E00;&#x884C;&#x662F;&#x5728;&#x90A3;&#x4E2A;&#x7248;&#x672C;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x3002;  
+git whatchanged &#x6587;&#x4EF6;&#x540D;  # &#x663E;&#x793A;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x6BCF;&#x4E2A;&#x7248;&#x672C;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&#xFF1A;&#x63D0;&#x4EA4;&#x65E5;&#x671F;&#xFF0C;&#x63D0;&#x4EA4;&#x4EBA;&#x5458;&#xFF0C;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x63D0;&#x4EA4;&#x5907;&#x6CE8;&#xFF08;&#x6CA1;&#x6709;&#x4FEE;&#x6539;&#x7EC6;&#x8282;&#xFF09;
+</code></pre>
+<h3 id="t22&#x6253;&#x9020;&#x81EA;&#x5DF1;&#x7684;git&#x547D;&#x4EE4;">&#x6253;&#x9020;&#x81EA;&#x5DF1;&#x7684;git&#x547D;&#x4EE4; <a href="#t22&#x6253;&#x9020;&#x81EA;&#x5DF1;&#x7684;git&#x547D;&#x4EE4;"> # </a></h3>
+<pre><code class="lang-sh">git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.co checkout
+git config --global alias.ci commit
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x597D;&#x540E;&#x518D;&#x8F93;&#x5165;git&#x547D;&#x4EE4;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4E0D;&#x7528;&#x518D;&#x8F93;&#x5165;&#x4E00;&#x5927;&#x6BB5;&#x4E86;&#xFF0C;&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x8981;&#x67E5;&#x770B;&#x72B6;&#x6001;&#xFF0C;&#x53EA;&#x9700;&#xFF1A;</p>
+<pre><code class="lang-sh">git st
+</code></pre>
+<h3 id="t23&#x4E2D;&#x6587;&#x4E71;&#x7801;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x4E2D;&#x6587;&#x4E71;&#x7801;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848; <a href="#t23&#x4E2D;&#x6587;&#x4E71;&#x7801;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;"> # </a></h3>
+<pre><code class="lang-bash">git config --global core.quotepath <span class="hljs-literal">false</span>
+</code></pre>
+<h2 id="t24&#x65B0;&#x5EFA;&#x4ED3;&#x5E93;">&#x65B0;&#x5EFA;&#x4ED3;&#x5E93; <a href="#t24&#x65B0;&#x5EFA;&#x4ED3;&#x5E93;"> # </a></h2>
+<h3 id="t25init">init <a href="#t25init"> # </a></h3>
+<p><code>git init</code> #&#x521D;&#x59CB;&#x5316;  </p>
+<h3 id="t26status">status <a href="#t26status"> # </a></h3>
+<p><code>git status</code> #&#x83B7;&#x53D6;&#x72B6;&#x6001;  </p>
+<h3 id="t27add">add <a href="#t27add"> # </a></h3>
+<p><code>git add file</code> # .&#x6216;*&#x4EE3;&#x8868;&#x5168;&#x90E8;&#x6DFB;&#x52A0;<br><code>git rm --cached &lt;added_file_to_undo&gt;</code> # &#x5728;commit&#x4E4B;&#x524D;&#x64A4;&#x9500;git add&#x64CD;&#x4F5C;<br><code>git reset head</code> # &#x597D;&#x50CF;&#x6BD4;&#x4E0A;&#x9762;<code>git rm --cached</code>&#x66F4;&#x65B9;&#x4FBF;  </p>
+<h3 id="t28commit">commit <a href="#t28commit"> # </a></h3>
+<p><code>git commit -m &quot;message&quot;</code> #&#x6B64;&#x5904;&#x6CE8;&#x610F;&#x4E71;&#x7801;  </p>
+<h3 id="t29remote">remote <a href="#t29remote"> # </a></h3>
+<p><code>git remote add origin git@github.com:JSLite/test.git</code> #&#x6DFB;&#x52A0;&#x6E90;  </p>
+<h3 id="t30push">push <a href="#t30push"> # </a></h3>
+<pre><code class="lang-bash">git push -u origin master <span class="hljs-comment"># push&#x540C;&#x4E8B;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x8DDF;&#x8E2A;&#x5206;&#x652F;  </span>
+git push origin master  
+git push -f origin master <span class="hljs-comment"># &#x5F3A;&#x5236;&#x63A8;&#x9001;&#x6587;&#x4EF6;&#xFF0C;&#x7F29;&#x5199; -f&#xFF08;&#x5168;&#x5199;--force&#xFF09;</span>
+</code></pre>
+<h2 id="t31clone">clone <a href="#t31clone"> # </a></h2>
+<p><code>git clone git://github.com/JSLite/JSLite.js.git</code><br><code>git clone git://github.com/JSLite/JSLite.js.git mypro</code> #&#x514B;&#x9686;&#x5230;&#x81EA;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;&#x5939;<br><code>git clone [user@]example.com:path/to/repo.git/</code> #SSH&#x534F;&#x8BAE;&#x8FD8;&#x6709;&#x53E6;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#x3002;  </p>
+<p>git clone&#x652F;&#x6301;&#x591A;&#x79CD;&#x534F;&#x8BAE;&#xFF0C;&#x9664;&#x4E86;HTTP(s)&#x4EE5;&#x5916;&#xFF0C;&#x8FD8;&#x652F;&#x6301;SSH&#x3001;Git&#x3001;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x534F;&#x8BAE;&#x7B49;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E9B;&#x4F8B;&#x5B50;&#x3002;<code>git clone &lt;&#x7248;&#x672C;&#x5E93;&#x7684;&#x7F51;&#x5740;&gt; &lt;&#x672C;&#x5730;&#x76EE;&#x5F55;&#x540D;&gt;</code>  </p>
+<pre><code class="lang-shell"><span class="hljs-meta">$</span><span class="bash"> git <span class="hljs-built_in">clone</span> http[s]://example.com/path/to/repo.git/</span>
+<span class="hljs-meta">$</span><span class="bash"> git <span class="hljs-built_in">clone</span> ssh://example.com/path/to/repo.git/</span>
+<span class="hljs-meta">$</span><span class="bash"> git <span class="hljs-built_in">clone</span> git://example.com/path/to/repo.git/</span>
+<span class="hljs-meta">$</span><span class="bash"> git <span class="hljs-built_in">clone</span> /opt/git/project.git </span>
+<span class="hljs-meta">$</span><span class="bash"> git <span class="hljs-built_in">clone</span> file:///opt/git/project.git</span>
+<span class="hljs-meta">$</span><span class="bash"> git <span class="hljs-built_in">clone</span> ftp[s]://example.com/path/to/repo.git/</span>
+<span class="hljs-meta">$</span><span class="bash"> git <span class="hljs-built_in">clone</span> rsync://example.com/path/to/repo.git/</span>
+</code></pre>
+<h2 id="t32&#x672C;&#x5730;">&#x672C;&#x5730; <a href="#t32&#x672C;&#x5730;"> # </a></h2>
+<h3 id="t33help">help <a href="#t33help"> # </a></h3>
+<pre><code class="lang-bash">git <span class="hljs-built_in">help</span> config <span class="hljs-comment"># &#x83B7;&#x53D6;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;</span>
+</code></pre>
+<h3 id="t34add">add <a href="#t34add"> # </a></h3>
+<pre><code class="lang-shell">git add *   # &#x8DDF;&#x8E2A;&#x65B0;&#x6587;&#x4EF6;   
+git add -u [path]   # &#x6DFB;&#x52A0;[&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x4E0B;]&#x5DF2;&#x8DDF;&#x8E2A;&#x6587;&#x4EF6;
+</code></pre>
+<h3 id="t35rm">rm <a href="#t35rm"> # </a></h3>
+<pre><code class="lang-shell">rm *&amp;git rm *          # &#x79FB;&#x9664;&#x6587;&#x4EF6;  
+git rm -f *            # &#x79FB;&#x9664;&#x6587;&#x4EF6;  
+git rm --cached *      # &#x53D6;&#x6D88;&#x8DDF;&#x8E2A;  
+git mv file_from file_to  # &#x91CD;&#x547D;&#x540D;&#x8DDF;&#x8E2A;&#x6587;&#x4EF6;  
+git log   # &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;
+</code></pre>
+<h3 id="t36commit">commit <a href="#t36commit"> # </a></h3>
+<pre><code class="lang-shell">git commit #&#x63D0;&#x4EA4;&#x66F4;&#x65B0;   
+git commit -m &apos;message&apos; #&#x63D0;&#x4EA4;&#x8BF4;&#x660E;   
+git commit -a #&#x8DF3;&#x8FC7;&#x4F7F;&#x7528;&#x6682;&#x5B58;&#x533A;&#x57DF;&#xFF0C;&#x628A;&#x6240;&#x6709;&#x5DF2;&#x7ECF;&#x8DDF;&#x8E2A;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&#x6682;&#x5B58;&#x8D77;&#x6765;&#x4E00;&#x5E76;&#x63D0;&#x4EA4;   
+git commit --amend #&#x4FEE;&#x6539;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;   
+git commit log #&#x67E5;&#x770B;&#x6240;&#x6709;&#x63D0;&#x4EA4;&#xFF0C;&#x5305;&#x62EC;&#x6CA1;&#x6709;push&#x7684;commit    
+git commit -m &quot;#133&quot; #&#x5173;&#x8054;issue &#x4EFB;&#x610F;&#x4F4D;&#x7F6E;&#x5E26;&#x4E0A;# &#x7B26;&#x53F7;&#x52A0;&#x4E0A;issue&#x53F7;&#x7801;  
+git commit -m &quot;fix #133&quot; commit&#x5173;&#x95ED;issue  
+git commit -m &apos;&#x6982;&#x8981;&#x63CF;&#x8FF0;&apos;$&apos;\n\n&apos;&apos;1.&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&apos;$&apos;\n&apos;&apos;2.&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&apos; #&#x63D0;&#x4EA4;&#x7B80;&#x8981;&#x63CF;&#x8FF0;&#x548C;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;
+</code></pre>
+<h3 id="t37reset">reset <a href="#t37reset"> # </a></h3>
+<pre><code class="lang-shell">git reset HEAD *  # &#x53D6;&#x6D88;&#x5DF2;&#x7ECF;&#x6682;&#x5B58;&#x7684;&#x6587;&#x4EF6;   
+git reset --mixed HEAD * # &#x540C;&#x4E0A;   
+git reset --soft HEAD *  # &#x91CD;&#x7F6E;&#x5230;&#x6307;&#x5B9A;&#x72B6;&#x6001;&#xFF0C;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#x7D22;&#x5F15;&#x533A;&#x548C;&#x5DE5;&#x4F5C;&#x6811;   
+git reset --hard HEAD *  # &#x91CD;&#x7F6E;&#x5230;&#x6307;&#x5B9A;&#x72B6;&#x6001;&#xFF0C;&#x4F1A;&#x4FEE;&#x6539;&#x7D22;&#x5F15;&#x533A;&#x548C;&#x5DE5;&#x4F5C;&#x6811;   
+git reset -- files *     # &#x91CD;&#x7F6E;index&#x533A;&#x6587;&#x4EF6;
+</code></pre>
+<h3 id="t38revert">revert <a href="#t38revert"> # </a></h3>
+<pre><code class="lang-shell">git revert HEAD   # &#x64A4;&#x9500;&#x524D;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;   
+git revert HEAD~  # &#x64A4;&#x9500;&#x524D;&#x524D;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;   
+git revert commit # &#x64A4;&#x9500;&#x6307;&#x5B9A;&#x64CD;&#x4F5C;
+</code></pre>
+<h3 id="t39checkout">checkout <a href="#t39checkout"> # </a></h3>
+<pre><code class="lang-shell">git checkout -- file  # &#x53D6;&#x6D88;&#x5BF9;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#xFF08;&#x4ECE;&#x6682;&#x5B58;&#x533A;&#x2014;&#x2014;&#x8986;&#x76D6;worktree file&#xFF09;  
+git checkout branch|tag|commit -- file_name  # &#x4ECE;&#x4ED3;&#x5E93;&#x53D6;&#x51FA;file&#x8986;&#x76D6;&#x5F53;&#x524D;&#x5206;&#x652F;   
+git checkout HEAD~1 [&#x6587;&#x4EF6;]  # &#x5C06;&#x4F1A;&#x66F4;&#x65B0; working directory &#x53BB;&#x5339;&#x914D;&#x67D0;&#x6B21; commit   
+git checkout -- .          # &#x4ECE;&#x6682;&#x5B58;&#x533A;&#x53D6;&#x51FA;&#x6587;&#x4EF6;&#x8986;&#x76D6;&#x5DE5;&#x4F5C;&#x533A;   
+git checkout -b gh-pages  0c304c9  # &#x8FD9;&#x4E2A;&#x8868;&#x793A; &#x4ECE;&#x5F53;&#x524D;&#x5206;&#x652F; commit &#x54C8;&#x5E0C;&#x503C;&#x4E3A; 0c304c9 &#x7684;&#x8282;&#x70B9;&#xFF0C;&#x5206;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5206;&#x652F;gh-pages&#x51FA;&#x6765;&#xFF0C;&#x5E76;&#x5207;&#x6362;&#x5230; gh-pages
+</code></pre>
+<h3 id="t40diff">diff <a href="#t40diff"> # </a></h3>
+<pre><code class="lang-shell">git diff file     # &#x67E5;&#x770B;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7684;&#x5DEE;&#x5F02;   
+git diff --stat   # &#x67E5;&#x770B;&#x7B80;&#x5355;&#x7684;diff&#x7ED3;&#x679C;   
+git diff  # &#x6BD4;&#x8F83;Worktree&#x548C;Index&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;   
+git diff --cached   # &#x6BD4;&#x8F83;Index&#x548C;HEAD&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;   
+git diff HEAD       # &#x6BD4;&#x8F83;Worktree&#x548C;HEAD&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;   
+git diff branch     # &#x6BD4;&#x8F83;Worktree&#x548C;branch&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;   
+git diff branch1 branch2  # &#x6BD4;&#x8F83;&#x4E24;&#x6B21;&#x5206;&#x652F;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;   
+git diff commit commit    # &#x6BD4;&#x8F83;&#x4E24;&#x6B21;&#x63D0;&#x4EA4;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;   
+git diff master..test   # &#x4E0A;&#x9762;&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x53EA;&#x663E;&#x793A;&#x4E24;&#x4E2A;&#x5206;&#x652F;&#x95F4;&#x7684;&#x5DEE;&#x5F02;  
+git diff master...test    # &#x4F60;&#x60F3;&#x627E;&#x51FA;&#x2018;master&#x2019;,&#x2018;test&#x2019;&#x7684;&#x5171;&#x6709; &#x7236;&#x5206;&#x652F;&#x548C;&apos;test&apos;&#x5206;&#x652F;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x4F60;&#x7528;3&#x4E2A;&#x2018;.&apos;&#x6765;&#x53D6;&#x4EE3;&#x524D;&#x9762;&#x7684;&#x4E24;&#x4E2A;&apos;.&apos;
+</code></pre>
+<h3 id="t41stash">stash <a href="#t41stash"> # </a></h3>
+<pre><code class="lang-shell">git stash # &#x5C06;&#x5DE5;&#x4F5C;&#x533A;&#x73B0;&#x573A;&#xFF08;&#x5DF2;&#x8DDF;&#x8E2A;&#x6587;&#x4EF6;&#xFF09;&#x50A8;&#x85CF;&#x8D77;&#x6765;&#xFF0C;&#x7B49;&#x4EE5;&#x540E;&#x6062;&#x590D;&#x540E;&#x7EE7;&#x7EED;&#x5DE5;&#x4F5C;&#x3002;   
+git stash list  # &#x67E5;&#x770B;&#x4FDD;&#x5B58;&#x7684;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;   
+git stash apply # &#x6062;&#x590D;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;   
+git stash drop  # &#x5220;&#x9664;stash&#x5185;&#x5BB9;   
+git stash pop   # &#x6062;&#x590D;&#x7684;&#x540C;&#x65F6;&#x76F4;&#x63A5;&#x5220;&#x9664;stash&#x5185;&#x5BB9;   
+git stash apply stash@{0} # &#x6062;&#x590D;&#x6307;&#x5B9A;&#x7684;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;&#xFF0C;&#x5F53;&#x4F60;&#x4FDD;&#x5B58;&#x4E86;&#x4E0D;&#x53EA;&#x4E00;&#x4EFD;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;&#x65F6;&#x3002;
+</code></pre>
+<h3 id="t42merge">merge <a href="#t42merge"> # </a></h3>
+<pre><code class="lang-bash">git merge --squash <span class="hljs-built_in">test</span> <span class="hljs-comment"># &#x5408;&#x5E76;&#x538B;&#x7F29;&#xFF0C;&#x5C06;test&#x4E0A;&#x7684;commit&#x538B;&#x7F29;&#x4E3A;&#x4E00;&#x6761;</span>
+</code></pre>
+<h3 id="t43cherry-pick">cherry-pick <a href="#t43cherry-pick"> # </a></h3>
+<pre><code class="lang-shell">git cherry-pick commit    # &#x62E3;&#x9009;&#x5408;&#x5E76;&#xFF0C;&#x5C06;commit&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;   
+git cherry-pick -n commit # &#x62E3;&#x9009;&#x591A;&#x4E2A;&#x63D0;&#x4EA4;&#xFF0C;&#x5408;&#x5E76;&#x5B8C;&#x540E;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x62E3;&#x9009;&#x4E0B;&#x4E00;&#x4E2A;&#x63D0;&#x4EA4;
+</code></pre>
+<h3 id="t44rebase">rebase <a href="#t44rebase"> # </a></h3>
+<pre><code class="lang-shell">git rebase master   # &#x5C06;master&#x5206;&#x4E4B;&#x4E0A;&#x8D85;&#x524D;&#x7684;&#x63D0;&#x4EA4;&#xFF0C;&#x53D8;&#x57FA;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;  
+git rebase --onto master 169a6  # &#x9650;&#x5236;&#x56DE;&#x6EDA;&#x8303;&#x56F4;&#xFF0C;rebase&#x5F53;&#x524D;&#x5206;&#x652F;&#x4ECE;169a6&#x4EE5;&#x540E;&#x7684;&#x63D0;&#x4EA4;  
+git rebase --interactive # &#x4EA4;&#x4E92;&#x6A21;&#x5F0F;&#xFF0C;&#x4FEE;&#x6539;commit   
+git rebase --continue    # &#x5904;&#x7406;&#x5B8C;&#x51B2;&#x7A81;&#x7EE7;&#x7EED;&#x5408;&#x5E76;   
+git rebase --skip        # &#x8DF3;&#x8FC7;   
+git rebase --abort       # &#x53D6;&#x6D88;&#x5408;&#x5E76;
+</code></pre>
+<h2 id="t45&#x5206;&#x652F;branch">&#x5206;&#x652F;branch <a href="#t45&#x5206;&#x652F;branch"> # </a></h2>
+<h3 id="t46&#x5220;&#x9664;">&#x5220;&#x9664; <a href="#t46&#x5220;&#x9664;"> # </a></h3>
+<pre><code class="lang-shell">git push origin :branchName  # &#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x5206;&#x652F;  
+git push origin --delete new # &#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x5206;&#x652F;new   
+git branch -d branchName     # &#x5220;&#x9664;&#x672C;&#x5730;&#x5206;&#x652F;&#xFF0C;&#x5F3A;&#x5236;&#x5220;&#x9664;&#x7528;-D  
+git branch -d test      # &#x5220;&#x9664;&#x672C;&#x5730;test&#x5206;&#x652F;   
+git branch -D test      # &#x5F3A;&#x5236;&#x5220;&#x9664;&#x672C;&#x5730;test&#x5206;&#x652F;   
+git remote prune origin # &#x8FDC;&#x7A0B;&#x5220;&#x9664;&#x4E86;&#xFF0C;&#x672C;&#x5730;&#x8FD8;&#x80FD;&#x770B;&#x5230;&#x8FDC;&#x7A0B;&#x5B58;&#x5728;&#xFF0C;&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5206;&#x652F;
+</code></pre>
+<h3 id="t47&#x63D0;&#x4EA4;">&#x63D0;&#x4EA4; <a href="#t47&#x63D0;&#x4EA4;"> # </a></h3>
+<pre><code class="lang-bash">git push -u origin branchName <span class="hljs-comment"># &#x63D0;&#x4EA4;&#x5206;&#x652F;&#x5230;&#x8FDC;&#x7A0B;origin&#x4E3B;&#x673A;&#x4E2D;</span>
+</code></pre>
+<h3 id="t48&#x62C9;&#x53D6;">&#x62C9;&#x53D6; <a href="#t48&#x62C9;&#x53D6;"> # </a></h3>
+<p><code>git fetch -p</code> #&#x62C9;&#x53D6;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x6E05;&#x7406; &#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x5DF2;&#x5220;&#x9664;&#xFF0C;&#x672C;&#x5730;&#x8FD8;&#x5B58;&#x5728;&#x7684;&#x5BF9;&#x5E94;&#x540C;&#x540D;&#x5206;&#x652F;&#x3002;  </p>
+<h3 id="t49&#x5206;&#x652F;&#x5408;&#x5E76;">&#x5206;&#x652F;&#x5408;&#x5E76; <a href="#t49&#x5206;&#x652F;&#x5408;&#x5E76;"> # </a></h3>
+<pre><code class="lang-shell">git merge branchName      # &#x5408;&#x5E76;&#x5206;&#x652F; - &#x5C06;&#x5206;&#x652F;branchName&#x548C;&#x5F53;&#x524D;&#x6240;&#x5728;&#x5206;&#x652F;&#x5408;&#x5E76;   
+git merge origin/master   # &#x5728;&#x672C;&#x5730;&#x5206;&#x652F;&#x4E0A;&#x5408;&#x5E76;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x3002;   
+git rebase origin/master  # &#x5728;&#x672C;&#x5730;&#x5206;&#x652F;&#x4E0A;&#x5408;&#x5E76;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x3002;   
+git merge test            # &#x5C06;test&#x5206;&#x652F;&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;
+</code></pre>
+<h3 id="t50&#x91CD;&#x547D;&#x540D;">&#x91CD;&#x547D;&#x540D; <a href="#t50&#x91CD;&#x547D;&#x540D;"> # </a></h3>
+<p><code>git branch -m old new</code> #&#x91CD;&#x547D;&#x540D;&#x5206;&#x652F;  </p>
+<h3 id="t51&#x67E5;&#x770B;">&#x67E5;&#x770B; <a href="#t51&#x67E5;&#x770B;"> # </a></h3>
+<pre><code class="lang-shell">git branch      # &#x5217;&#x51FA;&#x672C;&#x5730;&#x5206;&#x652F;   
+git branch -r   # &#x5217;&#x51FA;&#x8FDC;&#x7AEF;&#x5206;&#x652F;   
+git branch -a   # &#x5217;&#x51FA;&#x6240;&#x6709;&#x5206;&#x652F;   
+git branch -v   # &#x67E5;&#x770B;&#x5404;&#x4E2A;&#x5206;&#x652F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x63D0;&#x4EA4;&#x5BF9;&#x8C61;&#x7684;&#x4FE1;&#x606F;   
+git branch --merge      # &#x67E5;&#x770B;&#x5DF2;&#x7ECF;&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;&#x7684;&#x5206;&#x652F;   
+git branch --no-merge   # &#x67E5;&#x770B;&#x4E3A;&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;&#x7684;&#x5206;&#x652F;   
+git remote show origin  # &#x53EF;&#x4EE5;&#x67E5;&#x770B;remote&#x5730;&#x5740;&#xFF0C;&#x8FDC;&#x7A0B;&#x5206;&#x652F;
+</code></pre>
+<h3 id="t52&#x65B0;&#x5EFA;">&#x65B0;&#x5EFA; <a href="#t52&#x65B0;&#x5EFA;"> # </a></h3>
+<pre><code class="lang-shell">git branch test # &#x65B0;&#x5EFA;test&#x5206;&#x652F;  
+git checkout -b newBrach origin/master # &#x53D6;&#x56DE;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;&#x66F4;&#x65B0;&#x4EE5;&#x540E;&#xFF0C;&#x5728;&#x5B83;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5206;&#x652F;
+</code></pre>
+<h3 id="t53&#x8FDE;&#x63A5;">&#x8FDE;&#x63A5; <a href="#t53&#x8FDE;&#x63A5;"> # </a></h3>
+<pre><code class="lang-shell">git branch --set-upstream dev origin/dev     # &#x5C06;&#x672C;&#x5730;dev&#x5206;&#x652F;&#x4E0E;&#x8FDC;&#x7A0B;dev&#x5206;&#x652F;&#x4E4B;&#x95F4;&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;  
+git branch --set-upstream master origin/next # &#x624B;&#x52A8;&#x5EFA;&#x7ACB;&#x8FFD;&#x8E2A;&#x5173;&#x7CFB;
+</code></pre>
+<h3 id="t54&#x5206;&#x652F;&#x5207;&#x6362;">&#x5206;&#x652F;&#x5207;&#x6362; <a href="#t54&#x5206;&#x652F;&#x5207;&#x6362;"> # </a></h3>
+<pre><code class="lang-shell">git checkout test     # &#x5207;&#x6362;&#x5230;test&#x5206;&#x652F;   
+git checkout -b test  # &#x65B0;&#x5EFA;+&#x5207;&#x6362;&#x5230;test&#x5206;&#x652F;   
+git checkout -b test dev # &#x57FA;&#x4E8E;dev&#x65B0;&#x5EFA;test&#x5206;&#x652F;&#xFF0C;&#x5E76;&#x5207;&#x6362;
+</code></pre>
+<h2 id="t55&#x8FDC;&#x7AEF;">&#x8FDC;&#x7AEF; <a href="#t55&#x8FDC;&#x7AEF;"> # </a></h2>
+<pre><code class="lang-shell">git fetch &lt;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x540D;&gt; &lt;&#x5206;&#x652F;&#x540D;&gt;   # fetch&#x53D6;&#x56DE;&#x6240;&#x6709;&#x5206;&#x652F;&#xFF08;branch&#xFF09;&#x7684;&#x66F4;&#x65B0;  
+git fetch origin remotebranch[:localbranch]   #  &#x4ECE;&#x8FDC;&#x7AEF;&#x62C9;&#x53BB;&#x5206;&#x652F;[&#x5230;&#x672C;&#x5730;&#x6307;&#x5B9A;&#x5206;&#x652F;]   
+git merge origin/branch   # &#x5408;&#x5E76;&#x8FDC;&#x7AEF;&#x4E0A;&#x6307;&#x5B9A;&#x5206;&#x652F;   
+git pull origin remotebranch:localbranch  #  &#x62C9;&#x53BB;&#x8FDC;&#x7AEF;&#x5206;&#x652F;&#x5230;&#x672C;&#x5730;&#x5206;&#x652F;   
+git push origin branch    # &#x5C06;&#x5F53;&#x524D;&#x5206;&#x652F;&#xFF0C;&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7AEF;&#x4E0A;&#x6307;&#x5B9A;&#x5206;&#x652F;   
+git push origin localbranch:remotebranch  # &#x63A8;&#x9001;&#x672C;&#x5730;&#x6307;&#x5B9A;&#x5206;&#x652F;&#xFF0C;&#x5230;&#x8FDC;&#x7AEF;&#x4E0A;&#x6307;&#x5B9A;&#x5206;&#x652F;   
+git push origin :remotebranch   # &#x5220;&#x9664;&#x8FDC;&#x7AEF;&#x6307;&#x5B9A;&#x5206;&#x652F;   
+git checkout -b [--track] test origin/dev # &#x57FA;&#x4E8E;&#x8FDC;&#x7AEF;dev&#x5206;&#x652F;&#xFF0C;&#x65B0;&#x5EFA;&#x672C;&#x5730;test&#x5206;&#x652F;[&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x8DDF;&#x8E2A;]
+</code></pre>
+<h2 id="t56submodule">submodule <a href="#t56submodule"> # </a></h2>
+<pre><code class="lang-bash">git submodule add --force <span class="hljs-string">&apos;&#x4ED3;&#x5E93;&#x5730;&#x5740;&apos;</span> <span class="hljs-string">&apos;&#x8DEF;&#x5F84;&apos;</span>
+<span class="hljs-comment"># &#x5176;&#x4E2D;&#xFF0C;&#x4ED3;&#x5E93;&#x5730;&#x5740;&#x662F;&#x6307;&#x5B50;&#x6A21;&#x5757;&#x4ED3;&#x5E93;&#x5730;&#x5740;&#xFF0C;&#x8DEF;&#x5F84;&#x6307;&#x5C06;&#x5B50;&#x6A21;&#x5757;&#x653E;&#x7F6E;&#x5728;&#x5F53;&#x524D;&#x5DE5;&#x7A0B;&#x4E0B;&#x7684;&#x8DEF;&#x5F84;&#x3002;</span>
+<span class="hljs-comment"># &#x6CE8;&#x610F;&#xFF1A;&#x8DEF;&#x5F84;&#x4E0D;&#x80FD;&#x4EE5; / &#x7ED3;&#x5C3E;&#xFF08;&#x4F1A;&#x9020;&#x6210;&#x4FEE;&#x6539;&#x4E0D;&#x751F;&#x6548;&#xFF09;&#x3001;&#x4E0D;&#x80FD;&#x662F;&#x73B0;&#x6709;&#x5DE5;&#x7A0B;&#x5DF2;&#x6709;&#x7684;&#x76EE;&#x5F55;&#xFF08;&#x4E0D;&#x80FD;&#x9806;&#x5229; Clone&#xFF09;</span>
+git submodule init <span class="hljs-comment"># &#x521D;&#x59CB;&#x5316;submodule</span>
+git submodule update <span class="hljs-comment"># &#x66F4;&#x65B0;submodule(&#x5FC5;&#x987B;&#x5728;&#x6839;&#x76EE;&#x5F55;&#x6267;&#x884C;&#x547D;&#x4EE4;)</span>
+</code></pre>
+<p>&#x5F53;&#x4F7F;&#x7528;<code>git clone</code>&#x4E0B;&#x6765;&#x7684;&#x5DE5;&#x7A0B;&#x4E2D;&#x5E26;&#x6709;submodule&#x65F6;&#xFF0C;&#x521D;&#x59CB;&#x7684;&#x65F6;&#x5019;&#xFF0C;submodule&#x7684;&#x5185;&#x5BB9;&#x5E76;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x7684;&#xFF0C;&#x6B64;&#x65F6;&#xFF0C;&#x53EA;&#x9700;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-bash">git submodule update --init --recursive  <span class="hljs-comment"># &#x4E0B;&#x8F7D;&#x7684;&#x5DE5;&#x7A0B;&#x5E26;&#x6709;submodule</span>
+git submodule foreach git pull  <span class="hljs-comment"># submodule &#x91CC;&#x6709;&#x5176;&#x4ED6;&#x7684; submodule &#x4E00;&#x6B21;&#x66F4;&#x65B0;</span>
+git submodule foreach git pull origin master <span class="hljs-comment"># submodule&#x66F4;&#x65B0;</span>
+
+git submodule foreach --recursive git submodule init
+git submodule foreach --recursive git submodule update
+</code></pre>
+<h2 id="t57&#x5220;&#x9664;&#x6587;&#x4EF6;">&#x5220;&#x9664;&#x6587;&#x4EF6; <a href="#t57&#x5220;&#x9664;&#x6587;&#x4EF6;"> # </a></h2>
+<pre><code class="lang-bash">git rm -rf node_modules/
+</code></pre>
+<h2 id="t58remote">remote <a href="#t58remote"> # </a></h2>
+<p>git&#x662F;&#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x4EE3;&#x7801;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x591A;&#x4E2A;&#x4ED3;&#x5E93;&#xFF0C;&#x5728;git&#x91CC;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x4ED3;&#x5E93;&#x5728;&#x672C;&#x5730;&#x79F0;&#x4E4B;&#x4E3A;remote&#x3002;&#x4E2A;&#x4EBA;&#x5F00;&#x53D1;&#x65F6;&#xFF0C;&#x591A;&#x6E90;&#x7528;&#x7684;&#x53EF;&#x80FD;&#x4E0D;&#x591A;&#xFF0C;&#x4F46;&#x591A;&#x6E90;&#x5176;&#x5B9E;&#x975E;&#x5E38;&#x6709;&#x7528;&#x3002;  </p>
+<pre><code class="lang-shell">git remote add origin1 git@github.com:yanhaijing/data.js.git  
+git remote    # &#x663E;&#x793A;&#x5168;&#x90E8;&#x6E90;  
+git remote -v # &#x663E;&#x793A;&#x5168;&#x90E8;&#x6E90;+&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;  
+git remote rename origin1 origin2 # &#x91CD;&#x547D;&#x540D;  
+git remote rm origin    # &#x5220;&#x9664;  
+git remote show origin  # &#x67E5;&#x770B;&#x6307;&#x5B9A;&#x6E90;&#x7684;&#x5168;&#x90E8;&#x4FE1;&#x606F;
+</code></pre>
+<h2 id="t59&#x6807;&#x7B7E;tag">&#x6807;&#x7B7E;tag <a href="#t59&#x6807;&#x7B7E;tag"> # </a></h2>
+<p>&#x5F53;&#x5F00;&#x53D1;&#x5230;&#x4E00;&#x5B9A;&#x9636;&#x6BB5;&#x65F6;&#xFF0C;&#x7ED9;&#x7A0B;&#x5E8F;&#x6253;&#x6807;&#x7B7E;&#x662F;&#x975E;&#x5E38;&#x68D2;&#x7684;&#x529F;&#x80FD;&#x3002;  </p>
+<pre><code class="lang-bash">git tag -a v0.1 -m <span class="hljs-string">&apos;my version 1.4&apos;</span> <span class="hljs-comment"># &#x65B0;&#x5EFA;&#x5E26;&#x6CE8;&#x91CA;&#x6807;&#x7B7E;   </span>
+git push origin --tags              <span class="hljs-comment"># &#x4E00;&#x6B21;&#x6027;&#x63A8;&#x9001;&#x6240;&#x6709;&#x5206;&#x652F; </span>
+git push origin v1.5                <span class="hljs-comment"># &#x63A8;&#x9001;&#x5355;&#x4E2A;tag&#x5230;orgin&#x6E90;&#x4E0A; </span>
+git tag -v v1.4.2.1                 <span class="hljs-comment"># &#x9A8C;&#x8BC1;&#x6807;&#x7B7E;&#xFF0C;&#x9A8C;&#x8BC1;&#x5DF2;&#x7ECF;&#x7B7E;&#x7F72;&#x7684;&#x6807;&#x7B7E;</span>
+git show v1.5                       <span class="hljs-comment"># &#x770B;&#x5230;&#x5BF9;&#x5E94;&#x7684; GPG &#x7B7E;</span>
+
+git tag        <span class="hljs-comment"># &#x5217;&#x51FA;&#x73B0;&#x6709;&#x6807;&#x7B7E;   </span>
+git tag v0gi.1 <span class="hljs-comment"># &#x65B0;&#x5EFA;&#x6807;&#x7B7E;   </span>
+git checkout tagname   <span class="hljs-comment"># &#x5207;&#x6362;&#x5230;&#x6807;&#x7B7E;       </span>
+git tag -d v0.1 <span class="hljs-comment"># &#x5220;&#x9664;&#x6807;&#x7B7E;   </span>
+git push origin :refs/tags/v0.1 <span class="hljs-comment"># &#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x6807;&#x7B7E;   </span>
+git pull --all <span class="hljs-comment"># &#x83B7;&#x53D6;&#x8FDC;&#x7A0B;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x5305;&#x62EC;tag  </span>
+git --git-dir=<span class="hljs-string">&apos;&lt;&#x7EDD;&#x5BF9;&#x5730;&#x5740;&gt;/.git&apos;</span> describe --tags HEAD <span class="hljs-comment"># &#x67E5;&#x770B;&#x672C;&#x5730;&#x7248;&#x672C;&#x4FE1;&#x606F;</span>
+</code></pre>
+<h2 id="t60&#x65E5;&#x5FD7;log">&#x65E5;&#x5FD7;log <a href="#t60&#x65E5;&#x5FD7;log"> # </a></h2>
+<pre><code class="lang-bash">git config format.pretty oneline  <span class="hljs-comment">#&#x663E;&#x793A;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x65F6;&#xFF0C;&#x6BCF;&#x4E2A;&#x63D0;&#x4EA4;&#x7684;&#x4FE1;&#x606F;&#x53EA;&#x663E;&#x793A;&#x4E00;&#x884C;   </span>
+git config color.ui <span class="hljs-literal">true</span> <span class="hljs-comment">#&#x5F69;&#x8272;&#x7684; git &#x8F93;&#x51FA;   </span>
+git <span class="hljs-built_in">log</span> <span class="hljs-comment">#&#x67E5;&#x770B;&#x6700;&#x8FD1;&#x7684;&#x63D0;&#x4EA4;&#x65E5;&#x5FD7;   </span>
+git <span class="hljs-built_in">log</span> --pretty=oneline <span class="hljs-comment">#&#x5355;&#x884C;&#x663E;&#x793A;&#x63D0;&#x4EA4;&#x65E5;&#x5FD7;   </span>
+git <span class="hljs-built_in">log</span> --graph --pretty=oneline --abbrev-commit   
+git <span class="hljs-built_in">log</span> -num <span class="hljs-comment">#&#x663E;&#x793A;&#x7B2C;&#x51E0;&#x6761;log&#xFF08;&#x5012;&#x6570;&#xFF09;   </span>
+git reflog <span class="hljs-comment">#&#x67E5;&#x770B;&#x6240;&#x6709;&#x5206;&#x652F;&#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x8BB0;&#x5F55;   </span>
+git <span class="hljs-built_in">log</span> --since=1.day <span class="hljs-comment">#&#x4E00;&#x5929;&#x5185;&#x7684;&#x63D0;&#x4EA4;&#xFF1B;&#x4F60;&#x53EF;&#x4EE5;&#x7ED9;&#x51FA;&#x5404;&#x79CD;&#x65F6;&#x95F4;&#x683C;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E00;&#x5929;&#xFF08;&#x201C;2008-01-15&#x201D;&#xFF09;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x591A;&#x4E45;&#x4EE5;&#x524D;&#xFF08;&#x201C;2 years 1 day 3 minutes ago&#x201D;&#xFF09;&#x3002;   </span>
+git <span class="hljs-built_in">log</span> --pretty=<span class="hljs-string">&quot;%h - %s&quot;</span> --author=&#x81EA;&#x5DF1;&#x7684;&#x540D;&#x5B57; <span class="hljs-comment">#&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x7684;&#x65E5;&#x5FD7;   </span>
+git <span class="hljs-built_in">log</span> -p -2 <span class="hljs-comment">#&#x5C55;&#x5F00;&#x4E24;&#x6B21;&#x66F4;&#x65B0;&#x663E;&#x793A;&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x5185;&#x5BB9;&#x5DEE;&#x5F02;   </span>
+git <span class="hljs-built_in">log</span> --<span class="hljs-built_in">stat</span> <span class="hljs-comment">#&#x8981;&#x5FEB;&#x901F;&#x6D4F;&#x89C8;&#x5176;&#x4ED6;&#x534F;&#x4F5C;&#x8005;&#x63D0;&#x4EA4;&#x7684;&#x66F4;&#x65B0;&#x90FD;&#x4F5C;&#x4E86;&#x54EA;&#x4E9B;&#x6539;&#x52A8;   </span>
+git <span class="hljs-built_in">log</span> --pretty=format:<span class="hljs-string">&quot;%h - %an, %ar : %s&quot;</span><span class="hljs-comment">#&#x5B9A;&#x5236;&#x8981;&#x663E;&#x793A;&#x7684;&#x8BB0;&#x5F55;&#x683C;&#x5F0F;   </span>
+git <span class="hljs-built_in">log</span> --pretty=format:<span class="hljs-string">&apos;%h : %s&apos;</span> --date-order --graph <span class="hljs-comment"># &#x62D3;&#x6251;&#x987A;&#x5E8F;&#x5C55;&#x793A;   </span>
+git <span class="hljs-built_in">log</span> --pretty=format:<span class="hljs-string">&apos;%h : %s - %ad&apos;</span> --date=short <span class="hljs-comment">#&#x65E5;&#x671F;YYYY-MM-DD&#x663E;&#x793A;   </span>
+git <span class="hljs-built_in">log</span> &lt;last tag&gt; HEAD --pretty=format:%s <span class="hljs-comment"># &#x53EA;&#x663E;&#x793A;commit</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>&#x9009;&#x9879;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x9009;&#x9879;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%H</td>
+<td>&#x63D0;&#x4EA4;&#x5BF9;&#x8C61;&#xFF08;commit&#xFF09;&#x7684;&#x5B8C;&#x6574;&#x54C8;&#x5E0C;&#x5B57;&#x4E32;</td>
+<td>%ad</td>
+<td>&#x4F5C;&#x8005;&#x4FEE;&#x8BA2;&#x65E5;&#x671F;&#xFF08;&#x53EF;&#x4EE5;&#x7528; -date= &#x9009;&#x9879;&#x5B9A;&#x5236;&#x683C;&#x5F0F;&#xFF09;</td>
+</tr>
+<tr>
+<td>%h</td>
+<td>&#x63D0;&#x4EA4;&#x5BF9;&#x8C61;&#x7684;&#x7B80;&#x77ED;&#x54C8;&#x5E0C;&#x5B57;&#x4E32;</td>
+<td>%ar</td>
+<td>&#x4F5C;&#x8005;&#x4FEE;&#x8BA2;&#x65E5;&#x671F;&#xFF0C;&#x6309;&#x591A;&#x4E45;&#x4EE5;&#x524D;&#x7684;&#x65B9;&#x5F0F;&#x663E;&#x793A;</td>
+</tr>
+<tr>
+<td>%T</td>
+<td>&#x6811;&#x5BF9;&#x8C61;&#xFF08;tree&#xFF09;&#x7684;&#x5B8C;&#x6574;&#x54C8;&#x5E0C;&#x5B57;&#x4E32;</td>
+<td>%cn</td>
+<td>&#x63D0;&#x4EA4;&#x8005;(committer)&#x7684;&#x540D;&#x5B57;</td>
+</tr>
+<tr>
+<td>%t</td>
+<td>&#x6811;&#x5BF9;&#x8C61;&#x7684;&#x7B80;&#x77ED;&#x54C8;&#x5E0C;&#x5B57;&#x4E32;</td>
+<td>%ce</td>
+<td>&#x63D0;&#x4EA4;&#x8005;&#x7684;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td>%P</td>
+<td>&#x7236;&#x5BF9;&#x8C61;&#xFF08;parent&#xFF09;&#x7684;&#x5B8C;&#x6574;&#x54C8;&#x5E0C;&#x5B57;&#x4E32;</td>
+<td>%cd</td>
+<td>&#x63D0;&#x4EA4;&#x65E5;&#x671F;</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>&#x7236;&#x5BF9;&#x8C61;&#x7684;&#x7B80;&#x77ED;&#x54C8;&#x5E0C;&#x5B57;&#x4E32;</td>
+<td>%cr</td>
+<td>&#x63D0;&#x4EA4;&#x65E5;&#x671F;&#xFF0C;&#x6309;&#x591A;&#x4E45;&#x4EE5;&#x524D;&#x7684;&#x65B9;&#x5F0F;&#x663E;&#x793A;</td>
+</tr>
+<tr>
+<td>%an</td>
+<td>&#x4F5C;&#x8005;&#xFF08;author&#xFF09;&#x7684;&#x540D;&#x5B57;</td>
+<td>%s</td>
+<td>&#x63D0;&#x4EA4;&#x8BF4;&#x660E;</td>
+</tr>
+<tr>
+<td>%ae</td>
+<td>&#x4F5C;&#x8005;&#x7684;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5730;&#x5740;</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://git-scm.com/docs/git-log#_pretty_formats">Pretty Formats</a></p>
+<h2 id="t61&#x91CD;&#x5199;&#x5386;&#x53F2;">&#x91CD;&#x5199;&#x5386;&#x53F2; <a href="#t61&#x91CD;&#x5199;&#x5386;&#x53F2;"> # </a></h2>
+<pre><code class="lang-bash">git commit --amend    <span class="hljs-comment"># &#x6539;&#x53D8;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;  </span>
+git rebase -i HEAD~3  <span class="hljs-comment"># &#x4FEE;&#x6539;&#x6700;&#x8FD1;&#x4E09;&#x6B21;&#x7684;&#x63D0;&#x4EA4;&#x8BF4;&#x660E;&#xFF0C;&#x6216;&#x8005;&#x5176;&#x4E2D;&#x4EFB;&#x610F;&#x4E00;&#x6B21;  </span>
+git commit --amend    <span class="hljs-comment"># &#x4FDD;&#x5B58;&#x597D;&#x4E86;&#xFF0C;&#x8FD9;&#x4E9B;&#x6307;&#x793A;&#x5F88;&#x660E;&#x786E;&#x5730;&#x544A;&#x8BC9;&#x4E86;&#x4F60;&#x8BE5;&#x5E72;&#x4EC0;&#x4E48;  </span>
+git rebase --<span class="hljs-built_in">continue</span> <span class="hljs-comment"># &#x4FEE;&#x6539;&#x63D0;&#x4EA4;&#x8BF4;&#x660E;&#xFF0C;&#x9000;&#x51FA;&#x7F16;&#x8F91;&#x5668;&#x3002;</span>
+</code></pre>
+<pre><code class="lang-bash">pick f7f3f6d changed my name a bit
+pick 310154e updated README formatting and added blame
+pick a5f4a0d added cat-file
+</code></pre>
+<p>&#x6539;&#x6210;</p>
+<pre><code>pick 310154e updated README formatting and added blame
+pick f7f3f6d changed my name a bit
+</code></pre><h3 id="t62&#x5220;&#x9664;&#x4ED3;&#x5E93;">&#x5220;&#x9664;&#x4ED3;&#x5E93; <a href="#t62&#x5220;&#x9664;&#x4ED3;&#x5E93;"> # </a></h3>
+<pre><code>cd ..
+rm -rf repo.git
+</code></pre><p><a href="https://help.github.com/articles/changing-author-info/">Github&#x5B98;&#x65B9;&#x6559;&#x7A0B;</a></p>
+<h2 id="t63&#x5176;&#x5B83;">&#x5176;&#x5B83; <a href="#t63&#x5176;&#x5B83;"> # </a></h2>
+<pre><code class="lang-bash">git <span class="hljs-built_in">help</span> *  <span class="hljs-comment"># &#x83B7;&#x53D6;&#x547D;&#x4EE4;&#x7684;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;  </span>
+git status  <span class="hljs-comment"># &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x975E;&#x5E38;&#x6709;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;git&#x4F1A;&#x63D0;&#x793A;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x80FD;&#x505A;&#x7684;&#x64CD;&#x4F5C;</span>
+</code></pre>
+<h2 id="t64&#x62A5;&#x9519;&#x95EE;&#x9898;&#x89E3;&#x51B3;">&#x62A5;&#x9519;&#x95EE;&#x9898;&#x89E3;&#x51B3; <a href="#t64&#x62A5;&#x9519;&#x95EE;&#x9898;&#x89E3;&#x51B3;"> # </a></h2>
+<p><strong>1. <code>git fatal: protocol error: bad line length character: No s</code></strong></p>
+<p>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x66F4;&#x6362;remote&#x5730;&#x5740;&#x4E3A; <code>http/https</code> &#x7684;  </p>
+<p><strong>2. <code>The requested URL returned error: 403 Forbidden while accessing</code></strong></p>
+<p>&#x89E3;&#x51B3;github push&#x9519;&#x8BEF;&#x7684;&#x529E;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-shell"><span class="hljs-meta">#</span><span class="bash">vim &#x7F16;&#x8F91;&#x5668;&#x6253;&#x5F00; &#x5F53;&#x524D;&#x9879;&#x76EE;&#x4E2D;&#x7684;config&#x6587;&#x4EF6;</span>
+vim .git/config
+<span class="hljs-meta">
+#</span><span class="bash">&#x4FEE;&#x6539;</span>
+[remote &quot;origin&quot;]  
+    url = https://github.com/jaywcjlove/example.git  
+<span class="hljs-meta">
+#</span><span class="bash">&#x4E3A;&#x4E0B;&#x9762;&#x4EE3;&#x7801;</span>
+[remote &quot;origin&quot;]  
+    url = https://jaywcjlove@github.com/jaywcjlove/example.git
+</code></pre>
+<p><strong>3. git status &#x663E;&#x793A;&#x4E2D;&#x6587;&#x95EE;&#x9898;</strong></p>
+<p>&#x5728;&#x67E5;&#x770B;&#x72B6;&#x6001;&#x7684;&#x65F6;&#x5019; git status &#x5982;&#x679C;&#x662F;&#x4E2D;&#x6587;&#x5C31;&#x663E;&#x793A;&#x4E0B;&#x9762;&#x7684;&#x60C5;&#x51B5;</p>
+<pre><code class="lang-bash">\344\272\247\345\223\201\351\234\200\346\261\202
+</code></pre>
+<p>&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x65B9;&#x6CD5;&#x662F;&#xFF1A;</p>
+<pre><code class="lang-bash">git config --global core.quotepath <span class="hljs-literal">false</span>
+</code></pre>
+<h2 id="t65&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599; <a href="#t65&#x53C2;&#x8003;&#x8D44;&#x6599;"> # </a></h2>
+<ul>
+<li><a href="http://git-scm.com/">Git&#x5B98;&#x7F51;</a></li>
+<li><a href="https://try.github.io"><strong>Github 15&#x5206;&#x949F;&#x5B66;&#x4E60;Git</strong></a></li>
+<li><a href="http://gitref.org/zh/index.html">Git&#x53C2;&#x8003;&#x624B;&#x518C;</a></li>
+<li><a href="http://www.mceiba.com/tool/git-cheat-sheet.html">Git&#x7B80;&#x660E;&#x624B;&#x518C;</a></li>
+<li><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/">Git Magic</a></li>
+<li><a href="http://gitbook.liuhui998.com/index.html">Git Community Book &#x4E2D;&#x6587;&#x7248;</a></li>
+<li><a href="http://git-scm.com/book/en/v2">Pro Git</a></li>
+<li><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html">&#x56FE;&#x89E3;Git</a></li>
+<li><a href="http://rogerdudler.github.io/git-guide/index.zh.html">git-&#x7B80;&#x660E;&#x6307;&#x5357;</a></li>
+<li><a href="http://pcottle.github.io/learnGitBranching/">learnGitBranching &#x5728;&#x7EBF;&#x5B66;&#x4E60;&#x5DE5;&#x5177;</a></li>
+<li><a href="http://rogerdudler.github.io/git-guide/index.zh.html">&#x521D;&#x7EA7;&#x6559;&#x7A0B;</a> </li>
+<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">&#x5ED6;&#x96EA;&#x5CF0;&#x7684;Git&#x6559;&#x7A0B;</a></li>
+<li><a href="http://www.worldhello.net/gotgithub/">&#x848B;&#x946B;&#x8001;&#x5E08;&#x5C06;&#x5E26;&#x4F60;&#x5165;github&#x7684;&#x5927;&#x95E8;</a></li>
+<li><a href="http://www.open-open.com/lib/view/open1328069609436.html">git&#x8BE6;&#x89E3;</a></li>
+<li><a href="http://git.oschina.net/progit/">oschina&#x6559;&#x7A0B;</a></li>
+<li><a href="https://github.com/blog/2019-how-to-undo-almost-anything-with-git">How to undo (almost) anything with Git&#x64A4;&#x9500;&#x4E00;&#x5207;&#xFF0C;&#x6C47;&#x603B;&#x5404;&#x79CD;&#x56DE;&#x6EDA;&#x64A4;&#x9500;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x52A0;&#x5F3A;&#x5B66;&#x4E60;&#x3002;</a></li>
+<li><a href="http://www.runoob.com/git/git-tutorial.html">Git &#x6559;&#x7A0B; | &#x83DC;&#x9E1F;&#x6559;&#x7A0B;runoob.com</a></li>
+<li><a href="https://gold.xitu.io/post/5842f9b861ff4b005889ade6">Git &#x672C;&#x5730;&#x4ED3;&#x5E93;&#x548C;&#x88F8;&#x4ED3;&#x5E93;</a></li>
+<li><a href="http://www.kancloud.cn/kancloud/igit/46710">&#x6C89;&#x6D78;&#x5F0F;&#x5B66; Git</a></li>
+<li><a href="http://way.oschina.io/2016/12/15/notes/GitAdvance/?utm_source=gank.io&amp;utm_medium=email">Git&#x8FDB;&#x9636;&#x7528;&#x6CD5;&#xFF0C;&#x4E3B;&#x8981;&#x662F;rebase&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;</a></li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>
