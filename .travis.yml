@@ -13,19 +13,18 @@ script:
   - idoc clean && idoc build
 
 after_script:
-  - mkdir public && cp index.html public\ && cp -r html\ public\ && cp -r static\ public\ && cp idoc-logo.svg public\ && cp -r img\ public\ && cp CNAME public\ && cd public\
+  - mkdir public && cp index.html public && cp -r html public && cp -r static public && cp idoc-logo.svg public && cp -r img public && cp CNAME public && cd public
   - git init
   - git config user.name "poetries"
   - git config user.email "jingguanliuye@gmail.com"
   - git add -A
   - git commit -m "update docs"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" gh-pages
 # E: Build LifeCycle
 
 branches:
   only:
     - dev
-    - gh-pages
 env:
  global:
    - GH_REF: github.com/poetries/handbook.git
