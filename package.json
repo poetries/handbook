@@ -17,8 +17,7 @@
     },
     "scripts": {
         "deploy": "git add -A && git commit -m update && git push -f origin dev",
-        "start": "idoc build && idoc server",
-        "clean": "idoc clean"
+        "start": "idoc clean && idoc build && idoc server"
     },
     "idoc": {
         "theme": "handbook",
@@ -44,7 +43,17 @@
             {
                 "服务端": [
                     "docker.md",
-                    "Nginx.md",
+                    "nginx.md",
+                    {
+                        "node": [
+                            {
+                                "框架": [
+                                    "express详细使用.md",
+                                    "koa基本用法.md"
+                                ]
+                            }
+                        ]
+                    },
                     {
                         "shell": [
                             "shell正则.md",
@@ -60,8 +69,18 @@
             },
             {
                 "工具箱": [
+                    {
+                        "代码片段": [
+                            "100个JavaScript代码片段.md"
+                        ]
+                    },
                     "Git常用命令.md",
-                    "vim.md"
+                    "vim.md",
+                    {
+                        "代码片段": [
+                            "100个JavaScript代码片段.md"
+                        ]
+                    }
                 ]
             },
             {
