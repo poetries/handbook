@@ -90,19 +90,19 @@ http://localhost:8081/index.android.bundle?platform=android
 
 在应用中登录，点击按钮`Add`下载模拟器设备，在`Setting`中设置`ADB`选择`User custom Android SDK tools.`填写地址，一般在目录`/Users/用户名/Library/Android/sdk`中，点击按钮`Start`启动模拟器
 
-![](rn/Genymotion01.jpg)
-![](rn/Genymotion02.jpg)
+![](img/rn/Genymotion01.jpg)
+![](img/rn/Genymotion02.jpg)
 
 在启动前需要设置ADB SDK，否则会报错 `error: could not install smartsocket listener: Address already in use`，解决方法：genymotion的adb设置Android sdk。如下图：
 
-![](rn/Genymotion04.jpg)
-![](rn/Genymotion03.jpg)
+![](img/rn/Genymotion04.jpg)
+![](img/rn/Genymotion03.jpg)
 
 #### 运行命令启动项目
 
 进入项目的根目录，也就是有`package.json`文件的目录，运行`react-native run-android`启动项目，如下动图：
 
-![](rn/React-native-run.gif)
+![](img/rn/React-native-run.gif)
 
 ## 各种报错
 

@@ -2,7 +2,7 @@
 常见HTTP/FTP/WebSocket错误代码大全
 ---
 
-![](img_http/Fetching_a_page.png)
+![](img/other/Fetching_a_page.png)
 
 
 

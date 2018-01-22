@@ -1,6 +1,6 @@
 {
     "name": "handbook",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "description": "handbook",
     "keywords": [
         "handbook"
@@ -15,9 +15,11 @@
     "dependencies": {
         "idoc": "^0.3.0"
     },
-	"scripts":{
-		"deploy":"git add -A && git commit -m update && git push -f origin dev"
-	},
+    "scripts": {
+        "deploy": "git add -A && git commit -m update && git push -f origin dev",
+        "start": "idoc build && idoc server",
+        "clean": "idoc clean"
+    },
     "idoc": {
         "theme": "handbook",
         "logo": "idoc-logo.svg",
@@ -41,60 +43,17 @@
             },
             {
                 "服务端": [
-		    "docker.md",
-		    "Nginx.md",
-		    {
-			"shell": [
-			    "shell-regex.md",
-			    "Shell.md"
-			]
-		    },
+                    "docker.md",
+                    "Nginx.md",
+                    {
+                        "shell": [
+                            "shell正则.md",
+                            "shell脚本入门.md"
+                        ]
+                    },
                     {
                         "数据库": [
-                            {
-                                "mysql": [
-                                    "21-minutes-MySQL-basic-entry.md",
-                                    "awesome-mysql.md",
-                                    {
-                                        "chapter1": [
-                                            "1.1.md",
-                                            "1.2.md",
-                                            "1.3.md",
-                                            "1.4.md",
-                                            "1.md"
-                                        ]
-                                    },
-                                    {
-                                        "chapter17": [
-                                            "17.1.md",
-                                            "17.2.md",
-                                            "17.3.md"
-                                        ]
-                                    },
-                                    {
-                                        "chapter2": [
-                                            "2.1.md",
-                                            "2.2.md",
-                                            "2.3.md",
-                                            "2.4.md",
-                                            "2.5.md"
-                                        ]
-                                    },
-                                    {
-                                        "chapter3": [
-                                            "3.1.md",
-                                            "3.2.md",
-                                            "3.3.md",
-                                            "3.4.md",
-                                            "3.5.md",
-                                            "3.md"
-                                        ]
-                                    },
-                                    "README.md"
-                                ]
-									
-                            },
-			  "Redis.md"			
+                            "Redis.md"
                         ]
                     }
                 ]
