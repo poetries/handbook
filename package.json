@@ -41,19 +41,14 @@
             },
             {
                 "服务端": [
-					"docker.md",
-					"Nginx.md",
-                    {
-                        "数据库": [
-                            "Redis.md"
-                        ]
-                    },
-					{
-						"shell": [
-						"shell-regex.md",
-						"Shell.md"
-					]
-					},
+		    "docker.md",
+		    "Nginx.md",
+		    {
+			"shell": [
+			    "shell-regex.md",
+			    "Shell.md"
+			]
+		    },
                     {
                         "数据库": [
                             {
@@ -99,9 +94,7 @@
                                 ]
 									
                             },
-							"Redis.md"
-							
-                            
+			  "Redis.md"			
                         ]
                     }
                 ]
