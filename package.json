@@ -15,11 +15,14 @@
     "dependencies": {
         "idoc": "^0.3.0"
     },
+	"scripts":{
+		"deploy":"git add -A && git commit -m update && git push -f origin dev"
+	},
     "idoc": {
         "theme": "handbook",
         "logo": "idoc-logo.svg",
         "md": [
-            "Git常用命令.md",
+            "正则表达式.md",
             {
                 "前端": [
                     {
@@ -37,27 +40,20 @@
                 ]
             },
             {
-                "服务端编程": [
+                "服务端": [
+					"docker.md",
+					"Nginx.md",
                     {
                         "数据库": [
                             "Redis.md"
                         ]
                     },
-                    {
-                        "系统服务": [
-                            "docker.md",
-                            {
-                                "shell": [
-                                    "shell-regex.md",
-                                    "Shell.md"
-                                ]
-                            },
-                            "Nginx.md"
-                        ]
-                    },
-                    {
-                        "Linux": []
-                    },
+					{
+						"shell": [
+						"shell-regex.md",
+						"Shell.md"
+					]
+					},
                     {
                         "数据库": [
                             {
@@ -101,14 +97,17 @@
                                     },
                                     "README.md"
                                 ]
+									
                             },
-                            "Redis.md"
+							"Redis.md"
+							
+                            
                         ]
                     }
                 ]
             },
             {
-                "工具快捷键": [
+                "工具箱": [
                     "Git常用命令.md",
                     "vim.md"
                 ]
