@@ -12,6 +12,9 @@
         "url": "https://github.com/poetries/handbook.git"
     },
     "licenses": "MIT",
+    "dependencies": {
+        "idoc": "^0.3.0"
+    },
     "idoc": {
         "theme": "handbook",
         "logo": "idoc-logo.svg",
