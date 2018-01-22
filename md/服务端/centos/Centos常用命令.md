@@ -1,7 +1,3 @@
-
-Centos常用命令
---- 
-
 # 登录
 
 username:root  
