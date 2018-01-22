@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - "8"
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+
+#before_script:
+
+script:
+  - idoc build
+
+after_script:
+  - git init
+  - git config user.name "poetries"
+  - git config user.email "jingguanliuye@gmail.com"
+  - git add -A
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:dev
+# E: Build LifeCycle
+
+branches:
+  only:
+    - gh-pages
+env:
+ global:
+   - GH_REF: github.com/poetries/handbook.git
