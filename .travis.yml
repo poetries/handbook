@@ -25,6 +25,7 @@ after_script:
 branches:
   only:
     - dev
+    - gh-pages
 env:
  global:
    - GH_REF: github.com/poetries/handbook.git
