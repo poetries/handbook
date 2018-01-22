@@ -9,7 +9,7 @@
     "author": "poetries <jingguanliuye@gmail.com>",
     "repository": {
         "type": "git",
-        "url": "https://github.com/poetries/handbook.git"
+        "url": "https://github.com/poetries/handbook"
     },
     "licenses": "MIT",
     "dependencies": {
