@@ -29,6 +29,22 @@
                     {
                         "Javascript": [
                             {
+                                "React": [
+                                    "10、react结合redux实战篇.md",
+                                    "11、React Router 4.md",
+                                    "12、Immutable学习记录.md",
+                                    "1、环境的搭建.md",
+                                    "2、JSX语法及非DOM操作属性.md",
+                                    "3、组件的生命周期以及属性状态.md",
+                                    "4、事件.md",
+                                    "5、组件的协同及（不）可控组件.md",
+                                    "6、action、store、reducer分析.md",
+                                    "7、异步Action及操作.md",
+                                    "8、浅析中间件.md",
+                                    "9、源码分析.md"
+                                ]
+                            },
+                            {
                                 "RN": [
                                     "React-native Android环境搭建.md"
                                 ]
