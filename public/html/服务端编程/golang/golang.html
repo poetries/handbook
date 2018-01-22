@@ -1,0 +1,2121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handbook</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            <img src="../../../idoc-logo.svg">
+        
+    </div>
+<ul><li><a href="../../../index.html">Git常用命令</a></li><li><a href="#"><span></span>前端</a><ul><li><a href="#"><span></span>Javascript</a><ul><li><a href="#"><span></span>RN</a><ul><li><a href="../../../html/前端/Javascript/RN/React-native Android环境搭建.html">React-native Android环境搭建</a></li></ul></li><li><a href="../../../html/前端/Javascript/思维导图.html">思维导图</a></li><li><a href="../../../html/前端/Javascript/正则表达式.html">正则表达式</a></li><li><a href="../../../html/前端/Javascript/轻量高效的开源JavaScript插件和库.html">轻量高效的开源JavaScript插件和库</a></li></ul></li></ul></li><li><a href="#"><span></span>服务端编程</a><ul><li><a href="#"><span></span>数据库</a><ul><li><a href="../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li><li><a href="#"><span></span>系统服务</a><ul><li><a href="../../../html/服务端编程/系统服务/docker.html">docker</a></li><li><a href="#"><span></span>shell</a><ul><li><a href="../../../html/服务端编程/系统服务/shell/shell-regex.html">shell-regex</a></li><li><a href="../../../html/服务端编程/系统服务/shell/Shell.html">Shell</a></li></ul></li><li><a href="../../../html/服务端编程/系统服务/Nginx.html">Nginx</a></li></ul></li><li><a href="#"><span></span>Linux</a><ul></ul></li><li><a href="#"><span></span>数据库</a><ul><li><a href="#"><span></span>mysql</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/21-minutes-MySQL-basic-entry.html">21-minutes-MySQL-basic-entry</a></li><li><a href="../../../html/服务端编程/数据库/mysql/awesome-mysql.html">awesome-mysql</a></li><li><a href="#"><span></span>chapter1</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.1.html">1.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.2.html">1.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.3.html">1.3</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.4.html">1.4</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.html">1</a></li></ul></li><li><a href="#"><span></span>chapter17</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter17/17.1.html">17.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter17/17.2.html">17.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter17/17.3.html">17.3</a></li></ul></li><li><a href="#"><span></span>chapter2</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.1.html">2.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.2.html">2.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.3.html">2.3</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.4.html">2.4</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.5.html">2.5</a></li></ul></li><li><a href="#"><span></span>chapter3</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.1.html">3.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.2.html">3.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.3.html">3.3</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.4.html">3.4</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.5.html">3.5</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.html">3</a></li></ul></li><li><a href="../../../html/服务端编程/数据库/mysql/README.html">README</a></li></ul></li><li><a href="../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li></ul></li><li><a href="#"><span></span>工具快捷键</a><ul><li><a href="../../../html/工具快捷键/Git常用命令.html">Git常用命令</a></li><li><a href="../../../html/工具快捷键/vim.html">vim</a></li></ul></li><li><a href="#"><span></span>其他</a><ul><li><a href="../../../html/其他/HTTP状态码.html">HTTP状态码</a></li><li><a href="../../../html/其他/通过代理工具提高Github Clone速度.html">通过代理工具提高Github Clone速度</a></li></ul></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/poetries/handbook"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0Go语言快速入门">Go语言快速入门</a><ul><li><a href="#t1安装Go">安装Go</a></li><li><a href="#t2运行Go">运行Go</a></li><li><a href="#t3格式化输入输出">格式化输入输出</a></li><li><a href="#t4编程基础">编程基础</a></li><li><a href="#t5基本类型">基本类型</a></li><li><a href="#t6常量变量">常量变量</a></li><li><a href="#t7语言运算符">语言运算符</a></li><li><a href="#t8流程控制语句">流程控制语句</a></li><li><a href="#t9结构体">结构体</a></li><li><a href="#t10资源导航">资源导航</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0Go&#x8BED;&#x8A00;&#x5FEB;&#x901F;&#x5165;&#x95E8;">Go&#x8BED;&#x8A00;&#x5FEB;&#x901F;&#x5165;&#x95E8; <a href="#t0Go&#x8BED;&#x8A00;&#x5FEB;&#x901F;&#x5165;&#x95E8;"> # </a></h1>
+<p>&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x6765;&#x5FEB;&#x901F;&#x5165;&#x95E8;Go&#x8BED;&#x8A00;&#x57FA;&#x7840;&#x7F16;&#x7A0B;&#x3001;&#x8BED;&#x6CD5;&#x7B49;&#x5404;&#x79CD;&#x8BED;&#x8A00;&#x7279;&#x6027;&#xFF0C;&#x4E3B;&#x8981;&#x9762;&#x5411;&#x65B0;&#x624B;&#x7EA7;&#x522B;&#x7684;&#x5B66;&#x4E60;&#x8005;&#x3002;&#x4E0B;&#x9762;&#x6240;&#x6709;&#x4F8B;&#x5B50;&#x5747;&#x6765;&#x6E90;&#x4E8E;&#x7F51;&#x7EDC;&#xFF0C;&#x770B;&#x6587;&#x9700;&#x8C28;&#x614E;&#x540E;&#x679C;&#x81EA;&#x8D1F;&#x3002;</p>
+<p>&#x5B89;&#x88C5;&#x4E4B;&#x524D;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x53CA;&#x65B0;&#x5EFA;&#x51E0;&#x4E2A;&#x5FC5;&#x8981;&#x7684;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#xFF1A;</p>
+<ul>
+<li>GOROOT &#x76EE;&#x5F55;&#xFF0C;&#x8BE5;&#x76EE;&#x5F55;&#x4E3A;&#x89E3;&#x538B;&#x538B;&#x7F29;&#x5305;&#x6240;&#x5B58;&#x653E;&#x7684;&#x76EE;&#x5F55;&#x3002;<blockquote>
+<p>&#xFF08;&#x5EFA;&#x8BAE; linux &#x73AF;&#x5883;&#x89E3;&#x538B;&#x5230; /usr/local &#x76EE;&#x5F55;&#xFF0C;windows &#x73AF;&#x5883;&#x89E3;&#x538B;&#x5230; C:\ProgramFiles &#x76EE;&#x5F55;&#xFF09;</p>
+</blockquote>
+</li>
+<li>&#x65B0;&#x5EFA; GOPATH &#x76EE;&#x5F55;&#xFF0C;&#x5373;&#x4E3A;&#x6211;&#x4EEC;&#x7684;&#x201C;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x201D;&#xFF0C;&#x8BE5;&#x76EE;&#x5F55;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#xFF0C;&#x5EFA;&#x8BAE;&#x53EA;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x3002;</li>
+<li>GOPATH &#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA; <code>src</code> &#x76EE;&#x5F55;&#xFF0C;&#x8BE5;&#x76EE;&#x5F55;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x6E90;&#x7801;&#xFF0C;&#x4EE5;&#x53CA;&#x5B58;&#x653E;&#x6211;&#x4EEC;&#x7684;&#x9879;&#x76EE;&#x7684;&#x6E90;&#x7801;&#x3002;</li>
+<li>GOPATH &#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA; <code>bin</code> &#x76EE;&#x5F55;&#xFF0C;&#x8BE5;&#x76EE;&#x5F55;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x9879;&#x76EE;&#x4E2D;&#x6240;&#x751F;&#x6210;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;</li>
+<li>GOPATH &#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA; <code>pkg</code> &#x76EE;&#x5F55;&#xFF0C;&#x8BE5;&#x76EE;&#x5F55;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x7684;&#x5E93;&#x6587;&#x4EF6;&#x3002;</li>
+</ul>
+<h2 id="t1&#x5B89;&#x88C5;Go">&#x5B89;&#x88C5;Go <a href="#t1&#x5B89;&#x88C5;Go"> # </a></h2>
+<details>
+<summary>CentOS7&#x4E2D;&#x901A;&#x8FC7;yum&#x5B89;&#x88C5;</summary>
+
+<code>bash
+# CentOS7 &#x53EF;&#x4EE5;&#x53EA;&#x7528;&#x4F7F;&#x7528;yum&#x5B89;&#x88C5;
+yum install golang</code>
+
+</details>
+
+<details>
+<summary>CentOS7&#x4E2D;&#x901A;&#x8FC7;&#x6E90;&#x7801;&#x5B89;&#x88C5;</summary>
+
+<code>bash
+# &#x6E90;&#x7801;&#x4E0B;&#x8F7D;
+# &#x5B98;&#x7F51;&#x6E90;&#x7801; https://golang.org/dl/ &#x9700;&#x8981;&#x7FFB;&#x5899;
+wget https://storage.googleapis.com/golang/go1.9.darwin-amd64.pkg
+tar zxvf go1.8.linux-amd64.tar.gz -C /usr/local
+# &#x65B0;&#x5EFA;GOPATH&#x76EE;&#x5F55;
+mkdir -p $HOME/gopath</code>
+
+</details>
+
+<details>
+<summary>Mac&#x4E2D;&#x901A;&#x8FC7;brew&#x547D;&#x4EE4;&#x5B89;&#x88C5;</summary>
+
+&#x4F7F;&#x7528;<a href="http://brew.sh/">home brew</a>&#x5B89;&#x88C5;&#x65B9;&#x4FBF;&#x5FEB;&#x6377;&#x5B89;&#x88C5;Go&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x5728;&#x4F60;&#x7684; Mac &#x7CFB;&#x7EDF;&#x4E0A;&#x5B89;&#x88C5; Go&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x4F7F;&#x7528; <code>Intel 64</code> &#x4F4D;&#x5904;&#x7406;&#x5668;&#xFF0C;Go &#x4E0D;&#x652F;&#x6301; <code>PowerPC</code> &#x5904;&#x7406;&#x5668;&#x3002;
+
+<code>bash
+brew update &amp;&amp; brew upgrade # &#x66F4;&#x65B0; Homebrew &#x7684;&#x4FE1;&#x606F;
+brew install git            # &#x5B89;&#x88C5; git
+brew install go             # &#x5B89;&#x88C5; go</code>
+
+</details>
+
+
+<details>
+<summary>Mac&#x4E2D;&#x901A;&#x8FC7;&#x6E90;&#x7801;&#x5B89;&#x88C5;</summary>
+
+&#x901A;&#x8FC7;&#x6E90;&#x4EE3;&#x7801;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#x7684;&#x8FC7;&#x7A0B;&#x4E0E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x914D;&#x7F6E;&#x4E0E;&#x5728; Linux &#x7CFB;&#x7EDF;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;
+
+<strong>&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;</strong>
+
+&#x5728; Mac &#x7CFB;&#x7EDF;&#x4E0B;&#x4F7F;&#x7528;&#x5230;&#x7684; C &#x5DE5;&#x5177;&#x94FE;&#x662F; Xcode &#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x5B89;&#x88C5; Xcode &#x6765;&#x5B8C;&#x6210;&#x8FD9;&#x4E9B;&#x5DE5;&#x5177;&#x7684;&#x5B89;&#x88C5;&#x3002;&#x4F60;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x5B8C;&#x6574;&#x7684; Xcode&#xFF0C;&#x800C;&#x53EA;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x5B83;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x90E8;&#x5206;&#x3002;
+
+</details>
+
+
+<details>
+<summary>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x914D;&#x7F6E;</summary>
+
+&#x901A;&#x8FC7;<code>go env</code>&#x67E5;&#x770B;go&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;
+
+<code>bash
+&#x2192; go env
+
+GOARCH=&quot;amd64&quot;
+GOBIN=&quot;&quot;
+GOEXE=&quot;&quot;
+GOHOSTARCH=&quot;amd64&quot;
+GOHOSTOS=&quot;darwin&quot;
+GOOS=&quot;darwin&quot;
+GOPATH=&quot;/Users/kenny/go&quot;
+GORACE=&quot;&quot;
+GOROOT=&quot;/usr/local/Cellar/go/1.9/libexec&quot;
+GOTOOLDIR=&quot;/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64&quot;
+GCCGO=&quot;gccgo&quot;
+CC=&quot;clang&quot;
+GOGCCFLAGS=&quot;-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=/var/folders/j7/3xly5sk567s65ny5dnr__3b80000gn/T/go-build377856897=/tmp/go-build -gno-record-gcc-switches -fno-common&quot;
+CXX=&quot;clang++&quot;
+CGO_ENABLED=&quot;1&quot;
+CGO_CFLAGS=&quot;-g -O2&quot;
+CGO_CPPFLAGS=&quot;&quot;
+CGO_CXXFLAGS=&quot;-g -O2&quot;
+CGO_FFLAGS=&quot;-g -O2&quot;
+CGO_LDFLAGS=&quot;-g -O2&quot;
+PKG_CONFIG=&quot;pkg-config&quot;</code>
+
+&#x5982;&#x679C;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x914D;&#x7F6E;&#x4FEE;&#x6539; <code>vim ~/.bash_profile</code> &#x6216;&#x8005; <code>vim ~/.zshrc</code>
+
+<code>bash
+#GOROOT
+# CentOS &#x4E2D;&#x5982;&#x4E0B;&#x8BBE;&#x7F6E; GOROOT&#xFF0C;&#x770B;&#x4F60;&#x5B89;&#x88C5;&#x7684;&#x8DEF;&#x5F84;
+# export GOROOT=/usr/local/go
+# Mac OS &#x4E2D;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;brew&#x5B89;&#x88C5;&#x5982;&#x4E0B;&#x914D;&#x7F6E; GOROOT
+export GOROOT=/usr/local/Cellar/go/1.9/libexec
+#GOPATH root bin
+export GOBIN=$GOROOT/bin
+export PATH=$PATH:$GOBIN
+#GOPATH
+export GOPATH=$HOME/go
+#GOPATH bin
+export PATH=$PATH:$GOPATH/bin</code>
+
+&#x4F7F;&#x5176;&#x7ACB;&#x5373;&#x751F;&#x6548;
+
+<code>bash
+source /etc/profile</code>
+
+</details>
+
+
+<details>
+<summary>&#x6807;&#x51C6;&#x547D;&#x4EE4;&#x8BE6;&#x89E3;</summary>
+
+<code>bash
+&#x2192; go --help
+Go is a tool for managing Go source code.
+Go&#x662F;&#x7528;&#x4E8E;&#x7BA1;&#x7406;Go&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x5DE5;&#x5177;&#x3002;
+
+Usage&#x7528;&#x6CD5;:
+  go command [arguments]
+
+The commands are:
+
+  build &#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x7F16;&#x8BD1;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x7684;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x6216;&#x4EE3;&#x7801;&#x5305;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x3002;
+    -o &#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x53EF;&#x4EE5;&#x5E26;&#x4E0A;&#x8DEF;&#x5F84;&#xFF0C;&#x4F8B;&#x5982; go build -o a/b/c
+    -i &#x5B89;&#x88C5;&#x76F8;&#x5E94;&#x7684;&#x5305;&#xFF0C;&#x7F16;&#x8BD1;+go install
+    -a &#x66F4;&#x65B0;&#x5168;&#x90E8;&#x5DF2;&#x7ECF;&#x662F;&#x6700;&#x65B0;&#x7684;&#x5305;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x6807;&#x51C6;&#x5305;&#x4E0D;&#x9002;&#x7528;
+    -n &#x628A;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;&#x7F16;&#x8BD1;&#x547D;&#x4EE4;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x7684;&#x77E5;&#x9053;&#x5E95;&#x5C42;&#x662F;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x7684;
+    -p n &#x6307;&#x5B9A;&#x53EF;&#x4EE5;&#x5E76;&#x884C;&#x53EF;&#x8FD0;&#x884C;&#x7684;&#x7F16;&#x8BD1;&#x6570;&#x76EE;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;CPU&#x6570;&#x76EE;
+    -race &#x5F00;&#x542F;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x68C0;&#x6D4B;&#x6570;&#x636E;&#x7ADE;&#x4E89;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;64&#x4F4D;&#x7684;&#x673A;&#x5668;
+    -v &#x6253;&#x5370;&#x51FA;&#x6765;&#x6211;&#x4EEC;&#x6B63;&#x5728;&#x7F16;&#x8BD1;&#x7684;&#x5305;&#x540D;
+    -work &#x6253;&#x5370;&#x51FA;&#x6765;&#x7F16;&#x8BD1;&#x65F6;&#x5019;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x5939;&#x540D;&#x79F0;&#xFF0C;&#x5E76;&#x4E14;&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x8BDD;&#x5C31;&#x4E0D;&#x8981;&#x5220;&#x9664;
+    -x &#x6253;&#x5370;&#x51FA;&#x6765;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x548C;-n&#x7684;&#x7ED3;&#x679C;&#x7C7B;&#x4F3C;&#xFF0C;&#x53EA;&#x662F;&#x8FD9;&#x4E2A;&#x4F1A;&#x6267;&#x884C;
+    -ccflags &apos;arg list&apos; &#x4F20;&#x9012;&#x53C2;&#x6570;&#x7ED9;5c, 6c, 8c &#x8C03;&#x7528;
+    -compiler name &#x6307;&#x5B9A;&#x76F8;&#x5E94;&#x7684;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;gccgo&#x8FD8;&#x662F;gc
+    -gccgoflags &apos;arg list&apos; &#x4F20;&#x9012;&#x53C2;&#x6570;&#x7ED9;gccgo&#x7F16;&#x8BD1;&#x8FDE;&#x63A5;&#x8C03;&#x7528;
+    -gcflags &apos;arg list&apos; &#x4F20;&#x9012;&#x53C2;&#x6570;&#x7ED9;5g, 6g, 8g &#x8C03;&#x7528;
+    -installsuffix suffix &#x4E3A;&#x4E86;&#x548C;&#x9ED8;&#x8BA4;&#x7684;&#x5B89;&#x88C5;&#x5305;&#x533A;&#x522B;&#x5F00;&#x6765;&#xFF0C;&#x91C7;&#x7528;&#x8FD9;&#x4E2A;&#x524D;&#x7F00;&#x6765;&#x91CD;&#x65B0;&#x5B89;&#x88C5;&#x90A3;&#x4E9B;&#x4F9D;&#x8D56;&#x7684;&#x5305;&#xFF0C;-race&#x7684;&#x65F6;&#x5019;&#x9ED8;&#x8BA4;&#x5DF2;&#x7ECF;&#x662F;-installsuffix race,&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;-n&#x547D;&#x4EE4;&#x6765;&#x9A8C;&#x8BC1;
+    -ldflags &apos;flag list&apos; &#x4F20;&#x9012;&#x53C2;&#x6570;&#x7ED9;5l, 6l, 8l &#x8C03;&#x7528;
+    -tags &apos;tag list&apos; &#x8BBE;&#x7F6E;&#x5728;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x9002;&#x914D;&#x7684;&#x90A3;&#x4E9B;tag&#xFF0C;&#x8BE6;&#x7EC6;&#x7684;tag&#x9650;&#x5236;&#x53C2;&#x8003;&#x91CC;&#x9762;&#x7684;http://golang.org/pkg/go/build/
+  clean       &#x5220;&#x9664;&#x6389;&#x6267;&#x884C;&#x5176;&#x5B83;&#x547D;&#x4EE4;&#x65F6;&#x4EA7;&#x751F;&#x7684;&#x4E00;&#x4E9B;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x3002;
+    -i &#x6E05;&#x9664;&#x5173;&#x8054;&#x7684;&#x5B89;&#x88C5;&#x7684;&#x5305;&#x548C;&#x53EF;&#x8FD0;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x901A;&#x8FC7;go install&#x5B89;&#x88C5;&#x7684;&#x6587;&#x4EF6;
+    -n &#x628A;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;&#x6E05;&#x9664;&#x547D;&#x4EE4;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x7684;&#x77E5;&#x9053;&#x5E95;&#x5C42;&#x662F;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x7684;
+    -r &#x5FAA;&#x73AF;&#x7684;&#x6E05;&#x9664;&#x5728;import&#x4E2D;&#x5F15;&#x5165;&#x7684;&#x5305;
+    -x &#x6253;&#x5370;&#x51FA;&#x6765;&#x6267;&#x884C;&#x7684;&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;-n&#x6253;&#x5370;&#x7684;&#x6267;&#x884C;&#x7248;&#x672C;
+  doc &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x6253;&#x5370;&#x9644;&#x4E8E;Go&#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#x5B9E;&#x4F53;&#x4E0A;&#x7684;&#x6587;&#x6863;&#x3002;
+  env &#x7528;&#x4E8E;&#x6253;&#x5370;Go&#x8BED;&#x8A00;&#x7684;&#x73AF;&#x5883;&#x4FE1;&#x606F;&#x3002;
+  bug &#x542F;&#x52A8;&#x9519;&#x8BEF;&#x62A5;&#x544A;&#x3002;
+  fix &#x628A;&#x6307;&#x5B9A;&#x4EE3;&#x7801;&#x5305;&#x7684;&#x6240;&#x6709;Go&#x8BED;&#x8A00;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x65E7;&#x7248;&#x672C;&#x4EE3;&#x7801;&#x4FEE;&#x6B63;&#x4E3A;&#x65B0;&#x7248;&#x672C;&#x7684;&#x4EE3;&#x7801;&#x3002;
+  fmt &#x5728;&#x5305;&#x6E90;&#x4E0A;&#x8FD0;&#x884C;gofmt&#x3002;
+    -l &#x663E;&#x793A;&#x90A3;&#x4E9B;&#x9700;&#x8981;&#x683C;&#x5F0F;&#x5316;&#x7684;&#x6587;&#x4EF6;
+    -w &#x628A;&#x6539;&#x5199;&#x540E;&#x7684;&#x5185;&#x5BB9;&#x76F4;&#x63A5;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F5C;&#x4E3A;&#x7ED3;&#x679C;&#x6253;&#x5370;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x3002;
+    -r &#x6DFB;&#x52A0;&#x5F62;&#x5982;&#x201C;a[b:len(a)] -&gt; a[b:]&#x201D;&#x7684;&#x91CD;&#x5199;&#x89C4;&#x5219;&#xFF0C;&#x65B9;&#x4FBF;&#x6211;&#x4EEC;&#x505A;&#x6279;&#x91CF;&#x66FF;&#x6362;
+    -s &#x7B80;&#x5316;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x4EE3;&#x7801;
+    -d &#x663E;&#x793A;&#x683C;&#x5F0F;&#x5316;&#x524D;&#x540E;&#x7684;diff&#x800C;&#x4E0D;&#x662F;&#x5199;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;false
+    -e &#x6253;&#x5370;&#x6240;&#x6709;&#x7684;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;&#x6B64;&#x6807;&#x8BB0;&#xFF0C;&#x5219;&#x53EA;&#x4F1A;&#x6253;&#x5370;&#x4E0D;&#x540C;&#x884C;&#x7684;&#x524D;10&#x4E2A;&#x9519;&#x8BEF;&#x3002;
+    -cpuprofile &#x652F;&#x6301;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#xFF0C;&#x5199;&#x5165;&#x76F8;&#x5E94;&#x7684;cpufile&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;
+  generate &#x901A;&#x8FC7;&#x5904;&#x7406;&#x6E90;&#x751F;&#x6210;Go&#x6587;&#x4EF6;&#x3002;
+  get &#x4E0B;&#x8F7D;&#x6216;&#x66F4;&#x65B0;&#x5B89;&#x88C5;&#x6307;&#x5B9A;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x53CA;&#x5176;&#x4F9D;&#x8D56;&#x5305;&#xFF0C;&#x5E76;&#x5BF9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#x548C;&#x5B89;&#x88C5;&#x3002;
+    -d &#x53EA;&#x4E0B;&#x8F7D;&#x4E0D;&#x5B89;&#x88C5;
+    -f &#x53EA;&#x6709;&#x5728;&#x4F60;&#x5305;&#x542B;&#x4E86;-u&#x53C2;&#x6570;&#x7684;&#x65F6;&#x5019;&#x624D;&#x6709;&#x6548;&#xFF0C;&#x4E0D;&#x8BA9;-u&#x53BB;&#x9A8C;&#x8BC1;import&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x90FD;&#x5DF2;&#x7ECF;&#x83B7;&#x53D6;&#x4E86;&#xFF0C;&#x8FD9;&#x5BF9;&#x4E8E;&#x672C;&#x5730;fork&#x7684;&#x5305;&#x7279;&#x522B;&#x6709;&#x7528;
+    -fix &#x5728;&#x83B7;&#x53D6;&#x6E90;&#x7801;&#x4E4B;&#x540E;&#x5148;&#x8FD0;&#x884C;fix&#xFF0C;&#x7136;&#x540E;&#x518D;&#x53BB;&#x505A;&#x5176;&#x4ED6;&#x7684;&#x4E8B;&#x60C5;
+    -t &#x540C;&#x65F6;&#x4E5F;&#x4E0B;&#x8F7D;&#x9700;&#x8981;&#x4E3A;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x6240;&#x9700;&#x8981;&#x7684;&#x5305;
+    -u &#x5F3A;&#x5236;&#x4F7F;&#x7528;&#x7F51;&#x7EDC;&#x53BB;&#x66F4;&#x65B0;&#x5305;&#x548C;&#x5B83;&#x7684;&#x4F9D;&#x8D56;&#x5305;
+    -v &#x663E;&#x793A;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;
+  install &#x7528;&#x4E8E;&#x7F16;&#x8BD1;&#x5E76;&#x5B89;&#x88C5;&#x6307;&#x5B9A;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x3002;
+  list &#x5217;&#x51FA;&#x6307;&#x5B9A;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x7684;&#x4FE1;&#x606F;&#x3002;
+  run &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x7F16;&#x8BD1;&#x5E76;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x3002;
+  test &#x5BF9;Go&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;
+    -bench regexp &#x6267;&#x884C;&#x76F8;&#x5E94;&#x7684;benchmarks&#xFF0C;&#x4F8B;&#x5982; -bench=.
+    -cover &#x5F00;&#x542F;&#x6D4B;&#x8BD5;&#x8986;&#x76D6;&#x7387;
+    -run regexp &#x53EA;&#x8FD0;&#x884C;regexp&#x5339;&#x914D;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F8B;&#x5982; -run=Array &#x90A3;&#x4E48;&#x5C31;&#x6267;&#x884C;&#x5305;&#x542B;&#x6709;Array&#x5F00;&#x5934;&#x7684;&#x51FD;&#x6570;
+    -v &#x663E;&#x793A;&#x6D4B;&#x8BD5;&#x7684;&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;
+  tool &#x8FD0;&#x884C;&#x6307;&#x5B9A;&#x7684;go&#x5DE5;&#x5177;
+    go tool fix . &#x7528;&#x6765;&#x4FEE;&#x590D;&#x4EE5;&#x524D;&#x8001;&#x7248;&#x672C;&#x7684;&#x4EE3;&#x7801;&#x5230;&#x65B0;&#x7248;&#x672C;&#xFF0C;&#x4F8B;&#x5982;go1&#x4E4B;&#x524D;&#x8001;&#x7248;&#x672C;&#x7684;&#x4EE3;&#x7801;&#x8F6C;&#x5316;&#x5230;go1,&#x4F8B;&#x5982;API&#x7684;&#x53D8;&#x5316;
+    go tool vet directory|files &#x7528;&#x6765;&#x5206;&#x6790;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x5426;&#x90FD;&#x662F;&#x6B63;&#x786E;&#x7684;&#x4EE3;&#x7801;,&#x4F8B;&#x5982;&#x662F;&#x4E0D;&#x662F;&#x8C03;&#x7528;fmt.Printf&#x91CC;&#x9762;&#x7684;&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;&#xFF0C;&#x4F8B;&#x5982;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x63D0;&#x524D;return&#x4E86;&#x7136;&#x540E;&#x51FA;&#x73B0;&#x4E86;&#x65E0;&#x7528;&#x4EE3;&#x7801;&#x4E4B;&#x7C7B;&#x7684;&#x3002;
+  version &#x6253;&#x5370;Go&#x7684;&#x7248;&#x672C;&#x4FE1;&#x606F;
+  vet &#x7528;&#x4E8E;&#x68C0;&#x67E5;Go&#x8BED;&#x8A00;&#x6E90;&#x7801;&#x4E2D;&#x9759;&#x6001;&#x9519;&#x8BEF;&#x7684;&#x7B80;&#x5355;&#x5DE5;&#x5177;&#x3002;
+
+Use &quot;go help [command]&quot; for more information about a command.
+
+Additional help topics:
+
+  c           calling between Go and C
+  buildmode   description of build modes
+  filetype    file types
+  gopath      GOPATH environment variable
+  environment environment variables
+  importpath  import path syntax
+  packages    description of package lists
+  testflag    description of testing flags
+  testfunc    description of testing functions
+
+Use &quot;go help [topic]&quot; for more information about that topic.</code>
+
+&#x5176;&#x5B83;&#x547D;&#x4EE4;
+
+<code>bash
+cat $GOROOT/VERSION  # &#x67E5;&#x770B;&#x7248;&#x672C;
+$GOROOT/src/all.bash # &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x6B63;&#x786E;</code>
+
+</details>
+
+
+<details>
+<summary>&#x4F9D;&#x8D56;&#x7BA1;&#x7406;&#x5DE5;&#x5177;</summary>
+
+&#x76EE;&#x524D; Go &#x8BED;&#x8A00;&#x5E38;&#x7528;&#x7684;&#x4F9D;&#x8D56;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x6709;&#x4E09;&#x4E2A; <a href="https://github.com/tools/godep">godep</a>&#x3001;<a href="https://github.com/kardianos/govendor">vendor</a>&#x548C;<a href="https://github.com/constabulary/gb/">db</a>&#xFF0C;<code>vendor</code> &#x662F;go 1.5 &#x5B98;&#x65B9;&#x5F15;&#x5165;&#x7BA1;&#x7406;&#x5305;&#x4F9D;&#x8D56;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;1.6&#x6B63;&#x5F0F;&#x5F15;&#x5165;&#x3002;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x63A8;&#x8350;&#x662F;&#x7528;<a href="https://github.com/kardianos/govendor">vendor</a>&#x6765;&#x7BA1;&#x7406;&#x4F60;&#x7684;&#x4F9D;&#x8D56;&#x3002;
+
+&#x5FEB;&#x901F;&#x5F00;&#x59CB;&#xFF1A;
+
+<code>bash
+# &#x8BBE;&#x7F6E;&#x4F60;&#x7684;&#x9879;&#x76EE;
+cd &quot;my project in GOPATH&quot;
+govendor init
+
+# &#x5C06;&#x73B0;&#x6709;&#x7684;GOPATH&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;vendor&#x3002;
+govendor add +external
+
+# &#x67E5;&#x770B;&#x4F60;&#x7684;&#x5DE5;&#x4F5C;&#x3002;
+govendor list
+
+govendor sync # &#x4ECE;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x62C9;&#x53D6;&#x4F9D;&#x8D56;
+govendor get  # &#x50CF;&#x201C;go get&#x201D;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x5C06;&#x4F9D;&#x8D56;&#x9879;&#x590D;&#x5236;&#x5230;&#x201C;vendor&#x201D;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;
+
+# &#x770B;&#x770B;&#x4EC0;&#x4E48;&#x662F;&#x4F7F;&#x7528;&#x5305;
+govendor list -v fmt
+
+# &#x6307;&#x5B9A;&#x8981;&#x83B7;&#x53D6;&#x7684;&#x7279;&#x5B9A;&#x7248;&#x672C;&#x6216;&#x4FEE;&#x8BA2;&#x7248;&#x672C;
+govendor fetch golang.org/x/net/context@a4bbce9fcae005b22ae5443f6af064d80a6f5a55
+govendor fetch golang.org/x/net/context@v1   # Get latest v1.*.* tag or branch.
+govendor fetch golang.org/x/net/context@=v1  # Get the tag or branch named &quot;v1&quot;.
+
+# &#x7ED9;&#x4E88;&#x4EFB;&#x4F55;&#x5148;&#x524D;&#x7248;&#x672C;&#x7684;&#x7EA6;&#x675F;&#xFF0C;&#x5C06;&#x5305;&#x66F4;&#x65B0;&#x4E3A;&#x6700;&#x65B0;
+govendor fetch golang.org/x/net/context
+
+# &#x4EC5;&#x683C;&#x5F0F;&#x5316;&#x60A8;&#x7684;&#x5B58;&#x50A8;&#x5E93;
+govendor fmt +local
+
+# &#x6784;&#x5EFA;&#x60A8;&#x7684;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;
+govendor install +local
+
+# &#x4EC5;&#x6D4B;&#x8BD5;&#x60A8;&#x7684;&#x5B58;&#x50A8;&#x5E93;
+govendor test +local</code>
+
+
+</details>
+
+
+<h2 id="t2&#x8FD0;&#x884C;Go">&#x8FD0;&#x884C;Go <a href="#t2&#x8FD0;&#x884C;Go"> # </a></h2>
+<details>
+<summary>&#x8FD0;&#x884C;Go&#x6587;&#x6863;&#xFF0C;&#x5728;&#x7EBF;&#x9884;&#x89C8;&#x6587;&#x6863;</summary>
+
+<code>bash
+# &#x5982;&#x679C;&#x4F60;&#x7684; godoc &#x547D;&#x4EE4;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x8FD0;&#x884C;&#x5B83;&#x5B89;&#x88C5;
+$ go get -v  golang.org/x/tools/cmd/godoc
+
+$ godoc -http=:6060
+# &#x8FD0;&#x884C;&#x4E0A;&#x9762;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x8BBF;&#x95EE;&#x6587;&#x6863;http://localhost:6060/</code>
+
+</details>
+
+<details>
+<summary>&#x901A;&#x8FC7;go&#x547D;&#x4EE4;&#x8FD0;&#x884C;</summary>
+
+&#x6211;&#x4EEC;&#x5148;&#x5199;&#x4E00;&#x6BB5;GO&#x4EE3;&#x7801;&#xFF0C;&#x5F88;&#x7B80;&#x5355;&#x5C31;&#x662F;&#x6253;&#x5370;&#x8F93;&#x51FA;&#x4E00;&#x4E2A;<code>hello world!</code>, &#x4FDD;&#x5B58;&#x4E3A;<a href="./example/hello/hello.go">hello.go</a>&#x6587;&#x4EF6;
+
+<code>go
+package main
+import &quot;fmt&quot; 
+func main() {
+   fmt.Println(&quot;Hello, World!&quot;)
+}</code>
+
+&#x547D;&#x4EE4;&#x8FD0;&#x884C;<code>go</code>&#x7A0B;&#x5E8F;&#xFF0C;&#x5728;<a href="./example/hello/hello.go">hello.go</a>&#x8FD9;&#x4E2A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x8F93;&#x51FA;<code>hello world!</code>&#x3002;
+
+<code>bash
+go run hello.go</code>
+
+</details>
+
+<details>
+<summary>&#x901A;&#x8FC7;go&#x547D;&#x4EE4;&#x7F16;&#x8BD1;&#x8FD0;&#x884C;</summary>
+
+GO&#x7A0B;&#x5E8F;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7F16;&#x8BD1;&#x6210;<code>exe&#x6587;&#x4EF6;</code> &#x6216;&#x8005; <code>&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</code>&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#xFF0C;&#x5728;<a href="./example/hello/hello.go">hello.go</a>&#x76EE;&#x5F55;&#x4E0B;&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#xFF0C;&#x5373;&#x53EF;&#x628A;go&#x7A0B;&#x5E8F;&#x7F16;&#x8BD1;&#x6210;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;
+
+<code>bash
+go build hello.go</code>
+
+&#x4E0A;&#x9762;&#x547D;&#x4EE4;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x7F16;&#x8BD1;&#x6210;&#x4E00;&#x4E2A;<code>hello</code>&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x76F4;&#x63A5;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B; <code>./hello</code> &#x8FD0;&#x884C;&#xFF0C;&#x53EF;&#x4EE5;&#x8F93;&#x51FA;<code>hello world!</code>&#x3002;
+
+</details>
+
+<details>
+<summary>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8FD0;&#x884C;</summary>
+
+Go Playground &#x5141;&#x8BB8;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#x9762;&#x7F16;&#x8F91;&#x8FD0;&#x884C; Go &#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x3002;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x6253;&#x5F00; <a href="https://play.golang.org/">https://play.golang.org/</a> (&#x9700;&#x8981;&#x7A7F;&#x8D8A;&#x624D;&#x80FD;&#x6253;&#x5F00;) &#xFF0C;&#x8F93;&#x5165;&#x4EE3;&#x7801;&#xFF0C;&#x70B9;&#x51FB; Run&#xFF0C;&#x770B;&#x770B;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#xFF1F;&#x8FD8;&#x6709;&#x4E2A; Share &#x6309;&#x94AE;&#xFF0C;&#x70B9;&#x51FB;&#x5B83;&#x4F1A;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5206;&#x4EAB;&#x7684;&#x7F51;&#x5740;&#xFF0C;&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x80FD;&#x4EE3;&#x5F00;&#x8FD9;&#x4E2A;&#x94FE;&#x63A5;&#xFF0C;&#x8BD5;&#x4E00;&#x8BD5; <a href="https://play.golang.org/p/UIOwu0DBQV">https://play.golang.org/p/UIOwu0DBQV</a>
+
+</details>
+
+
+<h2 id="t3&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x5165;&#x8F93;&#x51FA;">&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x5165;&#x8F93;&#x51FA; <a href="#t3&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x5165;&#x8F93;&#x51FA;"> # </a></h2>
+<details>
+<summary>&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x8BED;&#x6CD5;&#x65B9;&#x6CD5;</summary>
+
+&gt; <code>%[&#x6807;&#x8BB0;][&#x5BBD;&#x5EA6;][.&#x7CBE;&#x5EA6;][arg&#x7D22;&#x5F15;]&#x52A8;&#x8BCD;</code><br>&gt; <code>Print(arg&#x5217;&#x8868;)</code>&#x3001;<code>Println(arg&#x5217;&#x8868;)</code>&#x3001;<code>Printf(&#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;, arg&#x5217;&#x8868;)</code><br>
+<code>go
+package main
+import (
+  &quot;fmt&quot;
+  &quot;time&quot;
+)
+func main() {
+  fmt.Println(&quot;Hello World!&quot;)
+  fmt.Println(&quot;The time is&quot;, time.Now())
+}</code>
+
+</details>
+
+<details>
+<summary>&#x6807;&#x8BB0;</summary>
+
+<code>+ &#x603B;&#x6253;&#x5370;&#x6570;&#x503C;&#x7684;&#x6B63;&#x8D1F;&#x53F7;&#xFF1B;&#x5BF9;&#x4E8E;%q&#xFF08;%+q&#xFF09;&#x4FDD;&#x8BC1;&#x53EA;&#x8F93;&#x51FA;ASCII&#x7F16;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x3002;
+- &#x5728;&#x53F3;&#x4FA7;&#x800C;&#x975E;&#x5DE6;&#x4FA7;&#x586B;&#x5145;&#x7A7A;&#x683C;&#xFF08;&#x5DE6;&#x5BF9;&#x9F50;&#x8BE5;&#x533A;&#x57DF;&#xFF09;
+# &#x5907;&#x7528;&#x683C;&#x5F0F;&#xFF1A;&#x4E3A;&#x516B;&#x8FDB;&#x5236;&#x6DFB;&#x52A0;&#x524D;&#x5BFC; 0&#xFF08;%#o&#xFF09;&#xFF0C;&#x4E3A;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6DFB;&#x52A0;&#x524D;&#x5BFC; 0x&#xFF08;%#x&#xFF09;&#x6216;
+  0X&#xFF08;%#X&#xFF09;&#xFF0C;&#x4E3A; %p&#xFF08;%#p&#xFF09;&#x53BB;&#x6389;&#x524D;&#x5BFC; 0x&#xFF1B;&#x5BF9;&#x4E8E; %q&#xFF0C;&#x82E5; strconv.CanBackquote
+  &#x8FD4;&#x56DE; true&#xFF0C;&#x5C31;&#x4F1A;&#x6253;&#x5370;&#x539F;&#x59CB;&#xFF08;&#x5373;&#x53CD;&#x5F15;&#x53F7;&#x56F4;&#x7ED5;&#x7684;&#xFF09;&#x5B57;&#x7B26;&#x4E32;&#xFF1B;&#x5982;&#x679C;&#x662F;&#x53EF;&#x6253;&#x5370;&#x5B57;&#x7B26;&#xFF0C;
+  %U&#xFF08;%#U&#xFF09;&#x4F1A;&#x5199;&#x51FA;&#x8BE5;&#x5B57;&#x7B26;&#x7684;Unicode&#x7F16;&#x7801;&#x5F62;&#x5F0F;&#xFF08;&#x5982;&#x5B57;&#x7B26; x &#x4F1A;&#x88AB;&#x6253;&#x5370;&#x6210; U+0078 &apos;x&apos;&#xFF09;&#x3002;
+&apos; &apos; &#xFF08;&#x7A7A;&#x683C;&#xFF09;&#x4E3A;&#x6570;&#x503C;&#x4E2D;&#x7701;&#x7565;&#x7684;&#x6B63;&#x8D1F;&#x53F7;&#x7559;&#x51FA;&#x7A7A;&#x767D;&#xFF08;% d&#xFF09;&#xFF1B;
+  &#x4EE5;&#x5341;&#x516D;&#x8FDB;&#x5236;&#xFF08;% x, % X&#xFF09;&#x6253;&#x5370;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x5207;&#x7247;&#x65F6;&#xFF0C;&#x5728;&#x5B57;&#x8282;&#x4E4B;&#x95F4;&#x7528;&#x7A7A;&#x683C;&#x9694;&#x5F00;
+0  &#x586B;&#x5145;&#x524D;&#x5BFC;&#x7684;0&#x800C;&#x975E;&#x7A7A;&#x683C;&#xFF1B;&#x5BF9;&#x4E8E;&#x6570;&#x5B57;&#xFF0C;&#x8FD9;&#x4F1A;&#x5C06;&#x586B;&#x5145;&#x79FB;&#x5230;&#x6B63;&#x8D1F;&#x53F7;&#x4E4B;&#x540E;</code>
+
+- &#x5176;&#x4E2D; <code>0</code> &#x548C; <code>-</code> &#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#xFF0C;&#x4F18;&#x5148;&#x4F7F;&#x7528; <code>-</code> &#x800C;&#x5FFD;&#x7565; <code>0</code>&#x3002;<br>- &#x6807;&#x8BB0;&#x6709;&#x4E8B;&#x4F1A;&#x88AB;&#x5360;&#x4F4D;&#x7B26;&#x5FFD;&#x7565;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x8981;&#x6307;&#x671B;&#x5B83;&#x4EEC;&#x3002;&#x4F8B;&#x5982;&#x5341;&#x8FDB;&#x5236;&#x6CA1;&#x6709;&#x5907;&#x7528;&#x683C;&#x5F0F;&#xFF0C;&#x56E0;&#x6B64; <code>%#d</code> &#x4E0E; <code>%d</code> &#x7684;&#x884C;&#x4E3A;&#x76F8;&#x540C;&#x3002;
+
+</details>
+
+<details>
+<summary>&#x5BBD;&#x5EA6;&#x548C;&#x7CBE;&#x5EA6;</summary>
+
+<code>[&#x5BBD;&#x5EA6;][.&#x7CBE;&#x5EA6;]</code>&#x90FD;&#x53EF;&#x4EE5;&#x5199;&#x6210;&#x4EE5;&#x4E0B;&#x4E09;&#x79CD;&#x5F62;&#x5F0F;&#xFF1A;<code>&#x6570;&#x503C;</code>&#xFF0C;<code>*</code>&#xFF0C;<code>arg&#x7D22;&#x5F15;*</code><br>
+- <code>&#x6570;&#x503C;</code> &#x8868;&#x793A;&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x503C;&#x4F5C;&#x4E3A;&#x5BBD;&#x5EA6;&#x503C;&#x6216;&#x7CBE;&#x5EA6;&#x503C;
+- <code>*</code> &#x8868;&#x793A;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x5904;&#x7406;&#x7684; arg &#x7684;&#x503C;&#x4F5C;&#x4E3A;&#x5BBD;&#x5EA6;&#x503C;&#x6216;&#x7CBE;&#x5EA6;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x8981;&#x683C;&#x5F0F;&#x5316;&#x7684; arg &#x5C06;&#x81EA;&#x52A8;&#x8DF3;&#x8F6C;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x3002;
+- <code>arg&#x7D22;&#x5F15;*</code> &#x8868;&#x793A;&#x4F7F;&#x7528;&#x6307;&#x5B9A; arg &#x7684;&#x503C;&#x4F5C;&#x4E3A;&#x5BBD;&#x5EA6;&#x503C;&#x6216;&#x7CBE;&#x5EA6;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x8981;&#x683C;&#x5F0F;&#x5316;&#x7684; arg &#x5C06;&#x81EA;&#x52A8;&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A; arg &#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x3002;
+
+&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;<br>
+- &#x5BBD;&#x5EA6;&#x503C;&#xFF1A;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x6700;&#x5C0F;&#x5BBD;&#x5EA6;&#x3002;
+- &#x7CBE;&#x5EA6;&#x503C;&#xFF1A;&#x5BF9;&#x4E8E;&#x6D6E;&#x70B9;&#x578B;&#xFF0C;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5C0F;&#x6570;&#x4F4D;&#x6570;&#xFF0C;&#x5BF9;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#xFF0C;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5B57;&#x7B26;&#x6570;&#x91CF;&#xFF08;&#x4E0D;&#x662F;&#x5B57;&#x8282;&#x6570;&#x91CF;&#xFF09;&#x3002;
+- &#x5BF9;&#x4E8E;&#x6D6E;&#x70B9;&#x578B;&#x800C;&#x8A00;&#xFF0C;&#x52A8;&#x8BCD; g/G &#x7684;&#x7CBE;&#x5EA6;&#x503C;&#x6BD4;&#x8F83;&#x7279;&#x6B8A;&#xFF0C;&#x5728;&#x9002;&#x5F53;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;g/G &#x4F1A;&#x8BBE;&#x7F6E;&#x603B;&#x6709;&#x6548;&#x6570;&#x5B57;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5C0F;&#x6570;&#x4F4D;&#x6570;&#x3002;
+
+</details>
+
+<details>
+<summary>arg &#x7D22;&#x5F15;</summary>
+
+&#x7531;&#x4E2D;&#x62EC;&#x53F7;&#x548C; arg &#x5E8F;&#x53F7;&#x7EC4;&#x6210;&#xFF08;&#x5C31;&#x50CF;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;<code>&quot;abc%+ #8.3[3]vdef&quot;</code>&#x4E2D;&#x7684;[3])&#xFF0C;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x5F53;&#x524D;&#x8981;&#x5904;&#x7406;&#x7684; arg &#x7684;&#x5E8F;&#x53F7;&#xFF0C;&#x5E8F;&#x53F7;&#x4ECE; 1 &#x5F00;&#x59CB;&#xFF1A;<code>&apos;[&apos; + arg&#x5E8F;&#x53F7; + &apos;]&apos;</code>
+
+</details>
+
+<details>
+<summary>&#x52A8;&#x8BCD;/&#x901A;&#x7528;&#x52A8;&#x8BCD;</summary>
+
+- <code>v</code>&#xFF1A;&#x9ED8;&#x8BA4;&#x683C;&#x5F0F;&#xFF0C;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x9ED8;&#x8BA4;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;
+    &gt; &#x5E03;&#x5C14;&#x578B;&#xFF1A;<code>t</code>
+    &gt; &#x6574;&#x3000;&#x578B;&#xFF1A;<code>d</code>
+    &gt; &#x6D6E;&#x70B9;&#x578B;&#xFF1A;<code>g</code>
+    &gt; &#x590D;&#x6570;&#x578B;&#xFF1A;<code>g</code>
+    &gt; &#x5B57;&#x7B26;&#x4E32;&#xFF1A;<code>s</code>
+    &gt; &#x901A;&#x3000;&#x9053;&#xFF1A;<code>p</code>
+    &gt; &#x6307;&#x3000;&#x9488;&#xFF1A;<code>p</code>
+
+- <code>#v</code>&#xFF1A;&#x9ED8;&#x8BA4;&#x683C;&#x5F0F;&#xFF0C;&#x4EE5;&#x7B26;&#x5408; Go &#x8BED;&#x6CD5;&#x7684;&#x65B9;&#x5F0F;&#x8F93;&#x51FA;&#x3002;&#x7279;&#x6B8A;&#x7C7B;&#x578B;&#x7684; Go &#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;
+    &gt; &#x65E0;&#x7B26;&#x53F7;&#x6574;&#x578B;&#xFF1A;x
+- <code>T</code>&#xFF1A;&#x8F93;&#x51FA; arg &#x7684;&#x7C7B;&#x578B;&#x800C;&#x4E0D;&#x662F;&#x503C;&#xFF08;&#x4F7F;&#x7528; Go &#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF09;&#x3002;
+
+&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;<code>&#x52A8;&#x8BCD;</code>&#x4E0D;&#x80FD;&#x7701;&#x7565;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x652F;&#x6301;&#x7684;&#x52A8;&#x8BCD;&#x4E0D;&#x4E00;&#x6837;&#x3002;
+
+</details>
+
+<details>
+<summary>&#x5E03;&#x5C14;&#x578B;</summary>
+
+-<code>t</code> &#xFF1A;&#x8F93;&#x51FA; true &#x6216; false &#x5B57;&#x7B26;&#x4E32;&#x3002;
+
+</details>
+
+<details>
+<summary>&#x6574;&#x578B;</summary>
+
+- <code>b/o/d</code>&#xFF1A;&#x8F93;&#x51FA; 2/8/10 &#x8FDB;&#x5236;&#x683C;&#x5F0F;
+- <code>x/X</code>&#xFF1A;&#x8F93;&#x51FA; 16 &#x8FDB;&#x5236;&#x683C;&#x5F0F;&#xFF08;&#x5C0F;&#x5199;/&#x5927;&#x5199;&#xFF09;
+- <code>c</code>&#xFF1A;&#x8F93;&#x51FA;&#x6570;&#x503C;&#x6240;&#x8868;&#x793A;&#x7684; Unicode &#x5B57;&#x7B26;
+- <code>q</code>&#xFF1A;&#x8F93;&#x51FA;&#x6570;&#x503C;&#x6240;&#x8868;&#x793A;&#x7684; Unicode &#x5B57;&#x7B26;&#xFF08;&#x5E26;&#x5355;&#x5F15;&#x53F7;&#xFF09;&#x3002;&#x5BF9;&#x4E8E;&#x65E0;&#x6CD5;&#x663E;&#x793A;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x5C06;&#x8F93;&#x51FA;&#x5176;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#x3002;
+- <code>U</code>&#xFF1A;&#x8F93;&#x51FA; Unicode &#x7801;&#x70B9;&#xFF08;&#x4F8B;&#x5982; U+1234&#xFF0C;&#x7B49;&#x540C;&#x4E8E;&#x5B57;&#x7B26;&#x4E32; &quot;U+%04X&quot; &#x7684;&#x663E;&#x793A;&#x7ED3;&#x679C;&#xFF09;
+
+&#x5BF9;&#x4E8E; o/x/X&#xFF1A;
+- &#x5982;&#x679C;&#x4F7F;&#x7528; &quot;#&quot; &#x6807;&#x8BB0;&#xFF0C;&#x5219;&#x4F1A;&#x6DFB;&#x52A0;&#x524D;&#x5BFC; 0 &#x6216; 0x&#x3002;
+
+&#x5BF9;&#x4E8E; U&#xFF1A;
+- &#x5982;&#x679C;&#x4F7F;&#x7528; &quot;#&quot; &#x6807;&#x8BB0;&#xFF0C;&#x5219;&#x4F1A;&#x5728; Unicode &#x7801;&#x70B9;&#x540E;&#x9762;&#x6DFB;&#x52A0;&#x76F8;&#x5E94;&#x7684; &apos;&#x5B57;&#x7B26;&apos;&#xFF08;&#x524D;&#x63D0;&#x662F;&#x8BE5;&#x5B57;&#x7B26;&#x5FC5;&#x987B;&#x53EF;&#x663E;&#x793A;&#xFF09;
+
+</details>
+
+<details>
+<summary>&#x6D6E;&#x70B9;&#x578B;&#x548C;&#x590D;&#x6570;&#x578B;</summary>
+
+- <code>b</code>&#xFF1A;&#x79D1;&#x5B66;&#x8BA1;&#x6570;&#x6CD5;&#xFF08;&#x4EE5; 2  &#x4E3A;&#x5E95;&#xFF09;
+- <code>e/E</code>&#xFF1A;&#x79D1;&#x5B66;&#x8BA1;&#x6570;&#x6CD5;&#xFF08;&#x4EE5; 10 &#x4E3A;&#x5E95;&#xFF0C;&#x5C0F;&#x5199; e/&#x5927;&#x5199; E&#xFF09;
+- <code>f/F</code>&#xFF1A;&#x666E;&#x901A;&#x5C0F;&#x6570;&#x683C;&#x5F0F;&#xFF08;&#x4E24;&#x8005;&#x65E0;&#x533A;&#x522B;&#xFF09;
+- <code>g/G</code>&#xFF1A;&#x5927;&#x6307;&#x6570;&#xFF08;&#x6307;&#x6570; &gt;= 6&#xFF09;&#x4F7F;&#x7528; %e/%E&#xFF0C;&#x5176;&#x5B83;&#x60C5;&#x51B5;&#x4F7F;&#x7528; %f/%F
+
+</details>
+
+<details>
+<summary>&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x5B57;&#x8282;&#x5207;&#x7247;</summary>
+
+- <code>s</code> &#xFF1A;&#x666E;&#x901A;&#x5B57;&#x7B26;&#x4E32;
+- <code>q</code> &#xFF1A;&#x53CC;&#x5F15;&#x53F7;&#x5F15;&#x8D77;&#x6765;&#x7684; Go &#x8BED;&#x6CD5;&#x5B57;&#x7B26;&#x4E32;
+- <code>x/X</code>&#xFF1A;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x7F16;&#x7801;&#xFF08;&#x5C0F;&#x5199;/&#x5927;&#x5199;&#xFF0C;&#x4EE5;&#x5B57;&#x8282;&#x4E3A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B57;&#x7B26;&#xFF09;
+
+&#x5BF9;&#x4E8E; q&#xFF1A;
+- &#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86; <code>+</code> &#x6807;&#x8BB0;&#xFF0C;&#x5219;&#x5C06;&#x6240;&#x6709;&#x975E; ASCII &#x5B57;&#x7B26;&#x90FD;&#x8FDB;&#x884C;&#x8F6C;&#x4E49;&#x5904;&#x7406;&#x3002;
+- &#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86; <code>#</code> &#x6807;&#x8BB0;&#xFF0C;&#x5219;&#x8F93;&#x51FA;&#x53CD;&#x5F15;&#x53F7;&#x5F15;&#x8D77;&#x6765;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x524D;&#x63D0;&#x662F;
+- &#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x4E0D;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x5236;&#x8868;&#x7B26;&#x4EE5;&#x5916;&#x7684;&#x63A7;&#x5236;&#x5B57;&#x7B26;&#xFF0C;&#x5426;&#x5219;&#x5FFD;&#x7565; # &#x6807;&#x8BB0;&#xFF09;
+
+&#x5BF9;&#x4E8E; x/X&#xFF1A;
+- &#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86; &quot; &quot; &#x6807;&#x8BB0;&#xFF0C;&#x5219;&#x5728;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x6DFB;&#x52A0;&#x7A7A;&#x683C;&#x3002;
+- &#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86; &quot;#&quot; &#x6807;&#x8BB0;&#xFF0C;&#x5219;&#x5728;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x4E4B;&#x524D;&#x6DFB;&#x52A0; 0x &#x524D;&#x7F00;&#x3002;
+
+</details>
+
+<details>
+<summary>&#x6307;&#x9488;&#x7C7B;&#x578B;</summary>
+
+- <code>p</code> &#xFF1A;&#x5E26; 0x &#x524D;&#x7F00;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x5730;&#x5740;&#x503C;&#x3002;
+- <code>#p</code>&#xFF1A;&#x4E0D;&#x5E26; 0x &#x524D;&#x7F00;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x5730;&#x5740;&#x503C;&#x3002;
+- Go &#x6CA1;&#x6709;&#x6307;&#x9488;&#x8FD0;&#x7B97;&#x3002;
+
+Go &#x5177;&#x6709;&#x6307;&#x9488;&#x3002; &#x6307;&#x9488;&#x4FDD;&#x5B58;&#x4E86;&#x53D8;&#x91CF;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x3002;
+
+&#x7C7B;&#x578B; <em>T &#x662F;&#x6307;&#x5411;&#x7C7B;&#x578B; T &#x7684;&#x503C;&#x7684;&#x6307;&#x9488;&#x3002;&#x5176;&#x96F6;&#x503C;&#x662F; nil &#x3002;
+
+```go
+var p </em>int
+<code>&amp; &#x7B26;&#x53F7;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x5176;&#x4F5C;&#x7528;&#x5BF9;&#x8C61;&#x7684;&#x6307;&#x9488;&#x3002;</code>go
+i := 42
+p = &amp;i
+<code>* &#x7B26;&#x53F7;&#x8868;&#x793A;&#x6307;&#x9488;&#x6307;&#x5411;&#x7684;&#x5E95;&#x5C42;&#x7684;&#x503C;&#x3002;</code>go
+fmt.Println(<em>p) // &#x901A;&#x8FC7;&#x6307;&#x9488; p &#x8BFB;&#x53D6; i
+</em>p = 21         // &#x901A;&#x8FC7;&#x6307;&#x9488; p &#x8BBE;&#x7F6E; i
+<code>&#x8FD9;&#x4E5F;&#x5C31;&#x662F;&#x901A;&#x5E38;&#x6240;&#x8BF4;&#x7684;&#x201C;&#x95F4;&#x63A5;&#x5F15;&#x7528;&#x201D;&#x6216;&#x201C;&#x975E;&#x76F4;&#x63A5;&#x5F15;&#x7528;&#x201D;&#x3002;</code>go
+package main
+import &quot;fmt&quot;
+func main() {
+    i, j := 42, 2701
+    p := &amp;i         // &#x6307;&#x5411;&#x6211; i
+    fmt.Println(<em>p) // &#x901A;&#x8FC7;&#x6307;&#x9488;&#x8BFB; i
+    </em>p = 21         // &#x901A;&#x8FC7;&#x6307;&#x9488;&#x8BBE;&#x7F6E; i
+    fmt.Println(i)  // &#x770B;&#x5230;i&#x7684;&#x65B0;&#x503C;
+
+    p = &amp;j         // &#x6307;&#x5411;&#x6211; j
+    <em>p = </em>p / 37   // &#x901A;&#x8FC7;&#x6307;&#x9488;&#x5212;&#x5206; j
+    fmt.Println(j) // &#x770B;&#x5230;j&#x7684;&#x65B0;&#x503C;
+}
+```
+
+</details>
+
+<details>
+<summary>&#x7B26;&#x5408;&#x7C7B;&#x578B;</summary>
+
+&#x590D;&#x5408;&#x7C7B;&#x578B;&#x5C06;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x683C;&#x5F0F;&#x8F93;&#x51FA;&#xFF0C;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;
+
+<code>&#x7ED3;&#x3000;&#x6784;&#x3000;&#x4F53;&#xFF1A;{&#x5B57;&#x6BB5;1 &#x5B57;&#x6BB5;2 ...}
+&#x6570;&#x7EC4;&#x6216;&#x5207;&#x7247;&#xFF1A;[&#x5143;&#x7D20;0 &#x5143;&#x7D20;1 ...]
+&#x6620;&#x3000;&#x3000;&#x3000;&#x5C04;&#xFF1A;map[&#x952E;1:&#x503C;1 &#x952E;2:&#x503C;2 ...]</code>
+
+&#x6307;&#x5411;&#x7B26;&#x5408;&#x5143;&#x7D20;&#x7684;&#x6307;&#x9488;&#xFF1A;<code>&amp;{}</code>, <code>&amp;[]</code>, <code>&amp;map[]</code>
+&#x590D;&#x5408;&#x7C7B;&#x578B;&#x672C;&#x8EAB;&#x6CA1;&#x6709;&#x52A8;&#x8BCD;&#xFF0C;&#x52A8;&#x8BCD;&#x5C06;&#x5E94;&#x7528;&#x5230;&#x590D;&#x5408;&#x7C7B;&#x578B;&#x7684;&#x5143;&#x7D20;&#x4E0A;&#x3002;
+&#x7ED3;&#x6784;&#x4F53;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &quot;+v&quot; &#x540C;&#x65F6;&#x8F93;&#x51FA;&#x5B57;&#x6BB5;&#x540D;&#x3002;
+
+</details>
+
+<details>
+<summary>&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x5165;</summary>
+
+<code>go
+// &#x683C;&#x5F0F;&#x5316;&#x8F93;&#x5165;&#xFF1A;&#x4ECE;&#x8F93;&#x5165;&#x7AEF;&#x8BFB;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x4EE5;&#x7A7A;&#x767D;&#x5206;&#x9694;&#x7684;&#x503C;&#x7684;&#x5E8F;&#x5217;&#xFF09;&#xFF0C;
+// &#x5E76;&#x89E3;&#x6790;&#x4E3A;&#x5177;&#x4F53;&#x7684;&#x503C;&#x5B58;&#x5165;&#x76F8;&#x5E94;&#x7684; arg &#x4E2D;&#xFF0C;arg &#x5FC5;&#x987B;&#x662F;&#x53D8;&#x91CF;&#x5730;&#x5740;&#x3002;
+// &#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x8FDE;&#x7EED;&#x7A7A;&#x767D;&#x89C6;&#x4E3A;&#x5355;&#x4E2A;&#x7A7A;&#x767D;&#xFF0C;&#x6362;&#x884C;&#x7B26;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x60C5;&#x51B5;&#x5904;&#x7406;&#x3002;
+// \r\n &#x88AB;&#x5F53;&#x505A; \n &#x5904;&#x7406;&#x3002;
+
+// &#x4EE5;&#x52A8;&#x8BCD; v &#x89E3;&#x6790;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6362;&#x884C;&#x89C6;&#x4E3A;&#x7A7A;&#x767D;
+Scan(arg&#x5217;&#x8868;)
+// &#x4EE5;&#x52A8;&#x8BCD; v &#x89E3;&#x6790;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6362;&#x884C;&#x7ED3;&#x675F;&#x89E3;&#x6790;
+Scanln(arg&#x5217;&#x8868;)
+// &#x6839;&#x636E;&#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#x89E3;&#x6790;&#x5B57;&#x7B26;&#x4E32;
+// &#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x6362;&#x884C;&#x7B26;&#x5FC5;&#x987B;&#x548C;&#x8F93;&#x5165;&#x7AEF;&#x7684;&#x6362;&#x884C;&#x7B26;&#x76F8;&#x5339;&#x914D;&#x3002;
+Scanf(&#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;, arg&#x5217;&#x8868;)
+
+// Scan &#x7C7B;&#x51FD;&#x6570;&#x4F1A;&#x8FD4;&#x56DE;&#x5DF2;&#x5904;&#x7406;&#x7684; arg &#x6570;&#x91CF;&#x548C;&#x9047;&#x5230;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</code>
+
+</details>
+
+<h2 id="t4&#x7F16;&#x7A0B;&#x57FA;&#x7840;">&#x7F16;&#x7A0B;&#x57FA;&#x7840; <a href="#t4&#x7F16;&#x7A0B;&#x57FA;&#x7840;"> # </a></h2>
+<details>
+<summary>&#x5185;&#x7F6E;&#x5173;&#x952E;&#x5B57;</summary>
+
+<code>go
+break      default       func      interface    select
+case       defer         go        map          struct
+chan       else          goto      package      switch
+const      fallthrough   if        range        type
+continue   for           import    retrun       var</code>
+
+</details>
+
+<details>
+<summary>&#x9884;&#x5B9A;&#x4E49;&#x6807;&#x8BC6;&#x7B26;</summary>
+
+<code>go
+append  bool    byte    cap     close  complex complex64 complex128 uint16
+copy    false   float32 float64 imag   int     int8      int16      uint32
+int32   int64   iota    len     make   new     nil       panic      uint64
+print   println real    recover string true    uint      uint8      uintptr</code>
+
+</details>
+
+<details>
+<summary>&#x884C;&#x5206;&#x9694;&#x7B26;</summary>
+
+- &#x5728; Go &#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x4E00;&#x884C;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x8BED;&#x53E5;&#x7ED3;&#x675F;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5206;&#x9694;&#x7B26;&#x3002;
+- &#x6253;&#x7B97;&#x5C06;&#x591A;&#x4E2A;&#x8BED;&#x53E5;&#x5199;&#x5728;&#x540C;&#x4E00;&#x884C;&#xFF0C;&#x5B83;&#x4EEC;&#x5219;&#x5FC5;&#x987B;&#x4F7F;&#x7528; <code>;</code> &#x4EBA;&#x4E3A;&#x533A;&#x5206;&#xFF0C;&#x5E76;&#x4E0D;&#x9F13;&#x52B1;&#x8FD9;&#x79CD;&#x505A;&#x6CD5;&#x3002;
+
+</details>
+
+<details>
+<summary>&#x6CE8;&#x91CA;&#x65B9;&#x6CD5;</summary>
+
+<code>go
+// &#x5355;&#x884C;&#x6CE8;&#x91CA;
+
+/*
+  &#x591A;&#x884C;&#x6CE8;&#x91CA;
+*/</code>
+
+</details>
+
+<details>
+<summary>&#x6807;&#x8BC6;&#x7B26;</summary>
+
+- &#x6807;&#x8BC6;&#x7B26;&#x7528;&#x6765;&#x547D;&#x540D;&#x53D8;&#x91CF;&#x3001;&#x7C7B;&#x578B;&#x7B49;&#x7A0B;&#x5E8F;&#x5B9E;&#x4F53;&#x3002;
+- &#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5FC5;&#x987B;&#x662F;&#x5B57;&#x6BCD;&#x6216;&#x4E0B;&#x5212;&#x7EBF;&#x800C;&#x4E0D;&#x80FD;&#x662F;&#x6570;&#x5B57;
+
+&#x6709;&#x6548;&#x6807;&#x8BC6;&#x7B26;
+
+<code>mahesh   kumar   abc   move_name   a_123
+myname50   _temp   j   a23b9   retVal</code>
+
+&#x65E0;&#x6548;&#x6807;&#x8BC6;&#x7B26;
+
+<code>bash
+1ab  #&#xFF08;&#x4EE5;&#x6570;&#x5B57;&#x5F00;&#x5934;&#xFF09;
+case #&#xFF08;Go &#x8BED;&#x8A00;&#x7684;&#x5173;&#x952E;&#x5B57;&#xFF09;
+a+b  #&#xFF08;&#x8FD0;&#x7B97;&#x7B26;&#x662F;&#x4E0D;&#x5141;&#x8BB8;&#x7684;&#xFF09;</code>
+
+</details>
+
+<details>
+<summary>&#x5305;&#x5F15;&#x7528; import</summary>
+
+<code>go
+import &quot;fmt&quot;
+import &quot;os&quot;
+import &quot;io&quot;</code>
+
+&#x7B80;&#x5199;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;
+
+<code>go
+import (
+  &quot;fmt&quot;
+  &quot;os&quot;
+  &quot;io&quot;
+)</code>
+
+<strong>&#x5305;&#x5F15;&#x7528;&#x4ECB;&#x7ECD;</strong>
+
+<code>bash
+.
+&#x251C;&#x2500;&#x2500; cal
+&#x2502;   &#x251C;&#x2500;&#x2500; add.go
+&#x2502;   &#x251C;&#x2500;&#x2500; multi
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; multiply.go
+&#x2502;   &#x2514;&#x2500;&#x2500; subtract.go
+&#x2514;&#x2500;&#x2500; main.go</code>
+
+&#x6CE8;&#x610F;&#xFF1A;<a href="example/package-demo">package-demo</a> &#x6587;&#x4EF6;&#x5939;&#x590D;&#x5236;&#x5230; <code>$GOPATH/src/</code> &#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4E0D;&#x7136;&#x8FD0;&#x884C;&#x62A5;&#x9519;&#x54E6;
+
+<code>bash
+go run $GOPATH/src/package-demo/main.go</code>
+
+main.go&#x4E2D;&#x5982;&#x4F55;&#x8C03;&#x7528;add.go&#x3001;subtract.go&#x6216;&#x8005;&#x662F;multiply.go&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x3002;
+
+&gt; <code>add.go</code>&#x548C;<code>subtract.go</code>&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5305;&#x540D;&#x4E3A;cal <code>package cal</code><br>&gt; <code>multiply.go</code>&#x5728; multi &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x6240;&#x4EE5;&#x7A0B;&#x5E8F;&#x7684;&#x5305;&#x540D;&#x4E3A;multi <code>package multi</code><br>&gt; &#x5982;&#x679C; mian &#x51FD;&#x6570;&#x8981;&#x8C03;&#x7528;<code>add.go</code>&#x6216;&#x8005;<code>subtract.go</code>&#x4E2D;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x5F15;&#x5165;&#x5305;&quot;cal&quot; <code>import &quot;package-demo/cal&quot;</code><br>&gt; &#x8981;&#x8C03;&#x7528;<code>multiply.go</code>&#x4E2D;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x5F15;&#x5165;&#x5305;&quot;multi&quot;&#xFF0C;<code>import &quot;package-demo/cal/multi&quot;</code><br>&gt; Go&#x4E2D;&#x5982;&#x679C;&#x51FD;&#x6570;&#x540D;&#x7684;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#xFF0C;&#x8868;&#x793A;&#x8BE5;&#x51FD;&#x6570;&#x662F;&#x516C;&#x6709;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x5176;&#x4ED6;&#x7A0B;&#x5E8F;&#x8C03;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x9996;&#x5B57;&#x6BCD;&#x5C0F;&#x5199;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x5C31;&#x662F;&#x662F;&#x79C1;&#x6709;&#x7684;
+
+</details>
+
+<details>
+<summary>&#x5305;&#x522B;&#x540D;</summary>
+
+<code>go
+import(
+  ff &quot;fmt&quot;
+)
+
+// &#x6216;&#x8005;
+import ff &quot;fmt&quot;
+
+// &#x522B;&#x540D;&#x5305;&#x8C03;&#x7528;
+ff.Println(&apos;Hello World!&apos;)</code>
+
+</details>
+
+
+<details>
+<summary>&#x7701;&#x7565;&#x8C03;&#x7528;</summary>
+
+<code>go
+import(
+  . &quot;fmt&quot;
+)
+func main() {
+  // &#x7701;&#x7565;&#x8C03;&#x7528;
+  Println(&apos;Hello World!&apos;)
+}</code>
+
+</details>
+
+
+<details>
+<summary>&#x53EF;&#x89C1;&#x6027;&#x89C4;&#x5219;</summary>
+
+Go&#x8BED;&#x8A00;&#x4E2D;&#x7EA6;&#x5B9A;&#x4F7F;&#x7528; <strong>&#x5927;&#x5C0F;&#x5199;</strong> &#x6765;&#x51B3;&#x5B9A;&#x5E38;&#x91CF;&#x3001;&#x53D8;&#x91CF;&#x3001;&#x7C7B;&#x578B;&#x3001;&#x63A5;&#x53E3;&#x3001;&#x7ED3;&#x6784;&#x6216;&#x51FD;&#x6570;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x88AB;&#x5916;&#x90E8;&#x5305;&#x6240;&#x8C03;&#x7528;
+
+- &#x51FD;&#x6570;&#x540D;&#x5B57;&#x9996;&#x5B57;&#x6BCD; <strong>&#x5C0F;&#x5199;</strong> &#x5373;&#x4E3A; <code>private</code> &#x79C1;&#x6709;&#x7684;
+- &#x51FD;&#x6570;&#x540D;&#x5B57;&#x9996;&#x5B57;&#x6BCD; <strong>&#x5927;&#x5199;</strong> &#x5373;&#x4E3A; <code>public</code> &#x516C;&#x6709;
+
+</details>
+
+<h2 id="t5&#x57FA;&#x672C;&#x7C7B;&#x578B;">&#x57FA;&#x672C;&#x7C7B;&#x578B; <a href="#t5&#x57FA;&#x672C;&#x7C7B;&#x578B;"> # </a></h2>
+<details>
+<summary>&#x5E03;&#x5C14;&#x578B;</summary>
+
+<code>go
+var b bool
+b  = true
+fmt.Printf(&quot;b is of type %t\n&quot;, b)
+e := bool(true)
+fmt.Printf(&quot;e is of type %t\n&quot;, e)</code>
+
+- &#x957F;&#x5EA6;&#xFF1A;1&#x5B57;&#x8282;
+- &#x53D6;&#x503C;&#x8303;&#x56F4;&#xFF1A;true/false
+- &#x53EA;&#x80FD;&#x4F7F;&#x7528;true/false&#x503C;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x6570;&#x5B57;&#x4EE3;&#x66FF;&#x5E03;&#x5C14;&#x503C;
+
+</details>
+
+<details>
+<summary>&#x6574;&#x5F62; int/uint</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+  // n &#x662F;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A; 10 &#x7684;&#x6570;&#x7EC4;
+  var n [10]int 
+  var i,j int
+
+  /* &#x4E3A;&#x6570;&#x7EC4; n &#x521D;&#x59CB;&#x5316;&#x5143;&#x7D20; */         
+  for i = 0; i &lt; 10; i++ {
+    n[i] = i + 100 /* &#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x4E3A; i + 100 */
+  }
+
+  /* &#x8F93;&#x51FA;&#x6BCF;&#x4E2A;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x503C; */
+  for j = 0; j &lt; 10; j++ {
+    fmt.Printf(&quot;Element[%d] = %d\n&quot;, j, n[j] )
+  }
+}</code>
+
+- int/uint
+- &#x6839;&#x636E;&#x5E73;&#x53F0;&#x53EF;&#x80FD;&#x4E3A;32/64&#x4F4D;
+
+</details>
+
+<details>
+<summary>8&#x4F4D;&#x6574;&#x578B; int8/uint8</summary>
+
+<code>go
+u8 := []uint8{98, 99}
+
+a := byte(255)  //11111111 &#x8FD9;&#x662F;byte&#x7684;&#x6781;&#x9650;&#xFF0C; &#x56E0;&#x4E3A; a := byte(256)//&#x8D8A;&#x754C;&#x62A5;&#x9519;&#xFF0C; 0~255&#x6B63;&#x597D;256&#x4E2A;&#x6570;&#xFF0C;&#x4E0D;&#x80FD;&#x518D;&#x9AD8;&#x4E86;
+b := uint8(255) //11111111 &#x8FD9;&#x662F;uint8&#x7684;&#x6781;&#x9650;&#xFF0C;&#x56E0;&#x4E3A; c := uint8(256)//&#x8D8A;&#x754C;&#x62A5;&#x9519;&#xFF0C;0~255&#x6B63;&#x597D;256&#x4E2A;&#x6570;&#xFF0C;&#x4E0D;&#x80FD;&#x518D;&#x9AD8;&#x4E86;
+c := int8(127)  //01111111 &#x8FD9;&#x662F;int8&#x7684;&#x6781;&#x9650;&#xFF0C; &#x56E0;&#x4E3A; b := int8(128)//&#x8D8A;&#x754C;&#x62A5;&#x9519;&#xFF0C; 0~127&#x6B63;&#x597D;128&#x4E2A;&#x6570;&#xFF0C;&#x6240;&#x4EE5;int8&#x7684;&#x6781;&#x9650;&#x53EA;&#x662F;256&#x7684;&#x4E00;&#x534A;
+d := int8(a)    //11111111 &#x6253;&#x5370;&#x51FA;&#x6765;&#x5219;&#x662F;-0000001&#xFF0C;int8(128)&#x3001;int8(255)&#x3001;int8(byte(255))&#x90FD;&#x62A5;&#x9519;&#x8D8A;&#x754C;&#xFF0C;&#x56E0;&#x4E3A;int&#x6781;&#x9650;&#x662F;127&#xFF0C;&#x4F46;&#x662F;&#x5374;&#x53EF;&#x4EE5;&#x5199;&#xFF1A;int8(a)&#xFF0C;&#x7B2C;&#x4E00;&#x4F4D;&#x62FF;&#x6765;&#x5F53;&#x7B26;&#x53F7;&#x4E86;
+e := int8(c)    //01111111 &#x6253;&#x5370;&#x51FA;&#x6765;&#x8FD8;&#x662F;01111111
+fmt.Printf(&quot;%08b %d \n&quot;, a, a)
+fmt.Printf(&quot;%08b %d \n&quot;, b, b)
+fmt.Printf(&quot;%08b %d \n&quot;, c, c)
+fmt.Printf(&quot;%08b %d \n&quot;, d, d)
+fmt.Printf(&quot;%08b %d \n&quot;, e, e)</code>
+
+- int8/uint8
+- &#x957F;&#x5EA6;&#xFF1A;1&#x5B57;&#x8282;
+- &#x53D6;&#x503C;&#x8303;&#x56F4;&#xFF1A;-128~127/0~255
+
+</details>
+
+<details>
+<summary>&#x5B57;&#x8282;&#x578B; byte</summary>
+
+<code>go
+// &#x8FD9;&#x91CC;&#x4E0D;&#x80FD;&#x5199;&#x6210; b := []byte{&quot;Golang&quot;}&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x5229;&#x7528;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x3002;
+b := []byte(&quot;Golang&quot;)
+c := []byte(&quot;go&quot;)
+d := []byte(&quot;Go&quot;)
+println(b,c,d)</code>
+
+- byte(uint8&#x522B;&#x540D;)
+
+<strong>&#x57FA;&#x672C;&#x5904;&#x7406;&#x51FD;&#x6570;</strong>
+
+- <code>Contains()</code> &#x8FD4;&#x56DE;&#x662F;&#x5426;&#x5305;&#x542B;&#x5B50;&#x5207;&#x7247;
+- <code>Count()</code> &#x5B50;&#x5207;&#x7247;&#x975E;&#x91CD;&#x53E0;&#x5B9E;&#x4F8B;&#x7684;&#x6570;&#x91CF;
+- <code>Map()</code> &#x51FD;&#x6570;&#xFF0C;&#x5C06;byte &#x8F6C;&#x5316;&#x4E3A;Unicode&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x66FF;&#x6362;
+- <code>Repeat()</code> &#x5C06;&#x5207;&#x7247;&#x590D;&#x5236;count&#x6B64;&#xFF0C;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;
+- <code>Replace()</code> &#x5C06;&#x5207;&#x7247;&#x4E2D;&#x7684;&#x4E00;&#x90E8;&#x5206; &#x66FF;&#x6362;&#x4E3A;&#x53E6;&#x5916;&#x7684;&#x4E00;&#x90E8;&#x5206;
+- <code>Runes()</code> &#x5C06; S &#x8F6C;&#x5316;&#x4E3A;&#x5BF9;&#x5E94;&#x7684; UTF-8 &#x7F16;&#x7801;&#x7684;&#x5B57;&#x8282;&#x5E8F;&#x5217;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684;Unicode &#x5207;&#x7247;
+- <code>Join()</code> &#x51FD;&#x6570;&#xFF0C;&#x5C06;&#x5B50;&#x5B57;&#x8282;&#x5207;&#x7247;&#x8FDE;&#x63A5;&#x5230;&#x4E00;&#x8D77;&#x3002;
+
+&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x5217;&#x5B50;&#x6765;&#x7406;&#x89E3;&#x4E0A;&#x9762;7&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x4F8B;&#x5B50; <a href="./example/byte/byte.go">byte.go</a>
+
+<code>go
+package main
+import (
+  &quot;bytes&quot;
+  &quot;fmt&quot;
+)
+func main() {
+  // &#x8FD9;&#x91CC;&#x4E0D;&#x80FD;&#x5199;&#x6210; b := []byte{&quot;Golang&quot;}&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x5229;&#x7528;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x3002;
+  b := []byte(&quot;Golang&quot;)
+  subslice1 := []byte(&quot;go&quot;)
+  subslice2 := []byte(&quot;Go&quot;)
+  // func Contains(b, subslice [] byte) bool
+  // &#x68C0;&#x67E5;&#x5B57;&#x8282;&#x5207;&#x7247;b &#xFF0C;&#x662F;&#x5426;&#x5305;&#x542B;&#x5B50;&#x5B57;&#x8282;&#x5207;&#x7247; subslice
+  fmt.Println(bytes.Contains(b, subslice1))
+  fmt.Println(bytes.Contains(b, subslice2))
+
+
+  s2 := []byte(&quot;&#x540C;&#x5B66;&#x4EEC;&#xFF0C;&#x4E0A;&#x5348;&#x597D;&quot;)
+  m := func(r rune) rune {
+    if r == &apos;&#x4E0A;&apos; {
+      r = &apos;&#x4E0B;&apos;
+    }
+    return r
+  }
+  fmt.Println(string(s2))
+  // func Map(mapping func(r rune) rune, s []byte) []byte
+  // Map&#x51FD;&#x6570;: &#x9996;&#x5148;&#x5C06; s &#x8F6C;&#x5316;&#x4E3A; UTF-8&#x7F16;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#xFF0C;
+  // &#x7136;&#x540E;&#x4F7F;&#x7528; mapping &#x5C06;&#x6BCF;&#x4E2A;Unicode&#x5B57;&#x7B26;&#x6620;&#x5C04;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x7B26;&#xFF0C;
+  // &#x6700;&#x540E;&#x5C06;&#x7ED3;&#x679C;&#x4FDD;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B57;&#x8282;&#x5207;&#x7247;&#x4E2D;&#x3002;
+  fmt.Println(string(bytes.Map(m, s2)))
+
+
+  s3 := []byte(&quot;google&quot;)
+  old := []byte(&quot;o&quot;)
+  //&#x8FD9;&#x91CC; new &#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x5207;&#x7247;&#xFF0C;&#x4E0D;&#x662F;&#x5173;&#x952E;&#x5B57;&#x4E86;
+  new := []byte(&quot;oo&quot;)
+  n := 1
+  // func Replace(s, old, new []byte, n int) []byte
+  //&#x8FD4;&#x56DE;&#x5B57;&#x8282;&#x5207;&#x7247; S &#x7684;&#x4E00;&#x4E2A;&#x526F;&#x672C;&#xFF0C; &#x5E76;&#x4E14;&#x5C06;&#x524D;n&#x4E2A;&#x4E0D;&#x91CD;&#x53E0;&#x7684;&#x5B50;&#x5207;&#x7247; old &#x66FF;&#x6362;&#x4E3A; new&#xFF0C;&#x5982;&#x679C;n &lt; 0 &#x90A3;&#x4E48;&#x4E0D;&#x9650;&#x5236;&#x66FF;&#x6362;&#x7684;&#x6570;&#x91CF;
+  fmt.Println(string(bytes.Replace(s3, old, new, n)))
+  fmt.Println(string(bytes.Replace(s3, old, new, -1)))
+
+
+  // &#x5C06;&#x5B57;&#x8282;&#x5207;&#x7247; &#x8F6C;&#x5316;&#x4E3A;&#x5BF9;&#x5E94;&#x7684; UTF-8&#x7F16;&#x7801;&#x7684;&#x5B57;&#x8282;&#x5E8F;&#x5217;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684; Unicode &#x5207;&#x7247;&#x3002;
+  s4 := []byte(&quot;&#x4E2D;&#x534E;&#x4EBA;&#x6C11;&#x5171;&#x548C;&#x56FD;&quot;)
+  r1 := bytes.Runes(s4)
+  // func Runes(b []byte) []rune
+  fmt.Println(string(s4), len(s4))  // &#x5B57;&#x8282;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;
+  fmt.Println(string(r1), len(r1))  // rune &#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;
+
+
+  // &#x5B57;&#x8282;&#x5207;&#x7247; &#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4F9D;&#x65E7;&#x662F;&#x5B57;&#x8282;&#x5207;&#x7247;&#x3002;
+  s5 := [][]byte{
+    []byte(&quot;&#x4F60;&#x597D;&quot;),
+    []byte(&quot;&#x4E16;&#x754C;&quot;),  //&#x8FD9;&#x91CC;&#x7684;&#x9017;&#x53F7;&#xFF0C;&#x5FC5;&#x4E0D;&#x53EF;&#x5C11;
+  }
+  sep := []byte(&quot;,&quot;)
+  // func Join(s [][]byte, sep []byte) []byte
+  // &#x7528;&#x5B57;&#x8282;&#x5207;&#x7247; sep &#x5427; s&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5B57;&#x8282;&#x5207;&#x7247;&#x8FDE;&#x63A5;&#x6210;&#x4E00;&#x4E2A;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;.
+  fmt.Println(string(bytes.Join(s5, sep)))
+}</code>
+
+</details>
+
+<details>
+<summary>16&#x4F4D;&#x6574;&#x578B; int16/uint16</summary>
+
+- int16/uint16
+- &#x957F;&#x5EA6;&#xFF1A;2&#x5B57;&#x8282;
+- &#x53D6;&#x503C;&#x8303;&#x56F4;&#xFF1A;-32768~32767/0~65535
+
+</details>
+
+<details>
+<summary>32&#x4F4D;&#x6574;&#x578B; int32(&#x522B;&#x540D;rune)/uint32</summary>
+
+- int32(&#x522B;&#x540D;rune)/uint32
+- &#x957F;&#x5EA6;&#xFF1A;4&#x5B57;&#x8282;
+- &#x53D6;&#x503C;&#x8303;&#x56F4;&#xFF1A;-2^32/2~2^32/2-1/0~2^32-1
+
+</details>
+
+<details>
+<summary>64&#x4F4D;&#x6574;&#x578B; int64/uint64</summary>
+
+- int64/uint64
+- &#x957F;&#x5EA6;&#xFF1A;8&#x5B57;&#x8282;
+- &#x53D6;&#x503C;&#x8303;&#x56F4;&#xFF1A;-2^64/2~2^64/2-1/0~2^64-1
+
+</details>
+
+<details>
+<summary>&#x6D6E;&#x70B9;&#x578B; float32/float64</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+
+func main() {
+  var x float64
+  x = 20.0
+  fmt.Println(x)
+  fmt.Printf(&quot;x is of type %T\n&quot;, x)
+
+  a := float64(20.0)
+  b := 42 
+  fmt.Println(a)
+  fmt.Println(b)
+  fmt.Printf(&quot;a is of type %T\n&quot;, a)
+  fmt.Printf(&quot;b is of type %T\n&quot;, b)
+}</code>
+
+&#x5B9E;&#x4F8B;&#xFF1A;<a href="./example/float/float.go">float.go</a>
+
+- float32/float64
+- &#x957F;&#x5EA6;&#xFF1A;4/8&#x5B57;&#x8282;
+- &#x5C0F;&#x6570;&#x4F4D;&#xFF1A;&#x7CBE;&#x786E;&#x5230; 7/15 &#x4F4D;&#x5C0F;&#x6570;
+
+</details>
+
+<details>
+<summary>&#x590D;&#x6570; complex64/complex128</summary>
+
+- complex64/complex128
+- &#x957F;&#x5EA6;&#xFF1A;8/16
+
+</details>
+
+<details>
+<summary>&#x6307;&#x9488;&#x6574;&#x6570;&#x578B; uintptr</summary>
+
+&#x7528;&#x4E8E;&#x6307;&#x9488;&#x8FD0;&#x7B97;&#xFF0C;GC &#x4E0D;&#x628A; uintptr &#x5F53;&#x6307;&#x9488;&#xFF0C;uintptr &#x65E0;&#x6CD5;&#x6301;&#x6709;&#x5BF9;&#x8C61;&#x3002;uintptr &#x7C7B;&#x578B;&#x7684;&#x76EE;&#x6807;&#x4F1A;&#x88AB;&#x56DE;&#x6536;&#x3002;
+
+- uintptr
+- &#x4FDD;&#x5B58;&#x6307;&#x6B63;&#x7684; 32 &#x4F4D;&#x6216;&#x8005; 64 &#x4F4D;&#x6574;&#x6570;&#x578B;
+
+<code>go
+// &#x793A;&#x4F8B;&#xFF1A;&#x901A;&#x8FC7;&#x6307;&#x9488;&#x4FEE;&#x6539;&#x7ED3;&#x6784;&#x4F53;&#x5B57;&#x6BB5;
+package main
+import (
+  &quot;fmt&quot;
+  &quot;unsafe&quot;
+)
+
+func main() {
+  s := struct {
+    a byte
+    b byte
+    c byte
+    d int64
+  }{0, 0, 0, 0}
+
+  // &#x5C06;&#x7ED3;&#x6784;&#x4F53;&#x6307;&#x9488;&#x8F6C;&#x6362;&#x4E3A;&#x901A;&#x7528;&#x6307;&#x9488;
+  p := unsafe.Pointer(&amp;s)
+  // &#x4FDD;&#x5B58;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x5730;&#x5740;&#x5907;&#x7528;&#xFF08;&#x504F;&#x79FB;&#x91CF;&#x4E3A; 0&#xFF09;
+  up0 := uintptr(p)
+  // &#x5C06;&#x901A;&#x7528;&#x6307;&#x9488;&#x8F6C;&#x6362;&#x4E3A; byte &#x578B;&#x6307;&#x9488;
+  pb := (*byte)(p)
+  // &#x7ED9;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x6307;&#x9488;&#x8D4B;&#x503C;
+  *pb = 10
+  // &#x7ED3;&#x6784;&#x4F53;&#x5185;&#x5BB9;&#x8DDF;&#x7740;&#x6539;&#x53D8;
+  fmt.Println(s)
+
+  // &#x504F;&#x79FB;&#x5230;&#x7B2C; 2 &#x4E2A;&#x5B57;&#x6BB5;
+  up := up0 + unsafe.Offsetof(s.b)
+  // &#x5C06;&#x504F;&#x79FB;&#x540E;&#x7684;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x4E3A;&#x901A;&#x7528;&#x6307;&#x9488;
+  p = unsafe.Pointer(up)
+  // &#x5C06;&#x901A;&#x7528;&#x6307;&#x9488;&#x8F6C;&#x6362;&#x4E3A; byte &#x578B;&#x6307;&#x9488;
+  pb = (*byte)(p)
+  // &#x7ED9;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x6307;&#x9488;&#x8D4B;&#x503C;
+  *pb = 20
+  // &#x7ED3;&#x6784;&#x4F53;&#x5185;&#x5BB9;&#x8DDF;&#x7740;&#x6539;&#x53D8;
+  fmt.Println(s)
+
+  // &#x504F;&#x79FB;&#x5230;&#x7B2C; 3 &#x4E2A;&#x5B57;&#x6BB5;
+  up = up0 + unsafe.Offsetof(s.c)
+  // &#x5C06;&#x504F;&#x79FB;&#x540E;&#x7684;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x4E3A;&#x901A;&#x7528;&#x6307;&#x9488;
+  p = unsafe.Pointer(up)
+  // &#x5C06;&#x901A;&#x7528;&#x6307;&#x9488;&#x8F6C;&#x6362;&#x4E3A; byte &#x578B;&#x6307;&#x9488;
+  pb = (*byte)(p)
+  // &#x7ED9;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x6307;&#x9488;&#x8D4B;&#x503C;
+  *pb = 30
+  // &#x7ED3;&#x6784;&#x4F53;&#x5185;&#x5BB9;&#x8DDF;&#x7740;&#x6539;&#x53D8;
+  fmt.Println(s)
+
+  // &#x504F;&#x79FB;&#x5230;&#x7B2C; 4 &#x4E2A;&#x5B57;&#x6BB5;
+  up = up0 + unsafe.Offsetof(s.d)
+  // &#x5C06;&#x504F;&#x79FB;&#x540E;&#x7684;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x4E3A;&#x901A;&#x7528;&#x6307;&#x9488;
+  p = unsafe.Pointer(up)
+  // &#x5C06;&#x901A;&#x7528;&#x6307;&#x9488;&#x8F6C;&#x6362;&#x4E3A; int64 &#x578B;&#x6307;&#x9488;
+  pi := (*int64)(p)
+  // &#x7ED9;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x6307;&#x9488;&#x8D4B;&#x503C;
+  *pi = 40
+  // &#x7ED3;&#x6784;&#x4F53;&#x5185;&#x5BB9;&#x8DDF;&#x7740;&#x6539;&#x53D8;
+  fmt.Println(s)
+}</code>
+
+</details>
+
+<details>
+<summary>&#x6570;&#x7EC4;&#x7C7B;&#x578B; array</summary>
+
+&#x6570;&#x7EC4;&#x58F0;&#x660E;&#x8BED;&#x6CD5;
+
+<code>go
+var variable_name [SIZE]variable_type</code>
+
+&#x6570;&#x7EC4;&#x662F;&#x5177;&#x6709;&#x76F8;&#x540C;&#x552F;&#x4E00;&#x7C7B;&#x578B;&#x7684;&#x4E00;&#x7EC4;&#x5DF2;&#x7F16;&#x53F7;&#x4E14;&#x957F;&#x5EA6;&#x56FA;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x9879;&#x5E8F;&#x5217;&#xFF0C;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x7684;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x4F8B;&#x5982;&#x6574;&#x5F62;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8005;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x5BF9;&#x6570;&#x7EC4;&#x64CD;&#x4F5C;&#x7684;&#x4F8B;&#x5B50;<a href="./example/array/array.go">array.go</a>
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+  // &#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A;5&#x7684;&#x6574;&#x6570;&#x6570;&#x7EC4;
+  // &#x4E00;&#x65E6;&#x6570;&#x7EC4;&#x88AB;&#x58F0;&#x660E;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8DDF;&#x957F;&#x5EA6;&#x90FD;&#x4E0D;&#x80FD;&#x518D;&#x88AB;&#x6539;&#x53D8;&#x3002;
+  var array1 [5]int
+
+  fmt.Printf(&quot;array1: %d\n\n&quot;, array1)
+
+  // &#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A;5&#x7684;&#x6574;&#x6570;&#x6570;&#x7EC4;
+  // &#x521D;&#x59CB;&#x5316;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;
+  array2 := [5]int{12, 123, 1234, 12345, 123456}
+  array2[1] = 5000
+  fmt.Printf(&quot;array2: %d\n\n&quot;, array2[1])
+
+  // n &#x662F;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A; 10 &#x7684;&#x6570;&#x7EC4;
+  var n [10]int 
+  var i,j int
+
+  /* &#x4E3A;&#x6570;&#x7EC4; n &#x521D;&#x59CB;&#x5316;&#x5143;&#x7D20; */         
+  for i = 0; i &lt; 10; i++ {
+    n[i] = i + 100 /* &#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x4E3A; i + 100 */
+  }
+
+  /* &#x8F93;&#x51FA;&#x6BCF;&#x4E2A;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x503C; */
+  for j = 0; j &lt; 10; j++ {
+    fmt.Printf(&quot;Element[%d] = %d\n&quot;, j, n[j] )
+  }
+
+  /* &#x6570;&#x7EC4; - 5 &#x884C; 2 &#x5217;*/
+  var a = [5][2]int{ {0,0}, {1,2}, {2,4}, {3,6},{4,8}}
+  var e, f int
+
+  /* &#x8F93;&#x51FA;&#x6570;&#x7EC4;&#x5143;&#x7D20; */
+  for  e = 0; e &lt; 5; e++ {
+    for f = 0; f &lt; 2; f++ {
+        fmt.Printf(&quot;a[%d][%d] = %d\n&quot;, e,f, a[e][f] )
+    }
+  }
+}</code>
+
+&#x521D;&#x59CB;&#x5316;&#x6570;&#x7EC4;&#x4E2D; {} &#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x4E0D;&#x80FD;&#x5927;&#x4E8E; [] &#x4E2D;&#x7684;&#x6570;&#x5B57;&#x3002;
+&#x5982;&#x679C;&#x5FFD;&#x7565; [] &#x4E2D;&#x7684;&#x6570;&#x5B57;&#x4E0D;&#x8BBE;&#x7F6E;&#x6570;&#x7EC4;&#x5927;&#x5C0F;&#xFF0C;Go &#x8BED;&#x8A00;&#x4F1A;&#x6839;&#x636E;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;&#x6765;&#x8BBE;&#x7F6E;&#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;&#xFF1A;
+
+<code>go
+var array1 = [...]float32{1000.0, 2.0, 3.4, 7.0, 50.0}</code>
+
+&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#xFF08;&#x4F4D;&#x7F6E;&#xFF09;&#x6765;&#x8BFB;&#x53D6;&#x3002;&#x683C;&#x5F0F;&#x4E3A;&#x6570;&#x7EC4;&#x540D;&#x540E;&#x52A0;&#x4E2D;&#x62EC;&#x53F7;&#xFF0C;&#x4E2D;&#x62EC;&#x53F7;&#x4E2D;&#x4E3A;&#x7D22;&#x5F15;&#x7684;&#x503C;&#x3002;&#x4F8B;&#x5982;&#xFF1A;
+
+<code>go
+float32 salary = array1[9]</code>
+
+&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x8BFB;&#x53D6;&#x4E86;&#x6570;&#x7EC4;<code>array1</code>&#x7B2C;<code>10</code>&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x503C;&#x3002;
+
+&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x4E0B;&#x9762;&#x4F8B;&#x5B50;
+
+<code>go
+// &#x4E09;&#x884C;&#x56DB;&#x5217;
+a = [3][4]int{  
+ {0, 1, 2, 3} ,   /*  &#x7B2C;&#x4E00;&#x884C;&#x7D22;&#x5F15;&#x4E3A; 0 */
+ {4, 5, 6, 7} ,   /*  &#x7B2C;&#x4E8C;&#x884C;&#x7D22;&#x5F15;&#x4E3A; 1 */
+ {8, 9, 10, 11}   /*  &#x7B2C;&#x4E09;&#x884C;&#x7D22;&#x5F15;&#x4E3A; 2 */
+}</code>
+
+&#x8BBF;&#x95EE;&#x591A;&#x7EF4;&#x6570;&#x7EC4;
+
+<code>go
+// &#x8BBF;&#x95EE;&#x7B2C;2&#x884C;&#x7B2C;3&#x5217;
+int val = a[2][3]</code>
+
+</details>
+
+<details>
+<summary>&#x7ED3;&#x6784;&#x7C7B;&#x578B; struct</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+type Vertex struct {
+    X int
+    Y int
+}
+func main() {
+  fmt.Println(Vertex{1, 2})
+
+  // &#x7ED3;&#x6784;&#x4F53;&#x5B57;&#x6BB5;&#x4F7F;&#x7528;&#x70B9;&#x53F7;&#x6765;&#x8BBF;&#x95EE;&#x3002;
+    v := Vertex{1, 2}
+    v.X = 4
+  fmt.Println(v.X)
+
+  // &#x7ED3;&#x6784;&#x4F53;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED3;&#x6784;&#x4F53;&#x6307;&#x9488;&#x6765;&#x8BBF;&#x95EE;&#x3002;
+    e := Vertex{1, 2}
+    p := &amp;e
+    p.X = 1e9
+  fmt.Println(e)
+
+
+  var (
+    v1 = Vertex{1, 2}  // &#x7C7B;&#x578B;&#x4E3A; Vertex
+    v2 = Vertex{X: 1}  // Y:0 &#x88AB;&#x7701;&#x7565;
+    v3 = Vertex{}      // X:0 &#x548C; Y:0
+    p  = &amp;Vertex{1, 2} // &#x7C7B;&#x578B;&#x4E3A; *Vertex , &#x7279;&#x6B8A;&#x7684;&#x524D;&#x7F00; &amp; &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x6307;&#x9488;
+  )
+  fmt.Println(v1, p, v2, v3)
+}</code>
+
+&#x7B80;&#x5355;&#x7684;&#x7ED3;&#x6784;&#x4F53;
+
+<code>go
+type T struct {a, b int}</code>
+
+&#x7ED3;&#x6784;&#x4F53;&#x91CC;&#x7684;&#x5B57;&#x6BB5;&#x90FD;&#x6709; &#x540D;&#x5B57;&#xFF0C;&#x50CF; <code>field1</code>&#x3001;<code>field2</code> &#x7B49;&#xFF0C;&#x5982;&#x679C;&#x5B57;&#x6BB5;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x4ECE;&#x6765;&#x4E5F;&#x4E0D;&#x4F1A;&#x88AB;&#x7528;&#x5230;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x547D;&#x540D;&#x5B83;&#x4E3A; <code>_</code>&#x3002;&#x4E0A;&#x9762;&#x7B80;&#x5355;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x5B9A;&#x4E49;&#xFF0C;&#x4E0B;&#x9762;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;
+
+<code>go
+var s T
+s.a = 5
+s.b = 8</code>
+
+&#x6570;&#x7EC4;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;&#x4E00;&#x79CD;&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x8FC7;&#x5B83;&#x4F7F;&#x7528;&#x4E0B;&#x6807;&#x800C;&#x4E0D;&#x662F;&#x5177;&#x540D;&#x7684;&#x5B57;&#x6BB5;&#x3002;
+
+<code>go
+var t *T
+t = new(T)</code>
+
+&#x4E0A;&#x9762;&#x7B80;&#x5355;&#x7684;&#x7BA1;&#x7528;&#x8BED;&#x53E5;&#x65B9;&#x6CD5;<code>t := new(T)</code>&#xFF0C;&#x53D8;&#x91CF; <code>t</code> &#x662F;&#x4E00;&#x4E2A;&#x6307;&#x5411; <code>T</code> &#x7684;&#x6307;&#x9488;&#xFF0C;&#x6B64;&#x65F6;&#x7ED3;&#x6784;&#x4F53;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x662F;&#x5B83;&#x4EEC;&#x6240;&#x5C5E;&#x7C7B;&#x578B;&#x7684;&#x96F6;&#x503C;&#x3002;
+
+&#x58F0;&#x660E; <code>var t T</code> &#x4E5F;&#x4F1A;&#x7ED9; <code>t</code> &#x5206;&#x914D;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x96F6;&#x503C;&#x5316;&#x5185;&#x5B58;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x65F6;&#x5019; <code>t</code> &#x662F;&#x7C7B;&#x578B;<code>T</code>&#x3002;&#x5728;&#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x4E2D;&#xFF0C;<code>t</code> &#x901A;&#x5E38;&#x88AB;&#x79F0;&#x505A;&#x7C7B;&#x578B; <code>T</code> &#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF08;instance&#xFF09;&#x6216;&#x5BF9;&#x8C61;&#xFF08;object&#xFF09;&#x3002;
+
+&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;<a href="./example/structs/structs_fields.go">structs_fields.go</a>&#x8FD0;&#x884C;&#x4F8B;&#x5B50;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#xFF1A;
+
+<code>bash
+&#x2192; go run test/structs_fields.go
+
+The int is: 10
+The float is: 15.500000
+The string is: Chris
+&amp;{10 15.5 Chris}</code>
+
+<strong>&#x4F7F;&#x7528; new</strong>
+
+</details>
+
+<details>
+<summary>&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B; string</summary>
+
+<code>go
+var str string //&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;
+str = &quot;Go lang&quot;  //&#x8D4B;&#x503C;
+ch :=str[0]    //&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;
+len :=len(str) //&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;,len&#x662F;&#x5185;&#x7F6E;&#x51FD;&#x6570; ,len=5</code>
+
+len&#x51FD;&#x6570;&#x662F;Go&#x4E2D;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#xFF0C;&#x4E0D;&#x5F15;&#x5165;strings&#x5305;&#x5373;&#x53EF;&#x4F7F;&#x7528;&#x3002;len(string)&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B57;&#x8282;&#x6570;&#x3002;len&#x51FD;&#x6570;&#x6240;&#x652F;&#x6301;&#x7684;&#x5165;&#x53C2;&#x7C7B;&#x578B;&#x5982;&#x4E0B;&#xFF1A;
+
+- len(Array) &#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;
+- len(*Array) &#x6570;&#x7EC4;&#x6307;&#x9488;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;,&#x5982;&#x679C;&#x5165;&#x53C2;&#x4E3A;nil&#x5219;&#x8FD4;&#x56DE;0
+- len(Slice) &#x6570;&#x7EC4;&#x5207;&#x7247;&#x4E2D;&#x5143;&#x7D20;&#x4E2A;&#x6570;,&#x5982;&#x679C;&#x5165;&#x53C2;&#x4E3A;nil&#x5219;&#x8FD4;&#x56DE;0
+- len(map) &#x5B57;&#x5178;&#x4E2D;&#x5143;&#x7D20;&#x4E2A;&#x6570;,&#x5982;&#x679C;&#x5165;&#x53C2;&#x4E3A;nil&#x5219;&#x8FD4;&#x56DE;0
+- len(Channel) Channel buffer&#x961F;&#x5217;&#x4E2D;&#x5143;&#x7D20;&#x4E2A;&#x6570;
+
+</details>
+
+<details>
+<summary>&#x63A5;&#x53E3;&#x7C7B;&#x578B; inteface</summary>
+
+<code>go
+package main
+import (
+   &quot;fmt&quot;
+   &quot;math&quot;
+)
+
+/* &#x5B9A;&#x4E49;&#x4E00;&#x4E2A; interface */
+type shape interface {
+   area() float64
+}
+
+/* &#x5B9A;&#x4E49;&#x4E00;&#x4E2A; circle */
+type circle struct {
+   x,y,radius float64
+}
+
+/* &#x5B9A;&#x4E49;&#x4E00;&#x4E2A; rectangle */
+type rectangle struct {
+   width, height float64
+}
+
+/* &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;circle&#x65B9;&#x6CD5; (&#x5B9E;&#x73B0; shape.area())*/
+func(circle circle) area() float64 {
+   return math.Pi * circle.radius * circle.radius
+}
+
+/* &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;rectangle&#x65B9;&#x6CD5; (&#x5B9E;&#x73B0; shape.area())*/
+func(rect rectangle) area() float64 {
+   return rect.width * rect.height
+}
+
+/* &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;shape&#x7684;&#x65B9;&#x6CD5;*/
+func getArea(shape shape) float64 {
+   return shape.area()
+}
+
+func main() {
+   circle := circle{x:0,y:0,radius:5}
+   rectangle := rectangle {width:10, height:5}
+
+   fmt.Printf(&quot;circle area: %f\n&quot;,getArea(circle))
+   fmt.Printf(&quot;rectangle area: %f\n&quot;,getArea(rectangle))
+}</code>
+
+&#x5B9E;&#x4F8B;&#xFF1A;<a href="./example/inteface/inteface.go">inteface.go</a>
+
+</details>
+
+<details>
+<summary>&#x51FD;&#x6570;&#x7C7B;&#x578B; func</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+type functinTyoe func(int, int) // &#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7C7B;&#x578B;
+func (f functinTyoe)Serve() {
+  fmt.Println(&quot;serve2&quot;)
+}
+func serve(int,int) {
+  fmt.Println(&quot;serve1&quot;)
+}
+func main() {
+  a := functinTyoe(serve)
+  a(1,2)
+  a.Serve()
+}</code>
+
+&#x5B9E;&#x4F8B;&#xFF1A;<a href="./example/func/func.go">func.go</a>
+
+</details>
+
+<details>
+<summary>&#x5F15;&#x7528;&#x7C7B;&#x578B; func</summary>
+
+
+<strong>&#x5207;&#x7247;</strong>
+
+&gt; &#x662F;&#x4E00;&#x79CD;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x6570;&#x7EC4;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x6211;&#x4EEC;&#x7684;&#x5E0C;&#x671B;&#x589E;&#x957F;&#x548C;&#x6536;&#x7F29;&#x3002;
+
+- slice
+
+<strong>Map</strong>
+
+&gt; &#x662F;&#x4E00;&#x79CD;&#x65E0;&#x5E8F;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x96C6;&#x5408;&#x3002;&#x662F;&#x4E00;&#x79CD;&#x96C6;&#x5408;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x50CF;&#x8FED;&#x4EE3;&#x6570;&#x7EC4;&#x548C; slice &#x90A3;&#x6837;&#x8FED;&#x4EE3;&#x5B83;&#x3002;
+
+- map
+
+<code>go
+// &#x901A;&#x8FC7; make &#x6765;&#x521B;&#x5EFA;
+dict := make(map[string]int)
+// &#x901A;&#x8FC7;&#x5B57;&#x9762;&#x503C;&#x521B;&#x5EFA;
+dict := map[string]string{&quot;Red&quot;: &quot;#da1337&quot;, &quot;Orange&quot;: &quot;#e95a22&quot;}
+
+// &#x7ED9; map &#x8D4B;&#x503C;&#x5C31;&#x662F;&#x6307;&#x5B9A;&#x5408;&#x6CD5;&#x7C7B;&#x578B;&#x7684;&#x952E;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x503C;&#x8D4B;&#x7ED9;&#x952E;
+colors := map[string]string{}
+colors[&quot;Red&quot;] = &quot;#da1337&quot;
+
+// &#x4E0D;&#x521D;&#x59CB;&#x5316; map , &#x5C31;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; nil map&#x3002;nil map &#x4E0D;&#x80FD;&#x7528;&#x6765;&#x5B58;&#x653E;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x8FD0;&#x884C;&#x65F6;&#x9519;&#x8BEF;
+var colors map[string]string
+colors[&quot;Red&quot;] = &quot;#da1337&quot;
+// Runtime Error:
+// panic: runtime error: assignment to entry in nil map
+
+//&#x9009;&#x62E9;&#x662F;&#x53EA;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x96F6;&#x503C;&#x6765;&#x786E;&#x5B9A;&#x952E;&#x662F;&#x5426;&#x5B58;&#x5728;&#x3002;
+value := colors[&quot;Blue&quot;]
+if value != &quot;&quot; {
+  fmt.Println(value)
+}</code>
+
+&#x5728;&#x51FD;&#x6570;&#x95F4;&#x4F20;&#x9012; map &#x4E0D;&#x662F;&#x4F20;&#x9012; map &#x7684;&#x62F7;&#x8D1D;&#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5728;&#x51FD;&#x6570;&#x4E2D;&#x6539;&#x53D8;&#x4E86; map&#xFF0C;&#x90A3;&#x4E48;&#x6240;&#x6709;&#x5F15;&#x7528; map &#x7684;&#x5730;&#x65B9;&#x90FD;&#x4F1A;&#x6539;&#x53D8;
+
+<code>go
+func main() {
+  colors := map[string]string{
+     &quot;AliceBlue&quot;:   &quot;#f0f8ff&quot;,
+     &quot;Coral&quot;:       &quot;#ff7F50&quot;,
+     &quot;DarkGray&quot;:    &quot;#a9a9a9&quot;,
+     &quot;ForestGreen&quot;: &quot;#228b22&quot;,
+  }
+  for key, value := range colors {
+      fmt.Printf(&quot;Key: %s  Value: %s\n&quot;, key, value)
+  }
+  removeColor(colors, &quot;Coral&quot;)
+  for key, value := range colors {
+      fmt.Printf(&quot;Key: %s  Value: %s\n&quot;, key, value)
+  }
+}
+func removeColor(colors map[string]string, key string) {
+    delete(colors, key)
+}</code>
+
+
+<strong>&#x901A;&#x9053;</strong>
+
+- chan
+
+</details>
+
+<details>
+<summary>&#x7C7B;&#x578B;&#x522B;&#x540D;</summary>
+
+<code>go
+type (
+  byte int8
+  rune init32
+  &#x6587;&#x672C; string
+)
+var b &#x6587;&#x672C;
+b = &quot;&#x522B;&#x540D;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x4E2D;&#x6587;&#xFF01;&quot;</code>
+
+</details>
+
+<h2 id="t6&#x5E38;&#x91CF;&#x53D8;&#x91CF;">&#x5E38;&#x91CF;&#x53D8;&#x91CF; <a href="#t6&#x5E38;&#x91CF;&#x53D8;&#x91CF;"> # </a></h2>
+<details>
+<summary>&#x5E38;&#x91CF; const</summary>
+
+<code>go
+package main
+import &quot;unsafe&quot;
+// &#x5E38;&#x91CF;&#x53EF;&#x4EE5;&#x7528;len(), cap(), unsafe.Sizeof()&#x5E38;&#x91CF;&#x8BA1;&#x7B97;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x3002;
+// &#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#xFF0C;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x662F;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#xFF0C;&#x5426;&#x5219;&#x7F16;&#x8BD1;&#x4E0D;&#x8FC7;&#xFF1A;
+const (
+  a = &quot;abc&quot;
+  b = len(a)
+  c = unsafe.Sizeof(a)
+)
+
+func main(){
+  const (
+    PI     = 3.14
+    const1 = &quot;1&quot;
+  )
+  const LENGTH int = 10
+  const e, f, g = 1, false, &quot;str&quot; //&#x591A;&#x91CD;&#x8D4B;&#x503C;
+  println(a, b, c,PI, LENGTH)
+}</code>
+
+&#x4E0A;&#x9762;&#x4F8B;&#x5B50;<a href="./example/const/const.go">const.go</a>
+
+<strong>iota</strong> &#x7279;&#x6B8A;&#x5E38;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x88AB;&#x7F16;&#x8BD1;&#x5668;&#x4FEE;&#x6539;&#x7684;&#x5E38;&#x91CF;&#x3002;<a href="./example/iota/iota.go">iota.go</a>
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+  const (
+    // &#x7B2C;&#x4E00;&#x4E2A; iota &#x7B49;&#x4E8E; 0&#xFF0C;&#x6BCF;&#x5F53; iota &#x5728;&#x65B0;&#x7684;&#x4E00;&#x884C;&#x88AB;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x5B83;&#x7684;&#x503C;&#x90FD;&#x4F1A;&#x81EA;&#x52A8;&#x52A0; 1&#xFF1B;
+    // &#x6240;&#x4EE5; a=0, b=1, c=2 &#x53EF;&#x4EE5;&#x7B80;&#x5199;&#x4E3A;&#x5982;&#x4E0B;&#x5F62;&#x5F0F;&#xFF1A;
+    a = iota   //0
+    b          //1
+    c          //2
+    d = &quot;ha&quot;   //&#x72EC;&#x7ACB;&#x503C;&#xFF0C;iota += 1
+    e          //&quot;ha&quot;   iota += 1
+    f = 100    //iota +=1
+    g          //100  iota +=1
+    h = iota   //7,&#x6062;&#x590D;&#x8BA1;&#x6570;
+    i          //8
+  )
+  fmt.Println(a,b,c,d,e,f,g,h,i)
+}</code>
+
+</details>
+
+<details>
+<summary>&#x53D8;&#x91CF; var</summary>
+
+<code>go
+var (
+  name  = &quot;gopher&quot;
+  name1 = &quot;1&quot;
+)
+// &#x53D8;&#x91CF;&#x58F0;&#x660E;
+var a int
+a = 11 /* &#x8D4B;&#x503C; */
+
+// &#x53D8;&#x91CF;&#x58F0;&#x660E; &#x5E76;&#x8D4B;&#x503C;
+var b int = 12
+
+// &#x5E94;&#x7528;&#x5728;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x7684;&#x65B9;&#x5F0F;
+var a, b, c, d int = 1, 2, 3, 4
+// a =1 
+// b =2 
+// c =3 
+// d =4 
+
+
+var a, _, c, d int = 1, 2, 3, 4
+// &#x5FFD;&#x7565; _ &#x8FD4;&#x56DE;&#x503C;&#x5FFD;&#x7565;</code>
+
+- &#x5168;&#x5C40;&#x53D8;&#x91CF;&#x540D; &#x4EE5;&#x5927;&#x5199;&#x5F00;&#x5934;
+- &#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4E0D;&#x53EF;&#x4EE5;&#x7701;&#x7565; var &#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5E76;&#x884C;&#x7684;&#x65B9;&#x5F0F;
+- &#x6240;&#x6709;&#x53D8;&#x91CF;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7C7B;&#x578B;&#x63A8;&#x65AD;
+- &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x4E0D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>var()</code>&#x7B80;&#x5199;&#x7684;&#x5F62;&#x5F0F;
+
+</details>
+
+<details>
+<summary>&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</summary>
+
+<code>go
+// &#x53EA;&#x80FD;&#x7C7B;&#x578B;&#x663E;&#x5F0F;&#x8F6C;&#x6362;
+var a float32 = 1.1
+// &#x7701;&#x7565;var, &#x7B80;&#x77ED;&#x5F62;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528; := &#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x7B26;
+b := int(a)
+// &#x4E0D;&#x517C;&#x5BB9;&#x7684;&#x7C7B;&#x578B;&#x4E0D;&#x80FD;&#x8F6C;&#x6362;&#x7C7B;&#x578B;</code>
+
+</details>
+
+<details>
+<summary>&#x591A;&#x53D8;&#x91CF;&#x58F0;&#x660E;</summary>
+
+<code>go
+var x, y int
+// &#x8FD9;&#x79CD;&#x56E0;&#x5F0F;&#x5206;&#x89E3;&#x5173;&#x952E;&#x5B57;&#x7684;&#x5199;&#x6CD5;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x58F0;&#x660E;&#x5168;&#x5C40;&#x53D8;&#x91CF;
+var (
+  a int
+  b bool
+)
+
+var c, d int = 1, 2
+var e, f = 123, &quot;hello&quot;
+
+//&#x8FD9;&#x79CD;&#x4E0D;&#x5E26;&#x58F0;&#x660E;&#x683C;&#x5F0F;&#x7684;&#x53EA;&#x80FD;&#x5728;&#x51FD;&#x6570;&#x4F53;&#x4E2D;&#x51FA;&#x73B0;
+//g, h := 123, &quot;hello&quot;</code>
+
+</details>
+
+<h2 id="t7&#x8BED;&#x8A00;&#x8FD0;&#x7B97;&#x7B26;">&#x8BED;&#x8A00;&#x8FD0;&#x7B97;&#x7B26; <a href="#t7&#x8BED;&#x8A00;&#x8FD0;&#x7B97;&#x7B26;"> # </a></h2>
+<details>
+<summary>&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+  var a int = 21
+  var b int = 10
+  var c int
+  c = a + b
+  fmt.Printf(&quot;&#x7B2C;&#x4E00;&#x884C; - c &#x7684;&#x503C;&#x4E3A; %d\n&quot;, c ) // &#x7B2C;&#x4E00;&#x884C; - c &#x7684;&#x503C;&#x4E3A; 31
+  c = a - b
+  fmt.Printf(&quot;&#x7B2C;&#x4E8C;&#x884C; - c &#x7684;&#x503C;&#x4E3A; %d\n&quot;, c ) // &#x7B2C;&#x4E8C;&#x884C; - c &#x7684;&#x503C;&#x4E3A; 11
+  c = a * b
+  fmt.Printf(&quot;&#x7B2C;&#x4E09;&#x884C; - c &#x7684;&#x503C;&#x4E3A; %d\n&quot;, c ) // &#x7B2C;&#x4E09;&#x884C; - c &#x7684;&#x503C;&#x4E3A; 210
+  c = a / b
+  fmt.Printf(&quot;&#x7B2C;&#x56DB;&#x884C; - c &#x7684;&#x503C;&#x4E3A; %d\n&quot;, c ) // &#x7B2C;&#x56DB;&#x884C; - c &#x7684;&#x503C;&#x4E3A; 2
+  c = a % b
+  fmt.Printf(&quot;&#x7B2C;&#x4E94;&#x884C; - c &#x7684;&#x503C;&#x4E3A; %d\n&quot;, c ) // &#x7B2C;&#x4E94;&#x884C; - c &#x7684;&#x503C;&#x4E3A; 1
+  a++
+  fmt.Printf(&quot;&#x7B2C;&#x516D;&#x884C; - c &#x7684;&#x503C;&#x4E3A; %d\n&quot;, a ) // &#x7B2C;&#x516D;&#x884C; - c &#x7684;&#x503C;&#x4E3A; 22
+  a--
+  fmt.Printf(&quot;&#x7B2C;&#x4E03;&#x884C; - c &#x7684;&#x503C;&#x4E3A; %d\n&quot;, a ) // &#x7B2C;&#x4E03;&#x884C; - c &#x7684;&#x503C;&#x4E3A; 21
+}</code>
+
+&#x4E0B;&#x8868;&#x5217;&#x51FA;&#x4E86;&#x6240;&#x6709;Go&#x8BED;&#x8A00;&#x7684;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;&#x3002;&#x5047;&#x5B9A; A &#x503C;&#x4E3A; 10&#xFF0C;B &#x503C;&#x4E3A; 20&#x3002;
+
+| &#x8FD0;&#x7B97;&#x7B26; | &#x63CF;&#x8FF0; | &#x5B9E;&#x4F8B; |
+| ---- | ---- | ---- |
+| + | &#x76F8;&#x52A0;  | A + B &#x8F93;&#x51FA;&#x7ED3;&#x679C; 30 |
+| - | &#x76F8;&#x51CF;  | A - B &#x8F93;&#x51FA;&#x7ED3;&#x679C; -10 |
+| <em> | &#x76F8;&#x4E58;  | A </em> B &#x8F93;&#x51FA;&#x7ED3;&#x679C; 200 |
+| / | &#x76F8;&#x9664;  | B / A &#x8F93;&#x51FA;&#x7ED3;&#x679C; 2 |
+| % | &#x6C42;&#x4F59;  | B % A &#x8F93;&#x51FA;&#x7ED3;&#x679C; 0 |
+| ++ | &#x81EA;&#x589E; | A++ &#x8F93;&#x51FA;&#x7ED3;&#x679C; 11 |
+| -- | &#x81EA;&#x51CF; | A-- &#x8F93;&#x51FA;&#x7ED3;&#x679C; 9 |
+
+</details>
+
+<details>
+<summary>&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+   var a int = 21
+   var b int = 10
+   if( a == b ) {
+      fmt.Printf(&quot;&#x7B2C;&#x4E00;&#x884C; - a &#x7B49;&#x4E8E; b\n&quot; )
+   } else {
+      fmt.Printf(&quot;&#x7B2C;&#x4E00;&#x884C; - a &#x4E0D;&#x7B49;&#x4E8E; b\n&quot; )
+   }
+   if ( a &lt; b ) {
+      fmt.Printf(&quot;&#x7B2C;&#x4E8C;&#x884C; - a &#x5C0F;&#x4E8E; b\n&quot; )
+   } else {
+      fmt.Printf(&quot;&#x7B2C;&#x4E8C;&#x884C; - a &#x4E0D;&#x5C0F;&#x4E8E; b\n&quot; )
+   } 
+
+   if ( a &gt; b ) {
+      fmt.Printf(&quot;&#x7B2C;&#x4E09;&#x884C; - a &#x5927;&#x4E8E; b\n&quot; )
+   } else {
+      fmt.Printf(&quot;&#x7B2C;&#x4E09;&#x884C; - a &#x4E0D;&#x5927;&#x4E8E; b\n&quot; )
+   }
+   /* &#x8BA9;&#x6211;&#x4EEC;&#x6539;&#x53D8;a&#x548C;b&#x7684;&#x503C; */
+   a = 5
+   b = 20
+   if ( a &lt;= b ) {
+      fmt.Printf(&quot;&#x7B2C;&#x56DB;&#x884C; - a &#x5C0F;&#x4E8E;&#x7B49;&#x4E8E; b\n&quot; )
+   }
+   if ( b &gt;= a ) {
+      fmt.Printf(&quot;&#x7B2C;&#x4E94;&#x884C; - b &#x5927;&#x4E8E;&#x7B49;&#x4E8E; a\n&quot; )
+   }
+}</code>
+
+&#x4E0B;&#x8868;&#x5217;&#x51FA;&#x4E86;&#x6240;&#x6709;Go&#x8BED;&#x8A00;&#x7684;&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;&#x3002;&#x5047;&#x5B9A; A &#x503C;&#x4E3A; 10&#xFF0C;B &#x503C;&#x4E3A; 20&#x3002;
+
+| &#x8FD0;&#x7B97;&#x7B26; | &#x63CF;&#x8FF0; | &#x5B9E;&#x4F8B; |
+| ---- | ---- | ---- |
+| ==  | &#x68C0;&#x67E5;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;&#xFF0C;&#x5982;&#x679C;&#x76F8;&#x7B49;&#x8FD4;&#x56DE; True &#x5426;&#x5219;&#x8FD4;&#x56DE; False&#x3002; |  (A == B) &#x4E3A; False |
+| !=  | &#x68C0;&#x67E5;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x4E0D;&#x76F8;&#x7B49;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x76F8;&#x7B49;&#x8FD4;&#x56DE; True &#x5426;&#x5219;&#x8FD4;&#x56DE; False&#x3002; |  (A != B) &#x4E3A; True |
+| &gt; | &#x68C0;&#x67E5;&#x5DE6;&#x8FB9;&#x503C;&#x662F;&#x5426;&#x5927;&#x4E8E;&#x53F3;&#x8FB9;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x8FD4;&#x56DE; True &#x5426;&#x5219;&#x8FD4;&#x56DE; False&#x3002; |  (A &gt; B) &#x4E3A; False |
+| &lt; | &#x68C0;&#x67E5;&#x5DE6;&#x8FB9;&#x503C;&#x662F;&#x5426;&#x5C0F;&#x4E8E;&#x53F3;&#x8FB9;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x8FD4;&#x56DE; True &#x5426;&#x5219;&#x8FD4;&#x56DE; False&#x3002; |  (A &lt; B) &#x4E3A; True |
+| &gt;=  | &#x68C0;&#x67E5;&#x5DE6;&#x8FB9;&#x503C;&#x662F;&#x5426;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x53F3;&#x8FB9;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x8FD4;&#x56DE; True &#x5426;&#x5219;&#x8FD4;&#x56DE; False&#x3002; |  (A &gt;= B) &#x4E3A; False |
+| &lt;=  | &#x68C0;&#x67E5;&#x5DE6;&#x8FB9;&#x503C;&#x662F;&#x5426;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x53F3;&#x8FB9;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x8FD4;&#x56DE; True &#x5426;&#x5219;&#x8FD4;&#x56DE; False&#x3002; | A &lt;= B) &#x4E3A; True |
+
+</details>
+
+<details>
+<summary>&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+  var a bool = true
+  var b bool = false
+  if ( a &amp;&amp; b ) {
+    fmt.Printf(&quot;&#x7B2C;&#x4E00;&#x884C; - &#x6761;&#x4EF6;&#x4E3A; true\n&quot; )
+  }
+  if ( a || b ) {
+    fmt.Printf(&quot;&#x7B2C;&#x4E8C;&#x884C; - &#x6761;&#x4EF6;&#x4E3A; true\n&quot; )
+  }
+  /* &#x4FEE;&#x6539; a &#x548C; b &#x7684;&#x503C; */
+  a = false
+  b = true
+  if ( a &amp;&amp; b ) {
+    fmt.Printf(&quot;&#x7B2C;&#x4E09;&#x884C; - &#x6761;&#x4EF6;&#x4E3A; true\n&quot; )
+  } else {
+    fmt.Printf(&quot;&#x7B2C;&#x4E09;&#x884C; - &#x6761;&#x4EF6;&#x4E3A; false\n&quot; )
+  }
+  if ( !(a &amp;&amp; b) ) {
+    fmt.Printf(&quot;&#x7B2C;&#x56DB;&#x884C; - &#x6761;&#x4EF6;&#x4E3A; true\n&quot; )
+  }
+}</code>
+
+&#x4E0B;&#x8868;&#x5217;&#x51FA;&#x4E86;&#x6240;&#x6709;Go&#x8BED;&#x8A00;&#x7684;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#x3002;&#x5047;&#x5B9A; A &#x503C;&#x4E3A; <code>True</code>&#xFF0C;B &#x503C;&#x4E3A; <code>False</code> d&#x3002;
+
+| &#x8FD0;&#x7B97;&#x7B26; | &#x63CF;&#x8FF0; | &#x5B9E;&#x4F8B; |
+| ---- | ---- | ---- |
+| &amp;&amp; | &#x903B;&#x8F91; AND &#x8FD0;&#x7B97;&#x7B26;&#x3002; &#x5982;&#x679C;&#x4E24;&#x8FB9;&#x7684;&#x64CD;&#x4F5C;&#x6570;&#x90FD;&#x662F; True&#xFF0C;&#x5219;&#x6761;&#x4EF6; True&#xFF0C;&#x5426;&#x5219;&#x4E3A; False&#x3002; | (A &amp;&amp; B) &#x4E3A; False |
+| || | &#x903B;&#x8F91; OR &#x8FD0;&#x7B97;&#x7B26;&#x3002; &#x5982;&#x679C;&#x4E24;&#x8FB9;&#x7684;&#x64CD;&#x4F5C;&#x6570;&#x6709;&#x4E00;&#x4E2A; True&#xFF0C;&#x5219;&#x6761;&#x4EF6; True&#xFF0C;&#x5426;&#x5219;&#x4E3A; False&#x3002;|    (A || B) &#x4E3A; True |
+| ! | &#x903B;&#x8F91; NOT &#x8FD0;&#x7B97;&#x7B26;&#x3002; &#x5982;&#x679C;&#x6761;&#x4EF6;&#x4E3A; True&#xFF0C;&#x5219;&#x903B;&#x8F91; NOT &#x6761;&#x4EF6; False&#xFF0C;&#x5426;&#x5219;&#x4E3A; True&#x3002; |    !(A &amp;&amp; B) &#x4E3A; True |
+
+</details>
+
+<details>
+<summary>&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+
+  var a uint = 60    /* 60 = 0011 1100 */  
+  var b uint = 13    /* 13 = 0000 1101 */
+  var c uint = 0          
+
+  c = a &amp; b       /* 12 = 0000 1100 */ 
+  fmt.Printf(&quot;&#x7B2C;&#x4E00;&#x884C; - c &#x7684;&#x503C;&#x4E3A; %d\n&quot;, c ) // &#x7B2C;&#x4E00;&#x884C; - c &#x7684;&#x503C;&#x4E3A; 12
+
+  c = a | b       /* 61 = 0011 1101 */
+  fmt.Printf(&quot;&#x7B2C;&#x4E8C;&#x884C; - c &#x7684;&#x503C;&#x4E3A; %d\n&quot;, c )  // &#x7B2C;&#x4E8C;&#x884C; - c &#x7684;&#x503C;&#x4E3A; 61
+
+  c = a ^ b       /* 49 = 0011 0001 */
+  fmt.Printf(&quot;&#x7B2C;&#x4E09;&#x884C; - c &#x7684;&#x503C;&#x4E3A; %d\n&quot;, c ) // &#x7B2C;&#x4E09;&#x884C; - c &#x7684;&#x503C;&#x4E3A; 49
+
+  c = a &lt;&lt; 2     /* 240 = 1111 0000 */
+  fmt.Printf(&quot;&#x7B2C;&#x56DB;&#x884C; - c &#x7684;&#x503C;&#x4E3A; %d\n&quot;, c ) // &#x7B2C;&#x56DB;&#x884C; - c &#x7684;&#x503C;&#x4E3A; 240
+
+  c = a &gt;&gt; 2     /* 15 = 0000 1111 */
+  fmt.Printf(&quot;&#x7B2C;&#x4E94;&#x884C; - c &#x7684;&#x503C;&#x4E3A; %d\n&quot;, c )  // &#x7B2C;&#x4E94;&#x884C; - c &#x7684;&#x503C;&#x4E3A; 15
+}</code>
+
+Go &#x8BED;&#x8A00;&#x652F;&#x6301;&#x7684;&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;&#x5982;&#x4E0B;&#x8868;&#x6240;&#x793A;&#x3002;&#x5047;&#x5B9A; A &#x4E3A;60&#xFF0C;B &#x4E3A;13&#xFF1A;
+
+| &#x8FD0;&#x7B97;&#x7B26; | &#x63CF;&#x8FF0; | &#x5B9E;&#x4F8B; |
+| ---- | ---- | ---- |
+| &amp; | &#x6309;&#x4F4D;&#x4E0E;&#x8FD0;&#x7B97;&#x7B26;&quot;&amp;&quot;&#x662F;&#x53CC;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;&#x3002; &#x5176;&#x529F;&#x80FD;&#x662F;&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x7684;&#x4E24;&#x6570;&#x5404;&#x5BF9;&#x5E94;&#x7684;&#x4E8C;&#x8FDB;&#x4F4D;&#x76F8;&#x4E0E;&#x3002; |    (A &amp; B) &#x7ED3;&#x679C;&#x4E3A; 12, &#x4E8C;&#x8FDB;&#x5236;&#x4E3A; 0000 1100 |
+| | | &#x6309;&#x4F4D;&#x6216;&#x8FD0;&#x7B97;&#x7B26; | &#x662F;&#x53CC;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;&#x3002; &#x5176;&#x529F;&#x80FD;&#x662F;&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x7684;&#x4E24;&#x6570;&#x5404;&#x5BF9;&#x5E94;&#x7684;&#x4E8C;&#x8FDB;&#x4F4D;&#x76F8;&#x6216;&#x3002; |    (A | B) &#x7ED3;&#x679C;&#x4E3A; 61, &#x4E8C;&#x8FDB;&#x5236;&#x4E3A; 0011 1101 |
+| ^ | &#x6309;&#x4F4D;&#x5F02;&#x6216;&#x8FD0;&#x7B97;&#x7B26;&quot;^&quot;&#x662F;&#x53CC;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;&#x3002; &#x5176;&#x529F;&#x80FD;&#x662F;&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x7684;&#x4E24;&#x6570;&#x5404;&#x5BF9;&#x5E94;&#x7684;&#x4E8C;&#x8FDB;&#x4F4D;&#x76F8;&#x5F02;&#x6216;&#xFF0C;&#x5F53;&#x4E24;&#x5BF9;&#x5E94;&#x7684;&#x4E8C;&#x8FDB;&#x4F4D;&#x76F8;&#x5F02;&#x65F6;&#xFF0C;&#x7ED3;&#x679C;&#x4E3A;1&#x3002; |    (A ^ B) &#x7ED3;&#x679C;&#x4E3A; 49, &#x4E8C;&#x8FDB;&#x5236;&#x4E3A; 0011 0001 |
+| &lt;&lt; | &#x5DE6;&#x79FB;&#x8FD0;&#x7B97;&#x7B26;&quot;&lt;&lt;&quot;&#x662F;&#x53CC;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;&#x3002;&#x5DE6;&#x79FB;n&#x4F4D;&#x5C31;&#x662F;&#x4E58;&#x4EE5;2&#x7684;n&#x6B21;&#x65B9;&#x3002; &#x5176;&#x529F;&#x80FD;&#x628A;&quot;&lt;&lt;&quot;&#x5DE6;&#x8FB9;&#x7684;&#x8FD0;&#x7B97;&#x6570;&#x7684;&#x5404;&#x4E8C;&#x8FDB;&#x4F4D;&#x5168;&#x90E8;&#x5DE6;&#x79FB;&#x82E5;&#x5E72;&#x4F4D;&#xFF0C;&#x7531;&quot;&lt;&lt;&quot;&#x53F3;&#x8FB9;&#x7684;&#x6570;&#x6307;&#x5B9A;&#x79FB;&#x52A8;&#x7684;&#x4F4D;&#x6570;&#xFF0C;&#x9AD8;&#x4F4D;&#x4E22;&#x5F03;&#xFF0C;&#x4F4E;&#x4F4D;&#x8865;0&#x3002; | A &lt;&lt; 2 &#x7ED3;&#x679C;&#x4E3A; 240 &#xFF0C;&#x4E8C;&#x8FDB;&#x5236;&#x4E3A; 1111 0000 |
+| &gt;&gt; | &#x53F3;&#x79FB;&#x8FD0;&#x7B97;&#x7B26;&quot;&gt;&gt;&quot;&#x662F;&#x53CC;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;&#x3002;&#x53F3;&#x79FB;n&#x4F4D;&#x5C31;&#x662F;&#x9664;&#x4EE5;2&#x7684;n&#x6B21;&#x65B9;&#x3002; &#x5176;&#x529F;&#x80FD;&#x662F;&#x628A;&quot;&gt;&gt;&quot;&#x5DE6;&#x8FB9;&#x7684;&#x8FD0;&#x7B97;&#x6570;&#x7684;&#x5404;&#x4E8C;&#x8FDB;&#x4F4D;&#x5168;&#x90E8;&#x53F3;&#x79FB;&#x82E5;&#x5E72;&#x4F4D;&#xFF0C;&quot;&gt;&gt;&quot;&#x53F3;&#x8FB9;&#x7684;&#x6570;&#x6307;&#x5B9A;&#x79FB;&#x52A8;&#x7684;&#x4F4D;&#x6570;&#x3002;| A &gt;&gt; 2 &#x7ED3;&#x679C;&#x4E3A; 15 &#xFF0C;&#x4E8C;&#x8FDB;&#x5236;&#x4E3A; 0000 1111 |
+
+</details>
+
+<details>
+<summary>&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+  var a int = 21
+  var c int
+
+  c =  a
+  fmt.Printf(&quot;&#x7B2C; 1 &#x884C; - =  &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = %d\n&quot;, c )
+  // &#x7B2C; 1 &#x884C; - =  &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = 21
+  c +=  a
+  fmt.Printf(&quot;&#x7B2C; 2 &#x884C; - += &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = %d\n&quot;, c )
+  // &#x7B2C; 2 &#x884C; - += &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = 42
+  c -=  a
+  fmt.Printf(&quot;&#x7B2C; 3 &#x884C; - -= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = %d\n&quot;, c )
+  // &#x7B2C; 3 &#x884C; - -= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = 21
+  c *=  a
+  fmt.Printf(&quot;&#x7B2C; 4 &#x884C; - *= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = %d\n&quot;, c )
+  // &#x7B2C; 4 &#x884C; - *= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = 441
+  c /=  a
+  fmt.Printf(&quot;&#x7B2C; 5 &#x884C; - /= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = %d\n&quot;, c )
+  // &#x7B2C; 5 &#x884C; - /= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = 21
+  c  = 200; 
+  c &lt;&lt;=  2
+  fmt.Printf(&quot;&#x7B2C; 6 &#x884C;  - &lt;&lt;= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = %d\n&quot;, c )
+  // &#x7B2C; 6 &#x884C;  - &lt;&lt;= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = 800
+  c &gt;&gt;=  2
+  fmt.Printf(&quot;&#x7B2C; 7 &#x884C; - &gt;&gt;= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = %d\n&quot;, c )
+  // &#x7B2C; 7 &#x884C; - &gt;&gt;= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = 200
+  c &amp;=  2
+  fmt.Printf(&quot;&#x7B2C; 8 &#x884C; - &amp;= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = %d\n&quot;, c )
+  // &#x7B2C; 8 &#x884C; - &amp;= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = 0
+  c ^=  2
+  fmt.Printf(&quot;&#x7B2C; 9 &#x884C; - ^= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = %d\n&quot;, c )
+  // &#x7B2C; 9 &#x884C; - ^= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = 2
+  c |=  2
+  fmt.Printf(&quot;&#x7B2C; 10 &#x884C; - |= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = %d\n&quot;, c )
+  // &#x7B2C; 10 &#x884C; - |= &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B;&#xFF0C;c &#x503C;&#x4E3A; = 2
+}</code>
+
+| &#x8FD0;&#x7B97;&#x7B26; | &#x63CF;&#x8FF0; | &#x5B9E;&#x4F8B; |
+| ---- | ---- | ---- |
+| = | &#x7B80;&#x5355;&#x7684;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x5C06;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x8D4B;&#x7ED9;&#x4E00;&#x4E2A;&#x5DE6;&#x503C;s | C = A + B &#x5C06; A + B &#x8868;&#x8FBE;&#x5F0F;&#x7ED3;&#x679C;&#x8D4B;&#x503C;&#x7ED9; C |
+| += | &#x76F8;&#x52A0;&#x540E;&#x518D;&#x8D4B;&#x503C;s | C += A &#x7B49;&#x4E8E; C = C + A |
+| -= | &#x76F8;&#x51CF;&#x540E;&#x518D;&#x8D4B;&#x503C;s | C -= A &#x7B49;&#x4E8E; C = C - A |
+| <em>= | &#x76F8;&#x4E58;&#x540E;&#x518D;&#x8D4B;&#x503C;s | C </em>= A &#x7B49;&#x4E8E; C = C * A |
+| /= | &#x76F8;&#x9664;&#x540E;&#x518D;&#x8D4B;&#x503C;s | C /= A &#x7B49;&#x4E8E; C = C / A |
+| %= | &#x6C42;&#x4F59;&#x540E;&#x518D;&#x8D4B;&#x503C;s | C %= A &#x7B49;&#x4E8E; C = C % A |
+| &lt;&lt;= | &#x5DE6;&#x79FB;&#x540E;&#x8D4B;&#x503C;s | C &lt;&lt;= 2 &#x7B49;&#x4E8E; C = C &lt;&lt; 2 |
+| &gt;&gt;= | &#x53F3;&#x79FB;&#x540E;&#x8D4B;&#x503C;s | C &gt;&gt;= 2 &#x7B49;&#x4E8E; C = C &gt;&gt; 2 |
+| &amp;= | &#x6309;&#x4F4D;&#x4E0E;&#x540E;&#x8D4B;&#x503C;s | C &amp;= 2 &#x7B49;&#x4E8E; C = C &amp; 2 |
+| ^= | &#x6309;&#x4F4D;&#x5F02;&#x6216;&#x540E;&#x8D4B;&#x503C;s | C ^= 2 &#x7B49;&#x4E8E; C = C ^ 2 |
+| |= | &#x6309;&#x4F4D;&#x6216;&#x540E;&#x8D4B;&#x503C;s | C |= 2 &#x7B49;&#x4E8E; C = C | 2 |
+
+</details>
+
+<details>
+<summary>&#x5176;&#x4ED6;&#x8FD0;&#x7B97;&#x7B26;</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+  var a int = 4
+  var b int32
+  var c float32
+  var ptr *int
+
+  /* &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B; */
+  fmt.Printf(&quot;&#x7B2C; 1 &#x884C; - a &#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x4E3A; = %T\n&quot;, a ); // &#x7B2C; 1 &#x884C; - a &#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x4E3A; = int
+  fmt.Printf(&quot;&#x7B2C; 2 &#x884C; - b &#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x4E3A; = %T\n&quot;, b ); // &#x7B2C; 2 &#x884C; - b &#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x4E3A; = int32
+  fmt.Printf(&quot;&#x7B2C; 3 &#x884C; - c &#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x4E3A; = %T\n&quot;, c ); // &#x7B2C; 3 &#x884C; - c &#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x4E3A; = float32
+
+  /*  &amp; &#x548C; * &#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x4F8B; */
+  ptr = &amp;a    /* &apos;ptr&apos; &#x5305;&#x542B;&#x4E86; &apos;a&apos; &#x53D8;&#x91CF;&#x7684;&#x5730;&#x5740; */
+  fmt.Printf(&quot;a &#x7684;&#x503C;&#x4E3A;  %d\n&quot;, a);   // a &#x7684;&#x503C;&#x4E3A;  4
+  fmt.Printf(&quot;*ptr &#x4E3A; %d\n&quot;, *ptr); // *ptr &#x4E3A; 4
+}</code>
+
+| &#x8FD0;&#x7B97;&#x7B26; | &#x63CF;&#x8FF0; | &#x5B9E;&#x4F8B; |
+| ---- | ---- | ---- |
+| &amp; | &#x8FD4;&#x56DE;&#x53D8;&#x91CF;&#x5B58;&#x50A8;&#x5730;&#x5740; | &amp;a; &#x5C06;&#x7ED9;&#x51FA;&#x53D8;&#x91CF;&#x7684;&#x5B9E;&#x9645;&#x5730;&#x5740;&#x3002; |
+| <em> | &#x6307;&#x9488;&#x53D8;&#x91CF;&#x3002; | </em>a; &#x662F;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x53D8;&#x91CF; |
+
+</details>
+
+<details>
+<summary>&#x8FD0;&#x7B97;&#x7B26;&#x4F18;&#x5148;&#x7EA7;</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+  var a int = 20
+  var b int = 10
+  var c int = 15
+  var d int = 5
+  var e int;
+  // &#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x62EC;&#x53F7;&#x6765;&#x4E34;&#x65F6;&#x63D0;&#x5347;&#x67D0;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x6574;&#x4F53;&#x8FD0;&#x7B97;&#x4F18;&#x5148;&#x7EA7;&#x3002;
+  e = (a + b) * c / d;      // ( 30 * 15 ) / 5
+  fmt.Printf(&quot;(a + b) * c / d &#x7684;&#x503C;&#x4E3A; : %d\n&quot;,  e );
+  e = ((a + b) * c) / d;    // (30 * 15 ) / 5
+  fmt.Printf(&quot;((a + b) * c) / d &#x7684;&#x503C;&#x4E3A;  : %d\n&quot; ,  e );
+  e = (a + b) * (c / d);   // (30) * (15/5)
+  fmt.Printf(&quot;(a + b) * (c / d) &#x7684;&#x503C;&#x4E3A;  : %d\n&quot;,  e );
+  e = a + (b * c) / d;     //  20 + (150/5)
+  fmt.Printf(&quot;a + (b * c) / d &#x7684;&#x503C;&#x4E3A;  : %d\n&quot; ,  e );  
+}</code>
+
+&#x6709;&#x4E9B;&#x8FD0;&#x7B97;&#x7B26;&#x62E5;&#x6709;&#x8F83;&#x9AD8;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x4E8C;&#x5143;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x8FD0;&#x7B97;&#x65B9;&#x5411;&#x5747;&#x662F;&#x4ECE;&#x5DE6;&#x81F3;&#x53F3;&#x3002;&#x4E0B;&#x8868;&#x5217;&#x51FA;&#x4E86;&#x6240;&#x6709;&#x8FD0;&#x7B97;&#x7B26;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x7531;&#x4E0A;&#x81F3;&#x4E0B;&#x4EE3;&#x8868;&#x4F18;&#x5148;&#x7EA7;&#x7531;&#x9AD8;&#x5230;&#x4F4E;&#xFF1A;
+
+| &#x4F18;&#x5148;&#x7EA7; | &#x8FD0;&#x7B97;&#x7B26; |
+| ---- | ---- |
+| 7 | ^ ! |
+| 6 | * / % &lt;&lt; &gt;&gt; &amp; &amp;^ |
+| 5 | + - | ^ |
+| 4 | == != &lt; &lt;= &gt;= &gt; |
+| 3 | &lt;- |
+| 2 | &amp;&amp; |
+| 1 | || |
+
+</details>
+
+<h2 id="t8&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x8BED;&#x53E5;">&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x8BED;&#x53E5; <a href="#t8&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x8BED;&#x53E5;"> # </a></h2>
+<details>
+<summary>for &#x5FAA;&#x73AF;&#x8BED;&#x53E5;</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+  sum := 0
+  // &#x5982;&#x679C;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x53D8;&#x4E3A; false&#xFF0C;&#x90A3;&#x4E48;&#x8FED;&#x4EE3;&#x5C06;&#x7EC8;&#x6B62;&#x3002;
+  for i := 0; i &lt; 10; i++ {
+    sum += i
+  }
+  fmt.Println(sum)
+
+  // &#x5FAA;&#x73AF;&#x521D;&#x59CB;&#x5316;&#x8BED;&#x53E5;&#x548C;&#x540E;&#x7F6E;&#x8BED;&#x53E5;&#x90FD;&#x662F;&#x53EF;&#x9009;&#x7684;&#x3002;
+  // for &#x662F; Go &#x7684; &#x201C;while&#x201D;
+  // &#x57FA;&#x4E8E;&#x6B64;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x5206;&#x53F7;&#xFF1A;C &#x7684; while &#x5728; Go &#x4E2D;&#x53EB;&#x505A; for &#x3002;
+  // &#x5982;&#x679C;&#x7701;&#x7565;&#x4E86;&#x5FAA;&#x73AF;&#x6761;&#x4EF6;&#xFF0C;&#x5FAA;&#x73AF;&#x5C31;&#x4E0D;&#x4F1A;&#x7ED3;&#x675F;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x7528;&#x66F4;&#x7B80;&#x6D01;&#x5730;&#x5F62;&#x5F0F;&#x8868;&#x8FBE;&#x6B7B;&#x5FAA;&#x73AF;&#x3002;
+  sum2 := 1
+  for ; sum2 &lt; 1000; {
+    sum2 += sum2
+  }
+  fmt.Println(sum2)
+}</code>
+&#x57FA;&#x672C;&#x7684; for &#x5FAA;&#x73AF;&#x5305;&#x542B;&#x4E09;&#x4E2A;&#x7531;&#x5206;&#x53F7;&#x5206;&#x5F00;&#x7684;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#xFF1A;
+
+1. &#x521D;&#x59CB;&#x5316;&#x8BED;&#x53E5;&#xFF1A;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#x6267;&#x884C;&#x524D;&#x88AB;&#x6267;&#x884C;
+1. &#x5FAA;&#x73AF;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;&#x6BCF;&#x8F6E;&#x8FED;&#x4EE3;&#x5F00;&#x59CB;&#x524D;&#x88AB;&#x6C42;&#x503C;
+1. &#x540E;&#x7F6E;&#x8BED;&#x53E5;&#xFF1A;&#x6BCF;&#x8F6E;&#x8FED;&#x4EE3;&#x540E;&#x88AB;&#x6267;&#x884C;
+
+</details>
+
+<details>
+<summary>if &#x8BED;&#x53E5;</summary>
+
+<code>go
+package main
+import (
+  &quot;fmt&quot;
+  &quot;math&quot;
+)
+func sqrt(x float64) string {
+  if x &lt; 0 {
+    return sqrt(-x) + &quot;i&quot;
+  }
+  return fmt.Sprint(math.Sqrt(x))
+}
+func main() {
+  fmt.Println(sqrt(2), sqrt(-4))
+}</code>
+
+&#x5C31;&#x50CF; for &#x5FAA;&#x73AF;&#x4E00;&#x6837;&#xFF0C;Go &#x7684; if &#x8BED;&#x53E5;&#x4E5F;&#x4E0D;&#x8981;&#x6C42;&#x7528; ( ) &#x5C06;&#x6761;&#x4EF6;&#x62EC;&#x8D77;&#x6765;&#xFF0C;&#x540C;&#x65F6;&#xFF0C; { } &#x8FD8;&#x662F;&#x5FC5;&#x987B;&#x6709;&#x7684;&#x3002;
+
+<strong>if &#x7684;&#x4FBF;&#x6377;&#x8BED;&#x53E5;</strong>
+
+<code>go
+package main
+import (
+  &quot;fmt&quot;
+  &quot;math&quot;
+)
+
+func pow(x, n, lim float64) float64 {
+  if v := math.Pow(x, n); v &lt; lim {
+    return v
+  }
+  return lim
+}
+func main() {
+  fmt.Println(
+    pow(3, 2, 10),
+    pow(3, 3, 20),
+  )
+}</code>
+
+</details>
+
+<details>
+<summary>if &#x548C; else &#x8BED;&#x53E5;</summary>
+
+<code>go
+package main
+import (
+  &quot;fmt&quot;
+  &quot;math&quot;
+)
+func pow(x, n, lim float64) float64 {
+  if v := math.Pow(x, n); v &lt; lim {
+    return v
+  } else {
+    fmt.Printf(&quot;%g &gt;= %g\n&quot;, v, lim)
+  }
+  // &#x8FD9;&#x91CC;&#x5F00;&#x59CB;&#x5C31;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; v &#x4E86;
+  return lim
+}
+
+func main() {
+  // &#x4E24;&#x4E2A; pow &#x8C03;&#x7528;&#x90FD;&#x5728; main &#x8C03;&#x7528; fmt.Println &#x524D;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x4E86;&#x3002;
+  fmt.Println(
+    pow(3, 2, 10),
+    pow(3, 3, 20),
+  )
+}</code>
+
+&#x5728; if &#x7684;&#x4FBF;&#x6377;&#x8BED;&#x53E5;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x5BF9;&#x5E94;&#x7684; else &#x5757;&#x4E2D;&#x4F7F;&#x7528;&#x3002;
+
+</details>
+
+<details>
+<summary>switch &#x8BED;&#x53E5;</summary>
+
+<code>go
+package main
+import (
+  &quot;fmt&quot;
+  &quot;runtime&quot;
+)
+func main() {
+  fmt.Print(&quot;Go runs on &quot;)
+  switch os := runtime.GOOS; os {
+    case &quot;darwin&quot;:
+      fmt.Println(&quot;OS X.&quot;)
+    case &quot;linux&quot;:
+      fmt.Println(&quot;Linux.&quot;)
+    default:
+      // freebsd, openbsd,
+      // plan9, windows...
+      fmt.Printf(&quot;%s.&quot;, os)
+  }
+}</code>
+
+&#x5728; if &#x7684;&#x4FBF;&#x6377;&#x8BED;&#x53E5;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x5BF9;&#x5E94;&#x7684; else &#x5757;&#x4E2D;&#x4F7F;&#x7528;&#x3002;
+
+<strong>switch &#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#xFF1A;</strong> &#x6761;&#x4EF6;&#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x5F53;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x65F6;&#x5019;&#x505C;&#x6B62;&#x3002;
+
+<code>go
+package main
+import (
+  &quot;fmt&quot;
+  &quot;time&quot;
+)
+func main() {
+  fmt.Println(&quot;When&apos;s Saturday?&quot;)
+  today := time.Now().Weekday()
+  switch time.Saturday {
+    case today + 0:
+      fmt.Println(&quot;Today.&quot;)
+    case today + 1:
+      fmt.Println(&quot;Tomorrow.&quot;)
+    case today + 2:
+      fmt.Println(&quot;In two days.&quot;)
+    default:
+      fmt.Println(&quot;Too far away.&quot;)
+  }
+}</code>
+
+<strong>&#x6CA1;&#x6709;&#x6761;&#x4EF6;&#x7684; switch &#x540C; switch true &#x4E00;&#x6837;&#x3002;</strong>
+
+<code>go
+package main
+import (
+  &quot;fmt&quot;
+  &quot;time&quot;
+)
+func main() {
+  t := time.Now()
+  switch {
+    case t.Hour() &lt; 12:
+      fmt.Println(&quot;Good morning!&quot;)
+    case t.Hour() &lt; 17:
+      fmt.Println(&quot;Good afternoon.&quot;)
+    default:
+      fmt.Println(&quot;Good evening.&quot;)
+  }
+}</code>
+
+</details>
+
+<details>
+<summary>defer &#x8BED;&#x53E5;</summary>
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+  // 2. &#x5728;&#x8F93;&#x51FA; world
+  defer fmt.Println(&quot;world&quot;)
+  // 1. &#x5148;&#x8F93;&#x51FA; hello
+  fmt.Println(&quot;hello&quot;)
+}</code>
+
+&gt; defer &#x8BED;&#x53E5;&#x4F1A;&#x5EF6;&#x8FDF;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x76F4;&#x5230;&#x4E0A;&#x5C42;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x3002;
+&gt; &#x5EF6;&#x8FDF;&#x8C03;&#x7528;&#x7684;&#x53C2;&#x6570;&#x4F1A;&#x7ACB;&#x523B;&#x751F;&#x6210;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x4E0A;&#x5C42;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x524D;&#x51FD;&#x6570;&#x90FD;&#x4E0D;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;
+
+<strong>defer &#x6808;</strong>
+
+&#x5EF6;&#x8FDF;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x88AB;&#x538B;&#x5165;&#x4E00;&#x4E2A;&#x6808;&#x4E2D;&#x3002;&#x5F53;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x65F6;&#xFF0C; &#x4F1A;&#x6309;&#x7167;&#x540E;&#x8FDB;&#x5148;&#x51FA;&#x7684;&#x987A;&#x5E8F;&#x8C03;&#x7528;&#x88AB;&#x5EF6;&#x8FDF;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x3002;
+
+<code>go
+package main
+import &quot;fmt&quot;
+func main() {
+  fmt.Println(&quot;counting&quot;)
+  for i := 0; i &lt; 10; i++ {
+    defer fmt.Println(i)
+  }
+  fmt.Println(&quot;done&quot;)
+}</code>
+
+&#x53EF;&#x4EE5;&#x8FD0;&#x884C;demo <a href="example/defer/defer.go">defer</a> &#x67E5;&#x770B;&#x6548;&#x679C;&#x3002;
+
+</details>
+
+<h2 id="t9&#x7ED3;&#x6784;&#x4F53;">&#x7ED3;&#x6784;&#x4F53; <a href="#t9&#x7ED3;&#x6784;&#x4F53;"> # </a></h2>
+<details>
+<summary>&#x7ED3;&#x6784;&#x4F53;&#x5B57;&#x6BB5;</summary>
+
+&#x7ED3;&#x6784;&#x4F53;&#x5B57;&#x6BB5;&#x4F7F;&#x7528;&#x70B9;&#x53F7;&#x6765;&#x8BBF;&#x95EE;&#x3002;
+
+<code>go
+package main
+import &quot;fmt&quot;
+type Vertex struct {
+  X int
+  Y int
+}
+func main() {
+  v := Vertex{1, 2}
+  v.X = 4
+  fmt.Println(v.X)
+}</code>
+
+</details>
+
+<details>
+<summary>&#x7ED3;&#x6784;&#x4F53;&#x6307;&#x9488;</summary>
+
+&#x7ED3;&#x6784;&#x4F53;&#x5B57;&#x6BB5;&#x4F7F;&#x7528;&#x70B9;&#x53F7;&#x6765;&#x8BBF;&#x95EE;&#x3002;
+
+<code>go
+package main
+import &quot;fmt&quot;
+type Vertex struct {
+  X int
+  Y int
+}
+func main() {
+  v := Vertex{1, 2}
+  p := &amp;v
+  p.X = 1e9
+  fmt.Println(v)
+}</code>
+
+</details>
+
+<details>
+<summary>&#x7ED3;&#x6784;&#x4F53;&#x6587;&#x6CD5;</summary>
+
+&gt; &#x7ED3;&#x6784;&#x4F53;&#x6587;&#x6CD5;&#x8868;&#x793A;&#x901A;&#x8FC7;&#x7ED3;&#x6784;&#x4F53;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x4F5C;&#x4E3A;&#x5217;&#x8868;&#x6765;&#x65B0;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x3002;
+&gt; &#x4F7F;&#x7528; Name: &#x8BED;&#x6CD5;&#x53EF;&#x4EE5;&#x4EC5;&#x5217;&#x51FA;&#x90E8;&#x5206;&#x5B57;&#x6BB5;&#x3002;&#xFF08;&#x5B57;&#x6BB5;&#x540D;&#x7684;&#x987A;&#x5E8F;&#x65E0;&#x5173;&#x3002;&#xFF09;<br>&gt; &#x7279;&#x6B8A;&#x7684;&#x524D;&#x7F00; &amp; &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x6307;&#x9488;&#x3002;
+
+<code>go
+package main
+import &quot;fmt&quot;
+type Vertex struct {
+  X int
+  Y int
+}
+func main() {
+  v := Vertex{1, 2}
+  p := &amp;v
+  p.X = 1e9
+  fmt.Println(v)
+}</code>
+
+</details>
+
+<h2 id="t10&#x8D44;&#x6E90;&#x5BFC;&#x822A;">&#x8D44;&#x6E90;&#x5BFC;&#x822A; <a href="#t10&#x8D44;&#x6E90;&#x5BFC;&#x822A;"> # </a></h2>
+<details>
+<summary>&#x5B98;&#x65B9;</summary>
+
+- <a href="http://play.golang.org">Playground</a>&#xFF1A;Go &#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5728;&#x7EBF;&#x8FD0;&#x884C;
+
+</details>
+
+<details>
+<summary>&#x56FD;&#x5185;&#x955C;&#x50CF;</summary>
+
+- <a href="http://tour.golangtc.com/">Go &#x6307;&#x5357;&#x56FD;&#x5185;&#x955C;&#x50CF;</a>
+- <a href="http://www.golangtc.com/download">Go &#x8BED;&#x8A00;&#x56FD;&#x5185;&#x4E0B;&#x8F7D;&#x955C;&#x50CF;</a>
+- <a href="http://docs.studygolang.com/">Go &#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#x56FD;&#x5185;&#x955C;&#x50CF;</a>
+
+</details>
+
+<details>
+<summary>Web &#x6846;&#x67B6;</summary>
+
+- <a href="https://go-macaron.com/">Macaron</a>&#xFF1A;&#x6A21;&#x5757;&#x5316; Web &#x6846;&#x67B6;
+- <a href="http://beego.me/">Beego</a>&#xFF1A;&#x91CD;&#x91CF;&#x7EA7; Web &#x6846;&#x67B6;
+- <a href="https://github.com/revel/revel">Revel</a>&#xFF1A;&#x8F83;&#x65E9;&#x6210;&#x719F;&#x7684;&#x91CD;&#x91CF;&#x7EA7; Web &#x6846;&#x67B6;
+- <a href="https://github.com/go-martini/martini">Martini</a>: &#x4E00;&#x4E2A;&#x5F3A;&#x5927;&#x4E3A;&#x4E86;&#x7F16;&#x5199;&#x6A21;&#x5757;&#x5316; Web &#x5E94;&#x7528;&#x800C;&#x751F;&#x7684; Go &#x8BED;&#x8A00;&#x6846;&#x67B6;
+
+</details>
+
+<details>
+<summary>ORM &#x4EE5;&#x53CA;&#x6570;&#x636E;&#x5E93;&#x9A71;&#x52A8;</summary>
+
+- <a href="https://github.com/go-xorm/xorm">xorm</a>&#xFF1A;&#x652F;&#x6301; MySQL&#x3001;PostgreSQL&#x3001;SQLite3 &#x4EE5;&#x53CA; MsSQL
+- <a href="http://labix.org/mgo">mgo</a>&#xFF1A;MongoDB &#x5B98;&#x65B9;&#x63A8;&#x8350;&#x9A71;&#x52A8;
+
+</details>
+
+<details>
+<summary>&#x8F85;&#x52A9;&#x7AD9;&#x70B9;</summary>
+
+- <a href="https://gowalker.org">Go Walker</a>&#xFF1A;Go &#x8BED;&#x8A00;&#x5728;&#x7EBF; API &#x6587;&#x6863;
+- <a href="http://gobuild.io/">gobuild.io</a>&#xFF1A;Go &#x8BED;&#x8A00;&#x5728;&#x7EBF;&#x4E8C;&#x8FDB;&#x5236;&#x7F16;&#x8BD1;&#x4E0E;&#x4E0B;&#x8F7D;
+- <a href="http://regoio.herokuapp.com/">Rego</a>&#xFF1A;Go &#x8BED;&#x8A00;&#x6B63;&#x5219;&#x5728;&#x7EBF;&#x6D4B;&#x8BD5;
+- <a href="https://gopm.io">gopm.io</a>&#xFF1A;&#x79D1;&#x5B66;&#x4E0B;&#x8F7D;&#x7B2C;&#x4E09;&#x65B9;&#x5305;
+
+</details>
+
+<details>
+<summary>&#x5176;&#x5B83;&#x6587;&#x7AE0;</summary>
+
+&gt; &#x6587;&#x7AE0;&#x8D44;&#x6E90;&#x6765;&#x6E90;&#x4E0E;Go&#x793E;&#x533A;&#x7684;<a href="https://gocn.io/topic/%E6%AF%8F%E6%97%A5%E6%96%B0%E9%97%BB">&#x6BCF;&#x65E5;&#x65B0;&#x95FB;</a>
+
+- <a href="https://outcrawl.com/image-recognition-api-go-tensorflow/">&#x4F7F;&#x7528;Go&#x548C;TensorFlow&#x6784;&#x5EFA;&#x56FE;&#x7247;&#x8BC6;&#x522B;API</a>
+- <a href="http://pp-qq.github.io/2017/10/18/go-c-atomic/">Golang C++11 &#x4E2D;&#x7684;&#x539F;&#x5B50;&#x64CD;&#x4F5C;&#x5BF9;&#x6BD4;</a>
+- <a href="http://weibo.com/ttarticle/p/show?id=2309614164586369582704&amp;u=1889019865&amp;m=4164582908028008&amp;cu=2278216581">Docker &#x955C;&#x50CF;&#x4F18;&#x5316;&#x4E0E;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</a>
+- <a href="https://www.nginx.com/blog/introduction-to-microservices/">&#x5FAE;&#x670D;&#x52A1;7&#x7BC7;&#x4ECB;&#x7ECD;</a>
+- <a href="https://blog.jetbrains.com/go/2017/10/18/gogland-eap-16-file-watcher-tons-of-new-inspections-smarter-navigate-to-test-and-more/">gogland eap 16 &#x53D1;&#x5E03;</a>
+- <a href="https://medium.com/@ljrudberg/working-on-the-go-team-at-google-917b2c8d35ff">&#x5728;Google Go team&#x5DE5;&#x4F5C;&#x4F53;&#x9A8C;</a>
+- <a href="https://blog.learngoprogramming.com/learn-go-programming-monthly-recap-a0b1e494393c">Go&#x5B66;&#x4E60;&#x4E00;&#x6708;&#x603B;&#x7ED3;</a>
+- <a href="https://chrisdodds.net/dirty-secrets-of-devops/">devops&#x7684;&#x80AE;&#x810F;&#x7684;&#x79D8;&#x5BC6;</a>
+- <a href="https://mp.weixin.qq.com/s/UMzq0Mt2_nm5pWn1Spba3Q">&#x4ECE;ELK&#x5230;EFK</a>
+- <a href="https://getstream.io/blog/switched-python-go/">&#x6211;&#x4EEC;&#x600E;&#x4E48;&#x4ECE;Python&#x5207;&#x6362;&#x5230;Go</a>
+- <a href="http://www.infoq.com/cn/presentations/exploration-practice-of-golang-micro-service-in-the-tencent-game-users">Golang &#x5FAE;&#x670D;&#x52A1;&#x5728;&#x817E;&#x8BAF;&#x6E38;&#x620F;&#x7528;&#x6237;&#x8FD0;&#x8425;&#x9886;&#x57DF;&#x7684;&#x63A2;&#x7D22;&#x53CA;&#x5B9E;&#x8DF5;</a>
+- <a href="https://medium.com/@brendanleglaunec/how-refactoring-my-c-application-into-a-go-library-made-it-better-in-every-way-b99aa15fcfdf">&#x5982;&#x4F55;&#x91CD;&#x6784;C++&#x9879;&#x76EE;&#x5230;Go</a>
+- <a href="https://gist.github.com/rushilgupta/228dfdf379121cb9426d5e90d34c5b96">Go&#x5E76;&#x53D1;&#x8BE6;&#x89E3;</a>
+- <a href="https://dzone.com/articles/golang-guide-a-list-of-top-golang-frameworks-ides">Go&#x6846;&#x67B6;&#x3001;IDE&#x548C;&#x5DE5;&#x5177;&#x96C6;&#x4ECB;&#x7ECD;</a>
+- <a href="https://www.youtube.com/watch?v=8IKxf98h65Y">Go&#x5F00;&#x53D1;&#x5927;&#x578B;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x7684;&#x597D;&#x4E0E;&#x574F;</a>
+- <a href="https://github.com/george518/PPGo_ApiAdmin">RESTFul&#x98CE;&#x683C;&#x7684;API&#x7BA1;&#x7406;&#x540E;&#x53F0;,&#x57FA;&#x4E8E;beego&#x548C;layui</a>
+- <a href="https://mp.weixin.qq.com/s/Ftd8pFVCrhtppvFjBNSF5Q">&#x963F;&#x91CC;&#x4E91;&#x57FA;&#x4E8E; Go &#x7684;&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x5206;&#x4EAB;</a>
+- <a href="http://www.54tianzhisheng.cn/2017/10/15/ElasticSearch-cluster-health-metrics/">ElasticSearch &#x96C6;&#x7FA4;&#x76D1;&#x63A7;</a>
+- <a href="https://blog.digitalocean.com/cthulhu-organizing-go-code-in-a-scalable-repo/">&#x7EC4;&#x7EC7;Go&#x4EE3;&#x7801;&#x5728;&#x4E00;&#x4E2A;&#x5927;&#x578B;repo&#x7ECF;&#x9A8C;&#x4E4B;&#x8C08;</a>
+- <a href="https://github.com/jbowes/oag">&#x57FA;&#x4E8E;openapi&#x6587;&#x6863;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x751F;&#x4EA7;&#x4EE3;&#x7801;&#x5DE5;&#x5177;</a>
+- <a href="https://zhuanlan.zhihu.com/p/30120861">&#x9ED1;&#x4E00;&#x4E0B;Go (&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4F5C;&#x8005;&#x4E0D;&#x7406;&#x89E3;Go&#x7684;interfaceO(&#x2229;_&#x2229;)O)</a>
+- <a href="https://medium.com/@shijuvar/building-distributed-systems-and-microservices-in-go-with-nats-streaming-d8b4baa633a2">&#x57FA;&#x4E8E;nats&#x7684;Go&#x5206;&#x5E03;&#x5F0F;&#x5FAE;&#x670D;&#x52A1;&#x7CFB;&#x7EDF;</a>
+- <a href="http://www.jianshu.com/p/138b4d267084">&#x6DF1;&#x5165;&#x6D45;&#x51FA; Raft - &#x57FA;&#x672C;&#x6982;&#x5FF5;</a>
+- <a href="http://www.zcfy.cc/article/restful-api-design-best-practices-in-a-nutshell-4388.html">RESTful API &#x8BBE;&#x8BA1;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</a>
+- <a href="https://dev.to/neilmadden/7-best-practices-for-json-web-tokens">&#x4E03;&#x4E2A;JWT&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</a>
+- <a href="https://cloud.tencent.com/community/article/649192">Go&#x8BED;&#x8A00;&#x4E09;&#x9A7E;&#x9A6C;&#x8F66;</a>
+- <a href="http://www.cnblogs.com/susufufu/p/7653579.html">&#x53CD;&#x5C04;&#x7684;&#x539F;&#x7406;&#x4E0E;&#x4F7F;&#x7528;&#x8BE6;&#x89E3;</a>
+- <a href="http://www.datadan.io/building-a-neural-net-from-scratch-in-go/">&#x4ECE;&#x96F6;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;</a>
+- <a href="https://medium.com/@Arafat./introducing-glot-the-plotting-library-for-golang-3133399948a1">glot&#x56FE;&#x6807;&#x5E93;&#x5E94;&#x7528;&#x5165;&#x95E8;</a>
+- <a href="https://speakerdeck.com/filosottile/calling-rust-from-go-without-cgo-at-gothamgo-2017">Go&#x5982;&#x4F55;&#x4E0D;&#x9002;&#x7528;CGO&#x8C03;&#x7528;rust</a>
+- <a href="https://medium.com/gopherjs/surprises-in-gopherjs-performance-4a0a49b04ecd">GopherJS &#x4EE4;&#x4EBA;&#x60CA;&#x8BB6;&#x7684;&#x6027;&#x80FD;&#x6539;&#x8FDB;</a>
+- <a href="https://go-review.googlesource.com/c/go/+/69091">Go 1.10 &#x7248;&#x672C;&#x5C06;&#x652F;&#x6301;&#x7F16;&#x8BD1;window dll</a>
+- <a href="https://dev.to/codehakase/how-i-learned-go-programming">&#x5982;&#x4F55;&#x5B66;&#x4E60;Go</a>
+- <a href="https://developers.redhat.com/blog/2017/08/02/organizing-microservices-modern-integration/">&#x5FAE;&#x670D;&#x52A1;&#x7EC4;&#x7EC7;</a>
+- <a href="https://mp.weixin.qq.com/s/7mrxUxuQlOxDKxB2HTZHIw">&#x73A9;&#x8F6C; Go Hack &#x4E4B;&#x5B98;&#x65B9;&#x653B;&#x7565; | &#x8D5B;&#x524D;&#x6307;&#x5357;</a>
+- <a href="http://blog.csdn.net/sinat_30800357/article/details/78178844">golang &#x6807;&#x51C6;&#x5E93;&#x95F4;&#x4F9D;&#x8D56;&#x7684;&#x53EF;&#x89C6;&#x5316;&#x5C55;&#x793A;</a>
+- <a href="http://blog.csdn.net/lastsweetop/article/details/78185713">golang&#x2014;&#x2014;glide&#x7684;&#x4F7F;&#x7528;&#x624B;&#x518C;</a>
+- <a href="https://github.com/EtixLabs/cameradar">hack CCTV&#x89C6;&#x9891;&#x5E93;</a>
+- <a href="https://medium.com/pantomath/how-we-use-grpc-to-build-a-client-server-system-in-go-dd20045fa1c2">&#x5982;&#x4F55;&#x4F7F;&#x7528;gRPC&#x5F00;&#x53D1;CS&#x7CFB;&#x7EDF;</a>
+- <a href="https://blog.fmpwizard.com/2017/09/29/memory-profiling-in-go/">Go&#x5185;&#x5B58;&#x8C03;&#x4F18;</a>
+- <a href="https://i6448038.github.io/2017/10/06/GolangDetailsTwo/">Go&#x5947;&#x8469;&#x70B9;</a>
+- <a href="https://dev.to/plutov/benchmarking-grpc-and-rest-in-go-565">gRPC&#x548C;RESTFul API&#x6027;&#x80FD;&#x5BF9;&#x6BD4;</a>
+- <a href="https://dzone.com/refcardz/an-overview-of-graphql">graphql&#x7684;&#x6982;&#x8FF0;</a>
+- <a href="https://reactdom.com/blog/go-books">2017&#x5E74;&#x5B66;&#x4E60;Go&#x7684;&#x89C6;&#x9891;&#x548C;&#x4E66;&#x7C4D;&#x96C6;&#x5408;</a>
+- <a href="https://github.com/oopsguy/microservices-from-design-to-deployment-chinese">&#x300A;&#x5FAE;&#x670D;&#x52A1;&#xFF1A;&#x4ECE;&#x8BBE;&#x8BA1;&#x5230;&#x90E8;&#x7F72;&#x300B;</a>
+- <a href="https://blog.alexellis.io/serverless-golang-with-openfaas/">&#x57FA;&#x4E8E;openfaas&#x7684;serverless&#x670D;&#x52A1;</a>
+- <a href="https://speakerdeck.com/filosottile/encrypting-the-internet-with-go-at-gophercon-2017">&#x4F7F;&#x7528;Go&#x52A0;&#x5BC6;&#x6574;&#x4E2A;&#x4E92;&#x8054;&#x7F51;</a>
+- <a href="https://speakerdeck.com/kavya719/go-run-race-under-the-hood">go run -race&#x7684;&#x5E95;&#x5C42;&#x5B9E;&#x73B0;</a>
+- <a href="https://speakerdeck.com/chimeracoder/monitoring-and-tracing-your-go-services-gothamgo-2017">&#x76D1;&#x63A7;&#x548C;&#x8FFD;&#x8E2A;Go&#x670D;&#x52A1;</a>
+- <a href="https://blogs.dropbox.com/tech/2017/09/optimizing-web-servers-for-high-throughput-and-low-latency/">&#x5982;&#x4F55;&#x4F18;&#x5316;&#x9AD8;&#x8D1F;&#x8F7D;&#x670D;&#x52A1;</a>
+- <a href="https://blog.learngoprogramming.com/about-go-language-an-overview-f0bee143597c">Go&#x6982;&#x8FF0;</a>
+- <a href="https://hackernoon.com/the-beauty-of-go-98057e3f0a7d">Go&#x4E4B;&#x7F8E;</a>
+- <a href="https://jvns.ca/blog/2017/10/05/reasons-kubernetes-is-cool/">k8s&#x5F88;&#x9177;&#x7684;&#x539F;&#x56E0;</a>
+- <a href="https://github.com/fnproject/fn">Go&#x5B9E;&#x73B0;&#x7684;FaaS</a>
+- <a href="https://github.com/dhax/go-base">&#x5FEB;&#x901F;&#x5F00;&#x53D1;&#x57FA;&#x4E8E;pg&#x7684;API&#x539F;&#x578B;&#x5DE5;&#x5177;</a>
+- <a href="http://www.agiratech.com/building-high-performance-apis-go-grpc/">&#x4F7F;&#x7528;Go+gRPC&#x6253;&#x9020;&#x9AD8;&#x6027;&#x80FD;API</a>
+- <a href="http://agniva.me/go/2017/10/03/improving-log-write.html">log&#x91CD;&#x8D1F;&#x8F7D;&#x5E94;&#x7528;&#x7684;&#x5185;&#x5B58;&#x4F18;&#x5316;</a>
+- <a href="https://www.writeingo.com/blog/important-go-interfaces/">&#x6BCF;&#x4E2A;Gopher&#x90FD;&#x5E94;&#x8BE5;&#x503C;&#x5F97;&#x5173;&#x6CE8;&#x7684;Go interface</a>
+- <a href="https://honeycomb.io/blog/2017/08/golang-observability-using-the-new-pprof-web-ui-to-debug-memory-usage/">&#x53EF;&#x89C6;&#x5316;&#x8C03;&#x8BD5;Go&#x7A0B;&#x5E8F;</a>
+- <a href="https://mp.weixin.qq.com/s/G4KdOwoKNyTYOW3J3Wk7qA">&#x8001;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x611F;&#x6168;</a>
+- <a href="https://sbinet.github.io/posts/2017-10-04-intro-to-stats-with-gonum/">&#x5982;&#x4F55;&#x4F7F;&#x7528;gonum&#x8FDB;&#x884C;&#x6570;&#x636E;&#x7EDF;&#x8BA1;</a>
+- <a href="https://blog.lab99.org/post/golang-2017-10-04-video-understanding-channels.html">&#x6DF1;&#x5165;&#x7406;&#x89E3;channel&#x7B14;&#x8BB0;</a>
+- <a href="https://scene-si.org/2017/10/04/elegant-code-and-go/">&#x4F7F;&#x7528;Go&#x5199;&#x51FA;&#x4F18;&#x96C5;&#x7684;&#x4EE3;&#x7801;</a>
+- <a href="https://dzone.com/articles/making-the-jump-to-go-a-guide-for-java-developers">Java&#x5F00;&#x53D1;&#x8005;&#x7684;Go&#x6307;&#x5357;</a>
+- <a href="https://groups.google.com/forum/m/#!topic/golang-nuts/sHfMg4gZNps">Go 1.8.4 &#x548C;Go 1.9.1 &#x53D1;&#x5E03;</a>
+- <a href="https://github.com/google/skylark">Google&#x5F00;&#x6E90;&#x7684;Go&#x5B9E;&#x73B0;&#x7684;&#x914D;&#x7F6E;&#x8BED;&#x8A00;</a>
+- <a href="https://github.com/jolestar/kubernetes-complete-course">&#x8001;&#x738B;&#x51FA;&#x54C1;&#x7684;k8s&#x5B8C;&#x6574;&#x6559;&#x7A0B;</a>
+- <a href="https://github.com/milochristiansen/lua">Go&#x5B9E;&#x73B0;&#x7684;lua VM</a>
+- <a href="https://semaphoreci.com/community/tutorials/writing-and-testing-an-event-sourcing-microservice-with-kafka-and-go">&#x57FA;&#x4E8E;kafka&#x548C;Go&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x5B9E;&#x73B0;&#x548C;&#x6D4B;&#x8BD5;</a>
+- <a href="https://medium.com/@rakyll/calling-go-from-swift-be88709942c3">swift&#x8C03;&#x7528;Go&#x5B9E;&#x4F8B;</a>
+- <a href="https://sphereinc.com/go-for-rails-developers/">Go for rails</a>
+- <a href="https://medium.com/go-walkthrough/go-walkthrough-fmt-55a14bbbfc53">fmt&#x5305;&#x8BE6;&#x89E3;</a>
+- <a href="http://www.jianshu.com/p/f1781fc452f6">&#x57FA;&#x4E8E; Linux bcc/BPF &#x5B9E;&#x73B0; Go &#x7A0B;&#x5E8F;&#x52A8;&#x6001;&#x8FFD;&#x8E2A;</a>
+- <a href="https://getstream.io/blog/how-we-test-go-at-stream/">&#x5982;&#x4F55;&#x6D4B;&#x8BD5;Go&#x7A0B;&#x5E8F;</a>
+- <a href="https://www.youtube.com/watch?v=DJ4d_PZ6Gns">Go&#x5982;&#x4F55;&#x6539;&#x5584;&#x6027;&#x80FD;</a>
+
+</details>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

@@ -10,20 +10,21 @@ install:
 #before_script:
 
 script:
-  - idoc build
+  - idoc clean && idoc build
 
 after_script:
+  - mkdir public && cp index.html public\ && cp -r html\ public\ && cp -r static\ public\ && cp idoc-logo.svg public\ && cp -r img\ public\ && cp CNAME public\ && cd public\
   - git init
   - git config user.name "poetries"
   - git config user.email "jingguanliuye@gmail.com"
   - git add -A
   - git commit -m "Update docs"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:dev
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
 # E: Build LifeCycle
 
 branches:
   only:
-    - gh-pages
+    - dev
 env:
  global:
    - GH_REF: github.com/poetries/handbook.git

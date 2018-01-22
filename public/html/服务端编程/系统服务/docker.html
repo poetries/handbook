@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handbook</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            <img src="../../../idoc-logo.svg">
+        
+    </div>
+<ul><li><a href="../../../index.html">Git常用命令</a></li><li><a href="#"><span></span>前端</a><ul><li><a href="#"><span></span>Javascript</a><ul><li><a href="#"><span></span>RN</a><ul><li><a href="../../../html/前端/Javascript/RN/React-native Android环境搭建.html">React-native Android环境搭建</a></li></ul></li><li><a href="../../../html/前端/Javascript/思维导图.html">思维导图</a></li><li><a href="../../../html/前端/Javascript/正则表达式.html">正则表达式</a></li><li><a href="../../../html/前端/Javascript/轻量高效的开源JavaScript插件和库.html">轻量高效的开源JavaScript插件和库</a></li></ul></li></ul></li><li><a href="#"><span></span>服务端编程</a><ul><li><a href="#"><span></span>数据库</a><ul><li><a href="../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li><li><a href="#"><span></span>系统服务</a><ul><li class="active"><a href="../../../html/服务端编程/系统服务/docker.html">docker</a></li><li><a href="#"><span></span>shell</a><ul><li><a href="../../../html/服务端编程/系统服务/shell/shell-regex.html">shell-regex</a></li><li><a href="../../../html/服务端编程/系统服务/shell/Shell.html">Shell</a></li></ul></li><li><a href="../../../html/服务端编程/系统服务/Nginx.html">Nginx</a></li></ul></li><li><a href="#"><span></span>Linux</a><ul></ul></li><li><a href="#"><span></span>数据库</a><ul><li><a href="#"><span></span>mysql</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/21-minutes-MySQL-basic-entry.html">21-minutes-MySQL-basic-entry</a></li><li><a href="../../../html/服务端编程/数据库/mysql/awesome-mysql.html">awesome-mysql</a></li><li><a href="#"><span></span>chapter1</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.1.html">1.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.2.html">1.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.3.html">1.3</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.4.html">1.4</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.html">1</a></li></ul></li><li><a href="#"><span></span>chapter17</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter17/17.1.html">17.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter17/17.2.html">17.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter17/17.3.html">17.3</a></li></ul></li><li><a href="#"><span></span>chapter2</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.1.html">2.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.2.html">2.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.3.html">2.3</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.4.html">2.4</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.5.html">2.5</a></li></ul></li><li><a href="#"><span></span>chapter3</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.1.html">3.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.2.html">3.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.3.html">3.3</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.4.html">3.4</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.5.html">3.5</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.html">3</a></li></ul></li><li><a href="../../../html/服务端编程/数据库/mysql/README.html">README</a></li></ul></li><li><a href="../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li></ul></li><li><a href="#"><span></span>工具快捷键</a><ul><li><a href="../../../html/工具快捷键/Git常用命令.html">Git常用命令</a></li><li><a href="../../../html/工具快捷键/vim.html">vim</a></li></ul></li><li><a href="#"><span></span>其他</a><ul><li><a href="../../../html/其他/HTTP状态码.html">HTTP状态码</a></li><li><a href="../../../html/其他/通过代理工具提高Github Clone速度.html">通过代理工具提高Github Clone速度</a></li></ul></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/poetries/handbook"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0Docker入门教程">Docker入门教程</a><ul><li><a href="#t1安装">安装</a></li><li><a href="#t2命令介绍">命令介绍</a></li><li><a href="#t3服务管理">服务管理</a></li><li><a href="#t4镜像管理">镜像管理</a><ul><li><a href="#t5通过容器创建镜像">通过容器创建镜像</a></li><li><a href="#t6发布自己的镜像">发布自己的镜像</a></li><li><a href="#t7镜像中安装软件">镜像中安装软件</a></li></ul></li><li><a href="#t8容器管理">容器管理</a><ul><li><a href="#t9容器服务管理">容器服务管理</a></li><li><a href="#t10进入容器">进入容器</a></li></ul></li><li><a href="#t11使用Docker实战">使用Docker实战</a><ul><li><a href="#t12部署Nginx">部署Nginx</a></li><li><a href="#t13部署MySQL">部署MySQL</a></li></ul></li><li><a href="#t14Docker私有仓库搭建">Docker私有仓库搭建</a><ul><li><a href="#t15部署registry">部署registry</a></li><li><a href="#t16部署Humpback">部署Humpback</a></li></ul></li><li><a href="#t17参考资料">参考资料</a><ul><li><a href="#t18官方英文资源">官方英文资源</a></li><li><a href="#t19中文资源">中文资源</a></li><li><a href="#t20其它资源">其它资源</a></li></ul></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <p></p><p align="center">
+<img width="130" align="center" src="../../../img/logo.svg">
+</p><p></p>
+<h1 align="center" id="t0Docker&#x5165;&#x95E8;&#x6559;&#x7A0B;">Docker&#x5165;&#x95E8;&#x6559;&#x7A0B; <a href="#t0Docker&#x5165;&#x95E8;&#x6559;&#x7A0B;"> # </a></h1>
+
+
+
+<p>Docker &#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x5F15;&#x64CE;&#xFF0C;&#x800C;&#x4E00;&#x4E2A;<ruby>&#x5BB9;&#x5668;<rt>containers</rt></ruby>&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x5316;&#x7684;&#x72EC;&#x7ACB;&#x7684;&#x73AF;&#x5883;&#xFF0C;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6253;&#x5305;&#x4ED6;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x4EE5;&#x53CA;&#x4F9D;&#x8D56;&#x5305;&#x5230;&#x4E00;&#x4E2A;&#x53EF;&#x79FB;&#x690D;&#x7684;&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x5E03;&#x5230;&#x4EFB;&#x4F55;&#x6D41;&#x884C;&#x7684; Linux &#x673A;&#x5668;&#x4E0A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x865A;&#x62DF;&#x5316;&#x3002;&#x5BB9;&#x5668;&#x662F;&#x5B8C;&#x5168;&#x4F7F;&#x7528;&#x6C99;&#x7BB1;&#x673A;&#x5236;&#xFF0C;&#x76F8;&#x4E92;&#x4E4B;&#x95F4;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x63A5;&#x53E3;&#x3002;</p>
+<ul>
+<li>Docker &#x7684;&#x5C40;&#x9650;&#x6027;&#x4E4B;&#x4E00;&#xFF0C;&#x5B83;&#x53EA;&#x80FD;&#x7528;&#x5728; 64 &#x4F4D;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#x3002;</li>
+</ul>
+<h2 id="t1&#x5B89;&#x88C5;">&#x5B89;&#x88C5; <a href="#t1&#x5B89;&#x88C5;"> # </a></h2>
+<pre><code class="lang-bash">yum install docker        <span class="hljs-comment"># CentOS &#x4E2D;&#x5B89;&#x88C5;</span>
+apt-get install docker-ce <span class="hljs-comment"># Ubuntu &#x4E2D;&#x5B89;&#x88C5;</span>
+pacman -S docker          <span class="hljs-comment"># Arch &#x4E2D;&#x5B89;&#x88C5;</span>
+emerge --ask docker       <span class="hljs-comment"># Gentoo &#x4E2D;&#x5B89;&#x88C5;</span>
+
+<span class="hljs-comment">#=====================</span>
+
+docker version      <span class="hljs-comment"># &#x901A;&#x8FC7;&#x67E5;&#x770B;&#x7248;&#x672C;&#xFF0C;&#x68C0;&#x67E5;&#x5B89;&#x88C5;&#x662F;&#x5426;&#x6210;&#x529F;</span>
+<span class="hljs-comment"># Client:</span>
+<span class="hljs-comment">#  Version:         1.12.6</span>
+<span class="hljs-comment">#  API version:     1.24</span>
+<span class="hljs-comment">#  Package version: docker-1.12.6-55.gitc4618fb.el7.centos.x86_64</span>
+<span class="hljs-comment">#  Go version:      go1.8.3</span>
+<span class="hljs-comment">#  Git commit:      c4618fb/1.12.6</span>
+<span class="hljs-comment">#  Built:           Thu Sep 21 22:33:52 2017</span>
+<span class="hljs-comment">#  OS/Arch:         linux/amd64</span>
+<span class="hljs-comment"># </span>
+<span class="hljs-comment"># Server:</span>
+<span class="hljs-comment">#  Version:         1.12.6</span>
+<span class="hljs-comment">#  API version:     1.24</span>
+<span class="hljs-comment">#  Package version: docker-1.12.6-55.gitc4618fb.el7.centos.x86_64</span>
+<span class="hljs-comment">#  Go version:      go1.8.3</span>
+<span class="hljs-comment">#  Git commit:      c4618fb/1.12.6</span>
+<span class="hljs-comment">#  Built:           Thu Sep 21 22:33:52 2017</span>
+<span class="hljs-comment">#  OS/Arch:         linux/amd64</span>
+</code></pre>
+<h2 id="t2&#x547D;&#x4EE4;&#x4ECB;&#x7ECD;">&#x547D;&#x4EE4;&#x4ECB;&#x7ECD; <a href="#t2&#x547D;&#x4EE4;&#x4ECB;&#x7ECD;"> # </a></h2>
+<pre><code class="lang-bash">$ docker --<span class="hljs-built_in">help</span>
+
+&#x7BA1;&#x7406;&#x547D;&#x4EE4;:
+  container   &#x7BA1;&#x7406;&#x5BB9;&#x5668;
+  image       &#x7BA1;&#x7406;&#x955C;&#x50CF;
+  network     &#x7BA1;&#x7406;&#x7F51;&#x7EDC;
+&#x547D;&#x4EE4;&#xFF1A;
+  attach      &#x4ECB;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;
+  build       &#x6839;&#x636E; Dockerfile &#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x955C;&#x50CF;
+  commit      &#x6839;&#x636E;&#x5BB9;&#x5668;&#x7684;&#x66F4;&#x6539;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x955C;&#x50CF;
+  cp          &#x5728;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E0E;&#x5BB9;&#x5668;&#x4E2D;&#x590D;&#x5236; &#x6587;&#x4EF6;/&#x6587;&#x4EF6;&#x5939;
+  create      &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5BB9;&#x5668;
+  <span class="hljs-built_in">exec</span>        &#x5728;&#x5BB9;&#x5668;&#x4E2D;&#x6267;&#x884C;&#x4E00;&#x6761;&#x547D;&#x4EE4;
+  images      &#x5217;&#x51FA;&#x955C;&#x50CF;
+  <span class="hljs-built_in">kill</span>        &#x6740;&#x6B7B;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;    
+  logs        &#x53D6;&#x5F97;&#x5BB9;&#x5668;&#x7684;&#x65E5;&#x5FD7;
+  pause       &#x6682;&#x505C;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x7684;&#x6240;&#x6709;&#x8FDB;&#x7A0B;
+  ps          &#x5217;&#x51FA;&#x6240;&#x6709;&#x5BB9;&#x5668;
+  pull        &#x62C9;&#x53D6;&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#x6216;&#x4ED3;&#x5E93;&#x5230; registry
+  push        &#x63A8;&#x9001;&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#x6216;&#x4ED3;&#x5E93;&#x5230; registry
+  rename      &#x91CD;&#x547D;&#x540D;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;
+  restart     &#x91CD;&#x65B0;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5BB9;&#x5668;
+  rm          &#x5220;&#x9664;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5BB9;&#x5668;
+  rmi         &#x5220;&#x9664;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x955C;&#x50CF;
+  run         &#x5728;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BB9;&#x5668;&#x4E2D;&#x6267;&#x884C;&#x4E00;&#x6761;&#x547D;&#x4EE4;
+  search      &#x5728; Docker Hub &#x4E2D;&#x641C;&#x7D22;&#x955C;&#x50CF;
+  start       &#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5DF2;&#x7ECF;&#x505C;&#x6B62;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;
+  stats       &#x663E;&#x793A;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x7684;&#x5B9E;&#x65F6;&#x8D44;&#x6E90;&#x5360;&#x7528;
+  stop        &#x505C;&#x6B62;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;
+  tag         &#x4E3A;&#x955C;&#x50CF;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6807;&#x7B7E;
+  top         &#x663E;&#x793A;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x5185;&#x7684;&#x6240;&#x6709;&#x8FDB;&#x7A0B;
+  unpause     &#x6062;&#x590D;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x5185;&#x6240;&#x6709;&#x88AB;&#x6682;&#x505C;&#x7684;&#x8FDB;&#x7A0B;
+</code></pre>
+<h2 id="t3&#x670D;&#x52A1;&#x7BA1;&#x7406;">&#x670D;&#x52A1;&#x7BA1;&#x7406; <a href="#t3&#x670D;&#x52A1;&#x7BA1;&#x7406;"> # </a></h2>
+<pre><code class="lang-bash">service docker start       <span class="hljs-comment"># &#x542F;&#x52A8; docker &#x670D;&#x52A1;&#xFF0C;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;</span>
+service docker stop        <span class="hljs-comment"># &#x505C;&#x6B62; docker &#x670D;&#x52A1;</span>
+chkconfig docker on        <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x4E3A;&#x5F00;&#x673A;&#x542F;&#x52A8;</span>
+</code></pre>
+<h2 id="t4&#x955C;&#x50CF;&#x7BA1;&#x7406;">&#x955C;&#x50CF;&#x7BA1;&#x7406; <a href="#t4&#x955C;&#x50CF;&#x7BA1;&#x7406;"> # </a></h2>
+<p>&#x955C;&#x50CF;&#x53EF;&#x4EE5;&#x770B;&#x505A;&#x6211;&#x4EEC;&#x5E73;&#x65F6;&#x88C5;&#x7CFB;&#x7EDF;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x91CC;&#x9762;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x3002;</p>
+<pre><code class="lang-bash">docker pull centos:latest  <span class="hljs-comment"># &#x4ECE;docker.io&#x4E2D;&#x4E0B;&#x8F7D;centos&#x955C;&#x50CF;&#x5230;&#x672C;&#x5730;</span>
+docker images              <span class="hljs-comment"># &#x67E5;&#x770B;&#x5DF2;&#x4E0B;&#x8F7D;&#x7684;&#x955C;&#x50CF;</span>
+docker rm image_id         <span class="hljs-comment"># &#x5220;&#x9664;&#x955C;&#x50CF;&#xFF0C;&#x6307;&#x5B9A;&#x955C;&#x50CF;id</span>
+
+<span class="hljs-comment"># &#x5220;&#x9664;&#x6240;&#x6709;&#x955C;&#x50CF;</span>
+<span class="hljs-comment"># none &#x9ED8;&#x8BA4;&#x4E3A; docker.io</span>
+docker rmi $(docker images | grep none | awk <span class="hljs-string">&apos;{print $3}&apos;</span> | sort -r)
+
+<span class="hljs-comment"># &#x8FDE;&#x63A5;&#x8FDB;&#x884C;&#x8FDB;&#x5165;&#x547D;&#x4EE4;&#x884C;&#x6A21;&#x5F0F;&#xFF0C;exit&#x547D;&#x4EE4;&#x9000;&#x51FA;&#x3002;</span>
+docker run -t -i nginx:latest /bin/bash
+</code></pre>
+<h3 id="t5&#x901A;&#x8FC7;&#x5BB9;&#x5668;&#x521B;&#x5EFA;&#x955C;&#x50CF;">&#x901A;&#x8FC7;&#x5BB9;&#x5668;&#x521B;&#x5EFA;&#x955C;&#x50CF; <a href="#t5&#x901A;&#x8FC7;&#x5BB9;&#x5668;&#x521B;&#x5EFA;&#x955C;&#x50CF;"> # </a></h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x5BF9;&#x955C;&#x50CF;&#x8FDB;&#x884C;&#x66F4;&#x6539;&#x3002;</p>
+<ol>
+<li>&#x4ECE;&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x7684;&#x5BB9;&#x5668;&#x4E2D;&#x66F4;&#x65B0;&#x955C;&#x50CF;&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x4EA4;&#x8FD9;&#x4E2A;&#x955C;&#x50CF;</li>
+<li>&#x4F7F;&#x7528; Dockerfile &#x6307;&#x4EE4;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x955C;&#x50CF;</li>
+</ol>
+<p>&#x4E0B;&#x9762;&#x901A;&#x8FC7;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x5BB9;&#x5668;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x955C;&#x50CF;&#x3002;</p>
+<pre><code class="lang-bash">docker commit -m=<span class="hljs-string">&quot;First Docker&quot;</span> -a=<span class="hljs-string">&quot;wcjiang&quot;</span> a6b0a6cfdacf wcjiang/nginx:v1.2.1
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<ul>
+<li><code>-m</code> &#x63D0;&#x4EA4;&#x7684;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;</li>
+<li><code>-a</code> &#x6307;&#x5B9A;&#x955C;&#x50CF;&#x4F5C;&#x8005;</li>
+<li><code>a6b0a6cfdacf</code> &#x8BB0;&#x4F4F;&#x8FD9;&#x4E2A;&#x662F;&#x5BB9;&#x5668;id&#xFF0C;&#x4E0D;&#x662F;&#x955C;&#x50CF;id</li>
+<li><code>wcjiang/nginx:v1.2.1</code> &#x521B;&#x5EFA;&#x7684;&#x76EE;&#x6807;&#x955C;&#x50CF;&#x540D;</li>
+</ul>
+<h3 id="t6&#x53D1;&#x5E03;&#x81EA;&#x5DF1;&#x7684;&#x955C;&#x50CF;">&#x53D1;&#x5E03;&#x81EA;&#x5DF1;&#x7684;&#x955C;&#x50CF; <a href="#t6&#x53D1;&#x5E03;&#x81EA;&#x5DF1;&#x7684;&#x955C;&#x50CF;"> # </a></h3>
+<ol>
+<li>&#x5728;<a href="https://www.docker.com/">Docker</a> &#x6CE8;&#x518C;&#x8D26;&#x6237;&#xFF0C;&#x53D1;&#x5E03;&#x7684;&#x955C;&#x50CF;&#x90FD;&#x5728;<a href="https://cloud.docker.com/repository/list">&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#x91CC;</a>&#x5C55;&#x793A;</li>
+<li>&#x5C06;&#x4E0A;&#x9762;&#x505A;&#x7684;&#x955C;&#x50CF;<code>nginx</code>&#xFF0C;&#x8D77;&#x4E2A;&#x65B0;&#x7684;&#x540D;&#x5B57;<code>nginx-test</code></li>
+</ol>
+<pre><code class="lang-bash">docker tag wcjiang/nginx:v1.2.1 wcjiang/nginx-test:lastest
+</code></pre>
+<ol>
+<li>&#x767B;&#x5F55;docker</li>
+</ol>
+<pre><code>docker login
+</code></pre><ol>
+<li>&#x4E0A;&#x4F20;<code>nginx-test</code>&#x955C;&#x50CF;</li>
+</ol>
+<pre><code class="lang-bash">docker push wcjiang/nginx-test:lastest
+<span class="hljs-comment"># The push refers to a repository [docker.io/wcjiang/nginx-test]</span>
+<span class="hljs-comment"># 2f5c6a3c22e3: Mounted from wcjiang/nginx</span>
+<span class="hljs-comment"># cf516324493c: Mounted from wcjiang/nginx</span>
+<span class="hljs-comment"># lastest: digest: sha256:73ae804b2c60327d1269aa387cf782f664bc91da3180d10dbd49027d7adaa789 size: 736</span>
+</code></pre>
+<h3 id="t7&#x955C;&#x50CF;&#x4E2D;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;">&#x955C;&#x50CF;&#x4E2D;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6; <a href="#t7&#x955C;&#x50CF;&#x4E2D;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;"> # </a></h3>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;docker&#x5B98;&#x65B9;&#x955C;&#x50CF;&#xFF0C;&#x5982; mysql&#x955C;&#x50CF;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x955C;&#x50CF;&#x4E2D;&#x5565;&#x8F6F;&#x4EF6;&#x4E5F;&#x6CA1;&#x6709;&#xFF0C;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x5B89;&#x88C5;&#x4F60;&#x6240;&#x9700;&#x8981;&#x7684;&#x8F6F;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x7B2C;&#x4E00;&#x6B21;&#x9700;&#x8981;&#x8FD0;&#x884C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x786E;&#x4FDD;&#x6E90;&#x7684;&#x7D22;&#x5F15;&#x662F;&#x6700;&#x65B0;&#x7684;</span>
+<span class="hljs-comment"># &#x540C;&#x6B65; /etc/apt/sources.list &#x548C; /etc/apt/sources.list.d &#x4E2D;&#x5217;&#x51FA;&#x7684;&#x6E90;&#x7684;&#x7D22;&#x5F15;</span>
+apt-get update
+<span class="hljs-comment"># &#x505A;&#x8FC7;&#x4E0A;&#x9762;&#x66F4;&#x65B0;&#x540C;&#x6B65;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x4E86;</span>
+apt-get install vim
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x5B89;&#x88C5;&#x4E86;CentOS&#x6216;&#x8005;Ubuntu&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x8FDB;&#x5165;&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x76F8;&#x5173;&#x8F6F;&#x4EF6;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x8FDB;&#x5165;&#x5230;centos7&#x955C;&#x50CF;&#x7CFB;&#x7EDF;</span>
+docker run -i -t centos:7 /bin/bash
+yum update
+yum install vim
+</code></pre>
+<h2 id="t8&#x5BB9;&#x5668;&#x7BA1;&#x7406;">&#x5BB9;&#x5668;&#x7BA1;&#x7406; <a href="#t8&#x5BB9;&#x5668;&#x7BA1;&#x7406;"> # </a></h2>
+<p>&#x5BB9;&#x5668;&#x5C31;&#x50CF;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;</p>
+<pre><code class="lang-bash">docker run centos <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;hello world&quot;</span>  <span class="hljs-comment"># &#x5728;docker&#x5BB9;&#x5668;&#x4E2D;&#x8FD0;&#x884C;hello world!</span>
+docker run centos yum install -y wget <span class="hljs-comment"># &#x5728;docker&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x5B89;&#x88C5;wget&#x8F6F;&#x4EF6;</span>
+docker ps                           <span class="hljs-comment"># &#x5217;&#x51FA;&#x5305;&#x62EC;&#x672A;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;</span>
+docker ps -a                        <span class="hljs-comment"># &#x67E5;&#x770B;&#x6240;&#x6709;&#x5BB9;&#x5668;(&#x5305;&#x62EC;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x548C;&#x5DF2;&#x505C;&#x6B62;&#x7684;)</span>
+docker logs my-nginx                <span class="hljs-comment"># &#x67E5;&#x770B; my-nginx &#x5BB9;&#x5668;&#x65E5;&#x5FD7;</span>
+
+docker run -i -t centos /bin/bash   <span class="hljs-comment"># &#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;</span>
+docker inspect centos     <span class="hljs-comment"># &#x68C0;&#x67E5;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x955C;&#x50CF;</span>
+docker commit 8bd centos  <span class="hljs-comment"># &#x4FDD;&#x5B58;&#x5BF9;&#x5BB9;&#x5668;&#x7684;&#x4FEE;&#x6539;</span>
+docker commit -m <span class="hljs-string">&quot;n changed&quot;</span> my-nginx my-nginx-image <span class="hljs-comment"># &#x4F7F;&#x7528;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5BB9;&#x5668;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x955C;&#x50CF;</span>
+docker inspect -f {{.State.Pid}} 44fc0f0582d9 <span class="hljs-comment"># &#x83B7;&#x53D6;id&#x4E3A; 44fc0f0582d9 &#x7684;PID&#x8FDB;&#x7A0B;&#x7F16;&#x53F7;</span>
+</code></pre>
+<h3 id="t9&#x5BB9;&#x5668;&#x670D;&#x52A1;&#x7BA1;&#x7406;">&#x5BB9;&#x5668;&#x670D;&#x52A1;&#x7BA1;&#x7406; <a href="#t9&#x5BB9;&#x5668;&#x670D;&#x52A1;&#x7BA1;&#x7406;"> # </a></h3>
+<pre><code class="lang-bash">docker run -itd --name my-nginx2 nginx <span class="hljs-comment"># &#x901A;&#x8FC7;nginx&#x955C;&#x50CF;&#xFF0C;&#x3010;&#x521B;&#x5EFA;&#x3011;&#x5BB9;&#x5668;&#x540D;&#x4E3A; my-nginx2 &#x7684;&#x5BB9;&#x5668;</span>
+docker start my-nginx --restart=always    <span class="hljs-comment"># &#x3010;&#x542F;&#x52A8;&#x7B56;&#x7565;&#x3011;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x6DFB;&#x52A0;&#x7B56;&#x7565;</span>
+                               <span class="hljs-comment"># no - &#x5BB9;&#x5668;&#x4E0D;&#x91CD;&#x542F;</span>
+                               <span class="hljs-comment"># on-failure - &#x5BB9;&#x5668;&#x63A8;&#x51FA;&#x72B6;&#x6001;&#x975E;0&#x65F6;&#x91CD;&#x542F;</span>
+                               <span class="hljs-comment"># always - &#x59CB;&#x7EC8;&#x91CD;&#x542F;</span>
+docker start my-nginx               <span class="hljs-comment"># &#x3010;&#x542F;&#x52A8;&#x3011;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5BB9;&#x5668;</span>
+docker restart my-nginx             <span class="hljs-comment"># &#x3010;&#x91CD;&#x542F;&#x3011;&#x5BB9;&#x5668;</span>
+docker stop my-nginx                <span class="hljs-comment"># &#x3010;&#x505C;&#x6B62;&#x8FD0;&#x884C;&#x3011;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;</span>
+docker <span class="hljs-built_in">kill</span> my-nginx                <span class="hljs-comment"># &#x3010;&#x6740;&#x6B7B;&#x3011;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x5BB9;&#x5668;</span>
+docker rename my-nginx new-nginx    <span class="hljs-comment"># &#x3010;&#x91CD;&#x547D;&#x540D;&#x3011;&#x5BB9;&#x5668;</span>
+docker rm new-nginx                 <span class="hljs-comment"># &#x3010;&#x5220;&#x9664;&#x3011;&#x5BB9;&#x5668;</span>
+</code></pre>
+<h3 id="t10&#x8FDB;&#x5165;&#x5BB9;&#x5668;">&#x8FDB;&#x5165;&#x5BB9;&#x5668; <a href="#t10&#x8FDB;&#x5165;&#x5BB9;&#x5668;"> # </a></h3>
+<ol>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B88;&#x62A4;&#x72B6;&#x6001;&#x7684;Docker&#x5BB9;&#x5668;</li>
+</ol>
+<pre><code class="lang-bash">docker run -itd my-nginx /bin/bash
+</code></pre>
+<ol>
+<li>&#x4F7F;&#x7528;<code>docker ps</code>&#x67E5;&#x770B;&#x5230;&#x8BE5;&#x5BB9;&#x5668;&#x4FE1;&#x606F;</li>
+</ol>
+<pre><code class="lang-bash">docker ps
+<span class="hljs-comment"># CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</span>
+<span class="hljs-comment"># 6bd0496da64f        nginx               &quot;/bin/bash&quot;         20 seconds ago      Up 18 seconds       80/tcp              high_shirley</span>
+</code></pre>
+<ol>
+<li>&#x4F7F;&#x7528;<code>docker exec</code>&#x547D;&#x4EE4;&#x8FDB;&#x5165;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;</li>
+</ol>
+<pre><code class="lang-bash">docker <span class="hljs-built_in">exec</span> -it 6bd0496da64f /bin/bash
+</code></pre>
+<p>&#x901A;&#x5E38;&#x6709;&#x4E0B;&#x9762;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#x8FDB;&#x5165;Docker&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;<code>exec</code>&#xFF0C;&#x4F7F;&#x7528;<code>attach</code>&#x4E00;&#x76F4;&#x8FDB;&#x5165;&#x5931;&#x8D25;&#x3002;</p>
+<ul>
+<li>&#x4F7F;&#x7528;<code>docker attach</code></li>
+<li>&#x4F7F;&#x7528;<code>SSH</code> <a href="http://www.oschina.net/translate/why-you-dont-need-to-run-sshd-in-docker?cmp">&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x9700;&#x8981;&#x5728; Docker &#x5BB9;&#x5668;&#x4E2D;&#x8FD0;&#x884C; sshd</a></li>
+<li>&#x4F7F;&#x7528;<code>nsenter</code>&#x8FDB;&#x5165;Docker&#x5BB9;&#x5668;&#xFF0C;<a href="https://github.com/jpetazzo/nsenter">nsenter&#x5B98;&#x65B9;&#x4ED3;&#x5E93;</a></li>
+<li>&#x4F7F;&#x7528;<code>docker exec</code>&#xFF0C;&#x5728;<code>1.3.*</code>&#x4E4B;&#x540E;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x547D;&#x4EE4;<code>exec</code>&#x7528;&#x4E8E;&#x8FDB;&#x5165;&#x5BB9;&#x5668;</li>
+</ul>
+<h2 id="t11&#x4F7F;&#x7528;Docker&#x5B9E;&#x6218;">&#x4F7F;&#x7528;Docker&#x5B9E;&#x6218; <a href="#t11&#x4F7F;&#x7528;Docker&#x5B9E;&#x6218;"> # </a></h2>
+<h3 id="t12&#x90E8;&#x7F72;Nginx">&#x90E8;&#x7F72;Nginx <a href="#t12&#x90E8;&#x7F72;Nginx"> # </a></h3>
+<p>1.&#x5728; docker hub &#x4E2D;&#x67E5;&#x627E; nginx &#x76F8;&#x5173;&#x955C;&#x50CF;&#x3002;</p>
+<pre><code class="lang-bash">$ docker search nginx
+
+<span class="hljs-comment"># INDEX       NAME                                                             DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED</span>
+<span class="hljs-comment"># docker.io   docker.io/nginx                                                  Official build of Nginx.                        7006      [OK]</span>
+<span class="hljs-comment"># docker.io   docker.io/jwilder/nginx-proxy                                    Automated Nginx reverse proxy for docker c...   1137                 [OK]</span>
+<span class="hljs-comment"># docker.io   docker.io/richarvey/nginx-php-fpm                                Container running Nginx + PHP-FPM capable ...   453                  [OK]</span>
+<span class="hljs-comment"># docker.io   docker.io/jrcs/letsencrypt-nginx-proxy-companion                 LetsEncrypt container to use with nginx as...   230                  [OK]</span>
+<span class="hljs-comment"># docker.io   docker.io/kong                                                   Open-source Microservice &amp; API Management ...   116       [OK]</span>
+<span class="hljs-comment"># docker.io   docker.io/webdevops/php-nginx                                    Nginx with PHP-FPM                              90                   [OK]</span>
+</code></pre>
+<p>2.&#x62C9;&#x53D6;&#x5B98;&#x65B9;&#x955C;&#x50CF;&#xFF0C;&#x5176;&#x4E2D;&#x4E0A;&#x9762;&#x7684;&#x975E;&#x5B98;&#x65B9;&#x955C;&#x50CF;&#x662F;&#x7528;&#x6237;&#x4EEC;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x8981;&#x5236;&#x4F5C;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x65B9;&#x4FBF;&#x5927;&#x5BB6;&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code class="lang-bash">$ docker pull nginx
+<span class="hljs-comment"># Using default tag: latest</span>
+<span class="hljs-comment"># Trying to pull repository docker.io/library/nginx ...</span>
+<span class="hljs-comment"># latest: Pulling from docker.io/library/nginx</span>
+<span class="hljs-comment"># bc95e04b23c0: Pull complete</span>
+<span class="hljs-comment"># 110767c6efff: Pull complete</span>
+<span class="hljs-comment"># f081e0c4df75: Pull complete</span>
+<span class="hljs-comment"># Digest: sha256:004ac1d5e791e705f12a1</span>
+</code></pre>
+<p>3.&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x955C;&#x50CF;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">docker run --name my-nginx -d -p 8080:80 nginx
+<span class="hljs-comment"># faaed6a2d63af248961aab59713e515c76aea447</span>
+</code></pre>
+<p>4.&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65E5;&#x5FD7;</p>
+<pre><code>docker logs my-nginx
+</code></pre><p>&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x66F4;&#x590D;&#x6742;Nginx&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4E0A;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x4E2D;&#x7684; nginx.conf &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x8981;&#x5C55;&#x793A;&#x7684;&#x9759;&#x6001;&#x9875;&#x9762;&#x4E5F;&#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#x3002;</span>
+docker run --name my-nginx \ 
+    -v /host/path/nginx.conf:/etc/nginx/nginx.conf:ro \
+    -v /some/html:/usr/share/nginx/html:ro \
+    -p 8080:80 \
+    -d nginx
+</code></pre>
+<p><code>-v</code> &#x53C2;&#x6570;&#x8BED;&#x6CD5;&#x4E3A; <code>-v host dir:container dir[:ro|rw]</code></p>
+<ul>
+<li>--name &#x4E3A;&#x5BB9;&#x5668;&#x53D6;&#x4E00;&#x4E2A;&#x540D;&#x5B57;</li>
+<li>-p &#x53C2;&#x6570;&#x8BED;&#x6CD5;&#x4E3A; <code>-p host port:container port</code>; -p 8080:80 &#x5C06;&#x4E3B;&#x673A;&#x4E0A;&#x7684;8080&#x7AEF;&#x53E3;&#x7ED1;&#x5B9A;&#x5230;&#x5BB9;&#x5668;&#x4E0A;&#x7684;80&#x7AEF;&#x53E3;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x4E3B;&#x673A;&#x4E2D;&#x8BBF;&#x95EE;8080&#x7AEF;&#x53E3;&#x65F6;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x8BBF;&#x95EE; nginx &#x5BB9;&#x5668;&#x7684;80&#x7AEF;&#x53E3;</li>
+<li>-d &#x540E;&#x53F0;&#x8FD0;&#x884C;&#x5BB9;&#x5668;</li>
+</ul>
+<h3 id="t13&#x90E8;&#x7F72;MySQL">&#x90E8;&#x7F72;MySQL <a href="#t13&#x90E8;&#x7F72;MySQL"> # </a></h3>
+<p>&#x62C9;&#x53D6;&#x5B98;&#x65B9;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x6807;&#x7B7E;&#x4E3A;<code>5.7</code>&#xFF0C;<a href="https://docs.docker.com/samples/library/mysql/#-via-docker-stack-deploy-or-docker-compose">Docker&#x5B98;&#x65B9;&#x8D44;&#x6599;</a>&#x3001;<a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html">MySQL &#x5B98;&#x65B9;&#x8D44;&#x6599;</a></p>
+<pre><code class="lang-bash">docker pull mysql:5.7
+<span class="hljs-comment"># Trying to pull repository docker.io/library/mysql ...</span>
+<span class="hljs-comment"># 5.7: Pulling from docker.io/library/mysql</span>
+<span class="hljs-comment"># 85b1f47fba49: Already exists</span>
+<span class="hljs-comment"># f34057997f40: Pull complete</span>
+<span class="hljs-comment"># ....</span>
+<span class="hljs-comment"># Digest: sha256:bfb22e93ee87c6aab6c1c9a4e70f28fa289f9ffae9fe8e173</span>
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x76EE;&#x5F55;</p>
+<ul>
+<li>data&#x76EE;&#x5F55;&#x5C06;&#x6620;&#x5C04;&#x4E3A;mysql&#x5BB9;&#x5668;&#x914D;&#x7F6E;&#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x8DEF;&#x5F84;</li>
+<li>logs&#x76EE;&#x5F55;&#x5C06;&#x6620;&#x5C04;&#x4E3A;mysql&#x5BB9;&#x5668;&#x7684;&#x65E5;&#x5FD7;&#x76EE;&#x5F55;</li>
+<li>conf&#x76EE;&#x5F55;&#x91CC;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5C06;&#x6620;&#x5C04;&#x4E3A;mysql&#x5BB9;&#x5668;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+</ul>
+<pre><code class="lang-bash">mkdir -p ~/mysql/data ~/mysql/logs ~/mysql/conf
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">docker run --name my-mysql \ 
+-p 3306:3306 \ 
+-v <span class="hljs-variable">$PWD</span>/conf/my.cnf:/etc/mysql/my.cnf \ 
+-v <span class="hljs-variable">$PWD</span>/logs:/logs \ 
+-v <span class="hljs-variable">$PWD</span>/data:/mysql_data \ 
+-e MYSQL_ROOT_PASSWORD=123456 \ 
+-d mysql:5.7
+</code></pre>
+<ul>
+<li><code>-p 3306:3306</code>&#xFF1A;&#x5C06;&#x5BB9;&#x5668;&#x7684;3306&#x7AEF;&#x53E3;&#x6620;&#x5C04;&#x5230;&#x4E3B;&#x673A;&#x7684;3306&#x7AEF;&#x53E3;</li>
+<li><code>-v $PWD/conf/my.cnf:/etc/mysql/my.cnf</code>&#xFF1A;&#x5C06;&#x4E3B;&#x673A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;conf/my.cnf&#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#x7684;/etc/mysql/my.cnf</li>
+<li><code>-v $PWD/logs:/logs</code>&#xFF1A;&#x5C06;&#x4E3B;&#x673A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;logs&#x76EE;&#x5F55;&#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#x7684;/logs</li>
+<li><code>-v $PWD/data:/mysql_data</code>&#xFF1A;&#x5C06;&#x4E3B;&#x673A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;data&#x76EE;&#x5F55;&#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#x7684;/mysql_data</li>
+<li><code>-e MYSQL_ROOT_PASSWORD=123456</code>&#xFF1A;&#x521D;&#x59CB;&#x5316;root&#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;</li>
+</ul>
+<h2 id="t14Docker&#x79C1;&#x6709;&#x4ED3;&#x5E93;&#x642D;&#x5EFA;">Docker&#x79C1;&#x6709;&#x4ED3;&#x5E93;&#x642D;&#x5EFA; <a href="#t14Docker&#x79C1;&#x6709;&#x4ED3;&#x5E93;&#x642D;&#x5EFA;"> # </a></h2>
+<p>&#x901A;&#x8FC7;&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x79C1;&#x6709;&#x4ED3;&#x5E93;&#x955C;&#x50CF;<code>registry</code>&#x6765;&#x642D;&#x5EFA;&#x79C1;&#x6709;&#x4ED3;&#x5E93;&#x3002;&#x901A;&#x8FC7; <a href="https://humpback.github.io">humpback</a> &#x5FEB;&#x901F;&#x642D;&#x5EFA;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;Docker&#x5BB9;&#x5668;&#x4E91;&#x7BA1;&#x7406;&#x5E73;&#x53F0;&#x3002;&#x5173;&#x4E8E;&#x4ED3;&#x5E93;&#x914D;&#x7F6E;&#x8BF4;&#x660E;&#x8BF7;&#x53C2;&#x89C1;<a href="https://github.com/docker/distribution/blob/master/docs/configuration.md">configuration.md</a></p>
+<h3 id="t15&#x90E8;&#x7F72;registry">&#x90E8;&#x7F72;registry <a href="#t15&#x90E8;&#x7F72;registry"> # </a></h3>
+<pre><code class="lang-bash">docker pull registry:2.6.2
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x5B9A;&#x5236;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#xFF0C;&#x548C;&#x5728; <a href="https://humpback.github.io">humpback</a> &#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5B9A;&#x5236;&#x5316;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;&#x4F7F;&#x7528;yml&#x6765;&#x7F16;&#x5199;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF09;&#xFF0C;&#x6587;&#x4EF6;&#x653E;&#x5728;<code>/etc/docker/registry/config.yml</code>&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-yml"><span class="hljs-attr">version:</span> <span class="hljs-number">0.1</span>
+<span class="hljs-attr">log:</span>
+<span class="hljs-attr">  fields:</span>
+<span class="hljs-attr">    service:</span> <span class="hljs-string">registry</span>
+<span class="hljs-attr">storage:</span> 
+<span class="hljs-attr">  cache:</span>
+<span class="hljs-attr">    blobdescriptor:</span> <span class="hljs-string">inmemory</span>
+<span class="hljs-attr">  filesystem:</span>
+<span class="hljs-attr">    rootdirectory:</span> <span class="hljs-string">/var/lib/registry</span>
+<span class="hljs-attr">http:</span>
+<span class="hljs-attr">  addr:</span> <span class="hljs-string">:7000</span>
+<span class="hljs-attr">  secret:</span> <span class="hljs-string">docker-registry</span>
+<span class="hljs-attr">  headers:</span>
+<span class="hljs-attr">    X-Content-Type-Options:</span> <span class="hljs-string">[nosniff]</span>
+<span class="hljs-attr">    Access-Control-Allow-Headers:</span> <span class="hljs-string">[&apos;*&apos;]</span>
+<span class="hljs-attr">    Access-Control-Allow-Origin:</span> <span class="hljs-string">[&apos;*&apos;]</span>
+<span class="hljs-attr">    Access-Control-Allow-Methods:</span> <span class="hljs-string">[&apos;GET,POST,PUT,DELETE&apos;]</span>
+<span class="hljs-attr">health:</span>
+<span class="hljs-attr">  storagedriver:</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    interval:</span> <span class="hljs-number">10</span><span class="hljs-string">s</span>
+<span class="hljs-attr">    threshold:</span> <span class="hljs-number">3</span>
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x5BB9;&#x5668;&#x5E76;&#x8FD0;&#x884C;&#xFF0C;&#x521B;&#x5EFA;&#x6210;&#x529F;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x8BBF;&#x95EE; <code>http://192.168.99.100:7000/v2/</code>&#xFF0C;&#x6765;&#x68C0;&#x67E5;&#x4ED3;&#x5E93;&#x662F;&#x5426;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#xFF0C;&#x5F53;&#x8FD4;&#x56DE; <code>{}</code> &#x65F6;&#xFF0C;&#x8868;&#x793A;&#x90E8;&#x7F72;&#x6210;&#x529F;&#x3002;</p>
+<pre><code class="lang-bash">docker run -d -p 7000:7000 --restart=always \
+ -v /var/lib/registry/:/var/lib/registry/ \
+ -v /etc/docker/registry/config.yml:/etc/docker/registry/config.yml \
+ --name humpback-registry \
+ registry:2.6.2
+</code></pre>
+<p>&#x63A8;&#x9001;&#x955C;&#x50CF;&#x5230;&#x79C1;&#x6709;&#x4ED3;&#x5E93;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4ECE;&#x5B98;&#x65B9;&#x4ED3;&#x5E93;&#x62C9;&#x53D6;&#x4E00;&#x4E2A;&#x955C;&#x50CF;</span>
+docker pull nginx:1.13
+<span class="hljs-comment"># &#x4E3A;&#x955C;&#x50CF; `nginx:1.13` &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6807;&#x7B7E; `192.168.99.100:7000/test-nginx:1.13`</span>
+docker tag nginx:1.13 192.168.99.100:7000/<span class="hljs-built_in">test</span>-nginx:1.13
+<span class="hljs-comment"># &#x63A8;&#x9001;&#x5230;&#x79C1;&#x6709;&#x4ED3;&#x5E93;&#x4E2D;</span>
+docker push 192.168.99.100:7000/<span class="hljs-built_in">test</span>-nginx:1.13
+<span class="hljs-comment"># The push refers to a repository [192.168.99.100:7000/test-nginx]</span>
+<span class="hljs-comment"># Get https://192.168.99.100:7000/v1/_ping: http: server gave HTTP response to HTTPS client</span>
+</code></pre>
+<p>&#x5728;&#x63A8;&#x9001;&#x5230;&#x7684;&#x65F6;&#x5019;&#x62A5;&#x9519;&#x8BEF;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x4F7F;&#x7528;<code>https</code>&#x63D0;&#x4EA4;&#xFF0C;&#x8FD9;&#x4E2A;&#x642D;&#x5EFA;&#x7684;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x662F; <code>http</code>&#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x4E24;&#x4E2A;&#xFF1A;</p>
+<ol>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;https&#x6620;&#x5C04;</li>
+<li>&#x5C06;&#x4ED3;&#x5E93;&#x5730;&#x5740;&#x52A0;&#x5165;&#x5230;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x4ED3;&#x5E93;&#x5217;&#x8868;&#x4E2D;</li>
+</ol>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x52A0;&#x5165;&#x5230;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x4ED3;&#x5E93;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x4FEE;&#x6539;docker&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>vi /etc/docker/daemon.json</code> &#x6DFB;&#x52A0; <code>insecure-registries</code>&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-js">{
+  <span class="hljs-comment">//... &#x5176;&#x4ED6;&#x914D;&#x7F6E;&#x9879;</span>
+  <span class="hljs-comment">//&#x5173;&#x952E;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x5C06;&#x4ED3;&#x5E93;&#x5C06;&#x5165;&#x5230;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x4ED3;&#x5E93;&#x5217;&#x8868;&#x4E2D;</span>
+  <span class="hljs-string">&quot;insecure-registries&quot;</span>:[ 
+    <span class="hljs-string">&quot;192.168.99.100:7000&quot;</span>
+  ]
+}
+</code></pre>
+<p>&#x91CD;&#x542F;&#x670D;&#x52A1; <code>service docker restart</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B; push &#x662F;&#x4F1A;&#x62A5;&#x5982;&#x4E0B;&#x9519;&#x8BEF;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-bash">docker push 192.168.99.100:7000/<span class="hljs-built_in">test</span>-nginx:1.13
+<span class="hljs-comment"># The push refers to a repository [192.168.99.100:7000/test-nginx]</span>
+<span class="hljs-comment"># a1a53f8d99b5: Retrying in 1 second</span>
+<span class="hljs-comment"># ...</span>
+<span class="hljs-comment"># received unexpected HTTP status: 500 Internal Server Error</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x9519;&#x8BEF;&#x662F;<code>SELinux</code>&#x5F3A;&#x5236;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x5B89;&#x5168;&#x7CFB;&#x7EDF;&#xFF0C;&#x963B;&#x6B62;&#x5BFC;&#x81F4;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x65B9;&#x6CD5;&#x7981;&#x7528;SELinux&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;push&#x4E86;&#x3002;</p>
+<pre><code class="lang-bash">setenforce 0  
+getenforce   
+<span class="hljs-comment"># Permissive</span>
+</code></pre>
+<h3 id="t16&#x90E8;&#x7F72;Humpback">&#x90E8;&#x7F72;Humpback <a href="#t16&#x90E8;&#x7F72;Humpback"> # </a></h3>
+<p>&#x9996;&#x5148;&#x521B;&#x5EFA;&#x653E;&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x5939;&#xFF0C;<code>mkdir -p /opt/app/humpback-web</code>&#xFF0C;&#x91CC;&#x9762;&#x5B58;&#x653E;&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF0C;&#x4F1A;&#x5B58;&#x50A8;&#x7AD9;&#x70B9;&#x7BA1;&#x7406;&#x548C;&#x5206;&#x7EC4;&#x4FE1;&#x606F;&#xFF0C;&#x542F;&#x52A8;&#x540E;&#x8BF7;&#x59A5;&#x5584;&#x4FDD;&#x5B58;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x521B;&#x5EFA;&#x653E;&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x5939;</span>
+mkdir -p /opt/app/humpback-web
+<span class="hljs-comment"># &#x4E0B;&#x8F7D;humpback-web&#x955C;&#x50CF;&#x5230;&#x672C;&#x5730;</span>
+docker pull humpbacks/humpback-web:1.0.0
+<span class="hljs-comment"># &#x542F;&#x52A8; humpback-web &#x5BB9;&#x5668;&#xFF0C;&#x5C06;&#x5BB9;&#x5668;&#x547D;&#x540D;&#x4E3A; humpback-web</span>
+docker run -d --net=host --restart=always \
+ -e HUMPBACK_LISTEN_PORT=7001 \
+ -v /opt/app/humpback-web/dbFiles:/humpback-web/dbFiles \
+ --name humpback-web \
+ humpbacks/humpback-web:1.0.0
+</code></pre>
+<p>&#x8BBF;&#x95EE;&#x7AD9;&#x70B9;&#xFF0C;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;&#xFF1A;<a href="http://192.168.99.100:7001">http://192.168.99.100:7001</a> &#xFF0C;&#x9ED8;&#x8BA4;&#x8D26;&#x6237;&#xFF1A;<code>admin</code> &#x5BC6;&#x7801;&#xFF1A;<code>123456</code></p>
+<h2 id="t17&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599; <a href="#t17&#x53C2;&#x8003;&#x8D44;&#x6599;"> # </a></h2>
+<h3 id="t18&#x5B98;&#x65B9;&#x82F1;&#x6587;&#x8D44;&#x6E90;">&#x5B98;&#x65B9;&#x82F1;&#x6587;&#x8D44;&#x6E90; <a href="#t18&#x5B98;&#x65B9;&#x82F1;&#x6587;&#x8D44;&#x6E90;"> # </a></h3>
+<ul>
+<li>Docker&#x5B98;&#x7F51;&#xFF1A;<a href="http://www.docker.com">http://www.docker.com</a></li>
+<li>Docker windows&#x5165;&#x95E8;&#xFF1A;<a href="https://docs.docker.com/windows/">https://docs.docker.com/windows/</a></li>
+<li>Docker Linux &#x5165;&#x95E8;&#xFF1A;<a href="https://docs.docker.com/linux/">https://docs.docker.com/linux/</a></li>
+<li>Docker mac &#x5165;&#x95E8;&#xFF1A;<a href="https://docs.docker.com/mac/">https://docs.docker.com/mac/</a></li>
+<li>Docker &#x7528;&#x6237;&#x6307;&#x5F15;&#xFF1A;<a href="https://docs.docker.com/engine/userguide/">https://docs.docker.com/engine/userguide/</a></li>
+<li>Docker &#x5B98;&#x65B9;&#x535A;&#x5BA2;&#xFF1A;<a href="http://blog.docker.com/">http://blog.docker.com/</a></li>
+<li>Docker Hub: <a href="https://hub.docker.com/">https://hub.docker.com/</a></li>
+<li>Docker&#x5F00;&#x6E90;&#xFF1A; <a href="https://www.docker.com/open-source">https://www.docker.com/open-source</a></li>
+</ul>
+<h3 id="t19&#x4E2D;&#x6587;&#x8D44;&#x6E90;">&#x4E2D;&#x6587;&#x8D44;&#x6E90; <a href="#t19&#x4E2D;&#x6587;&#x8D44;&#x6E90;"> # </a></h3>
+<ul>
+<li>Docker&#x4E2D;&#x6587;&#x7F51;&#x7AD9;&#xFF1A;<a href="http://www.docker.org.cn">http://www.docker.org.cn</a></li>
+<li>Docker&#x4E2D;&#x6587;&#x6587;&#x6863;&#xFF1A;<a href="http://www.dockerinfo.net/document">http://www.dockerinfo.net/document</a></li>
+<li>Docker&#x5B89;&#x88C5;&#x624B;&#x518C;&#xFF1A;<a href="http://www.docker.org.cn/book/install.html">http://www.docker.org.cn/book/install.html</a></li>
+<li>&#x4E00;&#x5C0F;&#x65F6;Docker&#x6559;&#x7A0B; &#xFF1A;<a href="https://blog.csphere.cn/archives/22">https://blog.csphere.cn/archives/22</a></li>
+<li>Docker&#x4E2D;&#x6587;&#x6307;&#x5357;&#xFF1A;<a href="http://www.widuu.com/chinese_docker/index.html">http://www.widuu.com/chinese_docker/index.html</a></li>
+</ul>
+<h3 id="t20&#x5176;&#x5B83;&#x8D44;&#x6E90;">&#x5176;&#x5B83;&#x8D44;&#x6E90; <a href="#t20&#x5176;&#x5B83;&#x8D44;&#x6E90;"> # </a></h3>
+<ul>
+<li><a href="https://github.com/eon01/DockerCheatSheet">Docker &#x5FEB;&#x901F;&#x624B;&#x518C;&#xFF01;</a></li>
+<li><a href="http://www.runoob.com/docker/docker-tutorial.html">Docker &#x6559;&#x7A0B;</a></li>
+<li><a href="http://blog.csdn.net/zhangchao19890805/article/details/52756865">MySQL Docker &#x5355;&#x4E00;&#x673A;&#x5668;&#x4E0A;&#x5982;&#x4F55;&#x914D;&#x7F6E;&#x81EA;&#x52A8;&#x5907;&#x4EFD;</a></li>
+<li><a href="https://segmentfault.com/t/docker">https://segmentfault.com/t/docker</a></li>
+<li><a href="https://github.com/docker/docker">https://github.com/docker/docker</a></li>
+<li><a href="https://wiki.openstack.org/wiki/Docker">https://wiki.openstack.org/wiki/Docker</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Docker">https://wiki.archlinux.org/index.php/Docker</a></li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

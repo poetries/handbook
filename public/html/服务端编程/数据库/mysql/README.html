@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handbook</title>
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            <img src="../../../../idoc-logo.svg">
+        
+    </div>
+<ul><li><a href="../../../../index.html">Git常用命令</a></li><li><a href="#"><span></span>前端</a><ul><li><a href="#"><span></span>Javascript</a><ul><li><a href="#"><span></span>RN</a><ul><li><a href="../../../../html/前端/Javascript/RN/React-native Android环境搭建.html">React-native Android环境搭建</a></li></ul></li><li><a href="../../../../html/前端/Javascript/思维导图.html">思维导图</a></li><li><a href="../../../../html/前端/Javascript/正则表达式.html">正则表达式</a></li><li><a href="../../../../html/前端/Javascript/轻量高效的开源JavaScript插件和库.html">轻量高效的开源JavaScript插件和库</a></li></ul></li></ul></li><li><a href="#"><span></span>服务端编程</a><ul><li><a href="#"><span></span>数据库</a><ul><li><a href="../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li><li><a href="#"><span></span>系统服务</a><ul><li><a href="../../../../html/服务端编程/系统服务/docker.html">docker</a></li><li><a href="#"><span></span>shell</a><ul><li><a href="../../../../html/服务端编程/系统服务/shell/shell-regex.html">shell-regex</a></li><li><a href="../../../../html/服务端编程/系统服务/shell/Shell.html">Shell</a></li></ul></li><li><a href="../../../../html/服务端编程/系统服务/Nginx.html">Nginx</a></li></ul></li><li><a href="#"><span></span>Linux</a><ul></ul></li><li><a href="#"><span></span>数据库</a><ul><li><a href="#"><span></span>mysql</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/21-minutes-MySQL-basic-entry.html">21-minutes-MySQL-basic-entry</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/awesome-mysql.html">awesome-mysql</a></li><li><a href="#"><span></span>chapter1</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.1.html">1.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.2.html">1.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.3.html">1.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.4.html">1.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.html">1</a></li></ul></li><li><a href="#"><span></span>chapter17</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.1.html">17.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.2.html">17.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.3.html">17.3</a></li></ul></li><li><a href="#"><span></span>chapter2</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.1.html">2.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.2.html">2.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.3.html">2.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.4.html">2.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.5.html">2.5</a></li></ul></li><li><a href="#"><span></span>chapter3</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.1.html">3.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.2.html">3.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.3.html">3.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.4.html">3.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.5.html">3.5</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.html">3</a></li></ul></li><li class="active"><a href="../../../../html/服务端编程/数据库/mysql/README.html">README</a></li></ul></li><li><a href="../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li></ul></li><li><a href="#"><span></span>工具快捷键</a><ul><li><a href="../../../../html/工具快捷键/Git常用命令.html">Git常用命令</a></li><li><a href="../../../../html/工具快捷键/vim.html">vim</a></li></ul></li><li><a href="#"><span></span>其他</a><ul><li><a href="../../../../html/其他/HTTP状态码.html">HTTP状态码</a></li><li><a href="../../../../html/其他/通过代理工具提高Github Clone速度.html">通过代理工具提高Github Clone速度</a></li></ul></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/poetries/handbook"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0MySQL入门教程">MySQL入门教程</a></li><li><a href="#t1目录">目录</a><ul><li><a href="#t2Awesome MySQL">Awesome MySQL</a></li><li><a href="#t3第1章 初识MySQL">第1章 初识MySQL</a></li><li><a href="#t4第2章 MySQL的安装与配置">第2章 MySQL的安装与配置</a></li><li><a href="#t5第3章 数据库的基本操作">第3章 数据库的基本操作</a></li><li><a href="#t6第4章 数据表的基本操作">第4章 数据表的基本操作</a></li><li><a href="#t7第5章 数据类型和运算符">第5章 数据类型和运算符</a></li><li><a href="#t8第6章 MySQL函数">第6章 MySQL函数</a></li><li><a href="#t9第7章 查询数据">第7章 查询数据</a></li><li><a href="#t10第8章 插入、更新与删除数据">第8章 插入、更新与删除数据</a></li><li><a href="#t11第9章 索引">第9章 索引</a></li><li><a href="#t12第10章 存储过程和函数">第10章 存储过程和函数</a></li><li><a href="#t13第11章 视图">第11章 视图</a></li><li><a href="#t14第12章 MySQL函数">第12章 MySQL函数</a></li><li><a href="#t15第13章 MySQL用户管理">第13章 MySQL用户管理</a></li><li><a href="#t16第14章 数据备份与还原">第14章 数据备份与还原</a></li><li><a href="#t17第15章 MySQL日志">第15章 MySQL日志</a></li><li><a href="#t18第16章 性能优化">第16章 性能优化</a></li><li><a href="#t19第17章 各种问题解决">第17章 各种问题解决</a></li></ul></li><li><a href="#t20读者对象">读者对象</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <p><img align="right" height="150" src="../../../.././img/mysql-logo.png"></p>
+<h2 id="t0MySQL&#x5165;&#x95E8;&#x6559;&#x7A0B;">MySQL&#x5165;&#x95E8;&#x6559;&#x7A0B; <a href="#t0MySQL&#x5165;&#x95E8;&#x6559;&#x7A0B;"> # </a></h2>
+<p><a href="http://www.mysql.com/"><img src="https://jaywcjlove.github.io/sb/ico/mysql.svg" alt=""></a> <a href="awesome-mysql.md"><img src="https://jaywcjlove.github.io/sb/ico/awesome.svg" alt=""></a> <a href="#"><img src="https://jaywcjlove.github.io/sb/license/mit.svg" alt=""></a></p>
+<p>&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x5B66;&#x4E60;MySQL&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x9762;&#x5411;MySQL&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x521D;&#x5B66;&#x8005;&#x3002;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x5DE5;&#x7A0B;&#x5E08;&#x4E3A;&#x4EC0;&#x4E48;&#x5199;&#x8FD9;&#x4E2A;&#x5165;&#x95E8;&#x6559;&#x7A0B;&#x5462;&#xFF1F;&#x6700;&#x8FD1;&#x9879;&#x76EE;&#x5F3A;&#x8FEB;&#x6211;&#x8FD9;&#x4E2A;&#x524D;&#x7AEF;&#x8001;&#x53F8;&#x673A;&#x4F7F;&#x7528;MySQL&#xFF0C;&#x867D;&#x7136;&#x6211;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x8FC7;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#xFF0C;&#x4E3A;&#x4E86;&#x5199;&#x51FA;&#x9AD8;&#x8D28;&#x91CF;&#x7684;SQL&#x8BED;&#x53E5;&#xFF0C;&#x80FD;&#x5FEB;&#x901F;&#x5B9A;&#x4F4D;&#x89E3;&#x51B3;&#x6570;&#x636E;&#x5E93;&#x5F15;&#x53D1;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x7CFB;&#x7EDF;&#x7684;&#x8FC7;&#x4E00;&#x904D;&#x57FA;&#x7840;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5F53;&#x505A;&#x662F;&#x6211;&#x7684;&#x7B14;&#x8BB0;&#x3002;&#x6709;&#x5E78;&#x4E5F;&#x8BA4;&#x8BC6;&#x4E00;&#x4E9B; MySQL &#x7684; DBA&#xFF0C;&#x8FD9;&#x8BA9;&#x6211;&#x5B66;&#x4E60;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x5FEB;&#xFF0C;&#x80FD;&#x5FEB;&#x901F;&#x5165;&#x95E8;&#xFF0C;&#x8FDB;&#x5165;&#x5B9E;&#x6218;&#x5F00;&#x53D1;&#x9636;&#x6BB5;&#x3002;</p>
+<p>&#x539F;&#x672C;&#x6211;&#x662F;&#x4F7F;&#x7528; MongoDB &#x8FD9;&#x7C7B;&#x578B;&#x7684; NoSQL &#x6570;&#x636E;&#x5E93;&#xFF0C;MongoDB&#x5728; Nodejs &#x5728; Mongoose &#x5305;&#x7684;&#x5E2E;&#x52A9;&#x4E0B; JSON &#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x76F4;&#x63A5;&#x63D2;&#x5165; MongoDB &#x4E2D;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x5DE5;&#x7A0B;&#x5E08;&#xFF0C;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x975E;&#x5E38;&#x8212;&#x670D;&#x3002;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#xFF0C;&#x6211;&#x662F;&#x88AB;&#x903C;&#x7684;&#xFF0C;&#x4ECE;&#x6B64;&#x5165;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x5751;&#xFF0C;&#x6211;&#x5C31;&#x51B3;&#x5FC3;&#x7CFB;&#x7EDF;&#x7684;&#x597D;&#x597D;&#x5B66;&#x4E60;&#x4E00;&#x4E0B;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x672C;&#x5C0F;&#x7535;&#x5B50;&#x4E66;&#x9605;&#x8BFB;&#x975E;&#x5E38;&#x6CA1;&#x6709;&#x8010;&#x5FC3;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x770B;&#x6211;&#x505A;&#x7684;&#x4E00;&#x7BC7;&#x7B14;&#x8BB0; <strong>&#x300A;<a href="21-minutes-MySQL-basic-entry.md">21&#x5206;&#x949F;MySQL&#x57FA;&#x7840;&#x5165;&#x95E8;</a>&#x300B;</strong> &#xFF0C;&#x8FD9;&#x4E2A;&#x7B14;&#x8BB0;&#x8FD8;&#x53EF;&#x4EE5;&#x5728; <a href="https://segmentfault.com/a/1190000006876419">SegmentFault</a> &#x91CC;&#x9762;&#x9605;&#x8BFB;&#xFF0C;&#x6709;&#x5BFC;&#x822A;&#x9605;&#x8BFB;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x53EA;&#x9700;&#x8981;21&#x5206;&#x949F;&#x5462;&#xFF1F;&#x56E0;&#x4E3A;&#x5728;&#x6211;&#x4EEC;&#x5927;&#x5929;&#x671D;&#x6709;&#x53E5;&#x8BDD;&#x53EB;&#x505A;&#x201C;&#x4E0D;&#x7BA1;&#x4E09;&#x4E03;&#x4E8C;&#x5341;&#x4E00;&#x201D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4E0D;&#x7BA1;&#x4E09;&#x4E03;&#x4E8C;&#x5341;&#x4E00;&#x5F00;&#x59CB;&#x4F7F;&#x7528; MySQL &#x53CA;&#x5FEB;&#x901F;&#x5165;&#x95E8;&#xFF0C;&#x91CC;&#x9762;&#x7CFB;&#x7EDF;&#x7684;&#x6574;&#x7406;&#x4E86;&#xFF0C;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x7684;SQL&#x8BED;&#x53E5;&#x3002;</p>
+<p>&#x5728;&#x672C;&#x4E66;&#x4E2D;&#x6240;&#x641C;&#x96C6;&#x5230;&#x5F97;&#x5404;&#x79CD;&#x8D44;&#x6E90;&#xFF0C;&#x6211;&#x628A;&#x5B83;&#x5C06;&#x653E;&#x5230;&#x8FD9;&#x91CC; <strong><a href="awesome-mysql.md">Awesome MySQL</a></strong>&#x3002;&#x6240;&#x6709;SQL&#x8BED;&#x53E5;&#x4F8B;&#x5B50;&#xFF0C;&#x662F;&#x57FA;&#x4E8E; MySQL 5.7.14 &#x6216;&#x8005; MySQL 5.7.16 &#x8FD0;&#x884C;&#x7684;&#x3002;&#x8FD9;&#x91CC;&#x9762;&#x7684;&#x4E00;&#x4E9B;&#x7406;&#x8BBA;&#x77E5;&#x8BC6;&#x90FD;&#x662F;&#x4ECE;<a href="https://zh.wikipedia.org">&#x7EF4;&#x57FA;&#x767E;&#x79D1;</a>&#x7B49;&#x5404;&#x79CD;&#x767E;&#x79D1;&#x3001;&#x5404;&#x79CD;&#x5B98;&#x7F51;&#x642C;&#x8FD0;&#x8FC7;&#x6765;&#x7684;&#xFF0C;&#x5076;&#x5C14;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x57FA;&#x7840;&#x7406;&#x8BBA;&#x77E5;&#x8BC6;&#x603B;&#x7ED3;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x9519;&#x8BEF;&#x6216;&#x8005;&#x8BEF;&#x5DEE;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED9;&#x6211;&#x6765;&#x4E2A;&#x75AF;&#x72C2;&#x7684;<a href="https://github.com/jaywcjlove/mysql-tutorial/pulls">Pull requesets</a>&#x6216;<a href="https://github.com/jaywcjlove/mysql-tutorial/issues">Issue</a>&#x3002;&#x5982;&#x679C;&#x5B9E;&#x5728;&#x770B;&#x4E0D;&#x4E0B;&#x53BB;&#x4F60;&#x53EF;&#x4EE5;&#x1F52B;&#x3002;</p>
+<p>MariaDB&#xFF0C;&#x662F; MySQL server &#x7684;&#x4E00;&#x4E2A;&#x7531;&#x793E;&#x533A;&#x5F00;&#x53D1;&#x7684;&#x5206;&#x652F;&#xFF0C;MariaDB&#x5927;&#x90E8;&#x5206;&#x8DDF; MySQL 5.5 &#x4EE5;&#x524D;&#x7248;&#x672C;&#x4F7F;&#x7528;&#x5DEE;&#x4E0D;&#x591A;&#x3002;&#x81EA;&#x5DF1;&#x7535;&#x8111;&#x4E0A;&#x662F; MySQL 5.7.14&#xFF0C;&#x516C;&#x53F8;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x9762;&#x662F; MariaDB &#x6700;&#x65B0;&#x7248;&#x672C;&#xFF0C;&#x751F;&#x4EA7;&#x4E0A; MySQL 5.7.16&#xFF0C;&#x6240;&#x4EE5;&#x5F88;&#x5C34;&#x5C2C;&#xFF0C;&#x5076;&#x5C14;&#x63D0;&#x53CA;MariaDB&#x4E5F;&#x662F;&#x5F88;&#x6B63;&#x5E38;&#x7684;&#x5427;&#x3002;</p>
+<h2 id="t1&#x76EE;&#x5F55;">&#x76EE;&#x5F55; <a href="#t1&#x76EE;&#x5F55;"> # </a></h2>
+<h4 id="t2Awesome MySQL">Awesome MySQL <a href="#t2Awesome MySQL"> # </a></h4>
+<ul>
+<li><a href="awesome-mysql.md#&#x624B;&#x518C;&#x6587;&#x6863;">&#x624B;&#x518C;&#x6587;&#x6863;</a> - &#x4E00;&#x4E9B;&#x975E;&#x5B98;&#x65B9;&#x7684;&#x624B;&#x518C;&#x6587;&#x6863;&#x641C;&#x96C6;</li>
+<li><a href="awesome-mysql.md#&#x5206;&#x6790;&#x5DE5;&#x5177;">&#x5206;&#x6790;&#x5DE5;&#x5177;</a> - &#x6027;&#x80FD;&#xFF0C;&#x7ED3;&#x6784;&#x548C;&#x6570;&#x636E;&#x5206;&#x6790;&#x5DE5;&#x5177;</li>
+<li><a href="awesome-mysql.md#gui">GUI</a> - &#x641C;&#x96C6;&#x7684;&#x4E00;&#x4E9B; MySQL &#x7684;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x4E5F;&#x6709;&#x547D;&#x4EE4;&#x884C;&#x5BA2;&#x6237;&#x7AEF;</li>
+<li><a href="awesome-mysql.md#&#x670D;&#x52A1;&#x5668;">&#x670D;&#x52A1;&#x5668;</a> - MySQL&#x670D;&#x52A1;&#x5668;&#x7684;&#x884D;&#x751F;&#x54C1;</li>
+<li><a href="awesome-mysql.md#&#x5907;&#x4EFD;">&#x5907;&#x4EFD;</a> - &#x5907;&#x4EFD;/&#x5B58;&#x50A8;/&#x6062;&#x590D; &#x5DE5;&#x5177;</li>
+<li><a href="awesome-mysql.md#&#x5B98;&#x65B9;&#x8D44;&#x6599;">&#x5B98;&#x65B9;&#x8D44;&#x6599;</a> - &#x5B98;&#x65B9;&#x7684;&#x4E00;&#x4E9B;&#x7F51;&#x7AD9;&#x548C;&#x6587;&#x7AE0;</li>
+<li><a href="awesome-mysql.md#&#x4F18;&#x79C0;&#x6587;&#x7AE0;">&#x4F18;&#x79C0;&#x6587;&#x7AE0;</a> - &#x4E00;&#x4E9B;&#x4F18;&#x79C0;&#x7684;&#x6587;&#x7AE0;</li>
+</ul>
+<h4 id="t3&#x7B2C;1&#x7AE0; &#x521D;&#x8BC6;MySQL">&#x7B2C;1&#x7AE0; &#x521D;&#x8BC6;MySQL <a href="#t3&#x7B2C;1&#x7AE0; &#x521D;&#x8BC6;MySQL"> # </a></h4>
+<ul>
+<li>1.1 <a href="chapter1/1.1.md">&#x6570;&#x636E;&#x5E93;&#x57FA;&#x7840;</a><ul>
+<li><a href="chapter1/1.1.md#&#x4EC0;&#x4E48;&#x662F;&#x6570;&#x636E;&#x5E93;">&#x4EC0;&#x4E48;&#x662F;&#x6570;&#x636E;&#x5E93;</a></li>
+<li><a href="chapter1/1.1.md#&#x6570;&#x636E;&#x5E93;&#x5206;&#x7C7B;">&#x6570;&#x636E;&#x5E93;&#x5206;&#x7C7B;</a></li>
+<li><a href="chapter1/1.1.md#&#x6570;&#x636E;&#x5E93;&#x6A21;&#x578B;">&#x6570;&#x636E;&#x5E93;&#x6A21;&#x578B;</a></li>
+<li><a href="chapter1/1.1.md#&#x6570;&#x636E;&#x8868;">&#x6570;&#x636E;&#x8868;</a></li>
+<li><a href="chapter1/1.1.md#&#x5173;&#x7CFB;&#x952E;">&#x5173;&#x7CFB;&#x952E;</a></li>
+</ul>
+</li>
+<li>1.2 <a href="chapter1/1.2.md">&#x6570;&#x636E;&#x5E93;&#x6280;&#x672F;&#x6784;&#x6210;</a><ul>
+<li><a href="chapter1/1.2.md#&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;">&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;</a></li>
+<li><a href="chapter1/1.2.md#&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x57FA;&#x672C;&#x6982;&#x5FF5;">&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x57FA;&#x672C;&#x6982;&#x5FF5;</a></li>
+<li><a href="chapter1/1.2.md#sql&#x8BED;&#x8A00;">SQL&#x8BED;&#x8A00;</a></li>
+<li><a href="chapter1/1.2.md#&#x6570;&#x636E;&#x5E93;&#x8BBF;&#x95EE;&#x6280;&#x672F;">&#x6570;&#x636E;&#x5E93;&#x8BBF;&#x95EE;&#x6280;&#x672F;</a></li>
+</ul>
+</li>
+<li>1.3 <a href="chapter1/1.3.md">&#x4EC0;&#x4E48;&#x662F;MySQL</a><ul>
+<li><a href="chapter1/1.3.md#mysql-&#x4ECB;&#x7ECD;">MySQL&#x4ECB;&#x7ECD;</a></li>
+<li><a href="chapter1/1.3.md#mysql-&#x53D1;&#x5C55;&#x5386;&#x53F2;">MySQL&#x53D1;&#x5C55;&#x5386;&#x53F2;</a></li>
+<li><a href="chapter1/1.3.md#mysql-&#x7248;&#x672C;">MySQL&#x7248;&#x672C;</a></li>
+<li><a href="chapter1/1.3.md#mysql-&#x7684;&#x4F18;&#x52BF;">MySQL&#x7684;&#x4F18;&#x52BF;</a></li>
+</ul>
+</li>
+<li>1.4 <a href="chapter1/1.4.md">&#x5982;&#x4F55;&#x5B66;&#x4E60;MySQL</a></li>
+</ul>
+<h4 id="t4&#x7B2C;2&#x7AE0; MySQL&#x7684;&#x5B89;&#x88C5;&#x4E0E;&#x914D;&#x7F6E;">&#x7B2C;2&#x7AE0; MySQL&#x7684;&#x5B89;&#x88C5;&#x4E0E;&#x914D;&#x7F6E; <a href="#t4&#x7B2C;2&#x7AE0; MySQL&#x7684;&#x5B89;&#x88C5;&#x4E0E;&#x914D;&#x7F6E;"> # </a></h4>
+<ul>
+<li>2.1 <a href="chapter2/2.1.md">Mac&#x5E73;&#x53F0;&#x4E0B;&#x5B89;&#x88C5;&#x4E0E;&#x914D;&#x7F6E;MySQL</a><ul>
+<li><a href="chapter2/2.1.md#mac-&#x5B89;&#x88C5;mysql">Mac&#x4E0A;&#x5B89;&#x88C5;MySQL</a></li>
+<li><a href="chapter2/2.1.md#mac-&#x5378;&#x8F7D;mysql">Mac&#x4E0A;&#x5378;&#x8F7D;MySQL</a></li>
+</ul>
+</li>
+<li>2.2 <a href="chapter2/2.2.md">Centos &#x5E73;&#x53F0;&#x5B89;&#x88C5;&#x4E0E;&#x5378;&#x8F7D;MySQL</a><ul>
+<li><a href="chapter2/2.2.md#&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5DF2;&#x5B89;&#x88C5;">&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5DF2;&#x5B89;&#x88C5;</a></li>
+<li><a href="chapter2/2.2.md#&#x66F4;&#x65B0;&#x5B89;&#x88C5;&#x6E90;">&#x66F4;&#x65B0;&#x5B89;&#x88C5;&#x6E90;</a></li>
+<li><a href="chapter2/2.2.md#&#x68C0;&#x67E5;&#x662F;&#x5426;&#x4E0B;&#x8F7D;&#x6210;&#x529F;">&#x68C0;&#x67E5;&#x662F;&#x5426;&#x4E0B;&#x8F7D;&#x6210;&#x529F;</a></li>
+<li><a href="chapter2/2.2.md#&#x67E5;&#x770B;&#x7248;&#x672C;">&#x67E5;&#x770B;&#x7248;&#x672C;</a></li>
+<li><a href="chapter2/2.2.md#&#x542F;&#x52A8;&#x6307;&#x5B9A;&#x7248;&#x672C;">&#x542F;&#x52A8;&#x6307;&#x5B9A;&#x7248;&#x672C;</a></li>
+<li><a href="chapter2/2.2.md#&#x5B89;&#x88C5;mysql">&#x5B89;&#x88C5;MySQL</a></li>
+<li><a href="chapter2/2.2.md#&#x67E5;&#x770B;&#x5B89;&#x88C5;&#x76EE;&#x5F55;">&#x67E5;&#x770B;&#x5B89;&#x88C5;&#x76EE;&#x5F55;</a></li>
+<li><a href="chapter2/2.2.md#mariadb&#x5207;&#x6362;mysql">MariaDB&#x5207;&#x6362;MySQL</a></li>
+<li><a href="chapter2/2.2.md#&#x5378;&#x8F7D;-mysql-&#x8F6F;&#x4EF6;">&#x5378;&#x8F7D; MySQL &#x8F6F;&#x4EF6;</a></li>
+</ul>
+</li>
+<li>2.3 <a href="chapter2/2.3.md">&#x542F;&#x52A8;&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x7F6E;&#x521D;&#x59CB;&#x5BC6;&#x7801;</a><ul>
+<li><a href="chapter2/2.3.md#&#x547D;&#x4EE4;&#x884C;&#x542F;&#x52A8;&#x5173;&#x95ED;&#x91CD;&#x542F;mysql&#x670D;&#x52A1;">&#x547D;&#x4EE4;&#x884C;&#x542F;&#x52A8;&#x5173;&#x95ED;&#x91CD;&#x542F;MySQL&#x670D;&#x52A1;</a></li>
+<li><a href="chapter2/2.3.md#&#x56FE;&#x50CF;&#x754C;&#x9762;&#x542F;&#x52A8;&#x5173;&#x95ED;&#x91CD;&#x542F;mysql&#x670D;&#x52A1;">&#x56FE;&#x50CF;&#x754C;&#x9762;&#x542F;&#x52A8;&#x5173;&#x95ED;&#x91CD;&#x542F;MySQL&#x670D;&#x52A1;</a></li>
+<li><a href="chapter2/2.3.md#&#x67E5;&#x770B;&#x521D;&#x59CB;&#x5BC6;&#x7801;">&#x67E5;&#x770B;&#x521D;&#x59CB;&#x5BC6;&#x7801;</a></li>
+<li><a href="chapter2/2.3.md#&#x8BBE;&#x7F6E;&#x521D;&#x59CB;&#x5316;&#x5BC6;&#x7801;">&#x8BBE;&#x7F6E;&#x521D;&#x59CB;&#x5316;&#x5BC6;&#x7801;</a></li>
+<li><a href="chapter2/2.3.md#&#x542F;&#x52A8;&#x62A5;&#x9519;&#x5904;&#x7406;">&#x542F;&#x52A8;&#x62A5;&#x9519;&#x5904;&#x7406;</a></li>
+</ul>
+</li>
+<li>2.4 <a href="chapter2/2.4.md">MySQL&#x5DE5;&#x5177;</a><ul>
+<li><a href="chapter2/2.4.md#&#x547D;&#x4EE4;&#x884C;&#x4F7F;&#x7528;&#x7A0B;&#x5E8F;">&#x547D;&#x4EE4;&#x884C;&#x4F7F;&#x7528;&#x7A0B;&#x5E8F;</a></li>
+<li><a href="chapter2/2.4.md#mysql-workbench&#x5BA2;&#x6237;&#x7AEF;">MySQL Workbench&#x5BA2;&#x6237;&#x7AEF;</a></li>
+<li><a href="chapter2/2.4.md#&#x5E38;&#x7528;&#x56FE;&#x5F62;&#x7BA1;&#x7406;&#x5DE5;&#x5177;">&#x5E38;&#x7528;&#x56FE;&#x5F62;&#x7BA1;&#x7406;&#x5DE5;&#x5177;</a></li>
+<li><a href="chapter2/2.4.md#mycli&#x66FF;&#x4EE3;mysql&#x7684;mysql&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;">MyCli&#x66FF;&#x4EE3;MySQL&#x7684;mysql&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</a></li>
+</ul>
+</li>
+<li>2.5 <a href="chapter2/2.5.md">MySQL&#x914D;&#x7F6E;&#x4FEE;&#x6539;</a><ul>
+<li><a href="chapter2/2.5.md#mysql&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x8BF4;&#x660E;">MySQL&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x8BF4;&#x660E;</a></li>
+<li><a href="chapter2/2.5.md#&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E;</a></li>
+<li><a href="chapter2/2.5.md#windows&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;">Windows&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;</a></li>
+<li><a href="chapter2/2.5.md#linux&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;">Linux&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;</a></li>
+<li><a href="chapter2/2.5.md#&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5185;&#x5BB9;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="t5&#x7B2C;3&#x7AE0; &#x6570;&#x636E;&#x5E93;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;">&#x7B2C;3&#x7AE0; &#x6570;&#x636E;&#x5E93;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C; <a href="#t5&#x7B2C;3&#x7AE0; &#x6570;&#x636E;&#x5E93;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;"> # </a></h4>
+<ul>
+<li>3.1 <a href="chapter3/3.1.md">&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;</a><ul>
+<li><a href="chapter3/3.1.md#mysql&#x547D;&#x4EE4;&#x8BED;&#x6CD5;">MySQL&#x547D;&#x4EE4;&#x8BED;&#x6CD5;</a></li>
+<li><a href="chapter3/3.1.md#mysql&#x547D;&#x4EE4;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;">MySQL&#x547D;&#x4EE4;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;</a></li>
+<li><a href="chapter3/3.1.md#&#x5F00;&#x542F;mysql&#x7684;&#x8FDC;&#x7A0B;&#x5E10;&#x53F7;">&#x5F00;&#x542F;MySQL&#x7684;&#x8FDC;&#x7A0B;&#x5E10;&#x53F7;</a></li>
+<li><a href="chapter3/3.1.md#mysql&#x4FEE;&#x6539;&#x5BC6;&#x7801;">MySQL&#x4FEE;&#x6539;&#x5BC6;&#x7801;</a></li>
+</ul>
+</li>
+<li>3.2 <a href="chapter3/3.2.md">&#x67E5;&#x770B;&#x9009;&#x62E9;&#x6570;&#x636E;&#x5E93;</a><ul>
+<li><a href="chapter3/3.2.md#&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;">&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;</a></li>
+<li><a href="chapter3/3.2.md#&#x9009;&#x62E9;&#x6570;&#x636E;&#x5E93;">&#x9009;&#x62E9;&#x6570;&#x636E;&#x5E93;</a></li>
+</ul>
+</li>
+<li>3.3 <a href="chapter3/3.3.md">&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;</a><ul>
+<li><a href="chapter3/3.4.md#sql&#x8BED;&#x53E5;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;">SQL&#x8BED;&#x53E5;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;</a></li>
+<li><a href="chapter3/3.4.md#&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;">&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;</a></li>
+</ul>
+</li>
+<li>3.4 <a href="chapter3/3.4.md">&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;</a><ul>
+<li><a href="chapter3/3.4.md#sql&#x8BED;&#x53E5;&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;">SQL&#x8BED;&#x53E5;&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;</a></li>
+<li><a href="chapter3/3.4.md#&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;">&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;</a></li>
+</ul>
+</li>
+<li>3.5 <a href="chapter3/3.5.md#">&#x6570;&#x636E;&#x5E93;&#x5B58;&#x50A8;&#x5F15;&#x64CE;</a><ul>
+<li><a href="chapter3/3.5.md#&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x7B80;&#x4ECB;">&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x7B80;&#x4ECB;</a></li>
+<li><a href="chapter3/3.5.md#&#x5E38;&#x7528;&#x5F15;&#x64CE;&#x5BF9;&#x6BD4;">&#x5E38;&#x7528;&#x5F15;&#x64CE;&#x5BF9;&#x6BD4;</a></li>
+<li><a href="chapter3/3.5.md#&#x67E5;&#x770B;&#x5B58;&#x50A8;&#x5F15;&#x64CE;">&#x67E5;&#x770B;&#x5B58;&#x50A8;&#x5F15;&#x64CE;</a></li>
+<li><a href="chapter3/3.5.md#&#x8BBE;&#x7F6E;&#x5B58;&#x50A8;&#x5F15;&#x64CE;">&#x8BBE;&#x7F6E;&#x5B58;&#x50A8;&#x5F15;&#x64CE;</a></li>
+<li><a href="chapter3/3.5.md#&#x5982;&#x4F55;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;">&#x5982;&#x4F55;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="t6&#x7B2C;4&#x7AE0; &#x6570;&#x636E;&#x8868;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;">&#x7B2C;4&#x7AE0; &#x6570;&#x636E;&#x8868;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C; <a href="#t6&#x7B2C;4&#x7AE0; &#x6570;&#x636E;&#x8868;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;"> # </a></h4>
+<ul>
+<li>4.1 &#x521B;&#x5EFA;&#x6570;&#x636E;&#x8868;</li>
+</ul>
+<h4 id="t7&#x7B2C;5&#x7AE0; &#x6570;&#x636E;&#x7C7B;&#x578B;&#x548C;&#x8FD0;&#x7B97;&#x7B26;">&#x7B2C;5&#x7AE0; &#x6570;&#x636E;&#x7C7B;&#x578B;&#x548C;&#x8FD0;&#x7B97;&#x7B26; <a href="#t7&#x7B2C;5&#x7AE0; &#x6570;&#x636E;&#x7C7B;&#x578B;&#x548C;&#x8FD0;&#x7B97;&#x7B26;"> # </a></h4>
+<h4 id="t8&#x7B2C;6&#x7AE0; MySQL&#x51FD;&#x6570;">&#x7B2C;6&#x7AE0; MySQL&#x51FD;&#x6570; <a href="#t8&#x7B2C;6&#x7AE0; MySQL&#x51FD;&#x6570;"> # </a></h4>
+<h4 id="t9&#x7B2C;7&#x7AE0; &#x67E5;&#x8BE2;&#x6570;&#x636E;">&#x7B2C;7&#x7AE0; &#x67E5;&#x8BE2;&#x6570;&#x636E; <a href="#t9&#x7B2C;7&#x7AE0; &#x67E5;&#x8BE2;&#x6570;&#x636E;"> # </a></h4>
+<h4 id="t10&#x7B2C;8&#x7AE0; &#x63D2;&#x5165;&#x3001;&#x66F4;&#x65B0;&#x4E0E;&#x5220;&#x9664;&#x6570;&#x636E;">&#x7B2C;8&#x7AE0; &#x63D2;&#x5165;&#x3001;&#x66F4;&#x65B0;&#x4E0E;&#x5220;&#x9664;&#x6570;&#x636E; <a href="#t10&#x7B2C;8&#x7AE0; &#x63D2;&#x5165;&#x3001;&#x66F4;&#x65B0;&#x4E0E;&#x5220;&#x9664;&#x6570;&#x636E;"> # </a></h4>
+<h4 id="t11&#x7B2C;9&#x7AE0; &#x7D22;&#x5F15;">&#x7B2C;9&#x7AE0; &#x7D22;&#x5F15; <a href="#t11&#x7B2C;9&#x7AE0; &#x7D22;&#x5F15;"> # </a></h4>
+<h4 id="t12&#x7B2C;10&#x7AE0; &#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x548C;&#x51FD;&#x6570;">&#x7B2C;10&#x7AE0; &#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x548C;&#x51FD;&#x6570; <a href="#t12&#x7B2C;10&#x7AE0; &#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x548C;&#x51FD;&#x6570;"> # </a></h4>
+<h4 id="t13&#x7B2C;11&#x7AE0; &#x89C6;&#x56FE;">&#x7B2C;11&#x7AE0; &#x89C6;&#x56FE; <a href="#t13&#x7B2C;11&#x7AE0; &#x89C6;&#x56FE;"> # </a></h4>
+<h4 id="t14&#x7B2C;12&#x7AE0; MySQL&#x51FD;&#x6570;">&#x7B2C;12&#x7AE0; MySQL&#x51FD;&#x6570; <a href="#t14&#x7B2C;12&#x7AE0; MySQL&#x51FD;&#x6570;"> # </a></h4>
+<h4 id="t15&#x7B2C;13&#x7AE0; MySQL&#x7528;&#x6237;&#x7BA1;&#x7406;">&#x7B2C;13&#x7AE0; MySQL&#x7528;&#x6237;&#x7BA1;&#x7406; <a href="#t15&#x7B2C;13&#x7AE0; MySQL&#x7528;&#x6237;&#x7BA1;&#x7406;"> # </a></h4>
+<h4 id="t16&#x7B2C;14&#x7AE0; &#x6570;&#x636E;&#x5907;&#x4EFD;&#x4E0E;&#x8FD8;&#x539F;">&#x7B2C;14&#x7AE0; &#x6570;&#x636E;&#x5907;&#x4EFD;&#x4E0E;&#x8FD8;&#x539F; <a href="#t16&#x7B2C;14&#x7AE0; &#x6570;&#x636E;&#x5907;&#x4EFD;&#x4E0E;&#x8FD8;&#x539F;"> # </a></h4>
+<h4 id="t17&#x7B2C;15&#x7AE0; MySQL&#x65E5;&#x5FD7;">&#x7B2C;15&#x7AE0; MySQL&#x65E5;&#x5FD7; <a href="#t17&#x7B2C;15&#x7AE0; MySQL&#x65E5;&#x5FD7;"> # </a></h4>
+<h4 id="t18&#x7B2C;16&#x7AE0; &#x6027;&#x80FD;&#x4F18;&#x5316;">&#x7B2C;16&#x7AE0; &#x6027;&#x80FD;&#x4F18;&#x5316; <a href="#t18&#x7B2C;16&#x7AE0; &#x6027;&#x80FD;&#x4F18;&#x5316;"> # </a></h4>
+<h4 id="t19&#x7B2C;17&#x7AE0; &#x5404;&#x79CD;&#x95EE;&#x9898;&#x89E3;&#x51B3;">&#x7B2C;17&#x7AE0; &#x5404;&#x79CD;&#x95EE;&#x9898;&#x89E3;&#x51B3; <a href="#t19&#x7B2C;17&#x7AE0; &#x5404;&#x79CD;&#x95EE;&#x9898;&#x89E3;&#x51B3;"> # </a></h4>
+<ul>
+<li><a href="chapter17/17.1.md">&#x8BA9;MySQL&#x652F;&#x6301;emoji&#x56FE;&#x6807;&#x5B58;&#x50A8;</a></li>
+<li><a href="chapter17/17.2.md">Centos6&#x4E0B;&#x5347;&#x7EA7;MySQL&#x6570;&#x636E;&#x5E93;</a></li>
+<li><a href="chapter17/17.3.md">MySQL&#x4FEE;&#x6539;&#x5BC6;&#x7801;</a><ul>
+<li><a href="chapter17/17.3.md#mysqld_safe&#x4E0D;&#x5B58;&#x5728;&#x4FEE;&#x6539;&#x5BC6;&#x7801;">mysqld_safe&#x4E0D;&#x5B58;&#x5728;&#x4FEE;&#x6539;&#x5BC6;&#x7801;</a></li>
+<li><a href="chapter17/17.3.md#&#x542F;&#x52A8;&#x4FEE;&#x6539;&#x4E22;&#x5931;&#x7684;mysql&#x5355;&#x5B9E;&#x4F8B;root&#x5BC6;&#x7801;&#x65B9;&#x6CD5;">&#x542F;&#x52A8;&#x4FEE;&#x6539;&#x4E22;&#x5931;&#x7684;mysql&#x5355;&#x5B9E;&#x4F8B;root&#x5BC6;&#x7801;&#x65B9;&#x6CD5;</a></li>
+<li><a href="chapter17/17.3.md#Mac&#x4E0B;&#x91CD;&#x7F6E;MySQL&#x7684;root&#x5BC6;&#x7801;">Mac&#x4E0B;&#x91CD;&#x7F6E;MySQL&#x7684;root&#x5BC6;&#x7801;</a></li>
+<li><a href="chapter17/17.3.md#&#x4E0D;&#x91CD;&#x542F;mysqld&#x7684;&#x65B9;&#x6CD5;">&#x4E0D;&#x91CD;&#x542F;mysqld&#x4FEE;&#x6539;&#x5BC6;&#x7801;&#x7684;&#x65B9;&#x6CD5;</a></li>
+</ul>
+</li>
+<li><a href="chapter2/2.2.md#centos7&#x5B89;&#x88C5;mysql">Centos7 &#x9ED8;&#x8BA4;&#x4E3A;MariaDB&#x5BFC;&#x81F4;mysql&#x5B89;&#x88C5;&#x4E0D;&#x4E0A;</a></li>
+<li><a href="chapter2/2.1.md#mysql&#x547D;&#x4EE4;&#x4E0D;&#x5B58;&#x5728;">mysql&#x547D;&#x4EE4;&#x4E0D;&#x5B58;&#x5728;</a></li>
+<li><a href="chapter2/2.3.md#linux-&#x4E0B;&#x547D;&#x4EE4;&#x64CD;&#x4F5C;">MySQL&#x670D;&#x52A1;&#x542F;&#x52A8;&#x5931;&#x8D25;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+<li><a href="chapter3/3.1.md#&#x5F00;&#x542F;mysql&#x7684;&#x8FDC;&#x7A0B;&#x5E10;&#x53F7;">&#x5BC6;&#x7801;&#x4E0D;&#x6EE1;&#x8DB3;&#x5F53;&#x524D;&#x7684;&#x7B56;&#x7565;&#x8981;&#x6C42;&#x5BFC;&#x81F4;&#x65E0;&#x6CD5;&#x5F00;&#x542F;&#x8FDC;&#x7A0B;&#x5E10;&#x53F7;</a></li>
+</ul>
+<h2 id="t20&#x8BFB;&#x8005;&#x5BF9;&#x8C61;">&#x8BFB;&#x8005;&#x5BF9;&#x8C61; <a href="#t20&#x8BFB;&#x8005;&#x5BF9;&#x8C61;"> # </a></h2>
+<p>&#x6574;&#x672C;&#x4E66;&#x76EE;&#x5F55;&#x89C4;&#x5212;&#x53C2;&#x8003;&#x4E86;&#x5176;&#x5B83;&#x51E0;&#x672C; MySQL &#x4E66;&#x7C4D;&#x76EE;&#x5F55;&#x89C4;&#x5212;&#x7684;&#xFF0C;&#x5728;&#x6211;&#x8FB9;&#x5B66;&#x4E60;&#x8FB9;&#x6574;&#x7406;&#x7684;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x6709;&#x4FEE;&#x6539;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x6709;&#x70B9;&#x6162;&#xFF0C;&#x5E0C;&#x671B;&#x80FD;&#x5B8C;&#x6210;&#xFF0C;&#x6240;&#x4EE5;&#x6559;&#x7A0B;&#x9002;&#x5408;&#x4EE5;&#x4E0B;&#x8BFB;&#x8005;&#x5B66;&#x4E60;&#x9605;&#x8BFB;&#x4F7F;&#x7528;&#xFF1A;</p>
+<ul>
+<li>MySQL &#x6570;&#x636E;&#x5E93;&#x521D;&#x5B66;&#x8005;&#x3002;</li>
+<li>&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x5F00;&#x53D1;&#x611F;&#x5174;&#x8DA3;&#xFF0C;&#x5E0C;&#x671B;&#x5FEB;&#x901F;&#x3001;&#x5168;&#x9762;&#x638C;&#x63E1; MySQL &#x7684;&#x4EBA;&#x5458;&#x3002;</li>
+<li>&#x5BF9;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x5E93;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x4E86;&#x89E3;&#xFF0C;&#x60F3;&#x8F6C;&#x5230; MySQL &#x5E73;&#x53F0;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x3002;</li>
+<li>&#x50CF;&#x6211;&#x4E00;&#x6837;&#x88AB;&#x903C;&#x65E0;&#x5948;&#x4F7F;&#x7528; MySQL &#x6570;&#x636E;&#x5E93;&#x7684;&#x4EBA;&#x3002;</li>
+</ul>
+<p>&#x4ECE;&#x76EE;&#x5F55;&#x6765;&#x770B;&#xFF0C;&#x770B;&#x4E0A;&#x53BB;&#x5185;&#x5BB9;&#x4E30;&#x5BCC;&#xFF0C;&#x6BD4;&#x8F83;&#x5B8C;&#x6574;&#x7684;&#x4ECB;&#x7ECD;&#x4E86; MySQL &#x6570;&#x636E;&#x5E93;&#x6280;&#x672F;&#x7684;&#x6559;&#x7A0B;&#xFF0C;&#x6211;&#x4E0D;&#x662F;<code>DBA</code>&#xFF0C;&#x6211;&#x4E0D;&#x662F;&#xFF0C;&#x6B63;&#x5728;&#x770B;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x4F60;&#xFF0C;&#x5F88;&#x53EF;&#x80FD;&#x4E5F;&#x4E0D;&#x662F;&#xFF0C;&#x4E0D;&#x60F3;&#x8BEF;&#x4EBA;&#x5B50;&#x5F1F;&#xFF0C;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x5E94;&#x7528;&#x4E86;&#x4E00;&#x6BB5;&#x65F6;&#x95F4; MySQL&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;<code>DBA</code>&#x8BF7;&#x591A;&#x591A;&#x6307;&#x6559;&#xFF0C;&#x6587;&#x91C7;&#x4E0D;&#x4F73;&#x8FD8;&#x671B;&#x9AD8;&#x62AC;&#x8D35;&#x624B;&#xFF0C;&#x4E0D;&#x751A;&#x611F;&#x6FC0;&#xFF0C;&#x5C0F;&#x5F1F;&#x5728;&#x8FD9;&#x91CC;&#x7ED9;&#x60A8;&#x97A0;&#x8EAC;&#xFF0C;&#x6B22;&#x8FCE;&#x7ED9;&#x6211;&#x7EA0;&#x9519;&#x3002;</p>
+<p>&#x6211;&#x60F3;&#x5FF5;&#x4E00;&#x4E2A;&#x5973;&#x5B69;&#x513F;&#xFF0C;&#x5B9E;&#x5C5E;&#x65E0;&#x5948;&#x6211;&#x5F97;&#x7EE7;&#x7EED;&#x52AA;&#x529B;&#xFF0C;&#x597D;&#x597D;&#x8BFB;&#x4E66;&#x505A;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x4EBA;&#xFF0C;&#x5B8C;&#x6210;&#x6211;&#x7684;&#x201C;&#x8457;&#x4F5C;&#x201D;&#xFF0C;&#x5F85;&#x6211;&#x8457;&#x4F5C;&#x5B8C;&#x6210;&#x53EF;&#x5426;&#x8DDF;&#x6211;&#x7EA6;&#x4E2A;&#x4F1A;&#xFF1F;</p>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

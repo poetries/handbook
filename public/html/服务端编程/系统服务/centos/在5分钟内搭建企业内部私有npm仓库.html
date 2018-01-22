@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handbook</title>
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            <img src="../../../../idoc-logo.svg">
+        
+    </div>
+<ul><li><a href="../../../../index.html">Git常用命令</a></li><li><a href="#"><span></span>前端</a><ul><li><a href="#"><span></span>Javascript</a><ul><li><a href="#"><span></span>RN</a><ul><li><a href="../../../../html/前端/Javascript/RN/React-native Android环境搭建.html">React-native Android环境搭建</a></li></ul></li><li><a href="../../../../html/前端/Javascript/思维导图.html">思维导图</a></li><li><a href="../../../../html/前端/Javascript/正则表达式.html">正则表达式</a></li><li><a href="../../../../html/前端/Javascript/轻量高效的开源JavaScript插件和库.html">轻量高效的开源JavaScript插件和库</a></li></ul></li></ul></li><li><a href="#"><span></span>服务端编程</a><ul><li><a href="#"><span></span>数据库</a><ul><li><a href="../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li><li><a href="#"><span></span>系统服务</a><ul><li><a href="../../../../html/服务端编程/系统服务/docker.html">docker</a></li><li><a href="#"><span></span>shell</a><ul><li><a href="../../../../html/服务端编程/系统服务/shell/shell-regex.html">shell-regex</a></li><li><a href="../../../../html/服务端编程/系统服务/shell/Shell.html">Shell</a></li></ul></li><li><a href="../../../../html/服务端编程/系统服务/Nginx.html">Nginx</a></li></ul></li><li><a href="#"><span></span>Linux</a><ul></ul></li><li><a href="#"><span></span>数据库</a><ul><li><a href="#"><span></span>mysql</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/21-minutes-MySQL-basic-entry.html">21-minutes-MySQL-basic-entry</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/awesome-mysql.html">awesome-mysql</a></li><li><a href="#"><span></span>chapter1</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.1.html">1.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.2.html">1.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.3.html">1.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.4.html">1.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.html">1</a></li></ul></li><li><a href="#"><span></span>chapter17</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.1.html">17.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.2.html">17.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.3.html">17.3</a></li></ul></li><li><a href="#"><span></span>chapter2</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.1.html">2.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.2.html">2.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.3.html">2.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.4.html">2.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.5.html">2.5</a></li></ul></li><li><a href="#"><span></span>chapter3</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.1.html">3.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.2.html">3.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.3.html">3.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.4.html">3.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.5.html">3.5</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.html">3</a></li></ul></li><li><a href="../../../../html/服务端编程/数据库/mysql/README.html">README</a></li></ul></li><li><a href="../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li></ul></li><li><a href="#"><span></span>工具快捷键</a><ul><li><a href="../../../../html/工具快捷键/Git常用命令.html">Git常用命令</a></li><li><a href="../../../../html/工具快捷键/vim.html">vim</a></li></ul></li><li><a href="#"><span></span>其他</a><ul><li><a href="../../../../html/其他/HTTP状态码.html">HTTP状态码</a></li><li><a href="../../../../html/其他/通过代理工具提高Github Clone速度.html">通过代理工具提高Github Clone速度</a></li></ul></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/poetries/handbook"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0在5分钟内搭建企业内部私有npm仓库">在5分钟内搭建企业内部私有npm仓库</a></li><li><a href="#t1cnpm搭建">cnpm搭建</a><ul><li><a href="#t2安装">安装</a></li><li><a href="#t3启动并配置服务">启动并配置服务</a></li><li><a href="#t4设置注册地址">设置注册地址</a></li><li><a href="#t5登录cnpm">登录cnpm</a></li><li><a href="#t6包上传到私有仓库">包上传到私有仓库</a></li><li><a href="#t7查看预览包">查看预览包</a></li><li><a href="#t8安装">安装</a></li></ul></li><li><a href="#t9通过verdaccio搭建">通过verdaccio搭建</a><ul><li><a href="#t10安装">安装</a></li><li><a href="#t11启动服务">启动服务</a></li><li><a href="#t12添加用户/登录">添加用户/登录</a></li><li><a href="#t13上传私有包">上传私有包</a></li><li><a href="#t14本地配置注册地址">本地配置注册地址</a></li></ul></li><li><a href="#t15Git仓库当私有npm">Git仓库当私有npm</a><ul><li><a href="#t16建立一个私有模块">建立一个私有模块</a></li><li><a href="#t17安装使用私有模块">安装使用私有模块</a></li><li><a href="#t18优劣势">优劣势</a></li></ul></li><li><a href="#t19参考资料">参考资料</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t0&#x5728;5&#x5206;&#x949F;&#x5185;&#x642D;&#x5EFA;&#x4F01;&#x4E1A;&#x5185;&#x90E8;&#x79C1;&#x6709;npm&#x4ED3;&#x5E93;">&#x5728;5&#x5206;&#x949F;&#x5185;&#x642D;&#x5EFA;&#x4F01;&#x4E1A;&#x5185;&#x90E8;&#x79C1;&#x6709;npm&#x4ED3;&#x5E93; <a href="#t0&#x5728;5&#x5206;&#x949F;&#x5185;&#x642D;&#x5EFA;&#x4F01;&#x4E1A;&#x5185;&#x90E8;&#x79C1;&#x6709;npm&#x4ED3;&#x5E93;"> # </a></h2>
+<p>&#x4E0B;&#x9762;&#x901A;&#x8FC7;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x642D;&#x5EFA;&#x516C;&#x53F8;&#x79C1;&#x6709;npm&#x4ED3;&#x5E93;&#xFF0C;&#x6BCF;&#x79CD;&#x65B9;&#x5F0F;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x4F18;&#x52BF;&#x3002;</p>
+<blockquote>
+<p>Node.js &gt;= 6.11.3&#xFF0C;&#x6211;&#x7684;Node&#x7248;&#x672C;&#xFF1A;node v8.2.1<br>Linux or OSX&#xFF0C;&#x6211;&#x7684;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#xFF1A;CentOS Linux release 7.2.1511 (Core)  </p>
+</blockquote>
+<h2 id="t1cnpm&#x642D;&#x5EFA;">cnpm&#x642D;&#x5EFA; <a href="#t1cnpm&#x642D;&#x5EFA;"> # </a></h2>
+<h3 id="t2&#x5B89;&#x88C5;">&#x5B89;&#x88C5; <a href="#t2&#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-bash">npm install -g --build-from-source cnpmjs.org cnpm sqlite3
+<span class="hljs-comment"># &#x5982;&#x679C;&#x62A5;&#x9519;&#x6216;&#x8005;&#x8B66;&#x544A;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x65B9;&#x5F0F;&#x5B89;&#x88C5;</span>
+npm install -g --unsafe-perm --verbose --build-from-source cnpmjs.org cnpm sqlite3
+</code></pre>
+<p>&#x5982;&#x679C;&#x5B89;&#x88C5;&#x4E0D;&#x6D41;&#x7545;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x5F62;&#x5F0F;&#x5B89;&#x88C5;&#xFF1A;</p>
+<pre><code class="lang-bash">npm install -g --build-from-source \
+  --registry=https://registry.npm.taobao.org \
+  --disturl=https://npm.taobao.org/mirrors/node \
+  cnpmjs.org cnpm sqlite3
+</code></pre>
+<p>&#x5982;&#x679C;&#x62A5;&#x8B66;&#x544A;&#x6216;&#x8005;&#x5B89;&#x88C5;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x6DFB;&#x52A0;&#x53C2;&#x6570;<code>--unsafe-perm --verbose</code></p>
+<h3 id="t3&#x542F;&#x52A8;&#x5E76;&#x914D;&#x7F6E;&#x670D;&#x52A1;">&#x542F;&#x52A8;&#x5E76;&#x914D;&#x7F6E;&#x670D;&#x52A1; <a href="#t3&#x542F;&#x52A8;&#x5E76;&#x914D;&#x7F6E;&#x670D;&#x52A1;"> # </a></h3>
+<blockquote>
+<p>&#x7BA1;&#x7406;&#x5458;&#xFF1A;<code>myname,othername</code><br>&#x8303;&#x56F4;&#xFF1A;<code>my-company-name,other-name</code><br>&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#xFF1A;7001-registry, 7002-web</p>
+</blockquote>
+<p>&#x542F;&#x52A8;&#x670D;&#x52A1;</p>
+<pre><code class="lang-bash">$ nohup cnpmjs.org start --admins=<span class="hljs-string">&apos;myname,othername&apos;</span> \
+  --scopes=<span class="hljs-string">&apos;@my-company-name,@other-name&apos;</span> &amp;
+</code></pre>
+<h3 id="t4&#x8BBE;&#x7F6E;&#x6CE8;&#x518C;&#x5730;&#x5740;">&#x8BBE;&#x7F6E;&#x6CE8;&#x518C;&#x5730;&#x5740; <a href="#t4&#x8BBE;&#x7F6E;&#x6CE8;&#x518C;&#x5730;&#x5740;"> # </a></h3>
+<p>&#x5C06;cnpm&#x9ED8;&#x8BA4;&#x6CE8;&#x518C;&#x5730;&#x5740;&#x66F4;&#x6539;&#x4E3A;&#x79C1;&#x6709;&#x6CE8;&#x518C;&#x5730;&#x5740;</p>
+<pre><code class="lang-bash">cnpm <span class="hljs-built_in">set</span> registry http://localhost:7001
+</code></pre>
+<h3 id="t5&#x767B;&#x5F55;cnpm">&#x767B;&#x5F55;cnpm <a href="#t5&#x767B;&#x5F55;cnpm"> # </a></h3>
+<pre><code class="lang-bash">$ cnpm login
+Username: myname
+Password: ***
+Email: (this IS public) <span class="hljs-built_in">test</span>@test.com
+</code></pre>
+<h3 id="t6&#x5305;&#x4E0A;&#x4F20;&#x5230;&#x79C1;&#x6709;&#x4ED3;&#x5E93;">&#x5305;&#x4E0A;&#x4F20;&#x5230;&#x79C1;&#x6709;&#x4ED3;&#x5E93; <a href="#t6&#x5305;&#x4E0A;&#x4F20;&#x5230;&#x79C1;&#x6709;&#x4ED3;&#x5E93;"> # </a></h3>
+<p>&#x65B0;&#x5EFA;&#x9879;&#x76EE;</p>
+<pre><code>$ cd /tmp
+$ mkdir helloworld &amp;&amp; cd helloworld
+$ cnpm init
+name: (helloworld) @my-company-name/helloworld
+version: (1.0.0)
+
+{
+  &quot;name&quot;: &quot;@my-company-name/helloworld&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;my first scoped package&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+</code></pre><p>&#x4E0A;&#x4F20;&#x5230;&#x79C1;&#x6709;&#x4ED3;&#x5E93;</p>
+<pre><code class="lang-bash">$ cnpm publish
++ @my-company-name/helloworld@1.0.0
+</code></pre>
+<h3 id="t7&#x67E5;&#x770B;&#x9884;&#x89C8;&#x5305;">&#x67E5;&#x770B;&#x9884;&#x89C8;&#x5305; <a href="#t7&#x67E5;&#x770B;&#x9884;&#x89C8;&#x5305;"> # </a></h3>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x9884;&#x89C8;</p>
+<pre><code class="lang-bash">open http://localhost:7002/@my-company-name/helloworld
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>cnpm</code>&#x9884;&#x89C8;</p>
+<pre><code>cnpm info
+</code></pre><h3 id="t8&#x5B89;&#x88C5;">&#x5B89;&#x88C5; <a href="#t8&#x5B89;&#x88C5;"> # </a></h3>
+<p>&#x6240;&#x6709;&#x516C;&#x5171;&#x5305;&#x90FD;&#x53EF;&#x76F4;&#x63A5;&#x4F7F;&#x7528;<code>cnpm</code>&#x5B89;&#x88C5;</p>
+<pre><code class="lang-bash">cnpm install hotkeys-js
+</code></pre>
+<h2 id="t9&#x901A;&#x8FC7;verdaccio&#x642D;&#x5EFA;">&#x901A;&#x8FC7;verdaccio&#x642D;&#x5EFA; <a href="#t9&#x901A;&#x8FC7;verdaccio&#x642D;&#x5EFA;"> # </a></h2>
+<p><a href="https://github.com/verdaccio/verdaccio">verdaccio</a> &#x662F;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x79C1;&#x6709;npm&#x4EE3;&#x7406;&#x6CE8;&#x518C;&#x3002;&#xFF08;<a href="https://github.com/rlidwka/sinopia">sinopia</a> fork&#xFF09;</p>
+<h3 id="t10&#x5B89;&#x88C5;">&#x5B89;&#x88C5; <a href="#t10&#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4F7F;&#x7528; npm &#x5B89;&#x88C5;</span>
+npm install -g npm
+
+<span class="hljs-comment"># &#x4F7F;&#x7528; yarn &#x5B89;&#x88C5;</span>
+yarn global add verdaccio
+</code></pre>
+<h3 id="t11&#x542F;&#x52A8;&#x670D;&#x52A1;">&#x542F;&#x52A8;&#x670D;&#x52A1; <a href="#t11&#x542F;&#x52A8;&#x670D;&#x52A1;"> # </a></h3>
+<pre><code class="lang-bash">verdaccio &gt;&gt; verdaccio.log 2&gt;&amp;1 &amp; <span class="hljs-comment"># &#x540E;&#x53F0;&#x542F;&#x52A8;&#x5E76;&#x5199;&#x5165;&#x65E5;&#x5FD7;</span>
+
+<span class="hljs-comment"># Verdaccio doesn&apos;t need superuser privileges. Don&apos;t run it under root.</span>
+<span class="hljs-comment"># warn --- config file  - /root/.config/verdaccio/config.yaml</span>
+<span class="hljs-comment"># warn --- http address - http://localhost:4873/ - verdaccio/2.3.6</span>
+
+verdaccio --listen 4000 --config ./config.yaml <span class="hljs-comment"># &#x6307;&#x5B9A;&#x914D;&#x7F6E;&#x542F;&#x52A8;</span>
+</code></pre>
+<h3 id="t12&#x6DFB;&#x52A0;&#x7528;&#x6237;/&#x767B;&#x5F55;">&#x6DFB;&#x52A0;&#x7528;&#x6237;/&#x767B;&#x5F55; <a href="#t12&#x6DFB;&#x52A0;&#x7528;&#x6237;/&#x767B;&#x5F55;"> # </a></h3>
+<pre><code class="lang-bash">npm adduser --registry  http://localhost:4873
+</code></pre>
+<h3 id="t13&#x4E0A;&#x4F20;&#x79C1;&#x6709;&#x5305;">&#x4E0A;&#x4F20;&#x79C1;&#x6709;&#x5305; <a href="#t13&#x4E0A;&#x4F20;&#x79C1;&#x6709;&#x5305;"> # </a></h3>
+<pre><code class="lang-bash">npm publish --registry http://localhost:4873
+</code></pre>
+<h3 id="t14&#x672C;&#x5730;&#x914D;&#x7F6E;&#x6CE8;&#x518C;&#x5730;&#x5740;">&#x672C;&#x5730;&#x914D;&#x7F6E;&#x6CE8;&#x518C;&#x5730;&#x5740; <a href="#t14&#x672C;&#x5730;&#x914D;&#x7F6E;&#x6CE8;&#x518C;&#x5730;&#x5740;"> # </a></h3>
+<pre><code class="lang-bash">npm config list -l <span class="hljs-comment"># &#x67E5;&#x770B;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;</span>
+<span class="hljs-comment"># &#x5C06;&#x9ED8;&#x8BA4;&#x5730;&#x5740; https://registry.npmjs.org/ &#x6539;&#x6210;&#x79C1;&#x6709;&#x5730;&#x5740;</span>
+npm <span class="hljs-built_in">set</span> registry http://localhost:4873
+<span class="hljs-comment"># &#x5982;&#x679C;&#x60A8;&#x4F7F;&#x7528;HTTPS&#xFF0C;&#x8BF7;&#x6DFB;&#x52A0;&#x9002;&#x5F53;&#x7684;CA&#x4FE1;&#x606F;</span>
+<span class="hljs-comment">#&#xFF08;&#x201C;null&#x201D;&#x8868;&#x793A;&#x4ECE;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x83B7;&#x53D6;CA&#x5217;&#x8868;&#xFF09;</span>
+$ npm <span class="hljs-built_in">set</span> ca null
+</code></pre>
+<h2 id="t15Git&#x4ED3;&#x5E93;&#x5F53;&#x79C1;&#x6709;npm">Git&#x4ED3;&#x5E93;&#x5F53;&#x79C1;&#x6709;npm <a href="#t15Git&#x4ED3;&#x5E93;&#x5F53;&#x79C1;&#x6709;npm"> # </a></h2>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5F97;&#x76CA;&#x4E8E;&#xFF0C;npm&#x63D0;&#x4F9B;&#x7684;&#x7684;&#x4E30;&#x5BCC;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;&#x3002;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x65B9;&#x6CD5;&#x5B89;&#x88C5;&#xFF1A;</p>
+<pre><code class="lang-bash">npm i -S git+ssh://git@git.showgold.cn:npm/hello.git
+
+npm install -S git+ssh://git@github.com:npm/npm.git<span class="hljs-comment">#v1.0.27</span>
+npm install -S git+ssh://git@github.com:npm/npm<span class="hljs-comment">#semver:^5.0</span>
+npm install -S git+https://isaacs@github.com/npm/npm.git
+npm install -S git://github.com/npm/npm.git<span class="hljs-comment">#v1.0.27</span>
+</code></pre>
+<p>&#x26A0;&#xFE0F; &#x4E0A;&#x9762;&#x5B89;&#x88C5;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF1A;&#x4F60;&#x7684;&#x5DE5;&#x7A0B;&#x4E00;&#x5B9A;&#x662F;&#x5728;&#x67D0;&#x4E00;&#x4E2A;&#x7EC4;&#x4E0B;&#x9762;&#x5EFA;&#x7ACB;&#xFF0C;&#x65B9;&#x4FBF;&#x7BA1;&#x7406;&#xFF0C;&#x5728;&#x751F;&#x6210;&#x4F60;&#x7684;&#x5305;&#x7684;&#x65F6;&#x5019;<code>package.json</code>&#x4E2D;&#x7684;<code>name</code>&#x4E00;&#x5B9A;&#x8981;&#x5E26;&#x4E0A;&#x8303;&#x56F4;</p>
+<h3 id="t16&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x6A21;&#x5757;">&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x6A21;&#x5757; <a href="#t16&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x6A21;&#x5757;"> # </a></h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5047;&#x8BBE;&#x4F60;&#x5EFA;&#x7ACB;&#x4E86;&#x4E00;&#x4E2A;Git&#x4ED3;&#x5E93;&#xFF0C;&#x5148;&#x514B;&#x9686;&#x4E0B;&#x6765;</span>
+git <span class="hljs-built_in">clone</span> http://git.your-inc.com/companyfe/hello-private.git
+
+<span class="hljs-comment"># &#x751F;&#x6210; `package.json` &#x914D;&#x7F6E;, &#x6CE8;&#x610F;&#x9650;&#x5B9A; `@scope` &#x8303;&#x56F4;</span>
+npm init --scope=companyfe
+<span class="hljs-comment"># &#x63D0;&#x4EA4;&#x5230;&#x4ED3;&#x5E93;</span>
+git push origin master
+</code></pre>
+<p>&#x26A0;&#xFE0F; &#x5C06;&#x5F97;&#x5230;&#x5982;&#x4E0B;&#x4F9D;&#x8D56;&#xFF0C;&#x6CE8;&#x610F;&#xFF1A;</p>
+<blockquote>
+<p><code>name</code>&#x5B57;&#x6BB5;&#x5FC5;&#x987B;&#x9650;&#x5B9A;&#x8303;&#x56F4;&#xFF0C;&#x4E00;&#x822C;&#x4E3A; GitLab group &#x7684;&#x540D;&#x5B57;, &#x4F8B;&#x5982; <code>@companyfe</code>, &#x90A3;&#x4E48; <code>name</code> &#x4E3A;: <code>@companyfe/hello-private</code>&#x3002;<br><code>private</code> &#x8BBE;&#x4E3A; <code>true</code> &#x9632;&#x6B62;&#x5C06;&#x79C1;&#x6709;&#x6A21;&#x5757;&#x4E0A;&#x4F20;&#x5230;&#x516C;&#x7F51;&#x4E0A;&#x53BB;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x8BBE;&#x7F6E;&#x4E00;&#x4E0B;&#x3002;  </p>
+</blockquote>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;@companyfe/hello-private&quot;</span>,
+  <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.1&quot;</span>,
+  <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-attr">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,
+  <span class="hljs-attr">&quot;private&quot;</span>:<span class="hljs-literal">true</span>,
+  <span class="hljs-attr">&quot;scripts&quot;</span>: {
+    <span class="hljs-attr">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  },
+  <span class="hljs-attr">&quot;author&quot;</span>: <span class="hljs-string">&quot;kenny wang &lt;wowohoo@qq.com&gt; (http://wangchujiang.com)&quot;</span>,
+  <span class="hljs-attr">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>
+}
+</code></pre>
+<h3 id="t17&#x5B89;&#x88C5;&#x4F7F;&#x7528;&#x79C1;&#x6709;&#x6A21;&#x5757;">&#x5B89;&#x88C5;&#x4F7F;&#x7528;&#x79C1;&#x6709;&#x6A21;&#x5757; <a href="#t17&#x5B89;&#x88C5;&#x4F7F;&#x7528;&#x79C1;&#x6709;&#x6A21;&#x5757;"> # </a></h3>
+<p>&#x8DDF;&#x5B89;&#x88C5;&#x5F00;&#x6E90;&#x7684;&#x6A21;&#x5757;&#x4E00;&#x6837;, &#x4F7F;&#x7528; <code>npm install</code> &#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5373;&#x53EF;. &#x79C1;&#x6709;&#x6A21;&#x5757;&#x4F1A;&#x5B89;&#x88C5;&#x5728; <code>@scope</code> &#x7684;&#x5B50;&#x6587;&#x4EF6;&#x5939;&#x4E2D;, &#x4F8B;&#x5982;: <code>node_modules/@companyfe/hello-private</code>.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x57FA;&#x7840;&#x5B89;&#x88C5;</span>
+npm i -S git+ssh://git@git.your-inc.com/companyfe/hello-private.git
+<span class="hljs-comment"># &#x5E26;&#x7248;&#x672C;&#x4FE1;&#x606F;&#x7684;&#xFF0C;&#x5FC5;&#x987B;&#x901A;&#x8FC7; git &#x6253; tag</span>
+npm i -S git+ssh://git@git.your-inc.com/companyfe/hello-private.git<span class="hljs-comment">#v1.2.0</span>
+</code></pre>
+<p>&#x5C06;&#x5F97;&#x5230;&#x5982;&#x4E0B;&#x4F9D;&#x8D56;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;helloworld&quot;</span>,
+  <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-attr">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,
+  <span class="hljs-attr">&quot;scripts&quot;</span>: {
+    <span class="hljs-attr">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  },
+  <span class="hljs-attr">&quot;dependencies&quot;</span>: {
+    <span class="hljs-attr">&quot;@companyfe/hello-private&quot;</span>: <span class="hljs-string">&quot;git+ssh://git@git.your-inc.com/companyfe/hello-private.git#v1.2.0&quot;</span>
+  },
+  <span class="hljs-attr">&quot;author&quot;</span>: <span class="hljs-string">&quot;kenny wang &lt;wowohoo@qq.com&gt; (http://wangchujiang.com)&quot;</span>,
+  <span class="hljs-attr">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>
+}
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x79C1;&#x6709;&#x6A21;&#x5757;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> hello = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@companyfe/hello-private&apos;</span>);
+</code></pre>
+<h3 id="t18&#x4F18;&#x52A3;&#x52BF;">&#x4F18;&#x52A3;&#x52BF; <a href="#t18&#x4F18;&#x52A3;&#x52BF;"> # </a></h3>
+<p>&#x4E0D;&#x597D;&#x7684;&#x5730;&#x65B9;&#x662F;&#xFF0C;&#x4F7F;&#x7528; <code>npm update</code> &#x662F;&#x65E0;&#x6CD5;&#x66F4;&#x65B0;&#x79C1;&#x6709;&#x6A21;&#x5757;&#xFF0C;&#x60F3;&#x66F4;&#x65B0;&#x53EA;&#x80FD;&#x91CD;&#x65B0;&#x5B89;&#x88C5;&#x4E00;&#x6B21;&#x3002;&#x597D;&#x5904;&#x662F;&#x4E0D;&#x7528;&#x642D;&#x5EFA;&#x670D;&#x52A1;&#x3002;</p>
+<h2 id="t19&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599; <a href="#t19&#x53C2;&#x8003;&#x8D44;&#x6599;"> # </a></h2>
+<ul>
+<li><a href="https://docs.npmjs.com/misc/registry#can-i-run-my-own-private-registry">Can I run my own private registry?</a></li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

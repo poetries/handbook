@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handbook</title>
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            <img src="../../../../idoc-logo.svg">
+        
+    </div>
+<ul><li><a href="../../../../index.html">Git常用命令</a></li><li><a href="#"><span></span>前端</a><ul><li><a href="#"><span></span>Javascript</a><ul><li><a href="#"><span></span>RN</a><ul><li><a href="../../../../html/前端/Javascript/RN/React-native Android环境搭建.html">React-native Android环境搭建</a></li></ul></li><li><a href="../../../../html/前端/Javascript/思维导图.html">思维导图</a></li><li><a href="../../../../html/前端/Javascript/正则表达式.html">正则表达式</a></li><li><a href="../../../../html/前端/Javascript/轻量高效的开源JavaScript插件和库.html">轻量高效的开源JavaScript插件和库</a></li></ul></li></ul></li><li><a href="#"><span></span>服务端编程</a><ul><li><a href="#"><span></span>数据库</a><ul><li><a href="../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li><li><a href="#"><span></span>系统服务</a><ul><li><a href="../../../../html/服务端编程/系统服务/docker.html">docker</a></li><li><a href="#"><span></span>shell</a><ul><li><a href="../../../../html/服务端编程/系统服务/shell/shell-regex.html">shell-regex</a></li><li><a href="../../../../html/服务端编程/系统服务/shell/Shell.html">Shell</a></li></ul></li><li><a href="../../../../html/服务端编程/系统服务/Nginx.html">Nginx</a></li></ul></li><li><a href="#"><span></span>Linux</a><ul></ul></li><li><a href="#"><span></span>数据库</a><ul><li><a href="#"><span></span>mysql</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/21-minutes-MySQL-basic-entry.html">21-minutes-MySQL-basic-entry</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/awesome-mysql.html">awesome-mysql</a></li><li><a href="#"><span></span>chapter1</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.1.html">1.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.2.html">1.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.3.html">1.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.4.html">1.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter1/1.html">1</a></li></ul></li><li><a href="#"><span></span>chapter17</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.1.html">17.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.2.html">17.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter17/17.3.html">17.3</a></li></ul></li><li><a href="#"><span></span>chapter2</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.1.html">2.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.2.html">2.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.3.html">2.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.4.html">2.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter2/2.5.html">2.5</a></li></ul></li><li><a href="#"><span></span>chapter3</a><ul><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.1.html">3.1</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.2.html">3.2</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.3.html">3.3</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.4.html">3.4</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.5.html">3.5</a></li><li><a href="../../../../html/服务端编程/数据库/mysql/chapter3/3.html">3</a></li></ul></li><li><a href="../../../../html/服务端编程/数据库/mysql/README.html">README</a></li></ul></li><li><a href="../../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li></ul></li><li><a href="#"><span></span>工具快捷键</a><ul><li><a href="../../../../html/工具快捷键/Git常用命令.html">Git常用命令</a></li><li><a href="../../../../html/工具快捷键/vim.html">vim</a></li></ul></li><li><a href="#"><span></span>其他</a><ul><li><a href="../../../../html/其他/HTTP状态码.html">HTTP状态码</a></li><li><a href="../../../../html/其他/通过代理工具提高Github Clone速度.html">通过代理工具提高Github Clone速度</a></li></ul></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/poetries/handbook"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0下载安装">下载安装</a></li><li><a href="#t1命令行运行">命令行运行</a></li><li><a href="#t2全局命令调用">全局命令调用</a></li><li><a href="#t3作为守护进程启动">作为守护进程启动</a></li><li><a href="#t4命令行中修改配置">命令行中修改配置</a></li><li><a href="#t5管理">管理</a></li><li><a href="#t6对比理解">对比理解</a></li><li><a href="#t7插件安装">插件安装</a><ul><li><a href="#t8插件">插件</a></li><li><a href="#t9MySQL数据导入">MySQL数据导入</a></li></ul></li><li><a href="#t10错误处理">错误处理</a></li><li><a href="#t11参考文档">参考文档</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t0&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;">&#x4E0B;&#x8F7D;&#x5B89;&#x88C5; <a href="#t0&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"> # </a></h2>
+<p>&#x5B98;&#x65B9;<a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.3/zip-targz.html">Elasticsearch 5.3</a> &#x5B89;&#x88C5;&#x6559;&#x7A0B;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4E0B;&#x8F7D;Elasticsearch 5.3</span>
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.3.0.tar.gz
+<span class="hljs-comment"># &#x89E3;&#x538B;&#x538B;&#x7F29;&#x5305;</span>
+tar -xzf elasticsearch-5.3.0.tar.gz
+<span class="hljs-comment"># &#x8FDB;&#x5165;&#x89E3;&#x538B;&#x51FA;&#x6765;&#x7684;&#x76EE;&#x5F55;</span>
+<span class="hljs-built_in">cd</span> elasticsearch-5.3.0/
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x5B98;&#x65B9;&#x4E0B;&#x8F7D;&#x4E0D;&#x4E0B;&#x6765;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FC5;&#x96F7;&#x65AD;&#x70B9;&#x4E0B;&#x8F7D;&#x3002;</p>
+<h2 id="t1&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;">&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C; <a href="#t1&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;"> # </a></h2>
+<p>&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;&#x4E4B;&#x540E;&#xFF0C;&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x5373;&#x53EF;&#x5F00;&#x59CB;&#x8FD0;&#x884C;Elasticsearch&#x670D;&#x52A1;&#x4E86;&#x3002;<code>ctrl-c</code> &#x7ED3;&#x675F;&#x670D;&#x52A1;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;</span>
+./bin/elasticsearch
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x65E5;&#x5FD7;</span>
+tail -f logs/elasticsearch.log
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x51FA;&#x73B0;&#x4E0B;&#x9762;&#x8B66;&#x544A;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x78C1;&#x76D8;&#x4E0D;&#x591F;&#x7684;&#x6837;&#x5B50;</p>
+<pre><code class="lang-bash">[2017-04-06T14:01:41,191][INFO ][o.e.c.r.a.DiskThresholdMonitor] [cki_UTv] low disk watermark [85%] exceeded on [cki_UTvDRtWzj9hzmC1kvg][cki_UTv][/usr/<span class="hljs-built_in">local</span>/elasticsearch-5.3.0/data/nodes/0] free: 25gb[10.7%], replicas will not be assigned to this node
+</code></pre>
+<h2 id="t2&#x5168;&#x5C40;&#x547D;&#x4EE4;&#x8C03;&#x7528;">&#x5168;&#x5C40;&#x547D;&#x4EE4;&#x8C03;&#x7528; <a href="#t2&#x5168;&#x5C40;&#x547D;&#x4EE4;&#x8C03;&#x7528;"> # </a></h2>
+<p>&#x5C06;&#x4F60;&#x4E0B;&#x8F7D;&#x7684;&#x76EE;&#x5F55;&#x62F7;&#x8D1D;&#x5230;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x76EE;&#x5F55;<code>/usr/local</code> &#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E00;&#x822C;&#x662F;&#x672C;&#x5730;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#xFF0C;&#x7528;&#x6765;&#x81EA;&#x7531;&#x6DFB;&#x52A0;&#x7A0B;&#x5E8F;&#x7684;&#x76EE;&#x5F55;&#x3002;</p>
+<pre><code class="lang-bash">cp -rf elasticsearch-5.3.0 /usr/<span class="hljs-built_in">local</span>/
+</code></pre>
+<p>&#x7F16;&#x8F91; <code>vim ~/.bash_profile</code> &#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x4E0B;&#x9762;&#x4E24;&#x884C;&#x914D;&#x7F6E;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">export</span> ELASTIC_SEARCH=/usr/<span class="hljs-built_in">local</span>/elasticsearch-5.3.0/bin
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">${ELASTIC_SEARCH}</span>:<span class="hljs-variable">${PATH}</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x8BB0;&#x5F97; <code>source ~/.bash_profile</code> &#x7ACB;&#x5373;&#x751F;&#x6548;&#x3002;</p>
+<h2 id="t3&#x4F5C;&#x4E3A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x542F;&#x52A8;">&#x4F5C;&#x4E3A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x542F;&#x52A8; <a href="#t3&#x4F5C;&#x4E3A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x542F;&#x52A8;"> # </a></h2>
+<p>&#x52A0;&#x4E0A; <code>-p</code> &#x53C2;&#x6570;&#x5C06;&#x8FDB;&#x7A0B;id&#x4FDD;&#x5B58;&#x5230;<code>es.pid</code>&#x6587;&#x672C;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x3002;</p>
+<pre><code class="lang-bash">elasticsearch -d -p es.pid
+</code></pre>
+<p>&#x901A;&#x8FC7; <code>es.pid</code> &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x8FDB;&#x7A0B;id &#x5C06;&#x5176;&#x6740;&#x6389;</p>
+<pre><code>kill `cat es.pid`
+</code></pre><h2 id="t4&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x4FEE;&#x6539;&#x914D;&#x7F6E;">&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x4FEE;&#x6539;&#x914D;&#x7F6E; <a href="#t4&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x4FEE;&#x6539;&#x914D;&#x7F6E;"> # </a></h2>
+<p>&#x4EFB;&#x4F55;<a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.3/settings.html">Elasticsearch&#x914D;&#x7F6E;</a>&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x4F46;&#x662F;&#x8981;&#x9075;&#x5FAA;elasticsearch&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x6BCF;&#x4E2A;&#x53C2;&#x6570;&#x524D;&#x9762;&#x8DDF;&#x4E0A;<code>-E</code>&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-bash">elasticsearch -d -Ecluster.name=my_cluster -Enode.name=node_1
+</code></pre>
+<h2 id="t5&#x7BA1;&#x7406;">&#x7BA1;&#x7406; <a href="#t5&#x7BA1;&#x7406;"> # </a></h2>
+<p>&#x5065;&#x5EB7;&#x72B6;&#x6001;</p>
+<pre><code class="lang-bash">curl <span class="hljs-string">&apos;localhost:9200/_cat/health?v&apos;</span>
+<span class="hljs-comment"># epoch      timestamp cluster status node.total node.data shards pri relo init unassign pending_tasks max_task_wait_time active_shards_percent </span>
+<span class="hljs-comment"># 1473669150 16:32:30  es-test green           1         1      0   0    0    0        0             0</span>
+</code></pre>
+<p>&#x5217;&#x51FA;&#x8282;&#x70B9;</p>
+<pre><code class="lang-bash">curl <span class="hljs-string">&apos;localhost:9200/_cat/nodes?v&apos;</span>
+<span class="hljs-comment"># host      ip        heap.percent ram.percent load node.role master name   </span>
+<span class="hljs-comment"># 127.0.0.1 127.0.0.1            6          16 0.00 d         *      node-1</span>
+</code></pre>
+<p>&#x5217;&#x51FA;&#x7D22;&#x5F15;</p>
+<pre><code>curl &apos;localhost:9200/_cat/indices?v&apos;
+health status index pri rep docs.count docs.deleted store.size pri.store.size
+</code></pre><h2 id="t6&#x5BF9;&#x6BD4;&#x7406;&#x89E3;">&#x5BF9;&#x6BD4;&#x7406;&#x89E3; <a href="#t6&#x5BF9;&#x6BD4;&#x7406;&#x89E3;"> # </a></h2>
+<pre><code>Relational DB -&gt; Databases -&gt; Tables -&gt; Rows -&gt; Columns
+Elasticsearch -&gt; Indices   -&gt; Types  -&gt; Documents -&gt; Fields
+</code></pre><p>&#x5728;Elasticsearch&#x4E2D;&#xFF0C;&#x6587;&#x6863;&#x5F52;&#x5C5E;&#x4E8E;&#x4E00;&#x79CD;&#x7C7B;&#x578B;(type),&#x800C;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x5B58;&#x5728;&#x4E8E;&#x7D22;&#x5F15;(index)&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x753B;&#x4E00;&#x4E9B;&#x7B80;&#x5355;&#x7684;&#x5BF9;&#x6BD4;&#x56FE;&#x6765;&#x7C7B;&#x6BD4;&#x4F20;&#x7EDF;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;</p>
+<p>Elasticsearch&#x96C6;&#x7FA4;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x7D22;&#x5F15;(indices)&#xFF08;&#x6570;&#x636E;&#x5E93;&#xFF09;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x7C7B;&#x578B;(types)&#xFF08;&#x8868;&#xFF09;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x6587;&#x6863;(documents)&#xFF08;&#x884C;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x6BCF;&#x4E2A;&#x6587;&#x6863;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;(Fields)&#xFF08;&#x5217;&#xFF09;&#x3002;</p>
+<h2 id="t7&#x63D2;&#x4EF6;&#x5B89;&#x88C5;">&#x63D2;&#x4EF6;&#x5B89;&#x88C5; <a href="#t7&#x63D2;&#x4EF6;&#x5B89;&#x88C5;"> # </a></h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5217;&#x51FA;&#x5F53;&#x524D;&#x63D2;&#x4EF6;&#x5217;&#x8868;</span>
+sudo bin/elasticsearch-plugin list
+<span class="hljs-comment"># &#x5220;&#x9664;&#x63D2;&#x4EF6;</span>
+sudo bin/elasticsearch-plugin remove [pluginname]
+<span class="hljs-comment"># &#x66F4;&#x65B0;&#x63D2;&#x4EF6;</span>
+sudo bin/elasticsearch-plugin remove [pluginname]
+sudo bin/elasticsearch-plugin install [pluginname]
+<span class="hljs-comment"># &#x901A;&#x8FC7;URL&#x6216;&#x8005;&#x7CFB;&#x7EDF;&#x6587;&#x4EF6;&#x5939;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</span>
+sudo bin/elasticsearch-plugin install [url] 
+sudo bin/elasticsearch-plugin install file:///path/to/plugin.zip
+sudo ES_JAVA_OPTS=<span class="hljs-string">&quot;-Djavax.net.ssl.trustStore=/path/to/trustStore.jks&quot;</span> bin/elasticsearch-plugin install https://....
+<span class="hljs-comment"># &#x67D0;&#x4E9B;&#x63D2;&#x4EF6;&#x9700;&#x8981;&#x66F4;&#x591A;&#x6743;&#x9650;</span>
+<span class="hljs-comment"># &#x8FD9;&#x4E9B;&#x63D2;&#x4EF6;&#x5C06;&#x5217;&#x51FA;&#x6240;&#x9700;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x5E76;&#x8981;&#x6C42;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x786E;&#x8BA4;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x7EE7;&#x7EED;&#x5B89;&#x88C5;&#x3002;</span>
+sudo bin/elasticsearch-plugin install --batch [pluginname]
+<span class="hljs-comment"># &#x5982;&#x679C;&#x60A8;&#x7684;elasticsearch.yml&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4F4D;&#x4E8E;&#x81EA;&#x5B9A;&#x4E49;&#x4F4D;&#x7F6E;&#xFF0C;</span>
+<span class="hljs-comment"># &#x5219;&#x9700;&#x8981;&#x5728;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x811A;&#x672C;&#x65F6;&#x6307;&#x5B9A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;</span>
+sudo bin/elasticsearch-plugin -Epath.conf=/path/to/custom/config/dir install &lt;plugin name&gt;
+<span class="hljs-comment"># &#x901A;&#x8FC7;&#x4EE3;&#x7406;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</span>
+sudo ES_JAVA_OPTS=<span class="hljs-string">&quot;-Dhttp.proxyHost=host_name -Dhttp.proxyPort=port_number -Dhttps.proxyHost=host_name -Dhttps.proxyPort=https_port_number&quot;</span> bin/elasticsearch-plugin install analysis-icu
+<span class="hljs-comment"># windows&#x4E2D;&#x901A;&#x8FC7;&#x4EE3;&#x7406;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</span>
+<span class="hljs-built_in">set</span> ES_JAVA_OPTS=<span class="hljs-string">&quot;-Dhttp.proxyHost=host_name -Dhttp.proxyPort=port_number -Dhttps.proxyHost=host_name -Dhttps.proxyPort=https_port_number&quot;</span>
+bin\elasticsearch-plugin install analysis-icu
+<span class="hljs-comment"># &#x5982;&#x679C;&#x60A8;&#x4F9D;&#x8D56;&#x67D0;&#x4E9B;&#x63D2;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C06;plugin.mandatory&#x8BBE;&#x7F6E;&#x6DFB;&#x52A0;&#x5230;config / elasticsearch.yml&#x6587;&#x4EF6;&#x4E2D;&#x6765;&#x5B9A;&#x4E49;&#x5F3A;&#x5236;&#x63D2;&#x4EF6;&#xFF0C;</span>
+plugin.mandatory: analysis-icu,lang-js
+</code></pre>
+<p>&#x26A0;&#xFE0F;  &#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x5BF9;&#x4E8E;Elasticsearch 5.x&#xFF1A;&#x4E0D;&#x652F;&#x6301;&#x7F51;&#x7AD9;&#x63D2;&#x4EF6;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x4E0D;&#x80FD;&#x653E;&#x5230;elasticsearch-5.3.0/plugins&#x76EE;&#x5F55;&#x4E2D;&#x3002;</li>
+</ul>
+<h3 id="t8&#x63D2;&#x4EF6;">&#x63D2;&#x4EF6; <a href="#t8&#x63D2;&#x4EF6;"> # </a></h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/elasticsearch-toolbox/focdbmjgdonlpdknobfghplhmafpgfbp/related">ElasticSearch Toolbox</a> &#x8C37;&#x6B4C;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x6269;&#x5C55;&#x7EC4;&#x4EF6;  </li>
+<li><a href="http://www.gridshore.nl/esgui/">Elasticsearch GUI</a> </li>
+<li><a href="https://github.com/mobz/elasticsearch-head">Elasticsearch-head</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/sense-beta/lhjgkmllcaadmopgmanpapmpjgmfcfig/related?hl=zh-CN">Sense (Beta)</a></li>
+</ul>
+<p>&#x63D2;&#x4EF6;<a href="https://github.com/mobz/elasticsearch-head">elasticsearch-head</a>&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x5B89;&#x88C5;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x56FE;&#x5F62;&#x754C;&#x9762;&#x7BA1;&#x7406;elasticsearch&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4FEE;&#x6539; elasticsearch/config/elasticsearch.yml &#x6DFB;&#x52A0;</span>
+http.cors.enabled: <span class="hljs-literal">true</span>
+http.cors.allow-origin: <span class="hljs-string">&quot;*&quot;</span>
+</code></pre>
+<p>&#x4E0B;&#x8F7D; <a href="https://github.com/mobz/elasticsearch-head">elasticsearch-head</a> &#x6216;&#x8005; git clone &#x5230;&#x968F;&#x4FBF;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /path/to/elasticsearch-head
+npm install
+npm start
+http://localhost:9100/
+</code></pre>
+<h3 id="t9MySQL&#x6570;&#x636E;&#x5BFC;&#x5165;">MySQL&#x6570;&#x636E;&#x5BFC;&#x5165; <a href="#t9MySQL&#x6570;&#x636E;&#x5BFC;&#x5165;"> # </a></h3>
+<ul>
+<li><a href="https://github.com/siddontang/go-mysql-elasticsearch">go-mysql-elasticsearch</a> golang&#x7248;&#x672C;</li>
+<li><a href="https://github.com/scharron/elasticsearch-river-mysql">elasticsearch-river-mysql</a></li>
+<li><a href="https://github.com/jprante/elasticsearch-river-jdbc">elasticsearch-river-jdbc</a></li>
+</ul>
+<h2 id="t10&#x9519;&#x8BEF;&#x5904;&#x7406;">&#x9519;&#x8BEF;&#x5904;&#x7406; <a href="#t10&#x9519;&#x8BEF;&#x5904;&#x7406;"> # </a></h2>
+<p>&#x6CE8;&#xFF1A;ES&#x6709;&#x6267;&#x884C;&#x811A;&#x672C;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x56E0;&#x5B89;&#x5168;&#x56E0;&#x7D20;&#xFF0C;&#x4E0D;&#x80FD;&#x5728;root&#x7528;&#x6237;&#x4E0B;&#x8FD0;&#x884C;&#xFF0C;&#x5F3A;&#x884C;&#x8FD0;&#x884C;&#x4F1A;&#x62A5;&#x5982;&#x4E0B;&#x9519;&#x8BEF;&#xFF1A;</p>
+<blockquote>
+<p>org.elasticsearch.bootstrap.StartupException: java.lang.RuntimeException: can not run elasticsearch as root</p>
+</blockquote>
+<pre><code class="lang-bash">groupadd elsearch   <span class="hljs-comment"># &#x589E;&#x52A0;es&#x7EC4;</span>
+useradd elsearch -g elsearch -p elasticsearch  <span class="hljs-comment"># &#x589E;&#x52A0;elsearch&#x7528;&#x6237;&#x5E76;&#x9644;&#x52A0;&#x5230;elsearch&#x7EC4;</span>
+chown -R elsearch:elsearch elasticsearch-5.1.1             <span class="hljs-comment"># &#x7ED9;&#x76EE;&#x5F55;&#x6743;&#x9650;</span>
+su elsearch <span class="hljs-comment"># &#x4F7F;&#x7528;es&#x7528;&#x6237;</span>
+</code></pre>
+<p>&#x6CE8;&#xFF1A; <code>network.host: 127.0.0.1</code></p>
+<pre><code class="lang-bash">bound or publishing to a non-loopback or non-link-local address, enforcing bootstrap checks
+ERROR: bootstrap checks failed
+</code></pre>
+<p>&#x6211;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;Nginx&#x4EE3;&#x7406;&#x6765;&#x8BBF;&#x95EE;</p>
+<h2 id="t11&#x53C2;&#x8003;&#x6587;&#x6863;">&#x53C2;&#x8003;&#x6587;&#x6863; <a href="#t11&#x53C2;&#x8003;&#x6587;&#x6863;"> # </a></h2>
+<ul>
+<li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.3/settings.html">Elasticsearch&#x914D;&#x7F6E;</a></li>
+<li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.3/zip-targz.html">&#x5B98;&#x65B9;&#x5B89;&#x88C5;Elasticsearch 5.3&#x6587;&#x6863;</a></li>
+<li><a href="https://github.com/elastic/elasticsearch-js">Github&#x5B98;&#x65B9;&#x4ED3;&#x5E93;</a></li>
+<li><a href="https://www.npmjs.com/package/elasticsearch">npm&#x5B98;&#x65B9;&#x4ED3;&#x5E93;</a></li>
+<li><a href="https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details">Elasticsearch &#x6743;&#x5A01;&#x6307;&#x5357;&#xFF08;&#x4E2D;&#x6587;&#x7248;&#xFF09;</a></li>
+<li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/12.1/index.html">Node.js &#x5B98;&#x65B9;&#x6587;&#x6863;</a></li>
+<li><a href="http://www.cnblogs.com/hanyouchun/p/5163183.html">Elasticsearch&#x914D;&#x7F6E;&#x8BF4;&#x660E;</a></li>
+<li><a href="http://www.cnblogs.com/woxpp/p/6061073.html">Elasticsearch5.0 &#x5B89;&#x88C5;&#x95EE;&#x9898;&#x96C6;&#x9526;</a></li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

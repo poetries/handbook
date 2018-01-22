@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handbook</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            <img src="../../../idoc-logo.svg">
+        
+    </div>
+<ul><li><a href="../../../index.html">Git常用命令</a></li><li><a href="#"><span></span>前端</a><ul><li><a href="#"><span></span>Javascript</a><ul><li><a href="#"><span></span>RN</a><ul><li><a href="../../../html/前端/Javascript/RN/React-native Android环境搭建.html">React-native Android环境搭建</a></li></ul></li><li><a href="../../../html/前端/Javascript/思维导图.html">思维导图</a></li><li><a href="../../../html/前端/Javascript/正则表达式.html">正则表达式</a></li><li><a href="../../../html/前端/Javascript/轻量高效的开源JavaScript插件和库.html">轻量高效的开源JavaScript插件和库</a></li></ul></li></ul></li><li><a href="#"><span></span>服务端编程</a><ul><li><a href="#"><span></span>数据库</a><ul><li><a href="../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li><li><a href="#"><span></span>系统服务</a><ul><li><a href="../../../html/服务端编程/系统服务/docker.html">docker</a></li><li><a href="#"><span></span>shell</a><ul><li><a href="../../../html/服务端编程/系统服务/shell/shell-regex.html">shell-regex</a></li><li><a href="../../../html/服务端编程/系统服务/shell/Shell.html">Shell</a></li></ul></li><li class="active"><a href="../../../html/服务端编程/系统服务/Nginx.html">Nginx</a></li></ul></li><li><a href="#"><span></span>Linux</a><ul></ul></li><li><a href="#"><span></span>数据库</a><ul><li><a href="#"><span></span>mysql</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/21-minutes-MySQL-basic-entry.html">21-minutes-MySQL-basic-entry</a></li><li><a href="../../../html/服务端编程/数据库/mysql/awesome-mysql.html">awesome-mysql</a></li><li><a href="#"><span></span>chapter1</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.1.html">1.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.2.html">1.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.3.html">1.3</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.4.html">1.4</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter1/1.html">1</a></li></ul></li><li><a href="#"><span></span>chapter17</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter17/17.1.html">17.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter17/17.2.html">17.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter17/17.3.html">17.3</a></li></ul></li><li><a href="#"><span></span>chapter2</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.1.html">2.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.2.html">2.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.3.html">2.3</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.4.html">2.4</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter2/2.5.html">2.5</a></li></ul></li><li><a href="#"><span></span>chapter3</a><ul><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.1.html">3.1</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.2.html">3.2</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.3.html">3.3</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.4.html">3.4</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.5.html">3.5</a></li><li><a href="../../../html/服务端编程/数据库/mysql/chapter3/3.html">3</a></li></ul></li><li><a href="../../../html/服务端编程/数据库/mysql/README.html">README</a></li></ul></li><li><a href="../../../html/服务端编程/数据库/Redis.html">Redis</a></li></ul></li></ul></li><li><a href="#"><span></span>工具快捷键</a><ul><li><a href="../../../html/工具快捷键/Git常用命令.html">Git常用命令</a></li><li><a href="../../../html/工具快捷键/vim.html">vim</a></li></ul></li><li><a href="#"><span></span>其他</a><ul><li><a href="../../../html/其他/HTTP状态码.html">HTTP状态码</a></li><li><a href="../../../html/其他/通过代理工具提高Github Clone速度.html">通过代理工具提高Github Clone速度</a></li></ul></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/poetries/handbook"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0Nginx 安装">Nginx 安装</a></li><li><a href="#t1安装">安装</a><ul><li><a href="#t2安装依赖">安装依赖</a></li><li><a href="#t3下载">下载</a></li><li><a href="#t4编译安装">编译安装</a></li><li><a href="#t5nginx测试">nginx测试</a></li><li><a href="#t6设置全局nginx命令">设置全局nginx命令</a></li></ul></li><li><a href="#t7开机自启动">开机自启动</a></li><li><a href="#t8运维">运维</a><ul><li><a href="#t9服务管理">服务管理</a></li><li><a href="#t10重启服务防火墙报错解决">重启服务防火墙报错解决</a></li></ul></li><li><a href="#t11nginx卸载">nginx卸载</a></li><li><a href="#t12参数说明">参数说明</a></li><li><a href="#t13配置">配置</a><ul><li><a href="#t14常用正则">常用正则</a></li><li><a href="#t15全局变量">全局变量</a></li><li><a href="#t16符号参考">符号参考</a></li><li><a href="#t17配置文件">配置文件</a></li><li><a href="#t18内置预定义变量">内置预定义变量</a></li><li><a href="#t19反向代理">反向代理</a></li><li><a href="#t20负载均衡">负载均衡</a><ul><li><a href="#t21RR">RR</a></li><li><a href="#t22权重">权重</a></li><li><a href="#t23ip_hash">ip_hash</a></li><li><a href="#t24fair">fair</a></li><li><a href="#t25url_hash">url_hash</a></li></ul></li><li><a href="#t26屏蔽ip">屏蔽ip</a></li></ul></li><li><a href="#t27第三方模块安装方法">第三方模块安装方法</a></li><li><a href="#t28重定向">重定向</a><ul><li><a href="#t29重定向整个网站">重定向整个网站</a></li><li><a href="#t30重定向单页">重定向单页</a></li><li><a href="#t31重定向整个子路径">重定向整个子路径</a></li></ul></li><li><a href="#t32性能">性能</a><ul><li><a href="#t33内容缓存">内容缓存</a></li><li><a href="#t34Gzip压缩">Gzip压缩</a></li><li><a href="#t35打开文件缓存">打开文件缓存</a></li><li><a href="#t36SSL缓存">SSL缓存</a></li><li><a href="#t37上游Keepalive">上游Keepalive</a></li><li><a href="#t38监控">监控</a></li></ul></li><li><a href="#t39常见使用场景">常见使用场景</a><ul><li><a href="#t40跨域问题">跨域问题</a></li><li><a href="#t41跳转到带www的域上面">跳转到带www的域上面</a></li><li><a href="#t42代理转发">代理转发</a></li><li><a href="#t43代理转发连接替换">代理转发连接替换</a></li><li><a href="#t44ssl配置">ssl配置</a></li><li><a href="#t45强制将http重定向到https">强制将http重定向到https</a></li><li><a href="#t46两个虚拟主机">两个虚拟主机</a></li><li><a href="#t47虚拟主机标准配置">虚拟主机标准配置</a></li><li><a href="#t48防盗链">防盗链</a></li><li><a href="#t49虚拟目录配置">虚拟目录配置</a></li><li><a href="#t50防盗图配置">防盗图配置</a></li><li><a href="#t51屏蔽.git等文件">屏蔽.git等文件</a></li><li><a href="#t52域名路径加不加需要都能正常访问">域名路径加不加需要都能正常访问</a></li></ul></li><li><a href="#t53错误问题">错误问题</a></li><li><a href="#t54精品文章参考">精品文章参考</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t0Nginx &#x5B89;&#x88C5;">Nginx &#x5B89;&#x88C5; <a href="#t0Nginx &#x5B89;&#x88C5;"> # </a></h2>
+<p>Nginx &#x662F;&#x4E00;&#x6B3E;&#x9762;&#x5411;&#x6027;&#x80FD;&#x8BBE;&#x8BA1;&#x7684; HTTP &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x80FD;&#x53CD;&#x5411;&#x4EE3;&#x7406; HTTP&#xFF0C;HTTPS &#x548C;&#x90AE;&#x4EF6;&#x76F8;&#x5173;(SMTP&#xFF0C;POP3&#xFF0C;IMAP)&#x7684;&#x534F;&#x8BAE;&#x94FE;&#x63A5;&#x3002;&#x5E76;&#x4E14;&#x63D0;&#x4F9B;&#x4E86;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x4EE5;&#x53CA; HTTP &#x7F13;&#x5B58;&#x3002;&#x5B83;&#x7684;&#x8BBE;&#x8BA1;&#x5145;&#x5206;&#x4F7F;&#x7528;&#x5F02;&#x6B65;&#x4E8B;&#x4EF6;&#x6A21;&#x578B;&#xFF0C;&#x524A;&#x51CF;&#x4E0A;&#x4E0B;&#x6587;&#x8C03;&#x5EA6;&#x7684;&#x5F00;&#x9500;&#xFF0C;&#x63D0;&#x9AD8;&#x670D;&#x52A1;&#x5668;&#x5E76;&#x53D1;&#x80FD;&#x529B;&#x3002;&#x91C7;&#x7528;&#x4E86;&#x6A21;&#x5757;&#x5316;&#x8BBE;&#x8BA1;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x4E30;&#x5BCC;&#x6A21;&#x5757;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x5173;&#x4E8E; Nginx&#xFF0C;&#x6709;&#x8FD9;&#x4E9B;&#x6807;&#x7B7E;&#xFF1A;&#x300C;&#x5F02;&#x6B65;&#x300D;&#x300C;&#x4E8B;&#x4EF6;&#x300D;&#x300C;&#x6A21;&#x5757;&#x5316;&#x300D;&#x300C;&#x9AD8;&#x6027;&#x80FD;&#x300D;&#x300C;&#x9AD8;&#x5E76;&#x53D1;&#x300D;&#x300C;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x300D;&#x300C;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x300D;</p>
+<p>Linux&#x7CFB;&#x7EDF;&#xFF1A;<code>Centos 7 x64</code>
+Nginx&#x7248;&#x672C;&#xFF1A;<code>1.11.5</code></p>
+<h2 id="t1&#x5B89;&#x88C5;">&#x5B89;&#x88C5; <a href="#t1&#x5B89;&#x88C5;"> # </a></h2>
+<h3 id="t2&#x5B89;&#x88C5;&#x4F9D;&#x8D56;">&#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t2&#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<blockquote>
+<p>prce(&#x91CD;&#x5B9A;&#x5411;&#x652F;&#x6301;)&#x548C;openssl(https&#x652F;&#x6301;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x9700;&#x8981;https&#x53EF;&#x4EE5;&#x4E0D;&#x5B89;&#x88C5;&#x3002;)</p>
+</blockquote>
+<pre><code class="lang-bash">yum install -y pcre-devel 
+yum -y install gcc make gcc-c++ wget
+yum -y install openssl openssl-devel
+</code></pre>
+<p>CentOS 6.5 &#x6211;&#x5B89;&#x88C5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x9009;&#x62E9;&#x7684;&#x201C;&#x57FA;&#x672C;&#x670D;&#x52A1;&#x5668;&#x201D;&#xFF0C;&#x9ED8;&#x8BA4;&#x8FD9;&#x4E24;&#x4E2A;&#x5305;&#x90FD;&#x6CA1;&#x5B89;&#x88C5;&#x5168;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E24;&#x4E2A;&#x90FD;&#x8FD0;&#x884C;&#x5B89;&#x88C5;&#x5373;&#x53EF;&#x3002;</p>
+<h3 id="t3&#x4E0B;&#x8F7D;">&#x4E0B;&#x8F7D; <a href="#t3&#x4E0B;&#x8F7D;"> # </a></h3>
+<p><a href="http://nginx.org/download/">nginx&#x7684;&#x6240;&#x6709;&#x7248;&#x672C;&#x5728;&#x8FD9;&#x91CC;</a></p>
+<pre><code class="lang-bash">wget http://nginx.org/download/nginx-1.13.3.tar.gz
+wget http://nginx.org/download/nginx-1.13.7.tar.gz
+
+<span class="hljs-comment"># &#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B89;&#x88C5;wget</span>
+<span class="hljs-comment"># &#x4E0B;&#x8F7D;&#x5DF2;&#x7F16;&#x8BD1;&#x7248;&#x672C;</span>
+$ yum install wget
+
+<span class="hljs-comment"># &#x89E3;&#x538B;&#x538B;&#x7F29;&#x5305;</span>
+tar zxf nginx-1.13.3.tar.gz
+</code></pre>
+<h3 id="t4&#x7F16;&#x8BD1;&#x5B89;&#x88C5;">&#x7F16;&#x8BD1;&#x5B89;&#x88C5; <a href="#t4&#x7F16;&#x8BD1;&#x5B89;&#x88C5;"> # </a></h3>
+<p>&#x7136;&#x540E;&#x8FDB;&#x5165;&#x76EE;&#x5F55;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#xFF0C;<a href="#configure&#x53C2;&#x6570;&#x8BF4;&#x660E;">configure&#x53C2;&#x6570;&#x8BF4;&#x660E;</a></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> nginx-1.11.5
+./configure
+
+
+....
+Configuration summary
+  + using system PCRE library
+  + OpenSSL library is not used
+  + using system zlib library
+
+  nginx path prefix: <span class="hljs-string">&quot;/usr/local/nginx&quot;</span>
+  nginx binary file: <span class="hljs-string">&quot;/usr/local/nginx/sbin/nginx&quot;</span>
+  nginx modules path: <span class="hljs-string">&quot;/usr/local/nginx/modules&quot;</span>
+  nginx configuration prefix: <span class="hljs-string">&quot;/usr/local/nginx/conf&quot;</span>
+  nginx configuration file: <span class="hljs-string">&quot;/usr/local/nginx/conf/nginx.conf&quot;</span>
+  nginx pid file: <span class="hljs-string">&quot;/usr/local/nginx/logs/nginx.pid&quot;</span>
+  nginx error <span class="hljs-built_in">log</span> file: <span class="hljs-string">&quot;/usr/local/nginx/logs/error.log&quot;</span>
+  nginx http access <span class="hljs-built_in">log</span> file: <span class="hljs-string">&quot;/usr/local/nginx/logs/access.log&quot;</span>
+  nginx http client request body temporary files: <span class="hljs-string">&quot;client_body_temp&quot;</span>
+  nginx http proxy temporary files: <span class="hljs-string">&quot;proxy_temp&quot;</span>
+  nginx http fastcgi temporary files: <span class="hljs-string">&quot;fastcgi_temp&quot;</span>
+  nginx http uwsgi temporary files: <span class="hljs-string">&quot;uwsgi_temp&quot;</span>
+  nginx http scgi temporary files: <span class="hljs-string">&quot;scgi_temp&quot;</span>
+</code></pre>
+<p>&#x5B89;&#x88C5;&#x62A5;&#x9519;&#x8BEF;&#x7684;&#x8BDD;&#x6BD4;&#x5982;&#xFF1A;&#x201C;C compiler cc is not found&#x201D;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x7F3A;&#x5C11;&#x7F16;&#x8BD1;&#x73AF;&#x5883;&#xFF0C;&#x5B89;&#x88C5;&#x4E00;&#x4E0B;&#x5C31;&#x53EF;&#x4EE5;&#x4E86; <strong>yum -y install gcc make gcc-c++ openssl-devel</strong></p>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;error&#x4FE1;&#x606F;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x4E0B;&#x8FB9;&#x7684;&#x5B89;&#x88C5;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-bash">make
+make install
+</code></pre>
+<h3 id="t5nginx&#x6D4B;&#x8BD5;">nginx&#x6D4B;&#x8BD5; <a href="#t5nginx&#x6D4B;&#x8BD5;"> # </a></h3>
+<p>&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x4F1A;&#x51FA;&#x73B0;&#x4E24;&#x4E2A;&#x7ED3;&#x679C;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;nginx&#x4F1A;&#x5B89;&#x88C5;&#x5728;<code>/usr/local/nginx</code>&#x76EE;&#x5F55;&#x4E2D;</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /usr/<span class="hljs-built_in">local</span>/nginx/sbin/
+./nginx -t
+
+<span class="hljs-comment"># nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok</span>
+<span class="hljs-comment"># nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful</span>
+</code></pre>
+<h3 id="t6&#x8BBE;&#x7F6E;&#x5168;&#x5C40;nginx&#x547D;&#x4EE4;">&#x8BBE;&#x7F6E;&#x5168;&#x5C40;nginx&#x547D;&#x4EE4; <a href="#t6&#x8BBE;&#x7F6E;&#x5168;&#x5C40;nginx&#x547D;&#x4EE4;"> # </a></h3>
+<pre><code class="lang-bash">vi ~/.bash_profile
+</code></pre>
+<p>&#x5C06;&#x4E0B;&#x9762;&#x5185;&#x5BB9;&#x6DFB;&#x52A0;&#x5230; <code>~/.bash_profile</code> &#x6587;&#x4EF6;&#x4E2D;</p>
+<pre><code class="lang-bash">PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$HOME</span>/bin:/usr/<span class="hljs-built_in">local</span>/nginx/sbin/
+<span class="hljs-built_in">export</span> PATH
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x547D;&#x4EE4; <strong><code>source ~/.bash_profile</code></strong> &#x8BA9;&#x914D;&#x7F6E;&#x7ACB;&#x5373;&#x751F;&#x6548;&#x3002;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x5168;&#x5C40;&#x8FD0;&#x884C; <code>nginx</code> &#x547D;&#x4EE4;&#x4E86;&#x3002;</p>
+<h2 id="t7&#x5F00;&#x673A;&#x81EA;&#x542F;&#x52A8;">&#x5F00;&#x673A;&#x81EA;&#x542F;&#x52A8; <a href="#t7&#x5F00;&#x673A;&#x81EA;&#x542F;&#x52A8;"> # </a></h2>
+<p><strong>&#x5F00;&#x673A;&#x81EA;&#x542F;&#x52A8;&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;</strong></p>
+<p>&#x7F16;&#x8F91; <strong>vi /lib/systemd/system/nginx.service</strong> &#x6587;&#x4EF6;&#xFF0C;&#x6CA1;&#x6709;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <strong>touch nginx.service</strong> &#x7136;&#x540E;&#x5C06;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#x6839;&#x636E;&#x5177;&#x4F53;&#x60C5;&#x51B5;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x540E;&#xFF0C;&#x6DFB;&#x52A0;&#x5230;nginx.service&#x6587;&#x4EF6;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-bash">[Unit]
+Description=nginx
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+
+Type=forking
+PIDFile=/var/run/nginx.pid
+ExecStartPre=/usr/<span class="hljs-built_in">local</span>/nginx/sbin/nginx -t -c /usr/<span class="hljs-built_in">local</span>/nginx/conf/nginx.conf
+ExecStart=/usr/<span class="hljs-built_in">local</span>/nginx/sbin/nginx -c /usr/<span class="hljs-built_in">local</span>/nginx/conf/nginx.conf
+ExecReload=/bin/<span class="hljs-built_in">kill</span> -s HUP <span class="hljs-variable">$MAINPID</span>
+ExecStop=/bin/<span class="hljs-built_in">kill</span> -s QUIT <span class="hljs-variable">$MAINPID</span>
+PrivateTmp=<span class="hljs-literal">true</span>
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>Description:&#x63CF;&#x8FF0;&#x670D;&#x52A1;<br>After:&#x63CF;&#x8FF0;&#x670D;&#x52A1;&#x7C7B;&#x522B;<br>[Service]&#x670D;&#x52A1;&#x8FD0;&#x884C;&#x53C2;&#x6570;&#x7684;&#x8BBE;&#x7F6E;<br>Type=forking&#x662F;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#x7684;&#x5F62;&#x5F0F;<br>ExecStart&#x4E3A;&#x670D;&#x52A1;&#x7684;&#x5177;&#x4F53;&#x8FD0;&#x884C;&#x547D;&#x4EE4;<br>ExecReload&#x4E3A;&#x91CD;&#x542F;&#x547D;&#x4EE4;<br>ExecStop&#x4E3A;&#x505C;&#x6B62;&#x547D;&#x4EE4;<br>PrivateTmp=True&#x8868;&#x793A;&#x7ED9;&#x670D;&#x52A1;&#x5206;&#x914D;&#x72EC;&#x7ACB;&#x7684;&#x4E34;&#x65F6;&#x7A7A;&#x95F4;<br>&#x6CE8;&#x610F;&#xFF1A;[Service]&#x7684;&#x542F;&#x52A8;&#x3001;&#x91CD;&#x542F;&#x3001;&#x505C;&#x6B62;&#x547D;&#x4EE4;&#x5168;&#x90E8;&#x8981;&#x6C42;&#x4F7F;&#x7528;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;<br>[Install]&#x8FD0;&#x884C;&#x7EA7;&#x522B;&#x4E0B;&#x670D;&#x52A1;&#x5B89;&#x88C5;&#x7684;&#x76F8;&#x5173;&#x8BBE;&#x7F6E;&#xFF0C;&#x53EF;&#x8BBE;&#x7F6E;&#x4E3A;&#x591A;&#x7528;&#x6237;&#xFF0C;&#x5373;&#x7CFB;&#x7EDF;&#x8FD0;&#x884C;&#x7EA7;&#x522B;&#x4E3A;3  </p>
+<p>&#x4FDD;&#x5B58;&#x9000;&#x51FA;&#x3002;</p>
+<p>&#x8BBE;&#x7F6E;&#x5F00;&#x673A;&#x542F;&#x52A8;&#xFF0C;&#x4F7F;&#x914D;&#x7F6E;&#x751F;&#x6548;&#xFF1A;</p>
+<pre><code class="lang-bash">systemctl <span class="hljs-built_in">enable</span> nginx.service
+<span class="hljs-comment"># &#x8F93;&#x51FA;&#x4E0B;&#x9762;&#x5185;&#x5BB9;&#x8868;&#x793A;&#x6210;&#x529F;&#x4E86;</span>
+Created symlink from /etc/systemd/system/multi-user.target.wants/nginx.service to /usr/lib/systemd/system/nginx.service.
+</code></pre>
+<p><strong>&#x5F00;&#x673A;&#x81EA;&#x542F;&#x52A8;&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;</strong></p>
+<pre><code class="lang-bash">vi /etc/rc.local
+
+<span class="hljs-comment"># &#x5728; rc.local &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x6DFB;&#x52A0;&#x4E0B;&#x9762;&#x8FD9;&#x6761;&#x547D;&#x4EE4;</span>
+/usr/<span class="hljs-built_in">local</span>/nginx/sbin/nginx start
+</code></pre>
+<p>&#x5982;&#x679C;&#x5F00;&#x673A;&#x540E;&#x53D1;&#x73B0;&#x81EA;&#x542F;&#x52A8;&#x811A;&#x672C;&#x6CA1;&#x6709;&#x6267;&#x884C;&#xFF0C;&#x4F60;&#x8981;&#x53BB;&#x786E;&#x8BA4;&#x4E00;&#x4E0B;rc.local&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x662F;&#x5426;&#x662F;&#x53EF;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;rc.local&#x9ED8;&#x8BA4;&#x662F;&#x4E0D;&#x53EF;&#x6267;&#x884C;&#x7684;&#x3002;&#x4FEE;&#x6539;rc.local&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF0C;&#x589E;&#x52A0;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF1A;</p>
+<pre><code class="lang-bash">chmod +x /etc/rc.d/rc.local
+</code></pre>
+<h2 id="t8&#x8FD0;&#x7EF4;">&#x8FD0;&#x7EF4; <a href="#t8&#x8FD0;&#x7EF4;"> # </a></h2>
+<h3 id="t9&#x670D;&#x52A1;&#x7BA1;&#x7406;">&#x670D;&#x52A1;&#x7BA1;&#x7406; <a href="#t9&#x670D;&#x52A1;&#x7BA1;&#x7406;"> # </a></h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x542F;&#x52A8;</span>
+/usr/<span class="hljs-built_in">local</span>/nginx/sbin/nginx
+
+<span class="hljs-comment"># &#x91CD;&#x542F;</span>
+/usr/<span class="hljs-built_in">local</span>/nginx/sbin/nginx -s reload
+
+<span class="hljs-comment"># &#x5173;&#x95ED;&#x8FDB;&#x7A0B;</span>
+/usr/<span class="hljs-built_in">local</span>/nginx/sbin/nginx -s stop
+
+<span class="hljs-comment"># &#x5E73;&#x6ED1;&#x5173;&#x95ED;nginx</span>
+/usr/<span class="hljs-built_in">local</span>/nginx/sbin/nginx -s quit
+
+<span class="hljs-comment"># &#x67E5;&#x770B;nginx&#x7684;&#x5B89;&#x88C5;&#x72B6;&#x6001;&#xFF0C;</span>
+/usr/<span class="hljs-built_in">local</span>/nginx/sbin/nginx -V
+</code></pre>
+<p><strong>&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;&#xFF0C;&#x6216;&#x8005;&#x6DFB;&#x52A0;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;&#x5C31;&#x53EF;&#x4EE5;&#x6D4B;&#x8BD5;&#x4E86;</strong></p>
+<pre><code class="lang-bash">service iptables stop
+</code></pre>
+<p>&#x6216;&#x8005;&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-bash">vi /etc/sysconfig/iptables
+</code></pre>
+<p>&#x6DFB;&#x52A0;&#x8FD9;&#x6837;&#x4E00;&#x6761;&#x5F00;&#x653E;80&#x7AEF;&#x53E3;&#x7684;&#x89C4;&#x5219;&#x540E;&#x4FDD;&#x5B58;&#xFF1A;</p>
+<pre><code class="lang-bash">-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
+</code></pre>
+<p>&#x91CD;&#x542F;&#x670D;&#x52A1;&#x5373;&#x53EF;:</p>
+<pre><code class="lang-bash">service iptables restart
+<span class="hljs-comment"># &#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x67E5;&#x770B;&#x76EE;&#x524D;nat</span>
+iptables -t nat -L
+</code></pre>
+<h3 id="t10&#x91CD;&#x542F;&#x670D;&#x52A1;&#x9632;&#x706B;&#x5899;&#x62A5;&#x9519;&#x89E3;&#x51B3;">&#x91CD;&#x542F;&#x670D;&#x52A1;&#x9632;&#x706B;&#x5899;&#x62A5;&#x9519;&#x89E3;&#x51B3; <a href="#t10&#x91CD;&#x542F;&#x670D;&#x52A1;&#x9632;&#x706B;&#x5899;&#x62A5;&#x9519;&#x89E3;&#x51B3;"> # </a></h3>
+<pre><code class="lang-bash">service iptables restart
+<span class="hljs-comment"># Redirecting to /bin/systemctl restart  iptables.service</span>
+<span class="hljs-comment"># Failed to restart iptables.service: Unit iptables.service failed to load: No such file or directory.</span>
+</code></pre>
+<p>&#x5728;CentOS 7&#x6216;RHEL 7&#x6216;Fedora&#x4E2D;&#x9632;&#x706B;&#x5899;&#x7531; <strong>firewalld</strong> &#x6765;&#x7BA1;&#x7406;&#xFF0C;&#x5F53;&#x7136;&#x4F60;&#x53EF;&#x4EE5;&#x8FD8;&#x539F;&#x4F20;&#x7EDF;&#x7684;&#x7BA1;&#x7406;&#x65B9;&#x5F0F;&#x3002;&#x6216;&#x5219;&#x4F7F;&#x7528;&#x65B0;&#x7684;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x3002;
+&#x5047;&#x5982;&#x91C7;&#x7528;&#x4F20;&#x7EDF;&#x8BF7;&#x6267;&#x884C;&#x4E00;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4F20;&#x7EDF;&#x547D;&#x4EE4;</span>
+systemctl stop firewalld
+systemctl mask firewalld
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5;&#x547D;&#x4EE4;</span>
+yum install iptables-services
+
+systemctl <span class="hljs-built_in">enable</span> iptables 
+service iptables restart
+</code></pre>
+<h2 id="t11nginx&#x5378;&#x8F7D;">nginx&#x5378;&#x8F7D; <a href="#t11nginx&#x5378;&#x8F7D;"> # </a></h2>
+<p>&#x5982;&#x679C;&#x901A;&#x8FC7;yum&#x5B89;&#x88C5;&#xFF0C;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x5B89;&#x88C5;&#x3002;</p>
+<pre><code class="lang-bash">yum remove nginx
+</code></pre>
+<p>&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#xFF0C;&#x5220;&#x9664;/usr/local/nginx&#x76EE;&#x5F55;&#x5373;&#x53EF;
+&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E86;&#x81EA;&#x542F;&#x52A8;&#x811A;&#x672C;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x5220;&#x9664;&#x3002;</p>
+<h2 id="t12&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E; <a href="#t12&#x53C2;&#x6570;&#x8BF4;&#x660E;"> # </a></h2>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--prefix=<code>&lt;path&gt;</code></td>
+<td>Nginx&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; /usr/local/nginx&#x3002;</td>
+</tr>
+<tr>
+<td>--sbin-path=<code>&lt;path&gt;</code></td>
+<td>Nginx&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#x3002;&#x53EA;&#x80FD;&#x5B89;&#x88C5;&#x65F6;&#x6307;&#x5B9A;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;<code>&lt;prefix&gt;</code>/sbin/nginx&#x3002;</td>
+</tr>
+<tr>
+<td>--conf-path=<code>&lt;path&gt;</code></td>
+<td>&#x5728;&#x6CA1;&#x6709;&#x7ED9;&#x5B9A;-c&#x9009;&#x9879;&#x4E0B;&#x9ED8;&#x8BA4;&#x7684;nginx.conf&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;<code>&lt;prefix&gt;</code>/conf/nginx.conf&#x3002;</td>
+</tr>
+<tr>
+<td>--pid-path=<code>&lt;path&gt;</code></td>
+<td>&#x5728;nginx.conf&#x4E2D;&#x6CA1;&#x6709;&#x6307;&#x5B9A;pid&#x6307;&#x4EE4;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;nginx.pid&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>&lt;prefix&gt;</code>/logs/nginx.pid&#x3002;</td>
+</tr>
+<tr>
+<td>--lock-path=<code>&lt;path&gt;</code></td>
+<td>nginx.lock&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;</td>
+</tr>
+<tr>
+<td>--error-log-path=<code>&lt;path&gt;</code></td>
+<td>&#x5728;nginx.conf&#x4E2D;&#x6CA1;&#x6709;&#x6307;&#x5B9A;error_log&#x6307;&#x4EE4;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>&lt;prefix&gt;</code>/- logs/error.log&#x3002;</td>
+</tr>
+<tr>
+<td>--http-log-path=<code>&lt;path&gt;</code></td>
+<td>&#x5728;nginx.conf&#x4E2D;&#x6CA1;&#x6709;&#x6307;&#x5B9A;access_log&#x6307;&#x4EE4;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x8BBF;&#x95EE;&#x65E5;&#x5FD7;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>&lt;prefix&gt;</code>/- logs/access.log&#x3002;</td>
+</tr>
+<tr>
+<td>--user=<code>&lt;user&gt;</code></td>
+<td>&#x5728;nginx.conf&#x4E2D;&#x6CA1;&#x6709;&#x6307;&#x5B9A;user&#x6307;&#x4EE4;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;nginx&#x4F7F;&#x7528;&#x7684;&#x7528;&#x6237;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; nobody&#x3002;</td>
+</tr>
+<tr>
+<td>--group=<code>&lt;group&gt;</code></td>
+<td>&#x5728;nginx.conf&#x4E2D;&#x6CA1;&#x6709;&#x6307;&#x5B9A;user&#x6307;&#x4EE4;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;nginx&#x4F7F;&#x7528;&#x7684;&#x7EC4;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; nobody&#x3002;</td>
+</tr>
+<tr>
+<td>--builddir=DIR</td>
+<td>&#x6307;&#x5B9A;&#x7F16;&#x8BD1;&#x7684;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td>--with-rtsig_module</td>
+<td>&#x542F;&#x7528; rtsig &#x6A21;&#x5757;</td>
+</tr>
+<tr>
+<td>--with-select_module --without-select_module</td>
+<td>&#x5141;&#x8BB8;&#x6216;&#x4E0D;&#x5141;&#x8BB8;&#x5F00;&#x542F;SELECT&#x6A21;&#x5F0F;&#xFF0C;&#x5982;&#x679C; configure &#x6CA1;&#x6709;&#x627E;&#x5230;&#x66F4;&#x5408;&#x9002;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;kqueue(sun os),epoll (linux kenel 2.6+), rtsig(- &#x5B9E;&#x65F6;&#x4FE1;&#x53F7;)&#x6216;&#x8005;/dev/poll(&#x4E00;&#x79CD;&#x7C7B;&#x4F3C;select&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5E95;&#x5C42;&#x5B9E;&#x73B0;&#x4E0E;SELECT&#x57FA;&#x672C;&#x76F8; &#x540C;&#xFF0C;&#x90FD;&#x662F;&#x91C7;&#x7528;&#x8F6E;&#x8BAD;&#x65B9;&#x6CD5;) SELECT&#x6A21;&#x5F0F;&#x5C06;&#x662F;&#x9ED8;&#x8BA4;&#x5B89;&#x88C5;&#x6A21;&#x5F0F;</td>
+</tr>
+<tr>
+<td>--with-poll_module --without-poll_module</td>
+<td>Whether or not to enable the poll module. This module is enabled by, default if a more suitable method such as kqueue, epoll, rtsig or /dev/poll is not discovered by configure.</td>
+</tr>
+<tr>
+<td>--with-http_ssl_module</td>
+<td>Enable ngx_http_ssl_module. Enables SSL support and the ability to handle HTTPS requests. Requires OpenSSL. On Debian, this is libssl-dev. &#x5F00;&#x542F;HTTP SSL&#x6A21;&#x5757;&#xFF0C;&#x4F7F;NGINX&#x53EF;&#x4EE5;&#x652F;&#x6301;HTTPS&#x8BF7;&#x6C42;&#x3002;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x9700;&#x8981;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x4E86;OPENSSL&#xFF0C;&#x5728;DEBIAN&#x4E0A;&#x662F;libssl</td>
+</tr>
+<tr>
+<td>--with-http_realip_module</td>
+<td>&#x542F;&#x7528; ngx_http_realip_module</td>
+</tr>
+<tr>
+<td>--with-http_addition_module</td>
+<td>&#x542F;&#x7528; ngx_http_addition_module</td>
+</tr>
+<tr>
+<td>--with-http_sub_module</td>
+<td>&#x542F;&#x7528; ngx_http_sub_module</td>
+</tr>
+<tr>
+<td>--with-http_dav_module</td>
+<td>&#x542F;&#x7528; ngx_http_dav_module</td>
+</tr>
+<tr>
+<td>--with-http_flv_module</td>
+<td>&#x542F;&#x7528; ngx_http_flv_module</td>
+</tr>
+<tr>
+<td>--with-http_stub_status_module</td>
+<td>&#x542F;&#x7528; &quot;server status&quot; &#x9875;</td>
+</tr>
+<tr>
+<td>--without-http_charset_module</td>
+<td>&#x7981;&#x7528; ngx_http_charset_module</td>
+</tr>
+<tr>
+<td>--without-http_gzip_module</td>
+<td>&#x7981;&#x7528; ngx_http_gzip_module. &#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x9700;&#x8981; zlib &#x3002;</td>
+</tr>
+<tr>
+<td>--without-http_ssi_module</td>
+<td>&#x7981;&#x7528; ngx_http_ssi_module</td>
+</tr>
+<tr>
+<td>--without-http_userid_module</td>
+<td>&#x7981;&#x7528; ngx_http_userid_module</td>
+</tr>
+<tr>
+<td>--without-http_access_module</td>
+<td>&#x7981;&#x7528; ngx_http_access_module</td>
+</tr>
+<tr>
+<td>--without-http_auth_basic_module</td>
+<td>&#x7981;&#x7528; ngx_http_auth_basic_module</td>
+</tr>
+<tr>
+<td>--without-http_autoindex_module</td>
+<td>&#x7981;&#x7528; ngx_http_autoindex_module</td>
+</tr>
+<tr>
+<td>--without-http_geo_module</td>
+<td>&#x7981;&#x7528; ngx_http_geo_module</td>
+</tr>
+<tr>
+<td>--without-http_map_module</td>
+<td>&#x7981;&#x7528; ngx_http_map_module</td>
+</tr>
+<tr>
+<td>--without-http_referer_module</td>
+<td>&#x7981;&#x7528; ngx_http_referer_module</td>
+</tr>
+<tr>
+<td>--without-http_rewrite_module</td>
+<td>&#x7981;&#x7528; ngx_http_rewrite_module. &#x5982;&#x679C;&#x542F;&#x7528;&#x9700;&#x8981; PCRE &#x3002;</td>
+</tr>
+<tr>
+<td>--without-http_proxy_module</td>
+<td>&#x7981;&#x7528; ngx_http_proxy_module</td>
+</tr>
+<tr>
+<td>--without-http_fastcgi_module</td>
+<td>&#x7981;&#x7528; ngx_http_fastcgi_module</td>
+</tr>
+<tr>
+<td>--without-http_memcached_module</td>
+<td>&#x7981;&#x7528; ngx_http_memcached_module</td>
+</tr>
+<tr>
+<td>--without-http_limit_zone_module</td>
+<td>&#x7981;&#x7528; ngx_http_limit_zone_module</td>
+</tr>
+<tr>
+<td>--without-http_empty_gif_module</td>
+<td>&#x7981;&#x7528; ngx_http_empty_gif_module</td>
+</tr>
+<tr>
+<td>--without-http_browser_module</td>
+<td>&#x7981;&#x7528; ngx_http_browser_module</td>
+</tr>
+<tr>
+<td>--without-http_upstream_ip_hash_module</td>
+<td>&#x7981;&#x7528; ngx_http_upstream_ip_hash_module</td>
+</tr>
+<tr>
+<td>--with-http_perl_module</td>
+<td>&#x542F;&#x7528; ngx_http_perl_module</td>
+</tr>
+<tr>
+<td>--with-perl_modules_path=PATH</td>
+<td>&#x6307;&#x5B9A; perl &#x6A21;&#x5757;&#x7684;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>--with-perl=PATH</td>
+<td>&#x6307;&#x5B9A; perl &#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>--http-log-path=PATH</td>
+<td>Set path to the http access log</td>
+</tr>
+<tr>
+<td>--http-client-body-temp-path=PATH</td>
+<td>Set path to the http client request body temporary files</td>
+</tr>
+<tr>
+<td>--http-proxy-temp-path=PATH</td>
+<td>Set path to the http proxy temporary files</td>
+</tr>
+<tr>
+<td>--http-fastcgi-temp-path=PATH</td>
+<td>Set path to the http fastcgi temporary files</td>
+</tr>
+<tr>
+<td>--without-http</td>
+<td>&#x7981;&#x7528; HTTP server</td>
+</tr>
+<tr>
+<td>--with-mail</td>
+<td>&#x542F;&#x7528; IMAP4/POP3/SMTP &#x4EE3;&#x7406;&#x6A21;&#x5757;</td>
+</tr>
+<tr>
+<td>--with-mail_ssl_module</td>
+<td>&#x542F;&#x7528; ngx_mail_ssl_module</td>
+</tr>
+<tr>
+<td>--with-cc=PATH</td>
+<td>&#x6307;&#x5B9A; C &#x7F16;&#x8BD1;&#x5668;&#x7684;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>--with-cpp=PATH</td>
+<td>&#x6307;&#x5B9A; C &#x9884;&#x5904;&#x7406;&#x5668;&#x7684;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>--with-cc-opt=OPTIONS</td>
+<td>Additional parameters which will be added to the variable CFLAGS. With the use of the system library PCRE in FreeBSD, it is necessary to indicate --with-cc-opt=&quot;-I /usr/local/include&quot;. If we are using select() and it is necessary to increase the number of file descriptors, then this also can be assigned here: --with-cc-opt=&quot;-D FD_SETSIZE=2048&quot;.</td>
+</tr>
+<tr>
+<td>--with-ld-opt=OPTIONS</td>
+<td>Additional parameters passed to the linker. With the use of the system library PCRE in - FreeBSD, it is necessary to indicate --with-ld-opt=&quot;-L /usr/local/lib&quot;.</td>
+</tr>
+<tr>
+<td>--with-cpu-opt=CPU</td>
+<td>&#x4E3A;&#x7279;&#x5B9A;&#x7684; CPU &#x7F16;&#x8BD1;&#xFF0C;&#x6709;&#x6548;&#x7684;&#x503C;&#x5305;&#x62EC;&#xFF1A;pentium, pentiumpro, pentium3, pentium4, athlon, opteron, amd64, sparc32, sparc64, ppc64</td>
+</tr>
+<tr>
+<td>--without-pcre</td>
+<td>&#x7981;&#x6B62; PCRE &#x5E93;&#x7684;&#x4F7F;&#x7528;&#x3002;&#x540C;&#x65F6;&#x4E5F;&#x4F1A;&#x7981;&#x6B62; HTTP rewrite &#x6A21;&#x5757;&#x3002;&#x5728; &quot;location&quot; &#x914D;&#x7F6E;&#x6307;&#x4EE4;&#x4E2D;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E5F;&#x9700;&#x8981; PCRE &#x3002;</td>
+</tr>
+<tr>
+<td>--with-pcre=DIR</td>
+<td>&#x6307;&#x5B9A; PCRE &#x5E93;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x8DEF;&#x5F84;&#x3002;</td>
+</tr>
+<tr>
+<td>--with-pcre-opt=OPTIONS</td>
+<td>Set additional options for PCRE building.</td>
+</tr>
+<tr>
+<td>--with-md5=DIR</td>
+<td>Set path to md5 library sources.</td>
+</tr>
+<tr>
+<td>--with-md5-opt=OPTIONS</td>
+<td>Set additional options for md5 building.</td>
+</tr>
+<tr>
+<td>--with-md5-asm</td>
+<td>Use md5 assembler sources.</td>
+</tr>
+<tr>
+<td>--with-sha1=DIR</td>
+<td>Set path to sha1 library sources.</td>
+</tr>
+<tr>
+<td>--with-sha1-opt=OPTIONS</td>
+<td>Set additional options for sha1 building.</td>
+</tr>
+<tr>
+<td>--with-sha1-asm</td>
+<td>Use sha1 assembler sources.</td>
+</tr>
+<tr>
+<td>--with-zlib=DIR</td>
+<td>Set path to zlib library sources.</td>
+</tr>
+<tr>
+<td>--with-zlib-opt=OPTIONS</td>
+<td>Set additional options for zlib building.</td>
+</tr>
+<tr>
+<td>--with-zlib-asm=CPU</td>
+<td>Use zlib assembler sources optimized for specified CPU, valid values are: pentium, pentiumpro</td>
+</tr>
+<tr>
+<td>--with-openssl=DIR</td>
+<td>Set path to OpenSSL library sources</td>
+</tr>
+<tr>
+<td>--with-openssl-opt=OPTIONS</td>
+<td>Set additional options for OpenSSL building</td>
+</tr>
+<tr>
+<td>--with-debug</td>
+<td>&#x542F;&#x7528;&#x8C03;&#x8BD5;&#x65E5;&#x5FD7;</td>
+</tr>
+<tr>
+<td>--add-module=PATH</td>
+<td>Add in a third-party module found in directory PATH</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t13&#x914D;&#x7F6E;">&#x914D;&#x7F6E; <a href="#t13&#x914D;&#x7F6E;"> # </a></h2>
+<p>&#x5728;Centos &#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728; <strong>/usr/local/nginx-1.5.1/conf/nginx.conf</strong> &#x6211;&#x4EEC;&#x8981;&#x5728;&#x8FD9;&#x91CC;&#x914D;&#x7F6E;&#x4E00;&#x4E9B;&#x6587;&#x4EF6;&#x3002;nginx.conf&#x662F;&#x4E3B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x7531;&#x82E5;&#x5E72;&#x4E2A;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#xFF0C;&#x6BCF;&#x4E2A;&#x5927;&#x62EC;&#x53F7;<code>{}</code>&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#x3002;&#x6BCF;&#x4E00;&#x884C;&#x6307;&#x4EE4;&#x90FD;&#x7531;&#x5206;&#x53F7;&#x7ED3;&#x675F;<code>;</code>&#xFF0C;&#x6807;&#x5FD7;&#x7740;&#x4E00;&#x884C;&#x7684;&#x7ED3;&#x675F;&#x3002;</p>
+<h3 id="t14&#x5E38;&#x7528;&#x6B63;&#x5219;">&#x5E38;&#x7528;&#x6B63;&#x5219; <a href="#t14&#x5E38;&#x7528;&#x6B63;&#x5219;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th>&#x6B63;&#x5219;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6B63;&#x5219;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.</code></td>
+<td>&#x5339;&#x914D;&#x9664;&#x6362;&#x884C;&#x7B26;&#x4EE5;&#x5916;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;</td>
+<td><code>$</code></td>
+<td>&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7ED3;&#x675F;</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>&#x91CD;&#x590D;0&#x6B21;&#x6216;1&#x6B21;</td>
+<td><code>{n}</code></td>
+<td>&#x91CD;&#x590D;n&#x6B21;</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>&#x91CD;&#x590D;1&#x6B21;&#x6216;&#x66F4;&#x591A;&#x6B21;</td>
+<td><code>{n,}</code></td>
+<td>&#x91CD;&#x590D;n&#x6B21;&#x6216;&#x66F4;&#x591A;&#x6B21;</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>&#x91CD;&#x590D;0&#x6B21;&#x6216;&#x66F4;&#x591A;&#x6B21;</td>
+<td><code>[c]</code></td>
+<td>&#x5339;&#x914D;&#x5355;&#x4E2A;&#x5B57;&#x7B26;c</td>
+</tr>
+<tr>
+<td><code>\d</code></td>
+<td>&#x5339;&#x914D;&#x6570;&#x5B57;</td>
+<td><code>[a-z]</code></td>
+<td>&#x5339;&#x914D;a-z&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F00;&#x59CB;</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t15&#x5168;&#x5C40;&#x53D8;&#x91CF;">&#x5168;&#x5C40;&#x53D8;&#x91CF; <a href="#t15&#x5168;&#x5C40;&#x53D8;&#x91CF;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th>&#x53D8;&#x91CF;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x53D8;&#x91CF;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$args</td>
+<td>&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x7B49;&#x4E8E;&#x8BF7;&#x6C42;&#x884C;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x540C;$query_string</td>
+<td>$remote_port</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x7AEF;&#x53E3;&#x3002;</td>
+</tr>
+<tr>
+<td>$content_length</td>
+<td>&#x8BF7;&#x6C42;&#x5934;&#x4E2D;&#x7684;Content-length&#x5B57;&#x6BB5;&#x3002;</td>
+<td>$remote_user</td>
+<td>&#x5DF2;&#x7ECF;&#x7ECF;&#x8FC7;Auth Basic Module&#x9A8C;&#x8BC1;&#x7684;&#x7528;&#x6237;&#x540D;&#x3002;</td>
+</tr>
+<tr>
+<td>$content_type</td>
+<td>&#x8BF7;&#x6C42;&#x5934;&#x4E2D;&#x7684;Content-Type&#x5B57;&#x6BB5;&#x3002;</td>
+<td>$request_filename</td>
+<td>&#x5F53;&#x524D;&#x8BF7;&#x6C42;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x7531;root&#x6216;alias&#x6307;&#x4EE4;&#x4E0E;URI&#x8BF7;&#x6C42;&#x751F;&#x6210;&#x3002;</td>
+</tr>
+<tr>
+<td>$document_root</td>
+<td>&#x5F53;&#x524D;&#x8BF7;&#x6C42;&#x5728;root&#x6307;&#x4EE4;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x503C;&#x3002;</td>
+<td>$scheme</td>
+<td>HTTP&#x65B9;&#x6CD5;&#xFF08;&#x5982;http&#xFF0C;https&#xFF09;&#x3002;</td>
+</tr>
+<tr>
+<td>$host</td>
+<td>&#x8BF7;&#x6C42;&#x4E3B;&#x673A;&#x5934;&#x5B57;&#x6BB5;&#xFF0C;&#x5426;&#x5219;&#x4E3A;&#x670D;&#x52A1;&#x5668;&#x540D;&#x79F0;&#x3002;</td>
+<td>$server_protocol</td>
+<td>&#x8BF7;&#x6C42;&#x4F7F;&#x7528;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x901A;&#x5E38;&#x662F;HTTP/1.0&#x6216;HTTP/1.1&#x3002;</td>
+</tr>
+<tr>
+<td>$http_user_agent</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;agent&#x4FE1;&#x606F;</td>
+<td>$server_addr</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#xFF0C;&#x5728;&#x5B8C;&#x6210;&#x4E00;&#x6B21;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x540E;&#x53EF;&#x4EE5;&#x786E;&#x5B9A;&#x8FD9;&#x4E2A;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td>$http_cookie</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;cookie&#x4FE1;&#x606F;</td>
+<td>$server_name</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x540D;&#x79F0;&#x3002;</td>
+</tr>
+<tr>
+<td>$limit_rate</td>
+<td>&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x9650;&#x5236;&#x8FDE;&#x63A5;&#x901F;&#x7387;&#x3002;</td>
+<td>$server_port</td>
+<td>&#x8BF7;&#x6C42;&#x5230;&#x8FBE;&#x670D;&#x52A1;&#x5668;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#x3002;</td>
+</tr>
+<tr>
+<td>$request_method</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x901A;&#x5E38;&#x4E3A;GET&#x6216;POST&#x3002;</td>
+<td>$request_uri</td>
+<td>&#x5305;&#x542B;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7684;&#x539F;&#x59CB;URI&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x4E3B;&#x673A;&#x540D;&#xFF0C;&#x5982;&#xFF1A;/foo/bar.php?arg=baz&#x3002;</td>
+</tr>
+<tr>
+<td>$remote_addr</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;&#x7684;IP&#x5730;&#x5740;&#x3002;</td>
+<td>$uri</td>
+<td>&#x4E0D;&#x5E26;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7684;&#x5F53;&#x524D;URI&#xFF0C;$uri&#x4E0D;&#x5305;&#x542B;&#x4E3B;&#x673A;&#x540D;&#xFF0C;&#x5982;/foo/bar.html&#x3002;</td>
+</tr>
+<tr>
+<td>$document_uri</td>
+<td>&#x4E0E;$uri&#x76F8;&#x540C;&#x3002;</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4F8B;&#x5982;&#x8BF7;&#x6C42;&#xFF1A;<code>http://localhost:3000/test1/test2/test.php</code></p>
+<p>$host&#xFF1A;localhost<br>$server_port&#xFF1A;3000<br>$request_uri&#xFF1A;/test1/test2/test.php<br>$document_uri&#xFF1A;/test1/test2/test.php<br>$document_root&#xFF1A;/var/www/html<br>$request_filename&#xFF1A;/var/www/html/test1/test2/test.php  </p>
+<h3 id="t16&#x7B26;&#x53F7;&#x53C2;&#x8003;">&#x7B26;&#x53F7;&#x53C2;&#x8003; <a href="#t16&#x7B26;&#x53F7;&#x53C2;&#x8003;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k,K</td>
+<td>&#x5343;&#x5B57;&#x8282;</td>
+<td>m,M</td>
+<td>&#x5146;&#x5B57;&#x8282;</td>
+<td>ms</td>
+<td>&#x6BEB;&#x79D2;</td>
+</tr>
+<tr>
+<td>s</td>
+<td>&#x79D2;</td>
+<td>m</td>
+<td>&#x5206;&#x949F;</td>
+<td>h</td>
+<td>&#x5C0F;&#x65F6;</td>
+</tr>
+<tr>
+<td>d</td>
+<td>&#x65E5;</td>
+<td>w</td>
+<td>&#x5468;</td>
+<td>M</td>
+<td>&#x4E00;&#x4E2A;&#x6708;, 30&#x5929;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4F8B;&#x5982;&#xFF0C;&quot;8k&quot;&#xFF0C;&quot;1m&quot; &#x4EE3;&#x8868;&#x5B57;&#x8282;&#x6570;&#x8BA1;&#x91CF;&#x3002;<br>&#x4F8B;&#x5982;&#xFF0C;&quot;1h 30m&quot;&#xFF0C;&quot;1y 6M&quot;&#x3002;&#x4EE3;&#x8868; &quot;1&#x5C0F;&#x65F6; 30&#x5206;&quot;&#xFF0C;&quot;1&#x5E74;&#x96F6;6&#x4E2A;&#x6708;&quot;&#x3002; </p>
+<h3 id="t17&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t17&#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h3>
+<p>nginx &#x7684;&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;&#x7531;&#x4E00;&#x4E2A;&#x4E3B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x548C;&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x8F85;&#x52A9;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6784;&#x6210;&#x3002;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5747;&#x662F;&#x7EAF;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x5168;&#x90E8;&#x4F4D;&#x4E8E; nginx &#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;&#x7684; conf &#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<p>&#x6307;&#x4EE4;&#x7531; nginx &#x7684;&#x5404;&#x4E2A;&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x6A21;&#x5757;&#x4F1A;&#x63D0;&#x4F9B;&#x4E0D;&#x540C;&#x7684;&#x6307;&#x4EE4;&#x6765;&#x5B9E;&#x73B0;&#x914D;&#x7F6E;&#x3002;
+&#x6307;&#x4EE4;&#x9664;&#x4E86; Key-Value &#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x8FD8;&#x6709;&#x4F5C;&#x7528;&#x57DF;&#x6307;&#x4EE4;&#x3002;</p>
+<p>nginx.conf &#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x6839;&#x636E;&#x5176;&#x903B;&#x8F91;&#x4E0A;&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x5BF9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C;&#x4E86;&#x5206;&#x7C7B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5206;&#x6210;&#x4E86;&#x591A;&#x4E2A;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x6216;&#x8005;&#x79F0;&#x4E4B;&#x4E3A;&#x914D;&#x7F6E;&#x6307;&#x4EE4;&#x4E0A;&#x4E0B;&#x6587;&#x3002;&#x4E0D;&#x540C;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x542B;&#x6709;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x914D;&#x7F6E;&#x9879;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x8FD9;&#x4E9B;&#x4E0A;&#x4E0B;&#x6587;&#x6307;&#x4EE4;&#x662F;&#x7528;&#x7684;&#x6BD4;&#x8F83;&#x591A;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Directive</th>
+<th>Description</th>
+<th>Contains Directive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>main</td>
+<td>nginx &#x5728;&#x8FD0;&#x884C;&#x65F6;&#x4E0E;&#x5177;&#x4F53;&#x4E1A;&#x52A1;&#x529F;&#x80FD;&#xFF08;&#x6BD4;&#x5982; http &#x670D;&#x52A1;&#x6216;&#x8005; email &#x670D;&#x52A1;&#x4EE3;&#x7406;&#xFF09;&#x65E0;&#x5173;&#x7684;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x6570;&#xFF0C;&#x8FD0;&#x884C;&#x7684;&#x8EAB;&#x4EFD;&#x7B49;&#x3002;</td>
+<td>user, worker_processes, error_log, events, http, mail</td>
+</tr>
+<tr>
+<td>http</td>
+<td>&#x4E0E;&#x63D0;&#x4F9B; http &#x670D;&#x52A1;&#x76F8;&#x5173;&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x662F;&#x5426;&#x4F7F;&#x7528; keepalive &#x554A;&#xFF0C;&#x662F;&#x5426;&#x4F7F;&#x7528; gzip &#x8FDB;&#x884C;&#x538B;&#x7F29;&#x7B49;&#x3002;</td>
+<td>server</td>
+</tr>
+<tr>
+<td>server</td>
+<td>http &#x670D;&#x52A1;&#x4E0A;&#x652F;&#x6301;&#x82E5;&#x5E72;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x3002;&#x6BCF;&#x4E2A;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684; server &#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x914D;&#x7F6E;&#x9879;&#x91CC;&#x9762;&#x5305;&#x542B;&#x8BE5;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x3002;&#x5728;&#x63D0;&#x4F9B; mail &#x670D;&#x52A1;&#x7684;&#x4EE3;&#x7406;&#x65F6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x82E5;&#x5E72; server. &#x6BCF;&#x4E2A; server &#x901A;&#x8FC7;&#x76D1;&#x542C;&#x7684;&#x5730;&#x5740;&#x6765;&#x533A;&#x5206;&#x3002;</td>
+<td>listen, server_name, access_log, location, protocol, proxy, smtp_auth, xclient</td>
+</tr>
+<tr>
+<td>location</td>
+<td>http &#x670D;&#x52A1;&#x4E2D;&#xFF0C;&#x67D0;&#x4E9B;&#x7279;&#x5B9A;&#x7684; URL &#x5BF9;&#x5E94;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x914D;&#x7F6E;&#x9879;&#x3002;</td>
+<td>index, root</td>
+</tr>
+<tr>
+<td>mail</td>
+<td>&#x5B9E;&#x73B0; email &#x76F8;&#x5173;&#x7684; SMTP/IMAP/POP3 &#x4EE3;&#x7406;&#x65F6;&#xFF0C;&#x5171;&#x4EAB;&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x9879;&#xFF08;&#x56E0;&#x4E3A;&#x53EF;&#x80FD;&#x5B9E;&#x73B0;&#x591A;&#x4E2A;&#x4EE3;&#x7406;&#xFF0C;&#x5DE5;&#x4F5C;&#x5728;&#x591A;&#x4E2A;&#x76D1;&#x542C;&#x5730;&#x5740;&#x4E0A;&#xFF09;&#x3002;</td>
+<td>server, http, imap_capabilities</td>
+</tr>
+<tr>
+<td>include</td>
+<td>&#x4EE5;&#x4FBF;&#x589E;&#x5F3A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#xFF0C;&#x4F7F;&#x5F97;&#x90E8;&#x5206;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x4F7F;&#x7528;&#x3002;</td>
+<td>-</td>
+</tr>
+<tr>
+<td>valid_referers</td>
+<td>&#x7528;&#x6765;&#x6821;&#x9A8C;Http&#x8BF7;&#x6C42;&#x5934;Referer&#x662F;&#x5426;&#x6709;&#x6548;&#x3002;</td>
+<td>-</td>
+</tr>
+<tr>
+<td>try_files</td>
+<td>&#x7528;&#x5728;server&#x90E8;&#x5206;&#xFF0C;&#x4E0D;&#x8FC7;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x8FD8;&#x662F;&#x7528;&#x5728;location&#x90E8;&#x5206;&#xFF0C;&#x5B83;&#x4F1A;&#x6309;&#x7167;&#x7ED9;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x5C1D;&#x8BD5;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x88AB;&#x5339;&#x914D;&#x5230;&#x7684;&#x5C06;&#x4F1A;&#x88AB;&#x4F7F;&#x7528;&#x3002;</td>
+<td>-</td>
+</tr>
+<tr>
+<td>if</td>
+<td>&#x5F53;&#x5728;location&#x5757;&#x4E2D;&#x4F7F;&#x7528;if&#x6307;&#x4EE4;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x5B83;&#x5E76;&#x4E0D;&#x6309;&#x7167;&#x9884;&#x671F;&#x8FD0;&#x884C;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x907F;&#x514D;&#x4F7F;&#x7528;if&#x6307;&#x4EE4;&#x3002;</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x518D; <strong>nginx.conf</strong> &#x91CC;&#x9762;&#x5F15;&#x7528;&#x4E24;&#x4E2A;&#x914D;&#x7F6E; vhost/example.com.conf &#x548C; vhost/gitlab.com.conf &#x5B83;&#x4EEC;&#x90FD;&#x88AB;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x6211;&#x81EA;&#x5DF1;&#x65B0;&#x5EFA;&#x7684;&#x76EE;&#x5F55; vhost &#x4E0B;&#x9762;&#x3002;nginx.conf &#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-nginx"><span class="hljs-attribute">worker_processes</span>  <span class="hljs-number">1</span>;
+<span class="hljs-section">events</span> {
+    <span class="hljs-attribute">worker_connections</span>  <span class="hljs-number">1024</span>;
+}
+
+<span class="hljs-section">http</span> {
+    <span class="hljs-attribute">include</span>       mime.types;
+    <span class="hljs-attribute">default_type</span>  application/octet-stream;
+
+    <span class="hljs-comment">#log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span>
+    <span class="hljs-comment">#                  &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span>
+    <span class="hljs-comment">#                  &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;</span>
+
+    <span class="hljs-comment">#access_log  logs/access.log  main;</span>
+
+    <span class="hljs-attribute">sendfile</span>        <span class="hljs-literal">on</span>;
+    <span class="hljs-comment">#tcp_nopush     on;</span>
+
+    <span class="hljs-comment">#keepalive_timeout  0;</span>
+    <span class="hljs-attribute">keepalive_timeout</span>  <span class="hljs-number">65</span>;
+
+    <span class="hljs-comment">#gzip  on;</span>
+    <span class="hljs-section">server</span> {
+        <span class="hljs-attribute">listen</span>       <span class="hljs-number">80</span>;
+        <span class="hljs-attribute">server_name</span>  localhost;
+        <span class="hljs-attribute">location</span> / {
+            <span class="hljs-attribute">root</span>   html;
+            <span class="hljs-attribute">index</span>  index.html index.htm;
+        }
+        <span class="hljs-attribute">error_page</span>   <span class="hljs-number">500</span> <span class="hljs-number">502</span> <span class="hljs-number">503</span> <span class="hljs-number">504</span>  /50x.html;
+        <span class="hljs-attribute">location</span> = /50x.html {
+            <span class="hljs-attribute">root</span>   html;
+        }
+    }
+    <span class="hljs-attribute">include</span>  vhost/example.com.conf;
+    <span class="hljs-attribute">include</span>  vhost/gitlab.com.conf;
+}
+</code></pre>
+<p>&#x7B80;&#x5355;&#x7684;&#x914D;&#x7F6E;: example.com.conf</p>
+<pre><code class="lang-nginx"><span class="hljs-section">server</span> {
+    <span class="hljs-comment">#&#x4FA6;&#x542C;&#x7684;80&#x7AEF;&#x53E3;</span>
+    <span class="hljs-attribute">listen</span>       <span class="hljs-number">80</span>;
+    <span class="hljs-attribute">server_name</span>  baidu.com app.baidu.com; <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x6307;&#x5B9A;&#x57DF;&#x540D;</span>
+    <span class="hljs-attribute">index</span>        index.html index.htm;    <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x6307;&#x5B9A;&#x9ED8;&#x8BA4;&#x5165;&#x53E3;&#x9875;&#x9762;</span>
+    <span class="hljs-attribute">root</span> /home/www/app.baidu.com;         <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x6307;&#x5B9A;&#x76EE;&#x5F55;</span>
+}
+</code></pre>
+<h3 id="t18&#x5185;&#x7F6E;&#x9884;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;">&#x5185;&#x7F6E;&#x9884;&#x5B9A;&#x4E49;&#x53D8;&#x91CF; <a href="#t18&#x5185;&#x7F6E;&#x9884;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"> # </a></h3>
+<p>Nginx&#x63D0;&#x4F9B;&#x4E86;&#x8BB8;&#x591A;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F7F;&#x7528;set&#x6765;&#x8BBE;&#x7F6E;&#x53D8;&#x91CF;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728;if&#x4E2D;&#x4F7F;&#x7528;&#x9884;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x4EEC;&#x4F20;&#x9012;&#x7ED9;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7684;&#x9884;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#xFF0C;<a href="http://nginx.org/en/docs/varindex.html">&#x66F4;&#x591A;&#x8BE6;&#x89C1;</a></p>
+<table>
+<thead>
+<tr>
+<th>&#x53D8;&#x91CF;&#x540D;&#x79F0;</th>
+<th>&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$args_name</td>
+<td>&#x5728;&#x8BF7;&#x6C42;&#x4E2D;&#x7684;name&#x53C2;&#x6570;</td>
+</tr>
+<tr>
+<td>$args</td>
+<td>&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+</tr>
+<tr>
+<td>$query_string</td>
+<td>$args&#x7684;&#x522B;&#x540D;</td>
+</tr>
+<tr>
+<td>$content_length</td>
+<td>&#x8BF7;&#x6C42;&#x5934;Content-Length&#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>$content_type</td>
+<td>&#x8BF7;&#x6C42;&#x5934;Content-Type&#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>$host</td>
+<td>&#x5982;&#x679C;&#x5F53;&#x524D;&#x6709;Host&#xFF0C;&#x5219;&#x4E3A;&#x8BF7;&#x6C42;&#x5934;Host&#x7684;&#x503C;&#xFF1B;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x5934;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x503C;&#x7B49;&#x4E8E;&#x5339;&#x914D;&#x8BE5;&#x8BF7;&#x6C42;&#x7684;server_name&#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>$remote_addr</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;&#x7684;IP&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td>$request</td>
+<td>&#x5B8C;&#x6574;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x6536;&#x5230;&#xFF0C;&#x5305;&#x62EC;Http&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x3001;URI&#x3001;Http&#x534F;&#x8BAE;&#x3001;&#x5934;&#x3001;&#x8BF7;&#x6C42;&#x4F53;</td>
+</tr>
+<tr>
+<td>$request_uri</td>
+<td>&#x5B8C;&#x6574;&#x8BF7;&#x6C42;&#x7684;URI&#xFF0C;&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x6765;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x5305;&#x62EC;&#x53C2;&#x6570;</td>
+</tr>
+<tr>
+<td>$scheme</td>
+<td>&#x5F53;&#x524D;&#x8BF7;&#x6C42;&#x7684;&#x534F;&#x8BAE;</td>
+</tr>
+<tr>
+<td>$uri</td>
+<td>&#x5F53;&#x524D;&#x8BF7;&#x6C42;&#x7684;&#x6807;&#x51C6;&#x5316;URI</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t19&#x53CD;&#x5411;&#x4EE3;&#x7406;">&#x53CD;&#x5411;&#x4EE3;&#x7406; <a href="#t19&#x53CD;&#x5411;&#x4EE3;&#x7406;"> # </a></h3>
+<p>&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x662F;&#x4E00;&#x4E2A;Web&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5B83;&#x63A5;&#x53D7;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x7ED9;&#x4E0A;&#x6E38;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x5C06;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;&#x8FDE;&#x63A5;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x3002;&#x4E0B;&#x9762;&#x7B80;&#x5355;&#x7684;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-nginx"><span class="hljs-section">server</span> {  
+  <span class="hljs-attribute">listen</span>       <span class="hljs-number">80</span>;                                                        
+  <span class="hljs-attribute">server_name</span>  localhost;                                              
+  <span class="hljs-attribute">client_max_body_size</span> <span class="hljs-number">1024M</span>;  <span class="hljs-comment"># &#x5141;&#x8BB8;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x6700;&#x5927;&#x5355;&#x6587;&#x4EF6;&#x5B57;&#x8282;&#x6570;</span>
+
+  <span class="hljs-attribute">location</span> / {
+    <span class="hljs-attribute">proxy_pass</span>                         http://localhost:8080;
+    <span class="hljs-attribute">proxy_set_header</span> Host              <span class="hljs-variable">$host</span>:<span class="hljs-variable">$server_port</span>;
+    <span class="hljs-attribute">proxy_set_header</span> X-Forwarded-For   <span class="hljs-variable">$remote_addr</span>; <span class="hljs-comment"># HTTP&#x7684;&#x8BF7;&#x6C42;&#x7AEF;&#x771F;&#x5B9E;&#x7684;IP</span>
+    <span class="hljs-attribute">proxy_set_header</span> X-Forwarded-Proto <span class="hljs-variable">$scheme</span>;      <span class="hljs-comment"># &#x4E3A;&#x4E86;&#x6B63;&#x786E;&#x5730;&#x8BC6;&#x522B;&#x5B9E;&#x9645;&#x7528;&#x6237;&#x53D1;&#x51FA;&#x7684;&#x534F;&#x8BAE;&#x662F; http &#x8FD8;&#x662F; https</span>
+  }
+}
+</code></pre>
+<p>&#x590D;&#x6742;&#x7684;&#x914D;&#x7F6E;: gitlab.com.conf&#x3002;</p>
+<pre><code class="lang-nginx"><span class="hljs-section">server</span> {
+    <span class="hljs-comment">#&#x4FA6;&#x542C;&#x7684;80&#x7AEF;&#x53E3;</span>
+    <span class="hljs-attribute">listen</span>       <span class="hljs-number">80</span>;
+    <span class="hljs-attribute">server_name</span>  git.example.cn;
+    <span class="hljs-attribute">location</span> / {
+        <span class="hljs-attribute">proxy_pass</span>   http://localhost:3000;
+        <span class="hljs-comment">#&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x7684;&#x914D;&#x7F6E;&#x53EF;&#x5220;&#x9664;</span>
+        <span class="hljs-attribute">proxy_redirect</span>             <span class="hljs-literal">off</span>;
+        <span class="hljs-comment">#&#x540E;&#x7AEF;&#x7684;Web&#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;X-Forwarded-For&#x83B7;&#x53D6;&#x7528;&#x6237;&#x771F;&#x5B9E;IP</span>
+        <span class="hljs-attribute">proxy_set_header</span>           Host <span class="hljs-variable">$host</span>;
+        <span class="hljs-attribute">client_max_body_size</span>       <span class="hljs-number">10m</span>; <span class="hljs-comment">#&#x5141;&#x8BB8;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x6700;&#x5927;&#x5355;&#x6587;&#x4EF6;&#x5B57;&#x8282;&#x6570;</span>
+        <span class="hljs-attribute">client_body_buffer_size</span>    <span class="hljs-number">128k</span>; <span class="hljs-comment">#&#x7F13;&#x51B2;&#x533A;&#x4EE3;&#x7406;&#x7F13;&#x51B2;&#x7528;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x6700;&#x5927;&#x5B57;&#x8282;&#x6570;</span>
+        <span class="hljs-attribute">proxy_connect_timeout</span>      <span class="hljs-number">300</span>; <span class="hljs-comment">#nginx&#x8DDF;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;&#x8D85;&#x65F6;&#x65F6;&#x95F4;(&#x4EE3;&#x7406;&#x8FDE;&#x63A5;&#x8D85;&#x65F6;)</span>
+        <span class="hljs-attribute">proxy_send_timeout</span>         <span class="hljs-number">300</span>; <span class="hljs-comment">#&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x6570;&#x636E;&#x56DE;&#x4F20;&#x65F6;&#x95F4;(&#x4EE3;&#x7406;&#x53D1;&#x9001;&#x8D85;&#x65F6;)</span>
+        <span class="hljs-attribute">proxy_read_timeout</span>         <span class="hljs-number">300</span>; <span class="hljs-comment">#&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;&#x65F6;&#x95F4;(&#x4EE3;&#x7406;&#x63A5;&#x6536;&#x8D85;&#x65F6;)</span>
+        <span class="hljs-attribute">proxy_buffer_size</span>          <span class="hljs-number">4k</span>; <span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#xFF08;nginx&#xFF09;&#x4FDD;&#x5B58;&#x7528;&#x6237;&#x5934;&#x4FE1;&#x606F;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;</span>
+        <span class="hljs-attribute">proxy_buffers</span>              <span class="hljs-number">4</span> <span class="hljs-number">32k</span>; <span class="hljs-comment">#proxy_buffers&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x7F51;&#x9875;&#x5E73;&#x5747;&#x5728;32k&#x4EE5;&#x4E0B;&#x7684;&#x8BDD;&#xFF0C;&#x8FD9;&#x6837;&#x8BBE;&#x7F6E;</span>
+        <span class="hljs-attribute">proxy_busy_buffers_size</span>    <span class="hljs-number">64k</span>; <span class="hljs-comment">#&#x9AD8;&#x8D1F;&#x8377;&#x4E0B;&#x7F13;&#x51B2;&#x5927;&#x5C0F;&#xFF08;proxy_buffers*2&#xFF09;</span>
+    }
+}
+</code></pre>
+<p>&#x4EE3;&#x7406;&#x5230;&#x4E0A;&#x6E38;&#x670D;&#x52A1;&#x5668;&#x7684;&#x914D;&#x7F6E;&#x4E2D;&#xFF0C;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;proxy_pass&#x6307;&#x4EE4;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x4EE3;&#x7406;&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x6307;&#x4EE4;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6307;&#x4EE4;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>proxy_connect_timeout</td>
+<td>Nginx&#x4ECE;&#x63A5;&#x53D7;&#x8BF7;&#x6C42;&#x81F3;&#x8FDE;&#x63A5;&#x5230;&#x4E0A;&#x6E38;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6700;&#x957F;&#x7B49;&#x5F85;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td>proxy_send_timeout</td>
+<td>&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x6570;&#x636E;&#x56DE;&#x4F20;&#x65F6;&#x95F4;(&#x4EE3;&#x7406;&#x53D1;&#x9001;&#x8D85;&#x65F6;)</td>
+</tr>
+<tr>
+<td>proxy_read_timeout</td>
+<td>&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;&#x65F6;&#x95F4;(&#x4EE3;&#x7406;&#x63A5;&#x6536;&#x8D85;&#x65F6;)</td>
+</tr>
+<tr>
+<td>proxy_cookie_domain</td>
+<td>&#x66FF;&#x4EE3;&#x4ECE;&#x4E0A;&#x6E38;&#x670D;&#x52A1;&#x5668;&#x6765;&#x7684;Set-Cookie&#x5934;&#x7684;domain&#x5C5E;&#x6027;</td>
+</tr>
+<tr>
+<td>proxy_cookie_path</td>
+<td>&#x66FF;&#x4EE3;&#x4ECE;&#x4E0A;&#x6E38;&#x670D;&#x52A1;&#x5668;&#x6765;&#x7684;Set-Cookie&#x5934;&#x7684;path&#x5C5E;&#x6027;</td>
+</tr>
+<tr>
+<td>proxy_buffer_size</td>
+<td>&#x8BBE;&#x7F6E;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#xFF08;nginx&#xFF09;&#x4FDD;&#x5B58;&#x7528;&#x6237;&#x5934;&#x4FE1;&#x606F;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;</td>
+</tr>
+<tr>
+<td>proxy_buffers</td>
+<td>proxy_buffers&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x7F51;&#x9875;&#x5E73;&#x5747;&#x5728;&#x591A;&#x5C11;k&#x4EE5;&#x4E0B;</td>
+</tr>
+<tr>
+<td>proxy_set_header</td>
+<td>&#x91CD;&#x5199;&#x53D1;&#x9001;&#x5230;&#x4E0A;&#x6E38;&#x670D;&#x52A1;&#x5668;&#x5934;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C06;&#x67D0;&#x4E2A;&#x5934;&#x90E8;&#x7684;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x800C;&#x4E0D;&#x53D1;&#x9001;&#x67D0;&#x4E2A;&#x5934;&#x90E8;&#x7684;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;</td>
+</tr>
+<tr>
+<td>proxy_ignore_headers</td>
+<td>&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x7981;&#x6B62;&#x5904;&#x7406;&#x6765;&#x81EA;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x7684;&#x5E94;&#x7B54;&#x3002;</td>
+</tr>
+<tr>
+<td>proxy_intercept_errors</td>
+<td>&#x4F7F;nginx&#x963B;&#x6B62;HTTP&#x5E94;&#x7B54;&#x4EE3;&#x7801;&#x4E3A;400&#x6216;&#x8005;&#x66F4;&#x9AD8;&#x7684;&#x5E94;&#x7B54;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t20&#x8D1F;&#x8F7D;&#x5747;&#x8861;">&#x8D1F;&#x8F7D;&#x5747;&#x8861; <a href="#t20&#x8D1F;&#x8F7D;&#x5747;&#x8861;"> # </a></h3>
+<p>upstream&#x6307;&#x4EE4;&#x542F;&#x7528;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x914D;&#x7F6E;&#x533A;&#x6BB5;&#xFF0C;&#x5728;&#x8BE5;&#x533A;&#x6BB5;&#x5B9A;&#x4E49;&#x4E00;&#x7EC4;&#x4E0A;&#x6E38;&#x670D;&#x52A1;&#x5668;&#x3002;&#x8FD9;&#x4E9B;&#x670D;&#x52A1;&#x5668;&#x53EF;&#x80FD;&#x88AB;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x6743;&#x91CD;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x51FA;&#x4E8E;&#x5BF9;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x7EF4;&#x62A4;&#xFF0C;&#x6807;&#x8BB0;&#x4E3A;down&#x3002;</p>
+<pre><code class="lang-nginx">upstream gitlab {
+    ip_hash;
+    # upstream&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF0C;weight&#x662F;&#x6743;&#x91CD;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x673A;&#x5668;&#x914D;&#x7F6E;&#x5B9A;&#x4E49;&#x6743;&#x91CD;&#x3002;weigth&#x53C2;&#x6570;&#x8868;&#x793A;&#x6743;&#x503C;&#xFF0C;&#x6743;&#x503C;&#x8D8A;&#x9AD8;&#x88AB;&#x5206;&#x914D;&#x5230;&#x7684;&#x51E0;&#x7387;&#x8D8A;&#x5927;&#x3002;
+    server 192.168.122.11:8081 ;
+    server 127.0.0.1:82 weight=3;
+    server 127.0.0.1:83 weight=3 down;
+    server 127.0.0.1:84 weight=3; max_fails=3  fail_timeout=20s;
+    server 127.0.0.1:85 weight=4;;
+    keepalive 32;
+}
+server {
+    #&#x4FA6;&#x542C;&#x7684;80&#x7AEF;&#x53E3;
+    listen       80;
+    server_name  git.example.cn;
+    location / {
+        proxy_pass   http://gitlab;    #&#x5728;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x4EE3;&#x7406;&#xFF0C;&#x548C;upstream&#x7684;&#x540D;&#x5B57;&#x4E00;&#x6837;
+        #&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x7684;&#x914D;&#x7F6E;&#x53EF;&#x5220;&#x9664;
+        proxy_redirect             off;
+        #&#x540E;&#x7AEF;&#x7684;Web&#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;X-Forwarded-For&#x83B7;&#x53D6;&#x7528;&#x6237;&#x771F;&#x5B9E;IP
+        proxy_set_header           Host $host;
+        proxy_set_header           X-Real-IP $remote_addr;
+        proxy_set_header           X-Forwarded-For $proxy_add_x_forwarded_for;
+        client_max_body_size       10m;  #&#x5141;&#x8BB8;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x6700;&#x5927;&#x5355;&#x6587;&#x4EF6;&#x5B57;&#x8282;&#x6570;
+        client_body_buffer_size    128k; #&#x7F13;&#x51B2;&#x533A;&#x4EE3;&#x7406;&#x7F13;&#x51B2;&#x7528;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x6700;&#x5927;&#x5B57;&#x8282;&#x6570;
+        proxy_connect_timeout      300;  #nginx&#x8DDF;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;&#x8D85;&#x65F6;&#x65F6;&#x95F4;(&#x4EE3;&#x7406;&#x8FDE;&#x63A5;&#x8D85;&#x65F6;)
+        proxy_send_timeout         300;  #&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x6570;&#x636E;&#x56DE;&#x4F20;&#x65F6;&#x95F4;(&#x4EE3;&#x7406;&#x53D1;&#x9001;&#x8D85;&#x65F6;)
+        proxy_read_timeout         300;  #&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;&#x65F6;&#x95F4;(&#x4EE3;&#x7406;&#x63A5;&#x6536;&#x8D85;&#x65F6;)
+        proxy_buffer_size          4k; #&#x8BBE;&#x7F6E;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#xFF08;nginx&#xFF09;&#x4FDD;&#x5B58;&#x7528;&#x6237;&#x5934;&#x4FE1;&#x606F;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;
+        proxy_buffers              4 32k;# &#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x7F51;&#x9875;&#x5E73;&#x5747;&#x5728;32k&#x4EE5;&#x4E0B;&#x7684;&#x8BDD;&#xFF0C;&#x8FD9;&#x6837;&#x8BBE;&#x7F6E;
+        proxy_busy_buffers_size    64k; #&#x9AD8;&#x8D1F;&#x8377;&#x4E0B;&#x7F13;&#x51B2;&#x5927;&#x5C0F;&#xFF08;proxy_buffers*2&#xFF09;
+        proxy_temp_file_write_size 64k; #&#x8BBE;&#x5B9A;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x5939;&#x5927;&#x5C0F;&#xFF0C;&#x5927;&#x4E8E;&#x8FD9;&#x4E2A;&#x503C;&#xFF0C;&#x5C06;&#x4ECE;upstream&#x670D;&#x52A1;&#x5668;&#x4F20;
+    }
+}
+</code></pre>
+<p>&#x6BCF;&#x4E2A;&#x8BF7;&#x6C42;&#x6309;&#x65F6;&#x95F4;&#x987A;&#x5E8F;&#x9010;&#x4E00;&#x5206;&#x914D;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5982;&#x679C;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;down&#x6389;&#xFF0C;&#x80FD;&#x81EA;&#x52A8;&#x5254;&#x9664;&#x3002;</p>
+<p><strong>&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF1A;</strong></p>
+<p>upstream&#x6A21;&#x5757;&#x80FD;&#x591F;&#x4F7F;&#x7528;3&#x79CD;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B97;&#x6CD5;&#xFF1A;&#x8F6E;&#x8BE2;&#x3001;IP&#x54C8;&#x5E0C;&#x3001;&#x6700;&#x5C11;&#x8FDE;&#x63A5;&#x6570;&#x3002;</p>
+<p><strong>&#x8F6E;&#x8BE2;&#xFF1A;</strong> &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#x8F6E;&#x8BE2;&#x7B97;&#x6CD5;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x6307;&#x4EE4;&#x6765;&#x6FC0;&#x6D3B;&#x5B83;&#xFF0C;&#x5B83;&#x662F;&#x57FA;&#x4E8E;&#x5728;&#x961F;&#x5217;&#x4E2D;&#x8C01;&#x662F;&#x4E0B;&#x4E00;&#x4E2A;&#x7684;&#x539F;&#x7406;&#x786E;&#x4FDD;&#x8BBF;&#x95EE;&#x5747;&#x5300;&#x5730;&#x5206;&#x5E03;&#x5230;&#x6BCF;&#x4E2A;&#x4E0A;&#x6E38;&#x670D;&#x52A1;&#x5668;&#xFF1B;<br><strong>IP&#x54C8;&#x5E0C;&#xFF1A;</strong> &#x901A;&#x8FC7;ip_hash&#x6307;&#x4EE4;&#x6765;&#x6FC0;&#x6D3B;&#xFF0C;Nginx&#x901A;&#x8FC7;IPv4&#x5730;&#x5740;&#x7684;&#x524D;3&#x4E2A;&#x5B57;&#x8282;&#x6216;&#x8005;&#x6574;&#x4E2A;IPv6&#x5730;&#x5740;&#x4F5C;&#x4E3A;&#x54C8;&#x5E0C;&#x952E;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;IP&#x5730;&#x5740;&#x603B;&#x662F;&#x80FD;&#x88AB;&#x6620;&#x5C04;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x4E0A;&#x6E38;&#x670D;&#x52A1;&#x5668;&#xFF1B;<br><strong>&#x6700;&#x5C11;&#x8FDE;&#x63A5;&#x6570;&#xFF1A;</strong> &#x901A;&#x8FC7;least_conn&#x6307;&#x4EE4;&#x6765;&#x6FC0;&#x6D3B;&#xFF0C;&#x8BE5;&#x7B97;&#x6CD5;&#x901A;&#x8FC7;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x6D3B;&#x8DC3;&#x6570;&#x6700;&#x5C11;&#x7684;&#x4E0A;&#x6E38;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x3002;&#x5982;&#x679C;&#x4E0A;&#x6E38;&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#x80FD;&#x529B;&#x4E0D;&#x540C;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED9;server&#x914D;&#x7F6E;weight&#x6743;&#x91CD;&#x6765;&#x8BF4;&#x660E;&#xFF0C;&#x8BE5;&#x7B97;&#x6CD5;&#x5C06;&#x8003;&#x8651;&#x5230;&#x4E0D;&#x540C;&#x670D;&#x52A1;&#x5668;&#x7684;&#x52A0;&#x6743;&#x6700;&#x5C11;&#x8FDE;&#x63A5;&#x6570;&#x3002;</p>
+<h4 id="t21RR">RR <a href="#t21RR"> # </a></h4>
+<p><strong>&#x7B80;&#x5355;&#x914D;&#x7F6E;</strong> &#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x914D;&#x7F6E;&#x4E86;2&#x53F0;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5F53;&#x7136;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x53F0;&#xFF0C;&#x53EA;&#x662F;&#x7AEF;&#x53E3;&#x4E0D;&#x4E00;&#x6837;&#x800C;&#x5DF2;&#xFF0C;&#x800C;8081&#x7684;&#x670D;&#x52A1;&#x5668;&#x662F;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x8BBF;&#x95EE;&#x4E0D;&#x5230;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x8BBF;&#x95EE; <code>http://localhost</code> &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x4F1A;&#x9ED8;&#x8BA4;&#x8DF3;&#x8F6C;&#x5230;<code>http://localhost:8080</code>&#x5177;&#x4F53;&#x662F;&#x56E0;&#x4E3A;Nginx&#x4F1A;&#x81EA;&#x52A8;&#x5224;&#x65AD;&#x670D;&#x52A1;&#x5668;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5982;&#x679C;&#x670D;&#x52A1;&#x5668;&#x5904;&#x4E8E;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#xFF08;&#x670D;&#x52A1;&#x5668;&#x6302;&#x4E86;&#xFF09;&#xFF0C;&#x5C31;&#x4E0D;&#x4F1A;&#x8DF3;&#x8F6C;&#x5230;&#x8FD9;&#x53F0;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x907F;&#x514D;&#x4E86;&#x4E00;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x6302;&#x4E86;&#x5F71;&#x54CD;&#x4F7F;&#x7528;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x7531;&#x4E8E;Nginx&#x9ED8;&#x8BA4;&#x662F;RR&#x7B56;&#x7565;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x5176;&#x4ED6;&#x66F4;&#x591A;&#x7684;&#x8BBE;&#x7F6E;</p>
+<pre><code class="lang-nginx"><span class="hljs-attribute">upstream</span> test {
+    <span class="hljs-attribute">server</span> localhost:<span class="hljs-number">8080</span>;
+    <span class="hljs-attribute">server</span> localhost:<span class="hljs-number">8081</span>;
+}
+<span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span>       <span class="hljs-number">81</span>;
+    <span class="hljs-attribute">server_name</span>  localhost;
+    <span class="hljs-attribute">client_max_body_size</span> <span class="hljs-number">1024M</span>;
+
+    <span class="hljs-attribute">location</span> / {
+        <span class="hljs-attribute">proxy_pass</span> http://test;
+        <span class="hljs-attribute">proxy_set_header</span> Host <span class="hljs-variable">$host</span>:<span class="hljs-variable">$server_port</span>;
+    }
+}
+</code></pre>
+<p><strong>&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684;&#x6838;&#x5FC3;&#x4EE3;&#x7801;&#x4E3A;</strong> </p>
+<pre><code class="lang-nginx"><span class="hljs-attribute">upstream</span> test {
+    <span class="hljs-attribute">server</span> localhost:<span class="hljs-number">8080</span>;
+    <span class="hljs-attribute">server</span> localhost:<span class="hljs-number">8081</span>;
+}
+</code></pre>
+<h4 id="t22&#x6743;&#x91CD;">&#x6743;&#x91CD; <a href="#t22&#x6743;&#x91CD;"> # </a></h4>
+<p>&#x6307;&#x5B9A;&#x8F6E;&#x8BE2;&#x51E0;&#x7387;&#xFF0C;weight&#x548C;&#x8BBF;&#x95EE;&#x6BD4;&#x7387;&#x6210;&#x6B63;&#x6BD4;&#xFF0C;&#x7528;&#x4E8E;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x6027;&#x80FD;&#x4E0D;&#x5747;&#x7684;&#x60C5;&#x51B5;&#x3002; &#x4F8B;&#x5982;</p>
+<pre><code class="lang-nginx"><span class="hljs-attribute">upstream</span> test {
+    <span class="hljs-attribute">server</span> localhost:<span class="hljs-number">8080</span> weight=<span class="hljs-number">9</span>;
+    <span class="hljs-attribute">server</span> localhost:<span class="hljs-number">8081</span> weight=<span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>&#x90A3;&#x4E48;10&#x6B21;&#x4E00;&#x822C;&#x53EA;&#x4F1A;&#x6709;1&#x6B21;&#x4F1A;&#x8BBF;&#x95EE;&#x5230;8081&#xFF0C;&#x800C;&#x6709;9&#x6B21;&#x4F1A;&#x8BBF;&#x95EE;&#x5230;8080</p>
+<h4 id="t23ip_hash">ip_hash <a href="#t23ip_hash"> # </a></h4>
+<p>&#x4E0A;&#x9762;&#x7684;2&#x79CD;&#x65B9;&#x5F0F;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x4E0B;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x6765;&#x7684;&#x65F6;&#x5019;&#x8BF7;&#x6C42;&#x53EF;&#x80FD;&#x5206;&#x53D1;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x7684;&#x7A0B;&#x5E8F;&#x4E0D;&#x662F;&#x65E0;&#x72B6;&#x6001;&#x7684;&#x65F6;&#x5019;&#xFF08;&#x91C7;&#x7528;&#x4E86;session&#x4FDD;&#x5B58;&#x6570;&#x636E;&#xFF09;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x6709;&#x4E00;&#x4E2A;&#x5F88;&#x5927;&#x7684;&#x5F88;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;&#x628A;&#x767B;&#x5F55;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5230;&#x4E86;session&#x4E2D;&#xFF0C;&#x90A3;&#x4E48;&#x8DF3;&#x8F6C;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x767B;&#x5F55;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x5F88;&#x591A;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x53EA;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;&#x7528;iphash&#x4E86;&#xFF0C;iphash&#x7684;&#x6BCF;&#x4E2A;&#x8BF7;&#x6C42;&#x6309;&#x8BBF;&#x95EE;ip&#x7684;hash&#x7ED3;&#x679C;&#x5206;&#x914D;&#xFF0C;&#x8FD9;&#x6837;&#x6BCF;&#x4E2A;&#x8BBF;&#x5BA2;&#x56FA;&#x5B9A;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;session&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<pre><code class="lang-nginx">upstream test {
+    ip_hash;
+    server localhost:8080;
+    server localhost:8081;
+}
+</code></pre>
+<h4 id="t24fair">fair <a href="#t24fair"> # </a></h4>
+<p>&#x8FD9;&#x662F;&#x4E2A;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#xFF0C;&#x6309;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x6765;&#x5206;&#x914D;&#x8BF7;&#x6C42;&#xFF0C;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x77ED;&#x7684;&#x4F18;&#x5148;&#x5206;&#x914D;&#x3002;</p>
+<pre><code class="lang-nginx">upstream backend {
+    fair;
+    server localhost:8080;
+    server localhost:8081;
+}
+</code></pre>
+<h4 id="t25url_hash">url_hash <a href="#t25url_hash"> # </a></h4>
+<p>&#x8FD9;&#x662F;&#x4E2A;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#xFF0C;&#x6309;&#x8BBF;&#x95EE;url&#x7684;hash&#x7ED3;&#x679C;&#x6765;&#x5206;&#x914D;&#x8BF7;&#x6C42;&#xFF0C;&#x4F7F;&#x6BCF;&#x4E2A;url&#x5B9A;&#x5411;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x4E3A;&#x7F13;&#x5B58;&#x65F6;&#x6BD4;&#x8F83;&#x6709;&#x6548;&#x3002; &#x5728;upstream&#x4E2D;&#x52A0;&#x5165;hash&#x8BED;&#x53E5;&#xFF0C;server&#x8BED;&#x53E5;&#x4E2D;&#x4E0D;&#x80FD;&#x5199;&#x5165;weight&#x7B49;&#x5176;&#x4ED6;&#x7684;&#x53C2;&#x6570;&#xFF0C;hash_method&#x662F;&#x4F7F;&#x7528;&#x7684;hash&#x7B97;&#x6CD5;</p>
+<pre><code class="lang-nginx"><span class="hljs-attribute">upstream</span> backend {
+    <span class="hljs-attribute">hash</span> <span class="hljs-variable">$request_uri</span>;
+    <span class="hljs-attribute">hash_method</span> crc32;
+    <span class="hljs-attribute">server</span> localhost:<span class="hljs-number">8080</span>;
+    <span class="hljs-attribute">server</span> localhost:<span class="hljs-number">8081</span>;
+}
+</code></pre>
+<p>&#x4EE5;&#x4E0A;5&#x79CD;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x5404;&#x81EA;&#x9002;&#x7528;&#x4E0D;&#x540C;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x54EA;&#x79CD;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#xFF0C;&#x4E0D;&#x8FC7;fair&#x548C;url_hash&#x9700;&#x8981;&#x5B89;&#x88C5;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x624D;&#x80FD;&#x4F7F;&#x7528;</p>
+<p><strong>server&#x6307;&#x4EE4;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ol>
+<li>weight&#xFF1A;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x91CD;&#xFF0C;&#x6570;&#x503C;&#x8D8A;&#x9AD8;&#xFF0C;&#x6536;&#x5230;&#x7684;&#x8BF7;&#x6C42;&#x4E5F;&#x8D8A;&#x591A;&#xFF1B;</li>
+<li>fail_timeout&#xFF1A;&#x5728;&#x8FD9;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5185;&#x670D;&#x52A1;&#x5668;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x54CD;&#x5E94;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x6709;&#x6536;&#x5230;&#x54CD;&#x5E94;&#xFF0C;&#x90A3;&#x4E48;&#x670D;&#x52A1;&#x5668;&#x5C06;&#x4F1A;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;down&#x72B6;&#x6001;&#xFF1B;</li>
+<li>max_fails&#xFF1A;&#x8BBE;&#x7F6E;&#x5728;fail_timeout&#x65F6;&#x95F4;&#x4E4B;&#x5185;&#x5C1D;&#x8BD5;&#x5BF9;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;&#x7684;&#x6700;&#x5927;&#x6B21;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x8FD9;&#x4E2A;&#x6B21;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x670D;&#x52A1;&#x5668;&#x5C06;&#x4F1A;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;down;</li>
+<li>down&#xFF1A;&#x6807;&#x8BB0;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x518D;&#x63A5;&#x53D7;&#x4EFB;&#x4F55;&#x8BF7;&#x6C42;&#xFF1B;</li>
+<li>backup&#xFF1A;&#x4E00;&#x65E6;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x5668;&#x5B95;&#x673A;&#xFF0C;&#x90A3;&#x4E48;&#x6709;&#x8BE5;&#x6807;&#x8BB0;&#x7684;&#x673A;&#x5668;&#x5C06;&#x4F1A;&#x63A5;&#x6536;&#x8BF7;&#x6C42;&#x3002;</li>
+</ol>
+<p><strong>keepalive&#x6307;&#x4EE4;&#xFF1A;</strong></p>
+<p>Nginx&#x670D;&#x52A1;&#x5668;&#x5C06;&#x4F1A;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;worker&#x8FDB;&#x884C;&#x4FDD;&#x6301;&#x540C;&#x4E0A;&#x6E38;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8FDE;&#x63A5;&#x3002;</p>
+<h3 id="t26&#x5C4F;&#x853D;ip">&#x5C4F;&#x853D;ip <a href="#t26&#x5C4F;&#x853D;ip"> # </a></h3>
+<p>&#x5728;nginx&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>nginx.conf</code>&#x4E2D;&#x52A0;&#x5165;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x653E;&#x5230;http, server, location, limit_except&#x8BED;&#x53E5;&#x5757;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x672C;&#x4F8B;&#x5F53;&#x4E2D;<code>nginx.conf</code>&#xFF0C;<code>blocksip.conf</code>&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-nginx"><span class="hljs-attribute">include</span> blockip.conf;
+</code></pre>
+<p>&#x5728;blockip.conf&#x91CC;&#x9762;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-nginx"><span class="hljs-attribute">deny</span> <span class="hljs-number">165.91.122.67</span>;
+
+<span class="hljs-attribute">deny</span> IP;   <span class="hljs-comment"># &#x5C4F;&#x853D;&#x5355;&#x4E2A;ip&#x8BBF;&#x95EE;</span>
+<span class="hljs-attribute">allow</span> IP;  <span class="hljs-comment"># &#x5141;&#x8BB8;&#x5355;&#x4E2A;ip&#x8BBF;&#x95EE;</span>
+<span class="hljs-attribute">deny</span> all;  <span class="hljs-comment"># &#x5C4F;&#x853D;&#x6240;&#x6709;ip&#x8BBF;&#x95EE;</span>
+<span class="hljs-attribute">allow</span> all; <span class="hljs-comment"># &#x5141;&#x8BB8;&#x6240;&#x6709;ip&#x8BBF;&#x95EE;</span>
+<span class="hljs-attribute">deny</span> <span class="hljs-number">123.0.0.0</span>/<span class="hljs-number">8</span>   <span class="hljs-comment"># &#x5C4F;&#x853D;&#x6574;&#x4E2A;&#x6BB5;&#x5373;&#x4ECE;123.0.0.1&#x5230;123.255.255.254&#x8BBF;&#x95EE;&#x7684;&#x547D;&#x4EE4;</span>
+deny <span class="hljs-number">124.45.0.0</span>/<span class="hljs-number">16</span> <span class="hljs-comment"># &#x5C4F;&#x853D;IP&#x6BB5;&#x5373;&#x4ECE;123.45.0.1&#x5230;123.45.255.254&#x8BBF;&#x95EE;&#x7684;&#x547D;&#x4EE4;</span>
+deny <span class="hljs-number">123.45.6.0</span>/<span class="hljs-number">24</span> <span class="hljs-comment"># &#x5C4F;&#x853D;IP&#x6BB5;&#x5373;&#x4ECE;123.45.6.1&#x5230;123.45.6.254&#x8BBF;&#x95EE;&#x7684;&#x547D;&#x4EE4;</span>
+
+<span class="hljs-comment"># &#x5982;&#x679C;&#x4F60;&#x60F3;&#x5B9E;&#x73B0;&#x8FD9;&#x6837;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x9664;&#x4E86;&#x51E0;&#x4E2A;IP&#x5916;&#xFF0C;&#x5176;&#x4ED6;&#x5168;&#x90E8;&#x62D2;&#x7EDD;</span>
+allow <span class="hljs-number">1.1.1.1</span>; 
+<span class="hljs-attribute">allow</span> <span class="hljs-number">1.1.1.2</span>;
+<span class="hljs-attribute">deny</span> all;
+</code></pre>
+<h2 id="t27&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;">&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x5B89;&#x88C5;&#x65B9;&#x6CD5; <a href="#t27&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;"> # </a></h2>
+<pre><code>./configure --prefix=/&#x4F60;&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;  --add-module=/&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x76EE;&#x5F55;
+</code></pre><h2 id="t28&#x91CD;&#x5B9A;&#x5411;">&#x91CD;&#x5B9A;&#x5411; <a href="#t28&#x91CD;&#x5B9A;&#x5411;"> # </a></h2>
+<ul>
+<li><code>permanent</code> &#x6C38;&#x4E45;&#x6027;&#x91CD;&#x5B9A;&#x5411;&#x3002;&#x8BF7;&#x6C42;&#x65E5;&#x5FD7;&#x4E2D;&#x7684;&#x72B6;&#x6001;&#x7801;&#x4E3A;301</li>
+<li><code>redirect</code> &#x4E34;&#x65F6;&#x91CD;&#x5B9A;&#x5411;&#x3002;&#x8BF7;&#x6C42;&#x65E5;&#x5FD7;&#x4E2D;&#x7684;&#x72B6;&#x6001;&#x7801;&#x4E3A;302</li>
+</ul>
+<h3 id="t29&#x91CD;&#x5B9A;&#x5411;&#x6574;&#x4E2A;&#x7F51;&#x7AD9;">&#x91CD;&#x5B9A;&#x5411;&#x6574;&#x4E2A;&#x7F51;&#x7AD9; <a href="#t29&#x91CD;&#x5B9A;&#x5411;&#x6574;&#x4E2A;&#x7F51;&#x7AD9;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-section">server</span> {
+    <span class="hljs-attribute">server_name</span> old-site.com
+    return <span class="hljs-number">301</span> <span class="hljs-variable">$scheme</span>://new-site.com<span class="hljs-variable">$request_uri</span>;
+}
+</code></pre>
+<h3 id="t30&#x91CD;&#x5B9A;&#x5411;&#x5355;&#x9875;">&#x91CD;&#x5B9A;&#x5411;&#x5355;&#x9875; <a href="#t30&#x91CD;&#x5B9A;&#x5411;&#x5355;&#x9875;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-section">server</span> {
+    <span class="hljs-attribute">location</span> = /oldpage.html {
+        <span class="hljs-attribute">return</span> <span class="hljs-number">301</span> http://example.org/newpage.html;
+    }
+}
+</code></pre>
+<h3 id="t31&#x91CD;&#x5B9A;&#x5411;&#x6574;&#x4E2A;&#x5B50;&#x8DEF;&#x5F84;">&#x91CD;&#x5B9A;&#x5411;&#x6574;&#x4E2A;&#x5B50;&#x8DEF;&#x5F84; <a href="#t31&#x91CD;&#x5B9A;&#x5411;&#x6574;&#x4E2A;&#x5B50;&#x8DEF;&#x5F84;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-attribute">location</span> /old-site {
+    <span class="hljs-attribute">rewrite</span><span class="hljs-regexp"> ^/old-site/(.*)</span> http://example.org/new-site/<span class="hljs-variable">$1</span> <span class="hljs-literal">permanent</span>;
+}
+</code></pre>
+<h2 id="t32&#x6027;&#x80FD;">&#x6027;&#x80FD; <a href="#t32&#x6027;&#x80FD;"> # </a></h2>
+<h3 id="t33&#x5185;&#x5BB9;&#x7F13;&#x5B58;">&#x5185;&#x5BB9;&#x7F13;&#x5B58; <a href="#t33&#x5185;&#x5BB9;&#x7F13;&#x5B58;"> # </a></h3>
+<p>&#x5141;&#x8BB8;&#x6D4F;&#x89C8;&#x5668;&#x57FA;&#x672C;&#x4E0A;&#x6C38;&#x4E45;&#x5730;&#x7F13;&#x5B58;&#x9759;&#x6001;&#x5185;&#x5BB9;&#x3002; Nginx&#x5C06;&#x4E3A;&#x60A8;&#x8BBE;&#x7F6E;Expires&#x548C;Cache-Control&#x5934;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-nginx"><span class="hljs-attribute">location</span> /static {
+    <span class="hljs-attribute">root</span> /data;
+    <span class="hljs-attribute">expires</span> max;
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x8981;&#x6C42;&#x6D4F;&#x89C8;&#x5668;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x7F13;&#x5B58;&#x54CD;&#x5E94;&#xFF08;&#x4F8B;&#x5982;&#x7528;&#x4E8E;&#x8DDF;&#x8E2A;&#x8BF7;&#x6C42;&#xFF09;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;-1&#x3002;</p>
+<pre><code class="lang-nginx">location = /empty.gif {
+    empty_gif;
+    expires -1;
+}
+</code></pre>
+<h3 id="t34Gzip&#x538B;&#x7F29;">Gzip&#x538B;&#x7F29; <a href="#t34Gzip&#x538B;&#x7F29;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-attribute">gzip</span>  <span class="hljs-literal">on</span>;
+<span class="hljs-attribute">gzip_buffers</span> <span class="hljs-number">16</span> <span class="hljs-number">8k</span>;
+<span class="hljs-attribute">gzip_comp_level</span> <span class="hljs-number">6</span>;
+<span class="hljs-attribute">gzip_http_version</span> <span class="hljs-number">1</span>.<span class="hljs-number">1</span>;
+<span class="hljs-attribute">gzip_min_length</span> <span class="hljs-number">256</span>;
+<span class="hljs-attribute">gzip_proxied</span> any;
+<span class="hljs-attribute">gzip_vary</span> <span class="hljs-literal">on</span>;
+<span class="hljs-attribute">gzip_types</span>
+    text/xml application/xml application/atom+xml application/rss+xml application/xhtml+xml image/svg+xml
+    text/javascript application/javascript application/x-javascript
+    text/x-json application/json application/x-web-app-manifest+json
+    text/css text/plain text/x-component
+    font/opentype application/x-font-ttf application/vnd.ms-fontobject
+    image/x-icon;
+<span class="hljs-attribute">gzip_disable</span>  <span class="hljs-string">&quot;msie6&quot;</span>;
+</code></pre>
+<h3 id="t35&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7F13;&#x5B58;">&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7F13;&#x5B58; <a href="#t35&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7F13;&#x5B58;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-attribute">open_file_cache</span> max=<span class="hljs-number">1000</span> inactive=<span class="hljs-number">20s</span>;
+<span class="hljs-attribute">open_file_cache_valid</span> <span class="hljs-number">30s</span>;
+<span class="hljs-attribute">open_file_cache_min_uses</span> <span class="hljs-number">2</span>;
+<span class="hljs-attribute">open_file_cache_errors</span> <span class="hljs-literal">on</span>;
+</code></pre>
+<h3 id="t36SSL&#x7F13;&#x5B58;">SSL&#x7F13;&#x5B58; <a href="#t36SSL&#x7F13;&#x5B58;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-attribute">ssl_session_cache</span> shared:SSL:<span class="hljs-number">10m</span>;
+<span class="hljs-attribute">ssl_session_timeout</span> <span class="hljs-number">10m</span>;
+</code></pre>
+<h3 id="t37&#x4E0A;&#x6E38;Keepalive">&#x4E0A;&#x6E38;Keepalive <a href="#t37&#x4E0A;&#x6E38;Keepalive"> # </a></h3>
+<pre><code class="lang-nginx">upstream backend {
+    server 127.0.0.1:8080;
+    keepalive 32;
+}
+server {
+    ...
+    location /api/ {
+        proxy_pass http://backend;
+        proxy_http_version 1.1;
+        proxy_set_header Connection &quot;&quot;;
+    }
+}
+</code></pre>
+<h3 id="t38&#x76D1;&#x63A7;">&#x76D1;&#x63A7; <a href="#t38&#x76D1;&#x63A7;"> # </a></h3>
+<p>&#x4F7F;&#x7528;<code>ngxtop</code>&#x5B9E;&#x65F6;&#x89E3;&#x6790;nginx&#x8BBF;&#x95EE;&#x65E5;&#x5FD7;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230;&#x7EC8;&#x7AEF;&#xFF0C;&#x529F;&#x80FD;&#x7C7B;&#x4F3C;&#x4E8E;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;top&#x3002;&#x6240;&#x6709;&#x793A;&#x4F8B;&#x90FD;&#x8BFB;&#x53D6;nginx&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x8BBF;&#x95EE;&#x65E5;&#x5FD7;&#x4F4D;&#x7F6E;&#x548C;&#x683C;&#x5F0F;&#x3002;&#x5982;&#x679C;&#x8981;&#x6307;&#x5B9A;&#x8BBF;&#x95EE;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x548C;/&#x6216;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;-f&#x548C;-a&#x9009;&#x9879;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5728;nginx&#x914D;&#x7F6E;&#x4E2D;<code>/usr/local/nginx/conf/nginx.conf</code>&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x662F;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5; ngxtop</span>
+pip install ngxtop
+
+<span class="hljs-comment"># &#x5B9E;&#x65F6;&#x72B6;&#x6001;</span>
+ngxtop
+<span class="hljs-comment"># &#x72B6;&#x6001;&#x4E3A;404&#x7684;&#x524D;10&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x8DEF;&#x5F84;&#xFF1A;</span>
+ngxtop top request_path --filter <span class="hljs-string">&apos;status == 404&apos;</span>
+
+<span class="hljs-comment"># &#x53D1;&#x9001;&#x603B;&#x5B57;&#x8282;&#x6570;&#x6700;&#x591A;&#x7684;&#x524D;10&#x4E2A;&#x8BF7;&#x6C42;</span>
+ngxtop --order-by <span class="hljs-string">&apos;avg(bytes_sent) * count&apos;</span>
+
+<span class="hljs-comment"># &#x6392;&#x540D;&#x524D;&#x5341;&#x4F4D;&#x7684;IP&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x8C01;&#x653B;&#x51FB;&#x4F60;&#x6700;&#x591A;</span>
+ngxtop --group-by remote_addr
+
+<span class="hljs-comment"># &#x6253;&#x5370;&#x5177;&#x6709;4xx&#x6216;5xx&#x72B6;&#x6001;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4EE5;&#x53CA;status&#x548C;http referer</span>
+ngxtop -i <span class="hljs-string">&apos;status &gt;= 400&apos;</span> <span class="hljs-built_in">print</span> request status http_referer
+
+<span class="hljs-comment"># &#x7531;200&#x4E2A;&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;&#x54CD;&#x5E94;&#x53D1;&#x9001;&#x7684;&#x5E73;&#x5747;&#x6B63;&#x6587;&#x5B57;&#x8282;&#x4EE5;&apos;foo&apos;&#x5F00;&#x59CB;&#xFF1A;</span>
+ngxtop avg bytes_sent --filter <span class="hljs-string">&apos;status == 200 and request_path.startswith(&quot;foo&quot;)&apos;</span>
+
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x201C;common&#x201D;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;&#x4ECE;&#x8FDC;&#x7A0B;&#x673A;&#x5668;&#x5206;&#x6790;apache&#x8BBF;&#x95EE;&#x65E5;&#x5FD7;</span>
+ssh remote tail -f /var/<span class="hljs-built_in">log</span>/apache2/access.log | ngxtop -f common
+</code></pre>
+<h2 id="t39&#x5E38;&#x89C1;&#x4F7F;&#x7528;&#x573A;&#x666F;">&#x5E38;&#x89C1;&#x4F7F;&#x7528;&#x573A;&#x666F; <a href="#t39&#x5E38;&#x89C1;&#x4F7F;&#x7528;&#x573A;&#x666F;"> # </a></h2>
+<h3 id="t40&#x8DE8;&#x57DF;&#x95EE;&#x9898;">&#x8DE8;&#x57DF;&#x95EE;&#x9898; <a href="#t40&#x8DE8;&#x57DF;&#x95EE;&#x9898;"> # </a></h3>
+<p>&#x5728;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x9047;&#x5230;&#x4E00;&#x4E9B;&#x63A5;&#x53E3;&#x4E0D;&#x652F;&#x6301;&#x8DE8;&#x57DF;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7684;&#x6DFB;&#x52A0;add_headers&#x6765;&#x652F;&#x6301;cors&#x8DE8;&#x57DF;&#x3002;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-nginx"><span class="hljs-section">server</span> {
+  <span class="hljs-attribute">listen</span> <span class="hljs-number">80</span>;
+  <span class="hljs-attribute">server_name</span> api.xxx.com;
+
+  <span class="hljs-attribute">add_header</span> <span class="hljs-string">&apos;Access-Control-Allow-Origin&apos;</span> <span class="hljs-string">&apos;*&apos;</span>;
+  <span class="hljs-attribute">add_header</span> <span class="hljs-string">&apos;Access-Control-Allow-Credentials&apos;</span> <span class="hljs-string">&apos;true&apos;</span>;
+  <span class="hljs-attribute">add_header</span> <span class="hljs-string">&apos;Access-Control-Allow-Methods&apos;</span> <span class="hljs-string">&apos;GET,POST,HEAD&apos;</span>;
+
+  <span class="hljs-attribute">location</span> / {
+    <span class="hljs-attribute">proxy_pass</span> http://127.0.0.1:3000;
+    <span class="hljs-attribute">proxy_set_header</span> X-Real-IP <span class="hljs-variable">$remote_addr</span>;
+    <span class="hljs-attribute">proxy_set_header</span> X-Forwarded-For <span class="hljs-variable">$proxy_add_x_forwarded_for</span>;
+    <span class="hljs-attribute">proxy_set_header</span> Host  <span class="hljs-variable">$http_host</span>;    
+  } 
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x66F4;&#x6539;&#x5934;&#x4FE1;&#x606F;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#xFF0C;&#x4F7F;&#x7528; <a href="http://nginx.org/en/docs/http/ngx_http_rewrite_module.html">rewrite</a> &#x6307;&#x4EE4;&#x91CD;&#x5B9A;&#x5411;URI&#x6765;&#x89E3;&#x51B3;&#x8DE8;&#x57DF;&#x95EE;&#x9898;&#x3002;</p>
+<pre><code class="lang-nginx"><span class="hljs-attribute">upstream</span> test {
+  <span class="hljs-attribute">server</span> <span class="hljs-number">127.0.0.1:8080</span>;
+  <span class="hljs-attribute">server</span> localhost:<span class="hljs-number">8081</span>;
+}
+<span class="hljs-section">server</span> {
+  <span class="hljs-attribute">listen</span> <span class="hljs-number">80</span>;
+  <span class="hljs-attribute">server_name</span> api.xxx.com;
+  <span class="hljs-attribute">location</span> / { 
+    <span class="hljs-attribute">root</span>  html;                   <span class="hljs-comment">#&#x53BB;&#x8BF7;&#x6C42;../html&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x7684;&#x6587;&#x4EF6;</span>
+    <span class="hljs-attribute">index</span>  index.html index.htm;  <span class="hljs-comment">#&#x9996;&#x9875;&#x54CD;&#x5E94;&#x5730;&#x5740;</span>
+  }
+  <span class="hljs-comment"># &#x7528;&#x4E8E;&#x62E6;&#x622A;&#x8BF7;&#x6C42;&#xFF0C;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x4EE5; /api/&#x5F00;&#x5934;&#x7684;&#x5730;&#x5740;&#xFF0C;</span>
+  <span class="hljs-comment"># &#x5339;&#x914D;&#x7B26;&#x5408;&#x4EE5;&#x540E;&#xFF0C;&#x505C;&#x6B62;&#x5F80;&#x4E0B;&#x641C;&#x7D22;&#x6B63;&#x5219;&#x3002;</span>
+  <span class="hljs-attribute">location</span><span class="hljs-regexp"> ^~/api/</span>{ 
+    <span class="hljs-comment"># &#x4EE3;&#x8868;&#x91CD;&#x5199;&#x62E6;&#x622A;&#x8FDB;&#x6765;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x80FD;&#x5BF9;&#x57DF;&#x540D;&#x540E;&#x8FB9;&#x7684;&#x9664;&#x53BB;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;&#x5916;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;</span>
+    <span class="hljs-comment"># &#x4F8B;&#x5982;www.a.com/proxy/api/msg?meth=1&amp;par=2&#x91CD;&#x5199;&#xFF0C;&#x53EA;&#x5BF9;/proxy/api/msg&#x91CD;&#x5199;&#x3002;</span>
+    <span class="hljs-comment"># rewrite&#x540E;&#x9762;&#x7684;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6B63;&#x5219; ^/api/(.*)$&#xFF0C;</span>
+    <span class="hljs-comment"># $1&#x4EE3;&#x8868;&#x6B63;&#x5219;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;()&#xFF0C;$2&#x4EE3;&#x8868;&#x7B2C;&#x4E8C;&#x4E2A;()&#x7684;&#x503C;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;</span>
+    <span class="hljs-attribute">rewrite</span><span class="hljs-regexp"> ^/api/(.*)$</span> /<span class="hljs-variable">$1</span> <span class="hljs-literal">break</span>;
+
+    <span class="hljs-comment"># &#x628A;&#x8BF7;&#x6C42;&#x4EE3;&#x7406;&#x5230;&#x5176;&#x4ED6;&#x4E3B;&#x673A; </span>
+    <span class="hljs-comment"># &#x5176;&#x4E2D; http://www.b.com/ &#x5199;&#x6CD5;&#x548C; http://www.b.com&#x5199;&#x6CD5;&#x7684;&#x533A;&#x522B;&#x5982;&#x4E0B;</span>
+    <span class="hljs-comment"># &#x5982;&#x679C;&#x4F60;&#x7684;&#x8BF7;&#x6C42;&#x5730;&#x5740;&#x662F;&#x4ED6; http://server/html/test.jsp</span>
+    <span class="hljs-comment"># &#x914D;&#x7F6E;&#x4E00;&#xFF1A; http://www.b.com/ &#x540E;&#x9762;&#x6709;&#x201C;/&#x201D; </span>
+    <span class="hljs-comment">#         &#x5C06;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x6210; http://www.b.com/html/test.jsp &#x8BBF;&#x95EE;</span>
+    <span class="hljs-comment"># &#x914D;&#x7F6E;&#x4E00;&#xFF1A; http://www.b.com &#x540E;&#x9762;&#x6CA1;&#x6709;&#x6709;&#x201C;/&#x201D; </span>
+    <span class="hljs-comment">#         &#x5C06;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x6210; http://www.b.com/test.jsp &#x8BBF;&#x95EE;</span>
+    <span class="hljs-attribute">proxy_pass</span> http://test;
+
+    <span class="hljs-comment"># &#x5982;&#x679C; proxy_pass  URL &#x662F; http://a.xx.com/platform/ &#x8FD9;&#x79CD;&#x60C5;&#x51B5;</span>
+    <span class="hljs-comment"># proxy_cookie_path&#x5E94;&#x8BE5;&#x8BBE;&#x7F6E;&#x6210; /platform/ / (&#x6CE8;&#x610F;&#x4E24;&#x4E2A;&#x659C;&#x6760;&#x4E4B;&#x95F4;&#x6709;&#x7A7A;&#x683C;)&#x3002;</span>
+    <span class="hljs-attribute">proxy_cookie_path</span> /platfrom/ /;
+
+    <span class="hljs-comment"># http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass_header</span>
+    <span class="hljs-comment"># &#x8BBE;&#x7F6E; Cookie &#x5934;&#x901A;&#x8FC7;</span>
+    <span class="hljs-attribute">proxy_pass_header</span> Set-Cookie;
+  } 
+}
+</code></pre>
+<h3 id="t41&#x8DF3;&#x8F6C;&#x5230;&#x5E26;www&#x7684;&#x57DF;&#x4E0A;&#x9762;">&#x8DF3;&#x8F6C;&#x5230;&#x5E26;www&#x7684;&#x57DF;&#x4E0A;&#x9762; <a href="#t41&#x8DF3;&#x8F6C;&#x5230;&#x5E26;www&#x7684;&#x57DF;&#x4E0A;&#x9762;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span> <span class="hljs-number">80</span>;
+    <span class="hljs-comment"># &#x914D;&#x7F6E;&#x6B63;&#x5E38;&#x7684;&#x5E26;www&#x7684;&#x57DF;&#x540D;</span>
+    <span class="hljs-attribute">server_name</span> www.wangchujiang.com;
+    <span class="hljs-attribute">root</span> /home/www/wabg/download;
+    <span class="hljs-attribute">location</span> / {
+        <span class="hljs-attribute">try_files</span> <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ /index.html =<span class="hljs-number">404</span>;
+    }
+}
+<span class="hljs-section">server</span> {
+    <span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x8981;&#x653E;&#x5230;&#x4E0B;&#x9762;&#xFF0C;</span>
+    <span class="hljs-comment"># &#x5C06;&#x4E0D;&#x5E26;www&#x7684; wangchujiang.com &#x6C38;&#x4E45;&#x6027;&#x91CD;&#x5B9A;&#x5411;&#x5230;  https://www.wangchujiang.com</span>
+    <span class="hljs-attribute">server_name</span> wangchujiang.com;
+    <span class="hljs-attribute">rewrite</span><span class="hljs-regexp"> ^(.*)</span> https://www.wangchujiang.com<span class="hljs-variable">$1</span> <span class="hljs-literal">permanent</span>;
+}
+</code></pre>
+<h3 id="t42&#x4EE3;&#x7406;&#x8F6C;&#x53D1;">&#x4EE3;&#x7406;&#x8F6C;&#x53D1; <a href="#t42&#x4EE3;&#x7406;&#x8F6C;&#x53D1;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-attribute">upstream</span> server-api{
+    <span class="hljs-comment"># api &#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5730;&#x5740;</span>
+    <span class="hljs-attribute">server</span> <span class="hljs-number">127.0.0.1:3110</span>;    
+}
+<span class="hljs-attribute">upstream</span> server-resource{
+    <span class="hljs-comment"># &#x9759;&#x6001;&#x8D44;&#x6E90; &#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5730;&#x5740;</span>
+    <span class="hljs-attribute">server</span> <span class="hljs-number">127.0.0.1:3120</span>;
+}
+<span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span>       <span class="hljs-number">3111</span>;
+    <span class="hljs-attribute">server_name</span>  localhost;      <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x6307;&#x5B9A;&#x57DF;&#x540D;</span>
+    <span class="hljs-attribute">root</span> /home/www/server-statics;
+    <span class="hljs-comment"># &#x5339;&#x914D; api &#x8DEF;&#x7531;&#x7684;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x5230;API&#x670D;&#x52A1;</span>
+    <span class="hljs-attribute">location</span><span class="hljs-regexp"> ^~/api/</span> {
+        <span class="hljs-attribute">rewrite</span><span class="hljs-regexp"> ^/(.*)$</span> /<span class="hljs-variable">$1</span> <span class="hljs-literal">break</span>;
+        <span class="hljs-attribute">proxy_pass</span> http://server-api;
+    }
+    <span class="hljs-comment"># &#x5047;&#x8BBE;&#x8FD9;&#x91CC;&#x9A8C;&#x8BC1;&#x7801;&#x4E5F;&#x5728;API&#x670D;&#x52A1;&#x4E2D;</span>
+    <span class="hljs-attribute">location</span><span class="hljs-regexp"> ^~/captcha</span> {
+        <span class="hljs-attribute">rewrite</span><span class="hljs-regexp"> ^/(.*)$</span> /<span class="hljs-variable">$1</span> <span class="hljs-literal">break</span>;
+        <span class="hljs-attribute">proxy_pass</span> http://server-api;
+    }
+    <span class="hljs-comment"># &#x5047;&#x8BBE;&#x4F60;&#x7684;&#x56FE;&#x7247;&#x8D44;&#x6E90;&#x5168;&#x90E8;&#x5728;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x4E0A;&#x9762;</span>
+    <span class="hljs-attribute">location</span><span class="hljs-regexp"> ^~/img/</span> {
+        <span class="hljs-attribute">rewrite</span><span class="hljs-regexp"> ^/(.*)$</span> /<span class="hljs-variable">$1</span> <span class="hljs-literal">break</span>;
+        <span class="hljs-attribute">proxy_pass</span> http://server-resource;
+    }
+    <span class="hljs-comment"># &#x8DEF;&#x7531;&#x5728;&#x524D;&#x7AEF;&#xFF0C;&#x540E;&#x7AEF;&#x6CA1;&#x6709;&#x771F;&#x5B9E;&#x8DEF;&#x7531;&#xFF0C;&#x5728;&#x8DEF;&#x7531;&#x4E0D;&#x5B58;&#x5728;&#x7684; 404&#x72B6;&#x6001;&#x7684;&#x9875;&#x9762;&#x8FD4;&#x56DE; /index.html</span>
+    <span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x4F60;&#x5728;&#x5199;React&#x6216;&#x8005;Vue&#x9879;&#x76EE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6CA1;&#x6709;&#x771F;&#x5B9E;&#x8DEF;&#x7531;</span>
+    <span class="hljs-attribute">location</span> / {
+        <span class="hljs-attribute">try_files</span> <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ /index.html =<span class="hljs-number">404</span>;
+        <span class="hljs-comment">#                               ^ &#x7A7A;&#x683C;&#x5F88;&#x91CD;&#x8981;</span>
+    }
+}
+</code></pre>
+<h3 id="t43&#x4EE3;&#x7406;&#x8F6C;&#x53D1;&#x8FDE;&#x63A5;&#x66FF;&#x6362;">&#x4EE3;&#x7406;&#x8F6C;&#x53D1;&#x8FDE;&#x63A5;&#x66FF;&#x6362; <a href="#t43&#x4EE3;&#x7406;&#x8F6C;&#x53D1;&#x8FDE;&#x63A5;&#x66FF;&#x6362;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-attribute">location</span><span class="hljs-regexp"> ^~/api/upload</span> {
+    <span class="hljs-attribute">rewrite</span><span class="hljs-regexp"> ^/(.*)$</span> /wfs/v1/upload <span class="hljs-literal">break</span>;
+    <span class="hljs-attribute">proxy_pass</span> http://wfs-api;
+}
+</code></pre>
+<h3 id="t44ssl&#x914D;&#x7F6E;">ssl&#x914D;&#x7F6E; <a href="#t44ssl&#x914D;&#x7F6E;"> # </a></h3>
+<p>&#x8D85;&#x6587;&#x672C;&#x4F20;&#x8F93;&#x5B89;&#x5168;&#x534F;&#x8BAE;&#xFF08;&#x7F29;&#x5199;&#xFF1A;HTTPS&#xFF0C;&#x82F1;&#x8BED;&#xFF1A;Hypertext Transfer Protocol Secure&#xFF09;&#x662F;&#x8D85;&#x6587;&#x672C;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x548C;SSL/TLS&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x7528;&#x4EE5;&#x63D0;&#x4F9B;&#x52A0;&#x5BC6;&#x901A;&#x8BAF;&#x53CA;&#x5BF9;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x5668;&#x8EAB;&#x4EFD;&#x7684;&#x9274;&#x5B9A;&#x3002;HTTPS&#x8FDE;&#x63A5;&#x7ECF;&#x5E38;&#x88AB;&#x7528;&#x4E8E;&#x4E07;&#x7EF4;&#x7F51;&#x4E0A;&#x7684;&#x4EA4;&#x6613;&#x652F;&#x4ED8;&#x548C;&#x4F01;&#x4E1A;&#x4FE1;&#x606F;&#x7CFB;&#x7EDF;&#x4E2D;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x7684;&#x4F20;&#x8F93;&#x3002;HTTPS&#x4E0D;&#x5E94;&#x4E0E;&#x5728;RFC 2660&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5B89;&#x5168;&#x8D85;&#x6587;&#x672C;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#xFF08;S-HTTP&#xFF09;&#x76F8;&#x6DF7;&#x3002;HTTPS &#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x662F;&#x6240;&#x6709;&#x6CE8;&#x91CD;&#x9690;&#x79C1;&#x548C;&#x5B89;&#x5168;&#x7684;&#x7F51;&#x7AD9;&#x7684;&#x9996;&#x9009;&#xFF0C;&#x968F;&#x7740;&#x6280;&#x672F;&#x7684;&#x4E0D;&#x65AD;&#x53D1;&#x5C55;&#xFF0C;HTTPS &#x7F51;&#x7AD9;&#x5DF2;&#x4E0D;&#x518D;&#x662F;&#x5927;&#x578B;&#x7F51;&#x7AD9;&#x7684;&#x4E13;&#x5229;&#xFF0C;&#x6240;&#x6709;&#x666E;&#x901A;&#x7684;&#x4E2A;&#x4EBA;&#x7AD9;&#x957F;&#x548C;&#x535A;&#x5BA2;&#x5747;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x5B89;&#x5168;&#x7684;&#x52A0;&#x5BC6;&#x7684;&#x7F51;&#x7AD9;&#x3002;</p>
+<p>&#x521B;&#x5EFA;SSL&#x8BC1;&#x4E66;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8D2D;&#x4E70;&#x7684;&#x8BC1;&#x4E66;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4E0B;&#x8F7D;</p>
+<pre><code class="lang-bash">sudo mkdir /etc/nginx/ssl
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E86;&#x6709;&#x6548;&#x671F;100&#x5E74;&#xFF0C;&#x52A0;&#x5BC6;&#x5F3A;&#x5EA6;&#x4E3A;RSA2048&#x7684;SSL&#x5BC6;&#x94A5;key&#x548C;X509&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#x3002;</span>
+sudo openssl req -x509 -nodes -days 36500 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
+<span class="hljs-comment"># &#x4E0A;&#x9762;&#x547D;&#x4EE4;&#xFF0C;&#x4F1A;&#x6709;&#x4E0B;&#x9762;&#x9700;&#x8981;&#x586B;&#x5199;&#x5185;&#x5BB9;</span>
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:New York
+Locality Name (eg, city) []:New York City
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Bouncy Castles, Inc.
+Organizational Unit Name (eg, section) []:Ministry of Water Slides
+Common Name (e.g. server FQDN or YOUR name) []:your_domain.com
+Email Address []:admin@your_domain.com
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x81EA;&#x7B7E;&#x8BC1;&#x4E66;</p>
+<pre><code class="lang-bash">&#x9996;&#x5148;&#xFF0C;&#x521B;&#x5EFA;&#x8BC1;&#x4E66;&#x548C;&#x79C1;&#x94A5;&#x7684;&#x76EE;&#x5F55;
+<span class="hljs-comment"># mkdir -p /etc/nginx/cert</span>
+<span class="hljs-comment"># cd /etc/nginx/cert</span>
+&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;&#x79C1;&#x94A5;&#xFF0C;&#x547D;&#x4EE4;&#x4F1A;&#x8BA9;&#x4F60;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x53E3;&#x4EE4;&#xFF1A;
+<span class="hljs-comment"># openssl genrsa -des3 -out nginx.key 2048</span>
+&#x521B;&#x5EFA;&#x7B7E;&#x540D;&#x8BF7;&#x6C42;&#x7684;&#x8BC1;&#x4E66;&#xFF08;CSR&#xFF09;&#xFF1A;
+<span class="hljs-comment"># openssl req -new -key nginx.key -out nginx.csr</span>
+&#x5728;&#x52A0;&#x8F7D;SSL&#x652F;&#x6301;&#x7684;Nginx&#x5E76;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x79C1;&#x94A5;&#x65F6;&#x9664;&#x53BB;&#x5FC5;&#x987B;&#x7684;&#x53E3;&#x4EE4;&#xFF1A;
+<span class="hljs-comment"># cp nginx.key nginx.key.org</span>
+<span class="hljs-comment"># openssl rsa -in nginx.key.org -out nginx.key</span>
+&#x6700;&#x540E;&#x6807;&#x8BB0;&#x8BC1;&#x4E66;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x79C1;&#x94A5;&#x548C;CSR&#xFF1A;
+<span class="hljs-comment"># openssl x509 -req -days 365 -in nginx.csr -signkey nginx.key -out nginx.crt</span>
+</code></pre>
+<p>&#x67E5;&#x770B;&#x76EE;&#x524D;nginx&#x7F16;&#x8BD1;&#x9009;&#x9879;</p>
+<pre><code>sbin/nginx -V
+</code></pre><p>&#x8F93;&#x51FA;&#x4E0B;&#x9762;&#x5185;&#x5BB9;</p>
+<pre><code>nginx version: nginx/1.7.8
+built by gcc 4.4.7 20120313 (Red Hat 4.4.7-4) (GCC)
+TLS SNI support enabled
+configure arguments: --prefix=/usr/local/nginx-1.7.8 --with-http_ssl_module --with-http_spdy_module --with-http_stub_status_module --with-pcre
+</code></pre><p>&#x5982;&#x679C;&#x4F9D;&#x8D56;&#x7684;&#x6A21;&#x5757;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x5165;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#xFF0C;&#x8F93;&#x5165;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#x3002;</p>
+<pre><code class="lang-bash">./configure --prefix=/usr/<span class="hljs-built_in">local</span>/nginx --with-http_stub_status_module --with-http_ssl_module
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x8FD8;&#x9700;&#x8981;<code>make</code> (&#x4E0D;&#x7528;make install)</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5907;&#x4EFD;nginx&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</span>
+cp -rf /usr/<span class="hljs-built_in">local</span>/nginx/sbin/nginx&#x3000; /usr/<span class="hljs-built_in">local</span>/nginx/sbin/nginx.bak
+<span class="hljs-comment"># &#x8986;&#x76D6;nginx&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</span>
+cp -rf objs/nginx   /usr/<span class="hljs-built_in">local</span>/nginx/sbin/
+</code></pre>
+<p>HTTPS server</p>
+<pre><code class="lang-nginx"><span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span>       <span class="hljs-number">443</span> ssl;
+    <span class="hljs-attribute">server_name</span>  localhost;
+
+    <span class="hljs-attribute">ssl_certificate</span> /etc/nginx/ssl/nginx.crt;
+    <span class="hljs-attribute">ssl_certificate_key</span> /etc/nginx/ssl/nginx.key;
+    <span class="hljs-comment"># &#x7981;&#x6B62;&#x5728;header&#x4E2D;&#x51FA;&#x73B0;&#x670D;&#x52A1;&#x5668;&#x7248;&#x672C;&#xFF0C;&#x9632;&#x6B62;&#x9ED1;&#x5BA2;&#x5229;&#x7528;&#x7248;&#x672C;&#x6F0F;&#x6D1E;&#x653B;&#x51FB;</span>
+    <span class="hljs-attribute">server_tokens</span> <span class="hljs-literal">off</span>;
+    <span class="hljs-comment"># &#x8BBE;&#x7F6E;ssl/tls&#x4F1A;&#x8BDD;&#x7F13;&#x5B58;&#x7684;&#x7C7B;&#x578B;&#x548C;&#x5927;&#x5C0F;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x4E00;&#x822C;&#x662F;shared&#xFF0C;buildin&#x53EF;&#x80FD;&#x4F1A;&#x53C2;&#x6570;&#x5185;&#x5B58;&#x788E;&#x7247;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;none&#xFF0C;&#x548C;off&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x505C;&#x7528;&#x7F13;&#x5B58;&#x3002;&#x5982;shared:SSL:10m&#x8868;&#x793A;&#x6211;&#x6240;&#x6709;&#x7684;nginx&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x5171;&#x4EAB;ssl&#x4F1A;&#x8BDD;&#x7F13;&#x5B58;&#xFF0C;&#x5B98;&#x7F51;&#x4ECB;&#x7ECD;&#x8BF4;1M&#x53EF;&#x4EE5;&#x5B58;&#x653E;&#x7EA6;4000&#x4E2A;sessions&#x3002; </span>
+    <span class="hljs-attribute">ssl_session_cache</span>    shared:SSL:<span class="hljs-number">1m</span>; 
+
+    <span class="hljs-comment"># &#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x91CD;&#x7528;&#x4F1A;&#x8BDD;&#x7F13;&#x5B58;&#x4E2D;ssl&#x53C2;&#x6570;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#xFF0C;&#x5185;&#x7F51;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;5&#x5206;&#x949F;&#x592A;&#x77ED;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x6210;30m&#x5373;30&#x5206;&#x949F;&#x751A;&#x81F3;4h&#x3002;</span>
+    <span class="hljs-attribute">ssl_session_timeout</span>  <span class="hljs-number">5m</span>; 
+
+    <span class="hljs-comment"># &#x9009;&#x62E9;&#x52A0;&#x5BC6;&#x5957;&#x4EF6;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x6240;&#x652F;&#x6301;&#x7684;&#x5957;&#x4EF6;&#xFF08;&#x548C;&#x987A;&#x5E8F;&#xFF09;&#x53EF;&#x80FD;&#x4F1A;&#x4E0D;&#x540C;&#x3002;</span>
+    <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x6307;&#x5B9A;&#x7684;&#x662F;OpenSSL&#x5E93;&#x80FD;&#x591F;&#x8BC6;&#x522B;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; openssl -v cipher &apos;RC4:HIGH:!aNULL:!MD5&apos;&#xFF08;&#x540E;&#x9762;&#x662F;&#x4F60;&#x6240;&#x6307;&#x5B9A;&#x7684;&#x5957;&#x4EF6;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#xFF09; &#x6765;&#x770B;&#x6240;&#x652F;&#x6301;&#x7B97;&#x6CD5;&#x3002;</span>
+    <span class="hljs-attribute">ssl_ciphers</span>  HIGH:!aNULL:!MD5;
+
+    <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x534F;&#x5546;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x65F6;&#xFF0C;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x6211;&#x4EEC;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x52A0;&#x5BC6;&#x5957;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x52A0;&#x5BC6;&#x5957;&#x4EF6;&#x3002;</span>
+    <span class="hljs-attribute">ssl_prefer_server_ciphers</span>  <span class="hljs-literal">on</span>;
+
+    <span class="hljs-attribute">location</span> / {
+        <span class="hljs-attribute">root</span>   html;
+        <span class="hljs-attribute">index</span>  index.html index.htm;
+    }
+}
+</code></pre>
+<h3 id="t45&#x5F3A;&#x5236;&#x5C06;http&#x91CD;&#x5B9A;&#x5411;&#x5230;https">&#x5F3A;&#x5236;&#x5C06;http&#x91CD;&#x5B9A;&#x5411;&#x5230;https <a href="#t45&#x5F3A;&#x5236;&#x5C06;http&#x91CD;&#x5B9A;&#x5411;&#x5230;https"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span>       <span class="hljs-number">80</span>;
+    <span class="hljs-attribute">server_name</span>  example.com;
+    <span class="hljs-attribute">rewrite</span><span class="hljs-regexp"> ^</span> https://<span class="hljs-variable">$http_host</span><span class="hljs-variable">$request_uri</span>? <span class="hljs-literal">permanent</span>;    <span class="hljs-comment"># &#x5F3A;&#x5236;&#x5C06;http&#x91CD;&#x5B9A;&#x5411;&#x5230;https</span>
+    <span class="hljs-comment"># &#x5728;&#x9519;&#x8BEF;&#x9875;&#x9762;&#x548C;&#x201C;&#x670D;&#x52A1;&#x5668;&#x201D;&#x54CD;&#x5E94;&#x5934;&#x5B57;&#x6BB5;&#x4E2D;&#x542F;&#x7528;&#x6216;&#x7981;&#x7528;&#x53D1;&#x5C04;nginx&#x7248;&#x672C;&#x3002; &#x9632;&#x6B62;&#x9ED1;&#x5BA2;&#x5229;&#x7528;&#x7248;&#x672C;&#x6F0F;&#x6D1E;&#x653B;&#x51FB;</span>
+    <span class="hljs-attribute">server_tokens</span> <span class="hljs-literal">off</span>;
+}
+</code></pre>
+<h3 id="t46&#x4E24;&#x4E2A;&#x865A;&#x62DF;&#x4E3B;&#x673A;">&#x4E24;&#x4E2A;&#x865A;&#x62DF;&#x4E3B;&#x673A; <a href="#t46&#x4E24;&#x4E2A;&#x865A;&#x62DF;&#x4E3B;&#x673A;"> # </a></h3>
+<p>&#x7EAF;&#x9759;&#x6001;-html &#x652F;&#x6301;</p>
+<pre><code class="lang-nginx"><span class="hljs-section">http</span> {
+    <span class="hljs-section">server</span> {
+        <span class="hljs-attribute">listen</span>          <span class="hljs-number">80</span>;
+        <span class="hljs-attribute">server_name</span>     www.domain1.com;
+        <span class="hljs-attribute">access_log</span>      logs/domain1.access.log main;
+        <span class="hljs-attribute">location</span> / {
+            <span class="hljs-attribute">index</span> index.html;
+            <span class="hljs-attribute">root</span>  /var/www/domain1.com/htdocs;
+        }
+    }
+    <span class="hljs-section">server</span> {
+        <span class="hljs-attribute">listen</span>          <span class="hljs-number">80</span>;
+        <span class="hljs-attribute">server_name</span>     www.domain2.com;
+        <span class="hljs-attribute">access_log</span>      logs/domain2.access.log main;
+        <span class="hljs-attribute">location</span> / {
+            <span class="hljs-attribute">index</span> index.html;
+            <span class="hljs-attribute">root</span>  /var/www/domain2.com/htdocs;
+        }
+    }
+}
+</code></pre>
+<h3 id="t47&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x6807;&#x51C6;&#x914D;&#x7F6E;">&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x6807;&#x51C6;&#x914D;&#x7F6E; <a href="#t47&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x6807;&#x51C6;&#x914D;&#x7F6E;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-section">http</span> {
+  <span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span>          <span class="hljs-number">80</span> default;
+    <span class="hljs-attribute">server_name</span>     _ *;
+    <span class="hljs-attribute">access_log</span>      logs/default.access.log main;
+    <span class="hljs-attribute">location</span> / {
+       <span class="hljs-attribute">index</span> index.html;
+       <span class="hljs-attribute">root</span>  /var/www/default/htdocs;
+    }
+  }
+}
+</code></pre>
+<h3 id="t48&#x9632;&#x76D7;&#x94FE;">&#x9632;&#x76D7;&#x94FE; <a href="#t48&#x9632;&#x76D7;&#x94FE;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-attribute">location</span> <span class="hljs-regexp">~* \.(gif|jpg|png|swf|flv)$</span> {
+   <span class="hljs-attribute">root</span> html
+   valid_referers <span class="hljs-literal">none</span> <span class="hljs-literal">blocked</span> <span class="hljs-regexp">*.nginxcn.com</span>;
+   <span class="hljs-attribute">if</span> (<span class="hljs-variable">$invalid_referer</span>) {
+     <span class="hljs-attribute">rewrite</span><span class="hljs-regexp"> ^/</span> www.nginx.cn
+     <span class="hljs-comment">#return 404;</span>
+   }
+}
+</code></pre>
+<h3 id="t49&#x865A;&#x62DF;&#x76EE;&#x5F55;&#x914D;&#x7F6E;">&#x865A;&#x62DF;&#x76EE;&#x5F55;&#x914D;&#x7F6E; <a href="#t49&#x865A;&#x62DF;&#x76EE;&#x5F55;&#x914D;&#x7F6E;"> # </a></h3>
+<p>alias&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55;&#x662F;&#x51C6;&#x786E;&#x7684;&#xFF0C;root&#x662F;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x7684;&#x4E0A;&#x7EA7;&#x76EE;&#x5F55;&#xFF0C;&#x5E76;&#x4E14;&#x8BE5;&#x4E0A;&#x7EA7;&#x76EE;&#x5F55;&#x8981;&#x542B;&#x6709;location&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x7684;&#x540C;&#x540D;&#x76EE;&#x5F55;&#x3002;</p>
+<pre><code class="lang-nginx"><span class="hljs-attribute">location</span> /img/ {
+    <span class="hljs-attribute">alias</span> /var/www/image/;
+}
+<span class="hljs-comment"># &#x8BBF;&#x95EE;/img/&#x76EE;&#x5F55;&#x91CC;&#x9762;&#x7684;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;ningx&#x4F1A;&#x81EA;&#x52A8;&#x53BB;/var/www/image/&#x76EE;&#x5F55;&#x627E;&#x6587;&#x4EF6;</span>
+<span class="hljs-attribute">location</span> /img/ {
+    <span class="hljs-attribute">root</span> /var/www/image;
+}
+<span class="hljs-comment"># &#x8BBF;&#x95EE;/img/&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;nginx&#x4F1A;&#x53BB;/var/www/image/img/&#x76EE;&#x5F55;&#x4E0B;&#x627E;&#x6587;&#x4EF6;&#x3002;]</span>
+</code></pre>
+<h3 id="t50&#x9632;&#x76D7;&#x56FE;&#x914D;&#x7F6E;">&#x9632;&#x76D7;&#x56FE;&#x914D;&#x7F6E; <a href="#t50&#x9632;&#x76D7;&#x56FE;&#x914D;&#x7F6E;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-attribute">location</span> <span class="hljs-regexp">~ \/public\/(css|js|img)\/.*\.(js|css|gif|jpg|jpeg|png|bmp|swf)</span> {
+    <span class="hljs-attribute">valid_referers</span> <span class="hljs-literal">none</span> <span class="hljs-literal">blocked</span> <span class="hljs-regexp">*.jslite.io</span>;
+    <span class="hljs-attribute">if</span> (<span class="hljs-variable">$invalid_referer</span>) {
+        <span class="hljs-attribute">rewrite</span><span class="hljs-regexp"> ^/</span>  http://wangchujiang.com/piratesp.png;
+    }
+}
+</code></pre>
+<h3 id="t51&#x5C4F;&#x853D;.git&#x7B49;&#x6587;&#x4EF6;">&#x5C4F;&#x853D;.git&#x7B49;&#x6587;&#x4EF6; <a href="#t51&#x5C4F;&#x853D;.git&#x7B49;&#x6587;&#x4EF6;"> # </a></h3>
+<pre><code class="lang-nginx"><span class="hljs-attribute">location</span> <span class="hljs-regexp">~ (.git|.gitattributes|.gitignore|.svn)</span> {
+    <span class="hljs-attribute">deny</span> all;
+}
+</code></pre>
+<h3 id="t52&#x57DF;&#x540D;&#x8DEF;&#x5F84;&#x52A0;&#x4E0D;&#x52A0;&#x9700;&#x8981;&#x90FD;&#x80FD;&#x6B63;&#x5E38;&#x8BBF;&#x95EE;">&#x57DF;&#x540D;&#x8DEF;&#x5F84;&#x52A0;&#x4E0D;&#x52A0;&#x9700;&#x8981;&#x90FD;&#x80FD;&#x6B63;&#x5E38;&#x8BBF;&#x95EE; <a href="#t52&#x57DF;&#x540D;&#x8DEF;&#x5F84;&#x52A0;&#x4E0D;&#x52A0;&#x9700;&#x8981;&#x90FD;&#x80FD;&#x6B63;&#x5E38;&#x8BBF;&#x95EE;"> # </a></h3>
+<pre><code class="lang-bash">http://wangchujiang.com/api/index.php?a=1&amp;name=wcj
+                                  ^ &#x6709;&#x540E;&#x7F00;
+
+http://wangchujiang.com/api/index?a=1&amp;name=wcj
+                                 ^ &#x6CA1;&#x6709;&#x540E;&#x7F00;
+</code></pre>
+<p>nginx rewrite&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-nginx"><span class="hljs-attribute">rewrite</span><span class="hljs-regexp"> ^/(.*)/$</span> /index.php?/<span class="hljs-variable">$1</span> <span class="hljs-literal">permanent</span>;
+<span class="hljs-attribute">if</span> (!-d <span class="hljs-variable">$request_filename</span>){
+        <span class="hljs-attribute">set</span> <span class="hljs-variable">$rule_1</span> <span class="hljs-number">1</span><span class="hljs-variable">$rule_1</span>;
+}
+<span class="hljs-attribute">if</span> (!-f <span class="hljs-variable">$request_filename</span>){
+        <span class="hljs-attribute">set</span> <span class="hljs-variable">$rule_1</span> <span class="hljs-number">2</span><span class="hljs-variable">$rule_1</span>;
+}
+<span class="hljs-attribute">if</span> (<span class="hljs-variable">$rule_1</span> = <span class="hljs-string">&quot;21&quot;</span>){
+        <span class="hljs-attribute">rewrite</span><span class="hljs-regexp"> ^/</span> /index.php <span class="hljs-literal">last</span>;
+}
+</code></pre>
+<h2 id="t53&#x9519;&#x8BEF;&#x95EE;&#x9898;">&#x9519;&#x8BEF;&#x95EE;&#x9898; <a href="#t53&#x9519;&#x8BEF;&#x95EE;&#x9898;"> # </a></h2>
+<pre><code class="lang-bash">The plain HTTP request was sent to HTTPS port
+</code></pre>
+<p>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF0C;<code>fastcgi_param HTTPS $https if_not_empty</code> &#x6DFB;&#x52A0;&#x8FD9;&#x6761;&#x89C4;&#x5219;&#xFF0C;</p>
+<pre><code class="lang-nginx"><span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span> <span class="hljs-number">443</span> ssl; <span class="hljs-comment"># &#x6CE8;&#x610F;&#x8FD9;&#x6761;&#x89C4;&#x5219;</span>
+    <span class="hljs-attribute">server_name</span>  my.domain.com;
+
+    <span class="hljs-attribute">fastcgi_param</span> HTTPS <span class="hljs-variable">$https</span> if_not_empty;
+    <span class="hljs-attribute">fastcgi_param</span> HTTPS <span class="hljs-literal">on</span>;
+
+    <span class="hljs-attribute">ssl_certificate</span> /etc/ssl/certs/your.pem;
+    <span class="hljs-attribute">ssl_certificate_key</span> /etc/ssl/private/your.key;
+
+    <span class="hljs-attribute">location</span> / {
+        <span class="hljs-comment"># Your config here...</span>
+    }
+}
+</code></pre>
+<h2 id="t54&#x7CBE;&#x54C1;&#x6587;&#x7AE0;&#x53C2;&#x8003;">&#x7CBE;&#x54C1;&#x6587;&#x7AE0;&#x53C2;&#x8003; <a href="#t54&#x7CBE;&#x54C1;&#x6587;&#x7AE0;&#x53C2;&#x8003;"> # </a></h2>
+<ul>
+<li><a href="https://my.oschina.net/u/3341316/blog/877206">&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x539F;&#x7406;&#x7684;&#x89E3;&#x6790;</a></li>
+<li><a href="http://blog.githuber.cn/posts/73">Nginx&#x6CDB;&#x57DF;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x5B9E;&#x73B0;&#x591A;&#x4E2A;&#x4E8C;&#x7EA7;&#x57DF;&#x540D; </a></li>
+<li><a href="https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/">&#x6DF1;&#x5165; NGINX: &#x6211;&#x4EEC;&#x5982;&#x4F55;&#x8BBE;&#x8BA1;&#x6027;&#x80FD;&#x548C;&#x6269;&#x5C55;</a></li>
+<li><a href="https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/">Inside NGINX: How We Designed for Performance &amp; Scale</a></li>
+<li><a href="http://tengine.taobao.org/book/index.html">Nginx&#x5F00;&#x53D1;&#x4ECE;&#x5165;&#x95E8;&#x5230;&#x7CBE;&#x901A;</a></li>
+<li><a href="http://os.51cto.com/art/201703/535326.htm#topx">Nginx&#x7684;&#x4F18;&#x5316;&#x4E0E;&#x9632;&#x76D7;&#x94FE;</a></li>
+<li><a href="https://segmentfault.com/a/1190000009769143">&#x5B9E;&#x6218;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;Nginx&#x6269;&#x5C55; (Nginx Module)</a></li>
+<li><a href="https://my.oschina.net/xshuai/blog/917097">Nginx+Keepalived(&#x53CC;&#x673A;&#x70ED;&#x5907;)&#x642D;&#x5EFA;&#x9AD8;&#x53EF;&#x7528;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x73AF;&#x5883;(HA)</a></li>
+<li><a href="http://www.huxd.org/articles/2017/07/24/1500890692329.html">Nginx &#x5E73;&#x6ED1;&#x5347;&#x7EA7;</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzIxNzg5ODE0OA==&amp;mid=2247483708&amp;idx=1&amp;sn=90b0b1dccd9c337922a0588245277666&amp;chksm=97f38cf7a08405e1928e0b46d923d630e529e7db8ac7ca2a91310a075986f8bcb2cee5b4953d#rd">Nginx&#x6700;&#x65B0;&#x6A21;&#x5757;&#x2014;ngx_http_mirror_module&#x5206;&#x6790;&#x53EF;&#x4EE5;&#x505A;&#x7248;&#x672C;&#x53D1;&#x5E03;&#x524D;&#x7684;&#x9884;&#x5148;&#x9A8C;&#x8BC1;&#xFF0C;&#x8FDB;&#x884C;&#x6D41;&#x91CF;&#x653E;&#x5927;&#x540E;&#x7684;&#x538B;&#x6D4B;&#x7B49;&#x7B49;</a></li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>
