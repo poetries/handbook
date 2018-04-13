@@ -23,7 +23,7 @@
         "theme": "handbook",
         "logo": "idoc-logo.svg",
         "md": [
-            "正则表达式.md",
+            "正则完整篇.md",
             {
                 "前端": [
                     {
